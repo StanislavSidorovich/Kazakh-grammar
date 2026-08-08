@@ -2,7 +2,7 @@
 
 Офлайн-курс казахской грамматики для самостоятельного изучения. Один HTML-файл, без сервера, без регистрации, без рекламы. Работает как PWA — можно установить на экран телефона и заниматься без интернета.
 
-> **Статус: ранняя версия.** Готовы каркас приложения и первые три темы блока «Негіз». Курс растёт по одной теме за раз — план ниже.
+> **Статус: ранняя версия.** Готовы каркас приложения и первые шесть тем блока «Негіз» — половина блока. Курс растёт по одной-две темы за подход, план ниже.
 
 ## Что внутри
 
@@ -24,7 +24,7 @@
 | 2 · Етістік | A2 | Негізгі | 11 | Времена, вспомогательные глаголы, есімше и көсемше |
 | 3 · Кеңейту | A2–B1 | Негізгі–Орта | 12 | Условное и желательное наклонения, послелоги, залоги, сложное предложение |
 
-Готово сейчас: **0.1 Үндестік заңы I**, **0.2 Үндестік заңы II**, **0.3 Сөйлем құрылымы**.
+Готово сейчас: **0.1 Үндестік заңы I**, **0.2 Үндестік заңы II**, **0.3 Сөйлем құрылымы**, **0.4 Жіктік жалғау**, **0.5 Есімдіктер**, **0.6 Көптік жалғау** — 6 из 19 тем первой версии.
 
 ## Кому подходит
 
@@ -79,7 +79,7 @@ Unlike the author's [English grammar course](https://github.com/StanislavSidorov
 
 Kazakh is agglutinative, and nearly every suffix is selected by vowel and consonant harmony (*үндестік заңы*), so the app ships a **suffix picker**: type any Kazakh word, pick a suffix type, and it shows the correct variant with a step-by-step explanation — which vowel governs, and which class the final consonant belongs to. There is also a dedicated **sentence-building** exercise type for SOV word order, which fill-in-the-blank drills cannot train.
 
-Planned: 42 topics across four blocks (A1–B1 / ҚАЗТЕСТ Қарапайым–Орта). Currently shipped: the app shell plus the first three topics.
+Planned: 42 topics across four blocks (A1–B1 / ҚАЗТЕСТ Қарапайым–Орта). Currently shipped: the app shell plus the first six topics.
 
 **Fonts:** the Kazakh letters ә ғ қ ң ө ү һ live in the `cyrillic-ext` subset and ұ і in `cyrillic`. Golos Text covers all of them; Manrope does not, so Manrope is loaded with Latin only and falls back to Golos for any Cyrillic.
 

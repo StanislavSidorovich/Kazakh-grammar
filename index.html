@@ -337,6 +337,7 @@
   .wordset .w{font-family:var(--font-kk); font-weight:600;}
   .wordset .t{color:var(--muted); font-size:0.84rem;}
 
+  .stage-note{font-family:var(--font-ru); font-size:0.8rem; color:var(--muted); margin:0 0 8px;}
   .tap-word{cursor:pointer; border-bottom:1px dotted #B9C2CC;}
   .tap-popup{
     position:fixed; z-index:60; background:var(--ink-fixed); color:#fff;
@@ -522,20 +523,23 @@
         <span class="row-arrow" aria-hidden="true">›</span>
       </button>
 
-      <button type="button" class="topic-row" disabled>
+      <button type="button" class="topic-row" data-open="zhiktik">
         <span class="marker" style="background:var(--negiz)"></span>
         <span class="row-title"><span class="topic-num">0.4</span> Жіктік жалғау<span class="row-title-ru">личные окончания — казахское «быть»</span></span>
-        <span class="row-soon">скоро</span>
+        <span class="row-check" data-check="zhiktik" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
       </button>
-      <button type="button" class="topic-row" disabled>
+      <button type="button" class="topic-row" data-open="pronouns">
         <span class="marker" style="background:var(--negiz)"></span>
         <span class="row-title"><span class="topic-num">0.5</span> Есімдіктер<span class="row-title-ru">местоимения, сен и сіз</span></span>
-        <span class="row-soon">скоро</span>
+        <span class="row-check" data-check="pronouns" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
       </button>
-      <button type="button" class="topic-row" disabled>
+      <button type="button" class="topic-row" data-open="plural">
         <span class="marker" style="background:var(--negiz)"></span>
         <span class="row-title"><span class="topic-num">0.6</span> Көптік жалғау<span class="row-title-ru">множественное число</span></span>
-        <span class="row-soon">скоро</span>
+        <span class="row-check" data-check="plural" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
       </button>
       <button type="button" class="topic-row" disabled>
         <span class="marker" style="background:var(--negiz)"></span>
@@ -1141,11 +1145,510 @@
       <button class="btn btn-reveal" type="button">Показать ответы</button>
       <span class="quiz-result" aria-live="polite"></span>
     </div>
+    <button type="button" class="next-card" data-open="zhiktik">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Жіктік жалғау — казахское «быть»</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 0.4 ЖІКТІК ЖАЛҒАУ ============ -->
+<div class="screen topic-screen" id="screen-zhiktik" data-topic="zhiktik" style="--tint-color:var(--negiz)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--negiz)"></span>
+    <h2><span class="topic-num">0.4</span> Жіктік жалғау</h2>
+    <span class="done-badge" data-badge="zhiktik">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Личные окончания. В казахском нет глагола «быть» — вместо него окончание на самом слове.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
+    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
+    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>Как сказать «Я студент»? По-русски достаточно двух слов — глагол «есть» мы просто не произносим. Казахский поступает иначе: он приклеивает лицо прямо к слову. <span class="kk">Мен студент<b>пін</b></span> — буквально «Я студент-я».</p>
+    <ul class="rule-list">
+      <li>Окончание ставится на <b>последнее слово</b> предложения — то, которое отвечает «кто он такой» или «какой он»</li>
+      <li>У <b>3-го лица</b> (ол, олар) окончания нет вообще: <span class="kk">Ол дәрігер</span></li>
+      <li>Выбор варианта — тот же закон созвучия: <b>м</b> после гласных и сонорных, <b>б</b> после звонких, <b>п</b> после глухих</li>
+      <li>Само местоимение часто опускают — окончание уже сказало, кто это: <span class="kk">Студентпін</span> = «Я студент»</li>
+    </ul>
+    <table>
+      <tr><th>Кто</th><th>Окончание</th><th>Пример</th></tr>
+      <tr><td class="kk">мен</td><td class="kk">-мын/-мін<br>-бын/-бін<br>-пын/-пін</td><td class="kk">мұғалім<b>мін</b><br>аспаз<b>бын</b><br>студент<b>пін</b></td></tr>
+      <tr><td class="kk">сен</td><td class="kk">-сың/-сің</td><td class="kk">оқушы<b>сың</b></td></tr>
+      <tr><td class="kk">сіз</td><td class="kk">-сыз/-сіз</td><td class="kk">дәрігер<b>сіз</b></td></tr>
+      <tr><td class="kk">ол</td><td>—</td><td class="kk">дәрігер</td></tr>
+      <tr><td class="kk">біз</td><td class="kk">-мыз/-міз<br>-быз/-біз<br>-пыз/-піз</td><td class="kk">инженер<b>міз</b><br>қазақ<b>пыз</b></td></tr>
+      <tr><td class="kk">сендер</td><td class="kk">-сыңдар/-сіңдер</td><td class="kk">оқушы<b>сыңдар</b></td></tr>
+      <tr><td class="kk">сіздер</td><td class="kk">-сыздар/-сіздер</td><td class="kk">мұғалім<b>сіздер</b></td></tr>
+      <tr><td class="kk">олар</td><td>— <span class="hint">(или -лар)</span></td><td class="kk">студент<b>тер</b></td></tr>
+    </table>
+    <ul class="examples">
+      <li>Мен мұғалім<b>мін</b>.<span class="ru">Я учитель. (м — сонорный → -мін)</span></li>
+      <li>Мен аспаз<b>бын</b>.<span class="ru">Я повар. (з — звонкий → -бын)</span></li>
+      <li>Мен студент<b>пін</b>.<span class="ru">Я студент. (т — глухой → -пін)</span></li>
+      <li>Мен оқушы<b>мын</b>.<span class="ru">Я ученик. (гласный → -мын)</span></li>
+      <li>Сен әнші<b>сің</b>.<span class="ru">Ты певец.</span></li>
+      <li>Сіз ғалым<b>сыз</b>.<span class="ru">Вы учёный.</span></li>
+      <li>Ол инженер.<span class="ru">Он инженер. (никакого окончания)</span></li>
+      <li>Біз жұмысшы<b>мыз</b>.<span class="ru">Мы рабочие.</span></li>
+    </ul>
+    <div class="contrast">
+      <div class="label">Где живёт «я» — в местоимении или в окончании</div>
+      <p>В русском лицо несёт только местоимение: убери «я» из «я студент» — и останется непонятное «студент». Поэтому местоимение обязательно.</p>
+      <p>В казахском лицо продублировано в окончании, и местоимение становится необязательным: <span class="kk">Студентпін</span> уже значит «я студент», а <span class="kk">Мен студентпін</span> — то же самое, но с нажимом на «я». Это не два разных правила, а одно: <b>окончание — главное, местоимение — усиление</b>.</p>
+    </div>
+    <div class="trap"><b>-сың и -сыз различаются одной буквой, но не по смыслу, а по вежливости.</b> <span class="kk">Сен мұғалімсің</span> — учителю-ровеснику или близкому. <span class="kk">Сіз мұғалімсіз</span> — незнакомому, старшему, на работе. Перепутать здесь — не грамматическая помарка, а социальная: обратиться на <span class="kk">сен</span> к пожилому человеку звучит грубо. Подробно об этом — в теме 0.5.</div>
+    <div class="tip"><b>Отработай на себе.</b> Скажи вслух пять предложений про себя: кто ты по профессии, откуда, какой ты. <span class="kk">Мен …мын</span>. Именно эти фразы понадобятся в первом же живом разговоре, и именно на них окончание встаёт в память быстрее всего — потому что оно про тебя, а не про абстрактного «ученика из учебника».</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 5 · Кәсіп — профессии и какой ты</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">кәсіп</span> <span class="t">— профессия</span></div>
+          <div><span class="w">маман</span> <span class="t">— специалист</span></div>
+          <div><span class="w">инженер</span> <span class="t">— инженер</span></div>
+          <div><span class="w">аспаз</span> <span class="t">— повар</span></div>
+          <div><span class="w">әнші</span> <span class="t">— певец</span></div>
+          <div><span class="w">ғалым</span> <span class="t">— учёный</span></div>
+          <div><span class="w">жұмысшы</span> <span class="t">— рабочий</span></div>
+          <div><span class="w">жас</span> <span class="t">— молодой; возраст</span></div>
+          <div><span class="w">бақытты</span> <span class="t">— счастливый</span></div>
+          <div><span class="w">әдемі</span> <span class="t">— красивый</span></div>
+          <div><span class="w">биік</span> <span class="t">— высокий</span></div>
+          <div><span class="w">және</span> <span class="t">— и</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> прогони каждое через закон созвучия и скажи форму «я …». <span class="kk">аспаз</span> кончается на звонкий <b>з</b> → <span class="kk">аспазбын</span>. <span class="kk">әнші</span> кончается на гласный → <span class="kk">әншімін</span>. <span class="kk">ғалым</span> — на сонорный <b>м</b> → <span class="kk">ғалыммын</span>, с двумя <b>м</b> подряд: так и надо, ничего не выпадает.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Мен туралы — о себе</div>
+      <div class="mini-text">
+        <p class="storytext">Менің атым — Айгүл. Мен дәрігермін. Мен Алматыданмын. Мен ауруханада істеймін. Менің жұмысым қиын, бірақ мен өз жұмысымды жақсы көремін. Мен бақыттымын. Данияр — менің досым. Ол мұғалім. Ол мектепте істейді. Біз екеуміз де Алматыда тұрамыз.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Меня зовут Айгуль. Я врач. Я из Алматы. Я работаю в больнице. Моя работа трудная, но я люблю свою работу. Я счастлива. Данияр — мой друг. Он учитель. Он работает в школе. Мы оба живём в Алматы.</p>
+        <p class="why-note"><b>Почему так:</b> посмотри, где окончание есть, а где нет. <span class="kk">Мен дәрігер<b>мін</b></span> — 1-е лицо, окончание обязательно. <span class="kk">Ол мұғалім</span> — 3-е лицо, окончания нет вообще. Русскому уху второе кажется «недоделанным», но это полная, правильная фраза.<br><br>И ещё: <span class="kk">Мен бақытты<b>мын</b></span> — окончание встаёт не только на профессию, но и на признак. Любое слово, которое отвечает «кто я» или «какой я», получает лицо.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Астана — новая столица</div>
+      <div class="mini-text">
+        <p class="storytext">Астана — елорда. Ол үлкен және жаңа қала. Астана солтүстікте. Мұнда қыс өте суық. Бәйтерек — әдемі мұнара. Ол биік. Астанада жаңа үйлер көп. Мен Астананы жақсы көремін.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Астана — столица. Это большой и новый город. Астана на севере. Здесь зима очень холодная. Байтерек — красивая башня. Она высокая. В Астане много новых домов. Я люблю Астану.</p>
+        <p class="why-note"><b>Почему так:</b> весь текст — про «он/она/оно», и потому в нём нет ни одного личного окончания: <span class="kk">Ол үлкен қала</span>, <span class="kk">Ол биік</span>. Сравни с предыдущим текстом, где Айгуль говорила о себе — там окончание в каждой фразе. Это и есть главное различие 3-го лица от 1-го и 2-го.<br><br><b>Про Байтерек:</b> башня высотой 97 метров — по году, когда столицу перенесли в Астану, в 1997-м.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Кездесу — встреча на конференции</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Айгүл:</span> Сәлеметсіз бе! Сіз мұғалімсіз бе?</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Иә, мен мұғаліммін. Сіз ше?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Мен дәрігермін. Мен ауруханада істеймін.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Өте жақсы! Сіз Астанадансыз ба?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Жоқ, мен Алматыданмын.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Мен де Алматыданмын!</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Айгуль:</b> Здравствуйте! Вы учитель?<br><b>Данияр:</b> Да, я учитель. А вы?<br><b>Айгуль:</b> Я врач. Я работаю в больнице.<br><b>Данияр:</b> Очень хорошо! Вы из Астаны?<br><b>Айгуль:</b> Нет, я из Алматы.<br><b>Данияр:</b> Я тоже из Алматы!</p>
+        <p class="why-note"><b>Почему так:</b> помнишь <span class="kk">Мен Алматыданмын</span> из темы 0.1, которую мы просили просто выучить целиком? Теперь её половина разобрана: <span class="kk">-мын</span> — то самое личное окончание. Осталась часть <span class="kk">-дан</span> «из» — это падеж, он будет в теме 1.5.<br><br>Оба говорят друг другу <span class="kk">сіз</span>: познакомились только что, на работе. Через полчаса дружеского разговора они, скорее всего, перейдут на <span class="kk">сен</span> — но начинать принято с <span class="kk">сіз</span>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="zhiktik">
+    <p class="quiz-instruction">Впиши личное окончание. Сначала реши, твёрдое слово или мягкое, потом посмотри на последнюю букву.</p>
+    <div class="qitem"><span class="qnum">1.</span> Мен студент<input class="blank" data-answer="пін" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(я студент)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Мен мұғалім<input class="blank" data-answer="мін" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(я учитель)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Мен аспаз<input class="blank" data-answer="бын" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(я повар)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Сен оқушы<input class="blank" data-answer="сың" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(ты ученик)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Сіз дәрігер<input class="blank" data-answer="сіз" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(вы врач)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> Біз инженер<input class="blank" data-answer="міз" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(мы инженеры)</span></div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">Какое окончание нужно после</span> <span class="kk">ол</span>?
+      <select class="mc" data-answer="никакого">
+        <option value="">—</option>
+        <option value="-ды">-ды</option>
+        <option value="-сы">-сы</option>
+        <option value="никакого">никакого</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="ru-hint">Мен қазақ… — какой вариант?</span>
+      <select class="mc" data-answer="қазақпын">
+        <option value="">—</option>
+        <option value="қазақмын">қазақмын</option>
+        <option value="қазақбын">қазақбын</option>
+        <option value="қазақпын">қазақпын</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">9.</span> <span class="ru-hint">Я работаю в больнице.</span>
+      <div class="qbuild" data-answer="Мен ауруханада істеймін" data-words="істеймін|ауруханада|Мен"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">10.</span> <span class="ru-hint">Он работает в школе.</span>
+      <div class="qbuild" data-answer="Ол мектепте істейді" data-words="мектепте|Ол|істейді"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
+    <button type="button" class="next-card" data-open="pronouns">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Есімдіктер — сен и сіз</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 0.5 ЕСІМДІКТЕР ============ -->
+<div class="screen topic-screen" id="screen-pronouns" data-topic="pronouns" style="--tint-color:var(--negiz)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--negiz)"></span>
+    <h2><span class="topic-num">0.5</span> Есімдіктер</h2>
+    <span class="done-badge" data-badge="pronouns">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Восемь местоимений вместо шести — и главное социальное правило языка: сен или сіз.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
+    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
+    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>Местоимений в казахском восемь, а не шесть, как в русском. Лишние два появляются там, где русский обходится одним «вы»: казахский различает <b>вежливое «вы»</b> и <b>«вы» про нескольких человек</b> — и умеет сочетать одно с другим.</p>
+    <table>
+      <tr><th>Казахский</th><th>Русский</th><th>Когда</th></tr>
+      <tr><td class="kk">мен</td><td>я</td><td>—</td></tr>
+      <tr><td class="kk">сен</td><td>ты</td><td>друг, ровесник, ребёнок, близкий</td></tr>
+      <tr><td class="kk">сіз</td><td>вы <span class="hint">(один человек)</span></td><td>старший, незнакомый, официально</td></tr>
+      <tr><td class="kk">ол</td><td>он, она, оно</td><td>рода нет — форма одна</td></tr>
+      <tr><td class="kk">біз</td><td>мы</td><td>—</td></tr>
+      <tr><td class="kk">сендер</td><td>вы <span class="hint">(несколько)</span></td><td>каждому из них ты сказал бы <span class="kk">сен</span></td></tr>
+      <tr><td class="kk">сіздер</td><td>вы <span class="hint">(несколько, вежливо)</span></td><td>каждому из них — <span class="kk">сіз</span></td></tr>
+      <tr><td class="kk">олар</td><td>они</td><td>—</td></tr>
+    </table>
+    <ul class="rule-list">
+      <li><span class="kk">ол</span> — сразу и «он», и «она», и «оно». Рода в казахском нет нигде: ни у местоимений, ни у существительных, ни у глаголов</li>
+      <li>Местоимение можно опустить, если личное окончание уже названо: <span class="kk">Дәрігермін</span> = «Я врач»</li>
+      <li><span class="kk">өз</span> — «свой, сам»: <span class="kk">өз жұмысым</span> — «моя собственная работа»</li>
+      <li>К незнакомым обращаются не по имени, а по слову родства: <span class="kk">аға</span>, <span class="kk">апай</span>, <span class="kk">әпке</span></li>
+    </ul>
+    <ul class="examples">
+      <li>Сен қалай<b>сың</b>?<span class="ru">Как ты? (другу)</span></li>
+      <li>Сіз қалай<b>сыз</b>?<span class="ru">Как вы? (старшему, незнакомому)</span></li>
+      <li>Ол дәрігер.<span class="ru">Он врач. / Она врач. — форма одна</span></li>
+      <li>Сендер оқушы<b>сыңдар</b>.<span class="ru">Вы ученики. (детям)</span></li>
+      <li>Сіздер мұғалім<b>сіздер</b>.<span class="ru">Вы учителя. (уважительно, нескольким)</span></li>
+    </ul>
+    <div class="contrast">
+      <div class="label">Русское «вы» — это два разных казахских слова</div>
+      <p>«Вы очень помогли» одному человеку → <span class="kk">Сіз</span>. Той же фразой нескольким друзьям → <span class="kk">Сендер</span>. Нескольким уважаемым людям → <span class="kk">Сіздер</span>.</p>
+      <p>То есть русское «вы» несёт сразу две вещи — вежливость и множественность, — и по фразе не всегда понятно, какую именно. Казахский разводит их по разным словам, и двусмысленности не возникает.</p>
+    </div>
+    <div class="trap"><b>Обратиться на <span class="kk">сен</span> к старшему — не мелкая ошибка.</b> Это не как в русском, где «ты» незнакомцу звучит просто фамильярно. В казахской среде возраст и уважение к старшим — вещь заметная, и <span class="kk">сен</span> в адрес пожилого человека читается почти как дерзость. Правило простое и безопасное: <b>если человек старше тебя или ты видишь его впервые — <span class="kk">сіз</span></b>. Переход на <span class="kk">сен</span> предлагает старший, а не младший.</div>
+    <div class="tip"><b>Как обращаться, если не знаешь имени.</b> В казахском не говорят «мужчина» или «девушка», как на русском рынке. Говорят по родству: <span class="kk">аға</span> — мужчине старше себя, <span class="kk">апай</span> — женщине заметно старше, <span class="kk">әпке</span> — женщине чуть старше, <span class="kk">іні</span> или <span class="kk">қарындас</span> — тому, кто младше. Это звучит тепло, а не панибратски: собеседник как бы вводится в круг семьи.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 6 · Қонақ — гость и уважение</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">қонақ</span> <span class="t">— гость</span></div>
+          <div><span class="w">құрмет</span> <span class="t">— уважение</span></div>
+          <div><span class="w">дастархан</span> <span class="t">— накрытый стол</span></div>
+          <div><span class="w">дайын</span> <span class="t">— готовый</span></div>
+          <div><span class="w">шай</span> <span class="t">— чай</span></div>
+          <div><span class="w">ет</span> <span class="t">— мясо</span></div>
+          <div><span class="w">кісі</span> <span class="t">— человек, персона</span></div>
+          <div><span class="w">төр</span> <span class="t">— почётное место</span></div>
+          <div><span class="w">отыру</span> <span class="t">— сидеть</span></div>
+          <div><span class="w">беру</span> <span class="t">— давать</span></div>
+          <div><span class="w">дәстүр</span> <span class="t">— традиция</span></div>
+          <div><span class="w">мақал</span> <span class="t">— пословица</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> <span class="kk">кісі</span> и <span class="kk">адам</span> оба переводятся «человек», но <span class="kk">кісі</span> звучит уважительнее и чаще идёт со словом <span class="kk">үлкен</span>: <span class="kk">үлкен кісі</span> — «старший, пожилой человек». Выбор слова здесь тоже часть вежливости.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Қонақжайлылық — гостеприимство</div>
+      <div class="mini-text">
+        <p class="storytext">Қазақта қонақ — үлкен құрмет. Қонақ келеді, дастархан дайын. Дастарханда шай, нан, ет бар. Үлкен кісі төрде отырады. Жас адам шай береді. Бұл — ежелгі дәстүр. Қазақта мақал бар: «Қонақ келсе, құт келеді».</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">У казахов гость — большое уважение. Гость приходит — стол уже накрыт. На столе есть чай, хлеб, мясо. Старший человек садится на почётное место. Молодой подаёт чай. Это древняя традиция. У казахов есть пословица: «Придёт гость — придёт благодать».</p>
+        <p class="why-note"><b>Почему так:</b> обрати внимание, что весь текст в 3-м лице и потому без личных окончаний — как текст про Астану в прошлой теме.<br><br><b>Про место за столом:</b> <span class="kk">төр</span> — это не просто «во главе стола», а место напротив входа, самое дальнее от двери. Кто где сидит, там читается сразу: старшего сажают в <span class="kk">төр</span>, младший садится ближе к выходу, чтобы удобнее было подавать и помогать. Пословица <span class="kk">«Қонақ келсе, құт келеді»</span> — одна из самых известных; в ней шартты рай (<span class="kk">-се</span>), это тема 3.1, пока просто запомни её целиком.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Сәлемдесу — два разных приветствия</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="stage-note">Айгуль встречает друга-ровесника:</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Сәлем, Данияр! Сен қалайсың?</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Жақсы, рақмет! Сен ше?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Мен де жақсымын.</p>
+          <p class="stage-note" style="margin-top:14px;">Через минуту — соседку намного старше:</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Сәлеметсіз бе, апай! Сіз қалайсыз?</p>
+          <p class="dline"><span class="speaker">Көрші:</span> Жақсымын, рақмет, қызым. Сен қалайсың?</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Айгуль:</b> Привет, Данияр! Как ты?<br><b>Данияр:</b> Хорошо, спасибо! А ты?<br><b>Айгуль:</b> Я тоже хорошо.<br><br><b>Айгуль:</b> Здравствуйте, апай! Как вы?<br><b>Соседка:</b> Хорошо, спасибо, доченька. А ты как?</p>
+        <p class="why-note"><b>Почему так:</b> самое интересное здесь — последняя строка. Айгуль говорит соседке <span class="kk">сіз</span>, а соседка ей в ответ — <span class="kk">сен</span>, и это не грубость, а норма: старший вправе обращаться к младшему на <span class="kk">сен</span>. Обращение <span class="kk">қызым</span> («доченька») от пожилой женщины к молодой — тёплое, а не покровительственное.<br><br>Заметь и приветствия: <span class="kk">Сәлем</span> — только своим и ровесникам, <span class="kk">Сәлеметсіз бе</span> — всем остальным. Если сомневаешься, всегда выбирай второе.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="pronouns">
+    <p class="quiz-instruction">Выбери правильное обращение и допиши окончания.</p>
+    <div class="qitem"><span class="qnum">1.</span> <span class="ru-hint">Ты обращаешься к пожилой незнакомой женщине. Какое местоимение?</span>
+      <select class="mc" data-answer="сіз">
+        <option value="">—</option>
+        <option value="сен">сен</option>
+        <option value="сіз">сіз</option>
+        <option value="сендер">сендер</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">2.</span> <span class="ru-hint">К другу-ровеснику?</span>
+      <select class="mc" data-answer="сен">
+        <option value="">—</option>
+        <option value="сен">сен</option>
+        <option value="сіз">сіз</option>
+        <option value="сіздер">сіздер</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">3.</span> <span class="ru-hint">К трём одноклассникам сразу?</span>
+      <select class="mc" data-answer="сендер">
+        <option value="">—</option>
+        <option value="сіз">сіз</option>
+        <option value="сендер">сендер</option>
+        <option value="сіздер">сіздер</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">4.</span> Сіз мұғалім<input class="blank" data-answer="сіз" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(вы учитель)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Сен оқушы<input class="blank" data-answer="сың" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(ты ученик)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="ru-hint">Что значит</span> <span class="kk">ол</span>?
+      <select class="mc" data-answer="он, она и оно">
+        <option value="">—</option>
+        <option value="только он">только он</option>
+        <option value="только она">только она</option>
+        <option value="он, она и оно">он, она и оно</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">7.</span> <span class="ru-hint">Как вы? (старшему)</span>
+      <div class="qbuild" data-answer="Сіз қалайсыз" data-words="қалайсыз|Сіз"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">8.</span> <span class="ru-hint">Старший человек сидит на почётном месте.</span>
+      <div class="qbuild" data-answer="Үлкен кісі төрде отырады" data-words="төрде|кісі|отырады|Үлкен"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
+    <button type="button" class="next-card" data-open="plural">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Көптік жалғау — множественное число</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 0.6 КӨПТІК ЖАЛҒАУ ============ -->
+<div class="screen topic-screen" id="screen-plural" data-topic="plural" style="--tint-color:var(--negiz)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--negiz)"></span>
+    <h2><span class="topic-num">0.6</span> Көптік жалғау</h2>
+    <span class="done-badge" data-badge="plural">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Множественное число целиком — и три случая, когда его как раз не ставят.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
+    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
+    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>Шесть вариантов множественного числа мы разобрали ещё в теме 0.2 — они выбираются законом созвучия и больше ничем. Здесь соберём их в одну таблицу и разберём то, о чём в 0.2 речи не было: <b>когда множественное число не ставят вообще</b>. Это место, где русская привычка мешает сильнее всего.</p>
+    <table>
+      <tr><th>Слово кончается на</th><th>Твёрдое</th><th>Мягкое</th><th>Пример</th></tr>
+      <tr><td>гласный, <span class="kk">р у й</span></td><td class="kk">-лар</td><td class="kk">-лер</td><td class="kk">бала<b>лар</b>, көше<b>лер</b></td></tr>
+      <tr><td><span class="kk">л м н ң ж з</span></td><td class="kk">-дар</td><td class="kk">-дер</td><td class="kk">қыз<b>дар</b>, дүкен<b>дер</b></td></tr>
+      <tr><td>глухие, <span class="kk">б в г д</span></td><td class="kk">-тар</td><td class="kk">-тер</td><td class="kk">кітап<b>тар</b>, мектеп<b>тер</b></td></tr>
+    </table>
+    <p><b>Когда множественного числа нет:</b></p>
+    <ul class="rule-list">
+      <li><b>После числа</b> — никогда: <span class="kk">екі кітап</span>, <span class="kk">бес бала</span>. Число само уже сказало, что предметов много</li>
+      <li><b>После слов «много», «мало»</b> — обычно тоже нет: <span class="kk">көп адам</span>, <span class="kk">аз ақша</span></li>
+      <li><b>У неисчисляемого</b> — как и в русском: <span class="kk">су</span>, <span class="kk">ақша</span>, <span class="kk">шай</span></li>
+      <li>Если ставишь и то и другое сразу — <b>сначала множественное, потом остальное</b>: <span class="kk">бала<b>лар</b>ым</span> — «мои дети»</li>
+    </ul>
+    <ul class="examples">
+      <li><b class="kk">екі</b> кітап<span class="ru">две книги — без -тар!</span></li>
+      <li><b class="kk">бес</b> бала<span class="ru">пять детей — без -лар!</span></li>
+      <li><b class="kk">көп</b> адам<span class="ru">много людей</span></li>
+      <li>Базарда адам<b>дар</b> көп.<span class="ru">На рынке много людей — здесь -дар есть, потому что «много» стоит отдельно, а не перед словом</span></li>
+      <li>бала<b>лар</b>ым<span class="ru">мои дети — сначала -лар, потом -ым</span></li>
+    </ul>
+    <table>
+      <tr><th colspan="2">Сан есім · числа</th></tr>
+      <tr><td class="kk">бір, екі, үш, төрт, бес</td><td>1, 2, 3, 4, 5</td></tr>
+      <tr><td class="kk">алты, жеті, сегіз, тоғыз, он</td><td>6, 7, 8, 9, 10</td></tr>
+      <tr><td class="kk">жиырма, жүз, мың</td><td>20, 100, 1000</td></tr>
+    </table>
+    <div class="contrast">
+      <div class="label">«Две книги» ↔ <span class="kk">екі кітап</span></div>
+      <p>В русском число и множественное число дублируют друг друга: «две книг<b>и</b>», «пять книг» — окончание меняется вместе с числом, хотя информации не добавляет.</p>
+      <p>Казахский эту избыточность убирает: сказал <span class="kk">екі</span> — значит уже понятно, что не одна, и слово остаётся в исходной форме. Ровно так же работает английское <i>two book</i>… точнее, работало бы, если бы английский был последователен. Казахский — последователен.</p>
+    </div>
+    <div class="trap"><b>«Бес балалар» — самая узнаваемая ошибка русскоязычного.</b> Рука ставит <span class="kk">-лар</span> автоматически, потому что по-русски «пять детей» тоже во множественном. Проверка простая: <b>если перед словом стоит число — окончания нет</b>. И наоборот, в <span class="kk">Базарда адамдар көп</span> окончание нужно: <span class="kk">көп</span> стоит после слова и относится ко всему предложению, а не к самому слову.</div>
+    <div class="tip"><b>Зачем вообще нужна эта таблица, если правило то же самое.</b> Затем, что в теме 0.2 ты выбирал форму сознательно, по шагам. Здесь цель другая — чтобы форма приходила сама. Возьми любые десять слов из уже пройденных и произнеси их во множественном вслух подряд, не останавливаясь. Если где-то запнулся — вот там правило ещё не автоматизировано, и туда стоит вернуться.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 7 · Базар — рынок и счёт</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">базар</span> <span class="t">— рынок</span></div>
+          <div><span class="w">көкөніс</span> <span class="t">— овощ</span></div>
+          <div><span class="w">жеміс</span> <span class="t">— фрукт</span></div>
+          <div><span class="w">өрік</span> <span class="t">— абрикос</span></div>
+          <div><span class="w">қауын</span> <span class="t">— дыня</span></div>
+          <div><span class="w">баға</span> <span class="t">— цена</span></div>
+          <div><span class="w">теңге</span> <span class="t">— тенге</span></div>
+          <div><span class="w">келі</span> <span class="t">— килограмм</span></div>
+          <div><span class="w">ақша</span> <span class="t">— деньги</span></div>
+          <div><span class="w">қанша</span> <span class="t">— сколько</span></div>
+          <div><span class="w">бәрі</span> <span class="t">— всё, все</span></div>
+          <div><span class="w">әртүрлі</span> <span class="t">— разный</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> <span class="kk">көкөніс</span> и <span class="kk">жеміс</span> оба кончаются на глухой <b>с</b> и оба мягкие → <span class="kk">көкөністер</span>, <span class="kk">жемістер</span>. А <span class="kk">ақша</span> во множественном практически не ставят: деньги в казахском, как и в русском, считаются не штуками, а суммой.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Базарда — на рынке</div>
+      <div class="mini-text">
+        <p class="storytext">Базарда адамдар көп. Мұнда көкөністер және жемістер бар. Алма, өрік, қауын — бәрі бар. Бір келі алма — бес жүз теңге. Мен екі келі алма аламын. Мен үш нан да аламын. Базарда бағалар әртүрлі. Сатушылар — жақсы адамдар.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">На рынке много людей. Здесь есть овощи и фрукты. Яблоки, абрикосы, дыни — есть всё. Один килограмм яблок — пятьсот тенге. Я беру два килограмма яблок. Ещё я беру три хлеба. Цены на рынке разные. Продавцы — хорошие люди.</p>
+        <p class="why-note"><b>Почему так:</b> в этом тексте оба случая стоят рядом. <span class="kk">адам<b>дар</b></span>, <span class="kk">көкөніс<b>тер</b></span>, <span class="kk">баға<b>лар</b></span> — окончание есть. А <span class="kk"><b>екі</b> келі</span>, <span class="kk"><b>үш</b> нан</span>, <span class="kk"><b>бес</b> жүз теңге</span> — окончания нет, потому что впереди число. Прочитай текст ещё раз и найди все пять мест сам.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Көлсай — три озера</div>
+      <div class="mini-text">
+        <p class="storytext">Көлсай — үш көл. Олар тауларда. Су мөлдір және суық. Айналада қарағайлар өседі. Мұнда қонақтар көп. Жазда адамдар келеді. Балалар су жағасында ойнайды. Көлсай — өте әдемі жер.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Кольсай — три озера. Они в горах. Вода прозрачная и холодная. Вокруг растут сосны. Здесь много гостей. Летом приезжают люди. Дети играют на берегу. Кольсай — очень красивое место.</p>
+        <p class="why-note"><b>Почему так:</b> первое же предложение — ловушка наоборот. <span class="kk">үш көл</span>, а не «үш көлдер»: перед словом стоит число. Зато в следующем предложении <span class="kk">Олар</span> — местоимение во множественном, и это нормально: правило про число касается только самого считаемого слова.<br><br><b>Про озёра:</b> Кольсайские озёра лежат одно над другим в Заилийском Алатау, третье — на высоте около 2700 метров. Вода в них остаётся холодной даже в июле, поэтому купаются там немногие.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Сатып алу — покупка</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Айгүл:</span> Сәлеметсіз бе! Алма қанша тұрады?</p>
+          <p class="dline"><span class="speaker">Сатушы:</span> Бір келі — бес жүз теңге.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Екі келі беріңіз.</p>
+          <p class="dline"><span class="speaker">Сатушы:</span> Тағы не аласыз?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Үш нан беріңіз. Бәрі қанша?</p>
+          <p class="dline"><span class="speaker">Сатушы:</span> Мың екі жүз теңге.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Рақмет!</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Айгуль:</b> Здравствуйте! Сколько стоят яблоки?<br><b>Продавец:</b> Один килограмм — пятьсот тенге.<br><b>Айгуль:</b> Дайте два килограмма.<br><b>Продавец:</b> Что ещё возьмёте?<br><b>Айгуль:</b> Дайте три хлеба. Сколько всего?<br><b>Продавец:</b> Тысяча двести тенге.<br><b>Айгуль:</b> Спасибо!</p>
+        <p class="why-note"><b>Почему так:</b> ни одного множественного числа во всём диалоге — и это правильно, потому что везде стоят числа. Обрати внимание на <span class="kk">беріңіз</span> — «дайте», вежливая форма. Она из темы 2.1, пока просто выучи её целиком: с ней можно сделать почти любую покупку.<br><br>И на порядок в <span class="kk">мың екі жүз</span> — «тысяча двести»: числа складываются от большего к меньшему, как и в русском.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="plural">
+    <p class="quiz-instruction">Впиши окончание множественного числа — или оставь слово без него, если оно там не нужно.</p>
+    <div class="qitem"><span class="qnum">1.</span> көкөніс<input class="blank" data-answer="тер" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(овощи)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> баға<input class="blank" data-answer="лар" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(цены)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> дос<input class="blank" data-answer="тар" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(друзья)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> <span class="ru-hint">Как правильно — «две книги»?</span>
+      <select class="mc" data-answer="екі кітап">
+        <option value="">—</option>
+        <option value="екі кітап">екі кітап</option>
+        <option value="екі кітаптар">екі кітаптар</option>
+        <option value="екілер кітап">екілер кітап</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">5.</span> <span class="ru-hint">А «пять детей»?</span>
+      <select class="mc" data-answer="бес бала">
+        <option value="">—</option>
+        <option value="бес балалар">бес балалар</option>
+        <option value="бес бала">бес бала</option>
+        <option value="балалар бес">балалар бес</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="ru-hint">«Мои дети» — в каком порядке?</span>
+      <select class="mc" data-answer="балаларым">
+        <option value="">—</option>
+        <option value="баламлар">баламлар</option>
+        <option value="балаларым">балаларым</option>
+        <option value="балалар мен">балалар мен</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">Сколько это —</span> <span class="kk">жеті</span>?
+      <select class="mc" data-answer="7">
+        <option value="">—</option>
+        <option value="5">5</option>
+        <option value="7">7</option>
+        <option value="9">9</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">8.</span> <span class="ru-hint">На рынке много людей.</span>
+      <div class="qbuild" data-answer="Базарда адамдар көп" data-words="көп|адамдар|Базарда"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">9.</span> <span class="ru-hint">Я беру два килограмма яблок.</span>
+      <div class="qbuild" data-answer="Мен екі келі алма аламын" data-words="алма|екі|аламын|Мен|келі"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
     <button type="button" class="next-card" data-open="tool-suffix">
       <span class="next-marker"></span>
       <span class="next-text">
         <span class="next-label">Келесі · дальше</span>
-        <span class="next-title">Потренируй суффиксы в подборщике</span>
+        <span class="next-title">Потренируй окончания в подборщике</span>
       </span>
       <span class="next-arrow">→</span>
     </button>
@@ -1162,15 +1665,16 @@
 
   // Порядок = порядок прохождения. Темы без контента сюда не попадают,
   // иначе прогресс считался бы от несуществующих экранов.
-  var TOPICS = ["harmony-vowels","harmony-consonants","word-order"];
+  var TOPICS = ["harmony-vowels","harmony-consonants","word-order","zhiktik","pronouns","plural"];
 
   var BLOCKS = {
-    negiz:  { label:"Негіз",   planned:12, topics:["harmony-vowels","harmony-consonants","word-order"], color:"--negiz" },
-    septik: { label:"Септік",  planned:7,  topics:[], color:"--septik" }
+    negiz:  { label:"Негіз",   planned:12, topics:TOPICS.slice(), color:"--negiz" },
+    septik: { label:"Септік",  planned:7,  topics:[],              color:"--septik" }
   };
 
   var TOPIC_MINUTES = {
-    "harmony-vowels":18, "harmony-consonants":20, "word-order":16
+    "harmony-vowels":18, "harmony-consonants":20, "word-order":16,
+    "zhiktik":20, "pronouns":18, "plural":20
   };
 
   var STORAGE_KEY   = "kkProgressV1";
@@ -1524,7 +2028,37 @@
     "жақсы":"хорошо, хороший","өте":"очень","бүгін":"сегодня","ертең":"завтра","кешке":"вечером",
     "тағы":"ещё","не":"что","қайда":"где","ше":"а (…что насчёт)","де":"тоже","деген":"так называемое",
     "сөз":"слово","сөзден":"от слова","күні":"день (его)","рақмет":"спасибо","атым":"моё имя",
-    "танысқаныма":"знакомству","қуаныштымын":"я рад","қазақ":"казахский","тілін":"язык (вин.)"
+    "танысқаныма":"знакомству","қуаныштымын":"я рад","қазақ":"казах; казахский","тілін":"язык (вин.)",
+    // 0.4 кәсіп
+    "кәсіп":"профессия","маман":"специалист","инженер":"инженер","аспаз":"повар","әнші":"певец",
+    "ғалым":"учёный","жұмысшы":"рабочий","жас":"молодой; возраст","бақытты":"счастливый",
+    "әдемі":"красивый","биік":"высокий","және":"и","қиын":"трудный","бірақ":"но",
+    "екеуміз":"мы вдвоём","тұрамыз":"мы живём","жұмысымды":"свою работу","туралы":"о, про",
+    "астана":"Астана; столица","елорда":"столица","солтүстік":"север","солтүстікте":"на севере",
+    "қыс":"зима","суық":"холодный","бәйтерек":"Байтерек","мұнара":"башня","жаңа":"новый",
+    // 0.5 қонақ
+    "қонақ":"гость","қонақжайлылық":"гостеприимство","құрмет":"уважение","дастархан":"накрытый стол",
+    "дайын":"готовый","шай":"чай","ет":"мясо","кісі":"человек, персона","төр":"почётное место",
+    "отыру":"сидеть","отырады":"сидит","беру":"давать","береді":"даёт","келеді":"приходит",
+    "ежелгі":"древний","дәстүр":"традиция","мақал":"пословица","келсе":"если придёт","құт":"благодать",
+    "сәлем":"привет","қалайсың":"как ты","қалайсыз":"как вы","қызым":"доченька","апай":"тётя (обращение)",
+    "аға":"старший брат; обращение к мужчине","әпке":"старшая сестра","қарындас":"младшая сестра",
+    "өз":"свой, сам","сендер":"вы (несколько)","сіздер":"вы (несколько, вежливо)","бұл":"это",
+    // 0.6 базар
+    "базар":"рынок","көкөніс":"овощ","жеміс":"фрукт","өрік":"абрикос","қауын":"дыня",
+    "баға":"цена","теңге":"тенге","келі":"килограмм","ақша":"деньги","қанша":"сколько",
+    "бәрі":"всё, все","әртүрлі":"разный","аламын":"я беру","сатып":"покупая",
+    "бір":"один","үш":"три","төрт":"четыре","бес":"пять","алты":"шесть","жеті":"семь",
+    "сегіз":"восемь","тоғыз":"девять","он":"десять","жиырма":"двадцать","жүз":"сто","мың":"тысяча",
+    "беріңіз":"дайте","көл":"озеро","көлсай":"Кольсай","мөлдір":"прозрачный","айнала":"вокруг",
+    "қарағай":"сосна","жаз":"лето","жер":"место, земля","су":"вода",
+    "ойнайды":"играет","жағасында":"на берегу","да":"тоже, и",
+    // формулы вежливости и вопроса — разбираются в 0.11, но встречаются раньше
+    "сәлеметсіз":"здравствуйте","ма":"ли (вопрос)","ме":"ли (вопрос)","ба":"ли (вопрос)",
+    "бе":"ли (вопрос)","па":"ли (вопрос)","пе":"ли (вопрос)",
+    // города — чтобы работал перевод форм вроде Алматыда, Алматыдан
+    "алматы":"Алматы","алматыдан":"из Алматы","астанадан":"из Астаны",
+    "сау":"здоровый","болыңыз":"будьте","жұмысын":"свою работу"
   };
 
   // Слова в тексте стоят с окончаниями, а словарь — по большей части в
@@ -1532,10 +2066,13 @@
   // окончания по одному и пробуем снова. Лучше показать перевод основы, чем
   // не показать ничего.
   var STRIP = ["ларда","лерде","дарда","дерде","тарда","терде",
+               "сыңдар","сіңдер","сыздар","сіздер",
                "лар","лер","дар","дер","тар","тер",
                "дан","ден","тан","тен","нан","нен",
                "ның","нің","дың","дің","тың","тің",
                "мын","мін","бын","бін","пын","пін",
+               "мыз","міз","быз","біз","пыз","піз",
+               "сың","сің","сыз","сіз",
                "да","де","та","те","ға","ге","қа","ке",
                "ны","ні","ды","ді","ты","ті","сы","сі","ым","ім","ы","і","м","н"];
 
