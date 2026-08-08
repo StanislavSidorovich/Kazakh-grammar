@@ -559,20 +559,23 @@
         <span class="row-check" data-check="demonstratives" aria-hidden="true">✓</span>
         <span class="row-arrow" aria-hidden="true">›</span>
       </button>
-      <button type="button" class="topic-row" disabled>
+      <button type="button" class="topic-row" data-open="question-words">
         <span class="marker" style="background:var(--negiz)"></span>
         <span class="row-title"><span class="topic-num">0.10</span> Сұрау есімдіктері<span class="row-title-ru">кім, не, қайда, қашан, қалай</span></span>
-        <span class="row-soon">скоро</span>
+        <span class="row-check" data-check="question-words" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
       </button>
-      <button type="button" class="topic-row" disabled>
+      <button type="button" class="topic-row" data-open="question-particle">
         <span class="marker" style="background:var(--negiz)"></span>
         <span class="row-title"><span class="topic-num">0.11</span> Сұраулық -ма / -ме<span class="row-title-ru">вопросительная частица</span></span>
-        <span class="row-soon">скоро</span>
+        <span class="row-check" data-check="question-particle" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
       </button>
-      <button type="button" class="topic-row" disabled>
+      <button type="button" class="topic-row" data-open="negation">
         <span class="marker" style="background:var(--negiz)"></span>
-        <span class="row-title"><span class="topic-num">0.12</span> Емес и -ма<span class="row-title-ru">два разных отрицания</span></span>
-        <span class="row-soon">скоро</span>
+        <span class="row-title"><span class="topic-num">0.12</span> Емес, жоқ и -ма<span class="row-title-ru">емес, жоқ и -ма — три отрицания</span></span>
+        <span class="row-check" data-check="negation" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
       </button>
     </div>
   </div>
@@ -2141,11 +2144,476 @@
       <button class="btn btn-reveal" type="button">Показать ответы</button>
       <span class="quiz-result" aria-live="polite"></span>
     </div>
-    <button type="button" class="next-card" data-open="tool-suffix">
+    <button type="button" class="next-card" data-open="question-words">
       <span class="next-marker"></span>
       <span class="next-text">
         <span class="next-label">Келесі · дальше</span>
-        <span class="next-title">Потренируй окончания в подборщике</span>
+        <span class="next-title">Сұрау есімдіктері — вопросительные слова</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 0.10 СҰРАУ ЕСІМДІКТЕРІ ============ -->
+<div class="screen topic-screen" id="screen-question-words" data-topic="question-words" style="--tint-color:var(--negiz)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--negiz)"></span>
+    <h2><span class="topic-num">0.10</span> Сұрау есімдіктері</h2>
+    <span class="done-badge" data-badge="question-words">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Вопросительные слова. Главное здесь не сам список, а то, что порядок слов в вопросе не меняется.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
+    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
+    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>В русском вопросительное слово прыгает в начало: «Ты работаешь в школе» → «<b>Где</b> ты работаешь?». В казахском оно никуда не прыгает — <b>оно встаёт ровно туда, где стоял бы ответ</b>, и больше в предложении ничего не двигается.</p>
+    <ul class="examples">
+      <li>Мен <b>Алматыда</b> тұрамын. → Сен <b>қайда</b> тұрасың?<span class="ru">Я живу в Алматы. → Где ты живёшь?</span></li>
+      <li>Ол <b>дәрігер</b>. → Ол <b>кім</b>?<span class="ru">Он врач. → Кто он?</span></li>
+      <li>Бұл — <b>кітап</b>. → Бұл — <b>не</b>?<span class="ru">Это книга. → Это что?</span></li>
+      <li>Мен <b>ертең</b> барамын. → Сен <b>қашан</b> барасың?<span class="ru">Я поеду завтра. → Когда ты поедешь?</span></li>
+      <li>Бұл <b>бес мың</b> теңге. → Бұл <b>қанша</b> тұрады?<span class="ru">Это пять тысяч тенге. → Сколько это стоит?</span></li>
+    </ul>
+    <table>
+      <tr><th>Слово</th><th>Перевод</th><th>Пример</th></tr>
+      <tr><td class="kk">кім</td><td>кто</td><td class="kk">Ол кім?</td></tr>
+      <tr><td class="kk">не</td><td>что</td><td class="kk">Бұл не?</td></tr>
+      <tr><td class="kk">қайда</td><td>где, куда</td><td class="kk">Сен қайда барасың?</td></tr>
+      <tr><td class="kk">қайдан</td><td>откуда</td><td class="kk">Сіз қайдансыз?</td></tr>
+      <tr><td class="kk">қашан</td><td>когда</td><td class="kk">Ол қашан келеді?</td></tr>
+      <tr><td class="kk">неге</td><td>почему</td><td class="kk">Неге келмейді?</td></tr>
+      <tr><td class="kk">қалай</td><td>как</td><td class="kk">Сен қалайсың?</td></tr>
+      <tr><td class="kk">қанша</td><td>сколько</td><td class="kk">Қанша тұрады?</td></tr>
+      <tr><td class="kk">қандай</td><td>какой</td><td class="kk">Қандай кітап?</td></tr>
+      <tr><td class="kk">қай</td><td>который</td><td class="kk">Қай үй?</td></tr>
+    </table>
+    <div class="contrast">
+      <div class="label">қандай или қай</div>
+      <p><span class="kk">Қандай кітап?</span> — «какая книга?» в смысле «что за книга, какого рода». Ответ: интересная, толстая, казахская.</p>
+      <p><span class="kk">Қай кітап?</span> — «которая книга?» из нескольких лежащих перед тобой. Ответ: вот эта, красная.</p>
+      <p>Русское «какой» покрывает оба случая, поэтому его переводят наугад. Признак простой: если можно заменить на «который из этих» — нужен <span class="kk">қай</span>.</p>
+    </div>
+    <div class="trap"><b>Не тащи вопросительное слово в начало.</b> «Қайда сен тұрасың?» — понять поймут, но звучит переставленно, как «Где ты живёшь?» с ударением на «где». Нейтральный вопрос — <span class="kk">Сен қайда тұрасың?</span>: подлежащее на месте, вопросительное слово на месте ответа, глагол в конце. Проверка та же, что и в теме 0.3: <b>последнее слово — глагол?</b></div>
+    <div class="tip"><b>Учи вопрос вместе с ответом.</b> Не заучивай столбик из десяти слов — от него в разговоре мало толку. Возьми пару: <span class="kk">Сен қайда тұрасың? — Мен Алматыда тұрамын.</span> Проговори её целиком несколько раз. Так вопрос и ответ ложатся одним куском, и в живой речи не приходится собирать фразу заново.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 11 · Сапар — поездка</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">сапар</span> <span class="t">— поездка</span></div>
+          <div><span class="w">демалыс</span> <span class="t">— отдых, выходной</span></div>
+          <div><span class="w">аялдама</span> <span class="t">— остановка</span></div>
+          <div><span class="w">әуежай</span> <span class="t">— аэропорт</span></div>
+          <div><span class="w">пойыз</span> <span class="t">— поезд</span></div>
+          <div><span class="w">ұшақ</span> <span class="t">— самолёт</span></div>
+          <div><span class="w">билет</span> <span class="t">— билет</span></div>
+          <div><span class="w">кеңсе</span> <span class="t">— офис</span></div>
+          <div><span class="w">жиналыс</span> <span class="t">— собрание</span></div>
+          <div><span class="w">алыс</span> <span class="t">— далеко</span></div>
+          <div><span class="w">жақын</span> <span class="t">— близко</span></div>
+          <div><span class="w">шатқал</span> <span class="t">— каньон, ущелье</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> <span class="kk">ұшақ</span> — от глагола <span class="kk">ұшу</span> «летать», буквально «летающее». <span class="kk">Аялдама</span> — от <span class="kk">аялдау</span> «останавливаться». Казахский охотно делает существительные из глаголов, и часто новое слово можно разгадать, если узнал корень. Разбор этих суффиксов — тема 3.6.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Демалыс жоспары — планы на выходные</div>
+      <div class="mini-text">
+        <p class="storytext">Айгүлдің демалысы бар. Ол қайда барады? Ол тауға барады. Қашан барады? Сенбіде. Кіммен барады? Балаларымен. Қалай барады? Көлікпен. Жол алыс па? Жоқ, жақын. Тауда ауа таза, су мөлдір. Айгүл демалысты жақсы көреді.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">У Айгуль есть выходной. Куда она поедет? Она поедет в горы. Когда поедет? В субботу. С кем поедет? С детьми. Как поедет? На машине. Дорога далёкая? Нет, близко. В горах воздух чистый, вода прозрачная. Айгуль любит выходные.</p>
+        <p class="why-note"><b>Почему так:</b> текст нарочно построен как цепочка «вопрос — ответ». Посмотри на пары: <span class="kk">Ол қайда барады? — Ол тауға барады.</span> Вопросительное слово <span class="kk">қайда</span> стоит ровно там, где в ответе стоит <span class="kk">тауға</span>. Так же и с <span class="kk">қашан</span>, <span class="kk">кіммен</span>, <span class="kk">қалай</span> — ни одно предложение не перестроилось.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Шарын — каньон</div>
+      <div class="mini-text">
+        <p class="storytext">Шарын — үлкен шатқал. Ол Алматыға жақын. Шарын өзені тау арасында ағады. Шатқалдың қабырғалары қызыл. Мұнда ежелгі ағаштар өседі. Олар — қарағаш. Шарын — атақты жер. Мұнда қонақтар көп.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Чарын — большой каньон. Он близко к Алматы. Река Чарын течёт между гор. Стены каньона красные. Здесь растут древние деревья. Это ясени. Чарын — знаменитое место. Здесь много гостей.</p>
+        <p class="why-note"><b>Почему так:</b> в тексте нет ни одного вопроса — и это специально. Попробуй задать к нему пять вопросов сам: <span class="kk">Шарын не?</span>, <span class="kk">Ол қайда?</span>, <span class="kk">Қабырғалары қандай?</span> Составить вопрос к готовому тексту — упражнение полезнее, чем ответить на чужой.<br><br><b>Про ясени:</b> в Чарыне растёт согдийский ясень — реликтовая роща, пережившая ледниковый период. Таких мест в мире почти не осталось.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Әуежайда — в аэропорту</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Кешіріңіз, сіз қайдансыз?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Мен Алматыданмын. Сіз ше?</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Мен Астанаданмын. Сіздің ұшағыңыз қашан?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Сағат бесте. Ал сіздікі?</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Менікі жетіде. Бұл жерде кофе қайда бар?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Анау жақта. Алыс емес.</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Извините, вы откуда?<br><b>Айгуль:</b> Я из Алматы. А вы?<br><b>Данияр:</b> Я из Астаны. Ваш самолёт когда?<br><b>Айгуль:</b> В пять часов. А ваш?<br><b>Данияр:</b> Мой в семь. А где здесь есть кофе?<br><b>Айгуль:</b> Вон в той стороне. Недалеко.</p>
+        <p class="why-note"><b>Почему так:</b> <span class="kk">Сіз қайдансыз?</span> — вопросительное слово плюс личное окончание прямо на нём. Так можно: <span class="kk">қайдан</span> здесь работает как сказуемое «откуда вы есть».<br><br><span class="kk">Менікі</span> и <span class="kk">сіздікі</span> — «мой» и «ваш» как отдельные слова, без называния вещи. Это форма на <span class="kk">-нікі</span>, она из темы 3.6, пока просто запомни пару.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="question-words">
+    <p class="quiz-instruction">Выбери подходящее вопросительное слово или собери вопрос.</p>
+    <div class="qitem"><span class="qnum">1.</span> Сен <input class="blank" data-answer="қайда" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> тұрасың? <span class="hint">(где ты живёшь?)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Ол <input class="blank" data-answer="кім" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">? <span class="hint">(кто он?)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Бұл <input class="blank" data-answer="қанша" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> тұрады? <span class="hint">(сколько это стоит?)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Ол <input class="blank" data-answer="қашан" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> келеді? <span class="hint">(когда он придёт?)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> <span class="ru-hint">«Которая из этих книг?» — какое слово?</span>
+      <select class="mc" data-answer="қай">
+        <option value="">—</option>
+        <option value="қандай">қандай</option>
+        <option value="қай">қай</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="ru-hint">«Что это за книга, интересная?» — какое слово?</span>
+      <select class="mc" data-answer="қандай">
+        <option value="">—</option>
+        <option value="қандай">қандай</option>
+        <option value="қай">қай</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">Куда встаёт вопросительное слово?</span>
+      <select class="mc" data-answer="на место ответа">
+        <option value="">—</option>
+        <option value="в начало предложения">в начало предложения</option>
+        <option value="на место ответа">на место ответа</option>
+        <option value="в самый конец">в самый конец</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">8.</span> <span class="ru-hint">Где ты работаешь?</span>
+      <div class="qbuild" data-answer="Сен қайда істейсің" data-words="істейсің|қайда|Сен"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">9.</span> <span class="ru-hint">Когда он придёт?</span>
+      <div class="qbuild" data-answer="Ол қашан келеді" data-words="келеді|Ол|қашан"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
+    <button type="button" class="next-card" data-open="question-particle">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Сұраулық -ма / -ме — вопрос без слова</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 0.11 СҰРАУЛЫҚ -МА / -МЕ ============ -->
+<div class="screen topic-screen" id="screen-question-particle" data-topic="question-particle" style="--tint-color:var(--negiz)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--negiz)"></span>
+    <h2><span class="topic-num">0.11</span> Сұраулық -ма / -ме</h2>
+    <span class="done-badge" data-badge="question-particle">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Вопрос «да или нет» ставится отдельным словом. Одной интонации, как в русском, здесь не хватает.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
+    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
+    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>По-русски утверждение превращается в вопрос одной интонацией: «Ты студент.» → «Ты студент?». В казахском так нельзя — нужна частица. Она ставится <b>в самый конец</b> и пишется <b>отдельным словом</b>.</p>
+    <ul class="rule-list">
+      <li>Шесть вариантов, и выбор — снова закон созвучия, теперь уже привычный</li>
+      <li><span class="kk">-ма / -ме</span> — после гласных и <span class="kk">р, у, й, л</span></li>
+      <li><span class="kk">-ба / -бе</span> — после <span class="kk">м, н, ң</span> и звонких</li>
+      <li><span class="kk">-па / -пе</span> — после глухих</li>
+      <li>Отвечают на такой вопрос словом <span class="kk">иә</span> или <span class="kk">жоқ</span></li>
+      <li><b>С вопросительным словом частица не нужна:</b> в <span class="kk">Сен қайда тұрасың?</span> никакого <span class="kk">ма</span> нет</li>
+    </ul>
+    <ul class="examples">
+      <li>Бұл кітап <b>па</b>?<span class="ru">Это книга? (п — глухой → па)</span></li>
+      <li>Ол дәрігер <b>ме</b>?<span class="ru">Он врач? (р → ме)</span></li>
+      <li>Сен студентсің <b>бе</b>?<span class="ru">Ты студент? (ң → бе)</span></li>
+      <li>Уақытың бар <b>ма</b>?<span class="ru">У тебя есть время? (р → ма)</span></li>
+      <li>Сіз мұғалімсіз <b>бе</b>?<span class="ru">Вы учитель? (з → бе)</span></li>
+      <li>Жол алыс <b>па</b>?<span class="ru">Дорога далёкая? (с — глухой → па)</span></li>
+    </ul>
+    <div class="contrast">
+      <div class="label">Два типа вопросов — две разные механики</div>
+      <p><b>Вопрос «да/нет»</b> требует частицу и не требует вопросительного слова: <span class="kk">Сен келесің <b>бе</b>?</span> — «Ты придёшь?»</p>
+      <p><b>Вопрос по существу</b> требует вопросительное слово и не требует частицы: <span class="kk">Сен <b>қашан</b> келесің?</span> — «Когда ты придёшь?»</p>
+      <p>Смешивать их не нужно: «Сен қашан келесің бе?» — ошибка. Либо одно, либо другое.</p>
+    </div>
+    <div class="trap"><b>Частица цепляется к последнему слову, а не к глаголу.</b> Обычно они совпадают, потому что глагол и так стоит в конце. Но если в конце оказалось не глагольное слово, вариант выбирается по нему: <span class="kk">Уақытың бар <b>ма</b>?</span> — по слову <span class="kk">бар</span>, а не по <span class="kk">уақытың</span>. Смотри всегда на ту букву, которая стоит непосредственно перед частицей.</div>
+    <div class="tip"><b>Пиши раздельно.</b> В современной казахской орфографии частица — отдельное слово: <span class="kk">кітап па</span>, а не «кітаппа». Это единственное окончание в курсе, которое отделяется пробелом, и именно поэтому его легко забыть написать вовсе. В подборщике суффиксов выбери «Сұраулық шылау» — там она тоже показана через пробел.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 12 · Келісім — согласие и сомнение</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">рас</span> <span class="t">— правда</span></div>
+          <div><span class="w">әрине</span> <span class="t">— конечно</span></div>
+          <div><span class="w">мүмкін</span> <span class="t">— возможно</span></div>
+          <div><span class="w">дұрыс</span> <span class="t">— правильно</span></div>
+          <div><span class="w">жарайды</span> <span class="t">— ладно</span></div>
+          <div><span class="w">өтінемін</span> <span class="t">— пожалуйста</span></div>
+          <div><span class="w">бірге</span> <span class="t">— вместе</span></div>
+          <div><span class="w">бос</span> <span class="t">— свободный</span></div>
+          <div><span class="w">әлі</span> <span class="t">— ещё</span></div>
+          <div><span class="w">мейрамхана</span> <span class="t">— ресторан</span></div>
+          <div><span class="w">аспап</span> <span class="t">— инструмент</span></div>
+          <div><span class="w">танымал</span> <span class="t">— известный</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> все эти слова часто оказываются в конце фразы, а значит именно по ним и выбирается частица. <span class="kk">Рас па?</span> («правда?»), <span class="kk">Дұрыс па?</span> («правильно?»), <span class="kk">Бос па?</span> («свободно?») — все три через <span class="kk">па</span>, потому что кончаются на глухие <b>с</b>. А <span class="kk">Мүмкін бе?</span> — через <span class="kk">бе</span>, потому что <b>н</b>.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Домбыра — два струны и целый рассказ</div>
+      <div class="mini-text">
+        <p class="storytext">Домбыра — қазақ аспабы. Оның екі ішегі бар. Домбырада күй ойнайды. Күй — сөзсіз әңгіме. Құрманғазы — атақты күйші. Оның күйлері әлі де танымал. Сен домбыра тыңдайсың ба? Бұл — қиын аспап па? Жоқ, қиын емес.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Домбра — казахский инструмент. У неё две струны. На домбре играют кюй. Кюй — рассказ без слов. Курмангазы — знаменитый кюйши. Его кюи известны до сих пор. Ты слушаешь домбру? Это трудный инструмент? Нет, не трудный.</p>
+        <p class="why-note"><b>Почему так:</b> три вопроса подряд, и все с разными частицами. <span class="kk">тыңдайсың <b>ба</b></span> — после <b>ң</b>. <span class="kk">аспап <b>па</b></span> — после глухого <b>п</b>. Один и тот же вопрос «да или нет», три разных написания — потому что разные буквы перед частицей.<br><br><b>Про кюй:</b> это не просто мелодия, а история, рассказанная без слов, — у каждого кюя есть сюжет, который раньше рассказывали перед исполнением. Курмангазы жил в XIX веке, и его «Сарыарка» звучит до сих пор в любом концерте.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Шақыру — приглашение</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Сәлем! Бүгін бос па?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Кешке бос. Неге сұрайсың?</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Мейрамханаға бірге барамыз ба?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Әрине! Ол мейрамхана алыс па?</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Жоқ, жақын. Сағат жетіде бе?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Жарайды. Сонда кездесеміз.</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Привет! Ты сегодня свободна?<br><b>Айгуль:</b> Вечером свободна. А почему спрашиваешь?<br><b>Данияр:</b> Пойдём вместе в ресторан?<br><b>Айгуль:</b> Конечно! Тот ресторан далеко?<br><b>Данияр:</b> Нет, близко. В семь часов?<br><b>Айгуль:</b> Ладно. Там и встретимся.</p>
+        <p class="why-note"><b>Почему так:</b> в диалоге пять вопросов, и только один из них — с вопросительным словом (<span class="kk">Неге сұрайсың?</span>). Обрати внимание: именно в нём частицы нет. Остальные четыре — «да или нет», и у каждого своя частица: <span class="kk">па</span>, <span class="kk">ба</span>, <span class="kk">па</span>, <span class="kk">бе</span>.<br><br>Так выглядит обычный бытовой разговор: частица нужна буквально в каждой второй реплике, и без неё речь сразу звучит как набор утверждений.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="question-particle">
+    <p class="quiz-instruction">Впиши нужный вариант частицы. Смотри на букву прямо перед ней.</p>
+    <div class="qitem"><span class="qnum">1.</span> Бұл кітап <input class="blank" data-answer="па" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">? <span class="hint">(это книга?)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Ол дәрігер <input class="blank" data-answer="ме" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">? <span class="hint">(он врач?)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Уақытың бар <input class="blank" data-answer="ма" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">? <span class="hint">(есть время?)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Сіз мұғалімсіз <input class="blank" data-answer="бе" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">? <span class="hint">(вы учитель?)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Жол алыс <input class="blank" data-answer="па" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">? <span class="hint">(дорога далеко?)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> Бүгін бос <input class="blank" data-answer="па" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">? <span class="hint">(сегодня свободен?)</span></div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">Нужна ли частица в вопросе</span> <span class="kk">Сен қайда тұрасың?</span>
+      <select class="mc" data-answer="не нужна">
+        <option value="">—</option>
+        <option value="нужна">нужна</option>
+        <option value="не нужна">не нужна</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="ru-hint">Как пишется частица?</span>
+      <select class="mc" data-answer="отдельным словом">
+        <option value="">—</option>
+        <option value="слитно">слитно: кітаппа</option>
+        <option value="отдельным словом">отдельным словом: кітап па</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">9.</span> <span class="ru-hint">Ты студент?</span>
+      <div class="qbuild" data-answer="Сен студентсің бе" data-words="бе|студентсің|Сен"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">10.</span> <span class="ru-hint">Тот ресторан далеко?</span>
+      <div class="qbuild" data-answer="Ол мейрамхана алыс па" data-words="алыс|па|мейрамхана|Ол"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
+    <button type="button" class="next-card" data-open="negation">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Емес, жоқ и -ма — три отрицания</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 0.12 ЕМЕС / ЖОҚ / -МА ============ -->
+<div class="screen topic-screen" id="screen-negation" data-topic="negation" style="--tint-color:var(--negiz)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--negiz)"></span>
+    <h2><span class="topic-num">0.12</span> Емес, жоқ и -ма</h2>
+    <span class="done-badge" data-badge="negation">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Три разных отрицания там, где русский обходится словом «не». Перепутать их — самая частая ошибка на этом уровне.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
+    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
+    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>Русское «не» умеет всё сразу: «я не врач», «у меня нет времени», «я не знаю». Казахский эти три случая разводит, и выбор между ними — не стилистика, а грамматика.</p>
+    <table>
+      <tr><th>Смысл</th><th>Чем</th><th>Пример</th></tr>
+      <tr><td>не является<br><span class="hint">отрицаем признак</span></td><td class="kk">емес</td><td class="kk">Мен дәрігер <b>емеспін</b><span class="hint">я не врач</span></td></tr>
+      <tr><td>отсутствует<br><span class="hint">отрицаем наличие</span></td><td class="kk">жоқ</td><td class="kk">Уақытым <b>жоқ</b><span class="hint">у меня нет времени</span></td></tr>
+      <tr><td>не делает<br><span class="hint">отрицаем действие</span></td><td class="kk">-ма/-ме на глаголе</td><td class="kk">Мен біл<b>ме</b>ймін<span class="hint">я не знаю</span></td></tr>
+    </table>
+    <ul class="rule-list">
+      <li><span class="kk">Емес</span> ставится <b>после</b> слова и само получает личное окончание: <span class="kk">емеспін, емессің, емессіз, емес, емеспіз</span></li>
+      <li><span class="kk">Жоқ</span> ничего вокруг не меняет — просто встаёт вместо <span class="kk">бар</span></li>
+      <li>Отрицание глагола вставляется <b>внутрь слова</b>, между основой и остальным: <span class="kk">біл-<b>ме</b>-ймін</span></li>
+      <li>Варианты <span class="kk">-ма/-ме/-ба/-бе/-па/-пе</span> — тот же закон созвучия, что и у вопросительной частицы</li>
+    </ul>
+    <ul class="examples">
+      <li>Мен мұғалім <b>емеспін</b>.<span class="ru">Я не учитель.</span></li>
+      <li>Бұл менің кітабым <b>емес</b>.<span class="ru">Это не моя книга.</span></li>
+      <li>Менің көлігім <b>жоқ</b>.<span class="ru">У меня нет машины.</span></li>
+      <li>Мен біл<b>ме</b>ймін.<span class="ru">Я не знаю.</span></li>
+      <li>Ол кел<b>ме</b>йді.<span class="ru">Он не придёт.</span></li>
+      <li>Маған ұна<b>ма</b>йды.<span class="ru">Мне не нравится.</span></li>
+    </ul>
+    <div class="contrast">
+      <div class="label">«Это не моя книга» ↔ «У меня нет книги»</div>
+      <p><span class="kk">Бұл менің кітабым <b>емес</b></span> — книга существует, она лежит перед нами, просто она чужая.</p>
+      <p><span class="kk">Менің кітабым <b>жоқ</b></span> — книги нет вообще, ни своей, ни чужой.</p>
+      <p>По-русски обе фразы начинаются одинаково, и разницу несёт только конец предложения. Поэтому её так легко потерять при переводе — а в казахском это два разных слова, и подменить одно другим нельзя.</p>
+    </div>
+    <div class="trap"><b>«Мен дәрігер жоқпын» — так не говорят.</b> <span class="kk">Жоқ</span> отрицает существование, а не признак: сказать так — примерно как по-русски «меня-врача не существует». Если отрицаешь, <b>кто ты</b> или <b>какой ты</b>, нужен <span class="kk">емес</span>: <span class="kk">Мен дәрігер емеспін</span>. Проверка простая: подставь мысленно «не является» — если подходит по смыслу, значит <span class="kk">емес</span>.</div>
+    <div class="tip"><b>Отрицание глагола — задел на будущее.</b> Формы вроде <span class="kk">білмеймін</span> и <span class="kk">келмейді</span> пока запоминай целиком, как готовые слова. Разбирать, из чего они собраны и как меняются по временам, будем в блоке «Етістік» — там <span class="kk">-ма/-ме</span> встанет на своё место в общей схеме глагола. Сейчас достаточно узнавать его в тексте и не путать с <span class="kk">емес</span>.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 13 · Жоқ деген сөздер — отрицание</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">ешкім</span> <span class="t">— никто</span></div>
+          <div><span class="w">ештеңе</span> <span class="t">— ничего</span></div>
+          <div><span class="w">ешқашан</span> <span class="t">— никогда</span></div>
+          <div><span class="w">қате</span> <span class="t">— ошибка</span></div>
+          <div><span class="w">шындық</span> <span class="t">— правда, истина</span></div>
+          <div><span class="w">енді</span> <span class="t">— теперь</span></div>
+          <div><span class="w">бәрібір</span> <span class="t">— всё равно</span></div>
+          <div><span class="w">ұнайды</span> <span class="t">— нравится</span></div>
+          <div><span class="w">түсінемін</span> <span class="t">— понимаю</span></div>
+          <div><span class="w">білмеймін</span> <span class="t">— не знаю</span></div>
+          <div><span class="w">теңіз</span> <span class="t">— море</span></div>
+          <div><span class="w">балық</span> <span class="t">— рыба</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> слова на <span class="kk">еш-</span> в казахском, как и русские «никто, ничего», требуют второго отрицания в предложении: <span class="kk">Ештеңе білмеймін</span> — буквально «ничего не знаю». Двойное отрицание здесь норма, ровно как в русском, — так что это тот редкий случай, где привычка не мешает.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Қате — про ошибки</div>
+      <div class="mini-text">
+        <p class="storytext">Мен әлі мұғалім емеспін. Мен оқушымын. Менде көп сұрақ бар, жауап жоқ. Кейде ештеңе түсінбеймін. Бұл жаман ба? Жоқ, жаман емес. Қате — жаман нәрсе емес. Қатесіз тіл үйренбейді. Мен ешқашан тоқтамаймын.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Я ещё не учитель. Я ученик. У меня много вопросов, ответов нет. Иногда я ничего не понимаю. Это плохо? Нет, не плохо. Ошибка — не плохая вещь. Без ошибок язык не выучишь. Я никогда не остановлюсь.</p>
+        <p class="why-note"><b>Почему так:</b> в тексте все три отрицания рядом. <span class="kk">мұғалім <b>емеспін</b></span> — не являюсь. <span class="kk">жауап <b>жоқ</b></span> — отсутствует. <span class="kk">түсін<b>бе</b>ймін</span>, <span class="kk">үйрен<b>бе</b>йді</span>, <span class="kk">тоқта<b>ма</b>ймын</span> — не делаю. Проверь себя: сможешь объяснить, почему в каждом случае выбрано именно это?</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Арал — море, которое возвращается</div>
+      <div class="mini-text">
+        <p class="storytext">Арал — теңіз. Қазір онда су аз. Балықшылар мұнда енді жоқ. Ескі кемелер құмда тұр. Бұл — қайғылы жер. Бірақ солтүстік Аралда су қайта келеді. Онда балық қайта бар. Ештеңе мүлдем жоғалмайды.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Арал — море. Сейчас там мало воды. Рыбаков здесь больше нет. Старые корабли стоят на песке. Это печальное место. Но в северном Арале вода возвращается. Там снова есть рыба. Ничто не исчезает совсем.</p>
+        <p class="why-note"><b>Почему так:</b> <span class="kk">Балықшылар енді <b>жоқ</b></span> — рыбаков нет физически, отсутствие. А <span class="kk">Ештеңе <b>жоғалмайды</b></span> — отрицание действия, потому и <span class="kk">-ма</span> внутри глагола.<br><br><b>Про северный Арал:</b> в 2005 году построили Кокаральскую плотину, и вода в северной части начала подниматься. Уровень вырос на несколько метров, рыба вернулась, рыболовство в Аральске снова работает. Южная часть по-прежнему высыхает — но одна половина всё-таки спаслась.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Түсінбедім — не понял</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Сен қазақша білесің бе?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Аз білемін. Бәрін түсінбеймін.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Бұл қиын ба?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Қиын емес, бірақ жаңа. Мен әлі оқушымын.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Қателерден қорықпа. Ешкім бірден білмейді.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Рас. Рақмет!</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Ты знаешь казахский?<br><b>Айгуль:</b> Немного знаю. Не всё понимаю.<br><b>Данияр:</b> Это трудно?<br><b>Айгуль:</b> Не трудно, но ново. Я ещё ученик.<br><b>Данияр:</b> Не бойся ошибок. Никто не знает сразу.<br><b>Айгуль:</b> Правда. Спасибо!</p>
+        <p class="why-note"><b>Почему так:</b> <span class="kk">Қиын емес</span> — отрицание признака, без всякого глагола: два слова, и фраза готова. А <span class="kk">Ешкім бірден біл<b>ме</b>йді</span> — отрицание действия, <span class="kk">-ме</span> уходит внутрь глагола.<br><br><span class="kk">Қорықпа</span> — «не бойся», отрицательная форма повеления: та же частица <span class="kk">-па</span>, приклеенная к основе. Повелительное наклонение целиком — тема 2.1.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="negation">
+    <p class="quiz-instruction">Выбери правильное отрицание. Спроси себя: отрицаем признак, наличие или действие?</p>
+    <div class="qitem"><span class="qnum">1.</span> Мен дәрігер <input class="blank" data-answer="емеспін" style="width:7em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">. <span class="hint">(я не врач)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Менің уақытым <input class="blank" data-answer="жоқ" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">. <span class="hint">(у меня нет времени)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Бұл менің кітабым <input class="blank" data-answer="емес" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">. <span class="hint">(это не моя книга)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> <span class="ru-hint">«Я не учитель» —</span>
+      <select class="mc" data-answer="Мен мұғалім емеспін">
+        <option value="">—</option>
+        <option value="Мен мұғалім жоқпын">Мен мұғалім жоқпын</option>
+        <option value="Мен мұғалім емеспін">Мен мұғалім емеспін</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">5.</span> <span class="ru-hint">«У меня нет машины» —</span>
+      <select class="mc" data-answer="Менің көлігім жоқ">
+        <option value="">—</option>
+        <option value="Менің көлігім емес">Менің көлігім емес</option>
+        <option value="Менің көлігім жоқ">Менің көлігім жоқ</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="ru-hint">«Я не знаю» — где стоит отрицание?</span>
+      <select class="mc" data-answer="внутри глагола">
+        <option value="">—</option>
+        <option value="внутри глагола">внутри глагола: білмеймін</option>
+        <option value="отдельным словом">отдельным словом: білемін емес</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">Что значит</span> <span class="kk">Бұл менің үйім емес</span>?
+      <select class="mc" data-answer="это не мой дом">
+        <option value="">—</option>
+        <option value="у меня нет дома">у меня нет дома</option>
+        <option value="это не мой дом">это не мой дом</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">8.</span> <span class="ru-hint">Я не врач.</span>
+      <div class="qbuild" data-answer="Мен дәрігер емеспін" data-words="емеспін|дәрігер|Мен"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">9.</span> <span class="ru-hint">Никто не знает сразу.</span>
+      <div class="qbuild" data-answer="Ешкім бірден білмейді" data-words="білмейді|Ешкім|бірден"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
+    <button type="button" class="next-card" data-open="cheat-law">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Блок «Негіз» пройден</span>
+        <span class="next-title">Повтори закон созвучия перед падежами</span>
       </span>
       <span class="next-arrow">→</span>
     </button>
@@ -2163,7 +2631,8 @@
   // Порядок = порядок прохождения. Темы без контента сюда не попадают,
   // иначе прогресс считался бы от несуществующих экранов.
   var TOPICS = ["harmony-vowels","harmony-consonants","word-order","zhiktik","pronouns","plural",
-               "possessive","bar-zhoq","demonstratives"];
+               "possessive","bar-zhoq","demonstratives",
+               "question-words","question-particle","negation"];
 
   var BLOCKS = {
     negiz:  { label:"Негіз",   planned:12, topics:TOPICS.slice(), color:"--negiz" },
@@ -2173,7 +2642,8 @@
   var TOPIC_MINUTES = {
     "harmony-vowels":18, "harmony-consonants":20, "word-order":16,
     "zhiktik":20, "pronouns":18, "plural":20,
-    "possessive":22, "bar-zhoq":18, "demonstratives":18
+    "possessive":22, "bar-zhoq":18, "demonstratives":18,
+    "question-words":18, "question-particle":16, "negation":20
   };
 
   var STORAGE_KEY   = "kkProgressV1";
@@ -2487,11 +2957,22 @@
     box.style.display = "block";
   }
 
+  // 1 тема / 2 темы / 5 тем — иначе на главной вылезает «открыто 12 темы»
+  function plural(n, one, few, many){
+    var mod100 = n % 100, mod10 = n % 10;
+    if(mod100 >= 11 && mod100 <= 14) return many;
+    if(mod10 === 1) return one;
+    if(mod10 >= 2 && mod10 <= 4) return few;
+    return many;
+  }
+
   function renderTotalTime(){
     var el = document.getElementById("totalTimeNote");
     if(!el) return;
+    var n = TOPICS.length;
     var mins = TOPICS.reduce(function(s,t){ return s + (TOPIC_MINUTES[t] || 0); }, 0);
-    el.textContent = "Сейчас открыто " + TOPICS.length + " темы — примерно " + mins + " мин занятий.";
+    el.textContent = "Сейчас открыто " + n + " " + plural(n, "тема", "темы", "тем") +
+                     " — примерно " + Math.round(mins/60*10)/10 + " часа занятий.";
   }
 
   /* ================= СЛОВАРЬ И ТАП-ПЕРЕВОД ================= */
@@ -2581,7 +3062,34 @@
     "таңдау":"выбор","кешіріңіз":"извините","тұр":"стоит",
     // географические названия и формы глаголов, которые не сводятся к основе
     "түркістан":"Туркестан","байқоңыр":"Байконур","қазақстан":"Казахстан","юнеско":"ЮНЕСКО",
-    "барамын":"я еду, я иду","аламын":"я беру"
+    "барамын":"я еду, я иду","аламын":"я беру",
+    // 0.10 сапар
+    "сапар":"поездка","демалыс":"отдых, выходной","аялдама":"остановка","әуежай":"аэропорт",
+    "пойыз":"поезд","ұшақ":"самолёт","билет":"билет","кеңсе":"офис","жиналыс":"собрание",
+    "алыс":"далеко","жақын":"близко","шатқал":"каньон, ущелье","өзен":"река","ағады":"течёт",
+    "қабырға":"стена","қарағаш":"ясень","арасында":"между","ауа":"воздух","таза":"чистый",
+    "қайда":"где, куда","қайдан":"откуда","қашан":"когда","неге":"почему","қалай":"как",
+    "қандай":"какой","қай":"который","кім":"кто","сенбіде":"в субботу","кіммен":"с кем",
+    "көлікпен":"на машине","жақта":"в стороне","кофе":"кофе","менікі":"мой","сіздікі":"ваш",
+    "барады":"идёт, едет","барасың":"ты едешь","тұрасың":"ты живёшь","істейсің":"ты работаешь",
+    // 0.11 келісім
+    "рас":"правда","әрине":"конечно","мүмкін":"возможно","дұрыс":"правильно","жарайды":"ладно",
+    "өтінемін":"пожалуйста","бірге":"вместе","бос":"свободный","әлі":"ещё",
+    "мейрамхана":"ресторан","аспап":"инструмент","аспабы":"инструмент (его)","танымал":"известный",
+    "домбыра":"домбра","ішек":"струна","күй":"кюй (пьеса)","күйші":"кюйши, исполнитель",
+    "әңгіме":"рассказ","сөзсіз":"без слов","тыңдайсың":"ты слушаешь","сұрайсың":"ты спрашиваешь",
+    "барамыз":"мы пойдём","кездесеміз":"встретимся","сонда":"там, тогда","жетіде":"в семь",
+    "бесте":"в пять","құрманғазы":"Курмангазы",
+    // 0.12 болымсыздық
+    "емес":"не является","ешкім":"никто","ештеңе":"ничего","ешқашан":"никогда","қате":"ошибка",
+    "шындық":"правда, истина","енді":"теперь","бәрібір":"всё равно","ұнайды":"нравится",
+    "түсінемін":"понимаю","түсінбеймін":"не понимаю","білмеймін":"не знаю","келмейді":"не придёт",
+    "жоғалмайды":"не исчезает","тоқтамаймын":"не остановлюсь","үйренбейді":"не выучишь",
+    "қорықпа":"не бойся","теңіз":"море","балық":"рыба","балықшы":"рыбак","кеме":"корабль",
+    "құм":"песок","қайғылы":"печальный","қайта":"снова","мүлдем":"совсем","нәрсе":"вещь",
+    "қатесіз":"без ошибок","кейде":"иногда","жаман":"плохой","бірден":"сразу","бәрін":"всё",
+    "қазақша":"по-казахски","үйрену":"учить, осваивать","білмейді":"не знает",
+    "шарын":"Чарын","арал":"Арал"
   };
 
   // Слова в тексте стоят с окончаниями, а словарь — по большей части в

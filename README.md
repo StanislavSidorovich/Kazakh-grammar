@@ -2,7 +2,7 @@
 
 Офлайн-курс казахской грамматики для самостоятельного изучения. Один HTML-файл, без сервера, без регистрации, без рекламы. Работает как PWA — можно установить на экран телефона и заниматься без интернета.
 
-> **Статус: ранняя версия.** Готовы каркас приложения и первые девять тем блока «Негіз» — три четверти блока. Курс растёт по одной-две темы за подход, план ниже.
+> **Статус: ранняя версия.** Готовы каркас приложения и весь блок «Негіз» целиком — 12 тем из 19 первой версии. Дальше падежи. Курс растёт по одной-две темы за подход, план ниже.
 
 ## Что внутри
 
@@ -24,7 +24,7 @@
 | 2 · Етістік | A2 | Негізгі | 11 | Времена, вспомогательные глаголы, есімше и көсемше |
 | 3 · Кеңейту | A2–B1 | Негізгі–Орта | 12 | Условное и желательное наклонения, послелоги, залоги, сложное предложение |
 
-Готово сейчас: **0.1 Үндестік заңы I**, **0.2 Үндестік заңы II**, **0.3 Сөйлем құрылымы**, **0.4 Жіктік жалғау**, **0.5 Есімдіктер**, **0.6 Көптік жалғау**, **0.7 Тәуелдік жалғау**, **0.8 Бар / жоқ**, **0.9 Бұл / осы / сол / ол** — 9 из 19 тем первой версии.
+Готово сейчас: **0.1 Үндестік заңы I**, **0.2 Үндестік заңы II**, **0.3 Сөйлем құрылымы**, **0.4 Жіктік жалғау**, **0.5 Есімдіктер**, **0.6 Көптік жалғау**, **0.7 Тәуелдік жалғау**, **0.8 Бар / жоқ**, **0.9 Бұл / осы / сол / ол**, **0.10 Сұрау есімдіктері**, **0.11 Сұраулық -ма / -ме**, **0.12 Емес, жоқ и -ма** — блок «Негіз» закрыт полностью, 12 из 19 тем первой версии. Осталось семь падежей.
 
 ## Кому подходит
 
@@ -79,7 +79,7 @@ Unlike the author's [English grammar course](https://github.com/StanislavSidorov
 
 Kazakh is agglutinative, and nearly every suffix is selected by vowel and consonant harmony (*үндестік заңы*), so the app ships a **suffix picker**: type any Kazakh word, pick a suffix type, and it shows the correct variant with a step-by-step explanation — which vowel governs, and which class the final consonant belongs to. There is also a dedicated **sentence-building** exercise type for SOV word order, which fill-in-the-blank drills cannot train.
 
-Planned: 42 topics across four blocks (A1–B1 / ҚАЗТЕСТ Қарапайым–Орта). Currently shipped: the app shell plus the first nine topics.
+Planned: 42 topics across four blocks (A1–B1 / ҚАЗТЕСТ Қарапайым–Орта). Currently shipped: the complete Негіз block — 12 of the 19 topics planned for v1; the seven case topics remain.
 
 **Fonts:** the Kazakh letters ә ғ қ ң ө ү һ live in the `cyrillic-ext` subset and ұ і in `cyrillic`. Golos Text covers all of them; Manrope does not, so Manrope is loaded with Latin only and falls back to Golos for any Cyrillic.
 
