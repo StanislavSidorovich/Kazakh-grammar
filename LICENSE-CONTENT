@@ -1,0 +1,54 @@
+Учебные материалы курса — лицензия CC BY-NC-SA 4.0
+Course content — licensed under CC BY-NC-SA 4.0
+
+Copyright (c) 2026 Stanislav Sidorovich
+
+
+Что покрывает эта лицензия / What this covers
+---------------------------------------------
+
+Учебное наполнение курса: объяснения правил, примеры, тексты для чтения,
+диалоги, задания и ответы к ним, словарь перевода слов, а также изображения
+в assets/ (кроме шрифтов).
+
+The teaching content: rule explanations, examples, reading texts, dialogues,
+exercises and their answer keys, the word-translation dictionary, and the
+images in assets/ (fonts excluded).
+
+Программный код (HTML/CSS/JavaScript, движок сингармонизма, service worker,
+PWA-обвязка) лицензирован отдельно — см. LICENSE (MIT). Шрифты — см.
+assets/fonts/OFL-*.txt (SIL OFL 1.1).
+
+The source code (HTML/CSS/JavaScript, the vowel-harmony engine, service worker,
+PWA plumbing) is licensed separately — see LICENSE (MIT). Fonts — see
+assets/fonts/OFL-*.txt (SIL OFL 1.1).
+
+
+Условия / Terms
+---------------
+
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+(CC BY-NC-SA 4.0). Полный текст лицензии / full legal code:
+
+    https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+    https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ru
+
+Коротко: материалы можно свободно копировать, распространять и переделывать
+при трёх условиях —
+
+  BY   — указать автора (Stanislav Sidorovich) и дать ссылку на источник:
+         https://github.com/StanislavSidorovich/Kazakh-grammar
+  NC   — не использовать в коммерческих целях;
+  SA   — производные работы распространять на тех же условиях.
+
+In short: share and adapt freely, provided you give attribution with a link to
+the source, do not use the material commercially, and license your derivatives
+under the same terms.
+
+Использование в некоммерческом обучении — на уроках, в кружках, в занятиях
+с собственными детьми — разрешено и приветствуется, отдельного разрешения
+спрашивать не нужно. На коммерческое использование напишите автору.
+
+Non-commercial teaching use — in classes, study groups, or with your own
+children — is explicitly allowed and welcome; no separate permission needed.
+For commercial use, contact the author.
