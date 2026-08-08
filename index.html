@@ -541,20 +541,23 @@
         <span class="row-check" data-check="plural" aria-hidden="true">✓</span>
         <span class="row-arrow" aria-hidden="true">›</span>
       </button>
-      <button type="button" class="topic-row" disabled>
+      <button type="button" class="topic-row" data-open="possessive">
         <span class="marker" style="background:var(--negiz)"></span>
         <span class="row-title"><span class="topic-num">0.7</span> Тәуелдік жалғау<span class="row-title-ru">принадлежность суффиксом</span></span>
-        <span class="row-soon">скоро</span>
+        <span class="row-check" data-check="possessive" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
       </button>
-      <button type="button" class="topic-row" disabled>
+      <button type="button" class="topic-row" data-open="bar-zhoq">
         <span class="marker" style="background:var(--negiz)"></span>
         <span class="row-title"><span class="topic-num">0.8</span> Бар / жоқ<span class="row-title-ru">«есть» и «нет», «у меня есть»</span></span>
-        <span class="row-soon">скоро</span>
+        <span class="row-check" data-check="bar-zhoq" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
       </button>
-      <button type="button" class="topic-row" disabled>
+      <button type="button" class="topic-row" data-open="demonstratives">
         <span class="marker" style="background:var(--negiz)"></span>
         <span class="row-title"><span class="topic-num">0.9</span> Бұл / осы / сол / ол<span class="row-title-ru">указательные слова</span></span>
-        <span class="row-soon">скоро</span>
+        <span class="row-check" data-check="demonstratives" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
       </button>
       <button type="button" class="topic-row" disabled>
         <span class="marker" style="background:var(--negiz)"></span>
@@ -1644,6 +1647,500 @@
       <button class="btn btn-reveal" type="button">Показать ответы</button>
       <span class="quiz-result" aria-live="polite"></span>
     </div>
+    <button type="button" class="next-card" data-open="possessive">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Тәуелдік жалғау — принадлежность</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 0.7 ТӘУЕЛДІК ЖАЛҒАУ ============ -->
+<div class="screen topic-screen" id="screen-possessive" data-topic="possessive" style="--tint-color:var(--negiz)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--negiz)"></span>
+    <h2><span class="topic-num">0.7</span> Тәуелдік жалғау</h2>
+    <span class="done-badge" data-badge="possessive">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Принадлежность — окончанием на самой вещи. «Мой» живёт не в отдельном слове, а внутри слова «книга».</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
+    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
+    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>«Моя книга» по-русски — два слова, и первое ещё и меняется по роду: моя книга, мой дом, моё окно. Казахский делает это одним словом и без всякого рода: <span class="kk">кітаб<b>ым</b></span> — «книга-моя».</p>
+    <table>
+      <tr><th>Чьё</th><th>После согласного</th><th>После гласного</th></tr>
+      <tr><td class="kk">менің <span class="hint">мой</span></td><td class="kk">-ым / -ім<br><span class="hint">кітаб<b>ым</b></span></td><td class="kk">-м<br><span class="hint">бала<b>м</b></span></td></tr>
+      <tr><td class="kk">сенің <span class="hint">твой</span></td><td class="kk">-ың / -ің<br><span class="hint">кітаб<b>ың</b></span></td><td class="kk">-ң<br><span class="hint">бала<b>ң</b></span></td></tr>
+      <tr><td class="kk">сіздің <span class="hint">ваш</span></td><td class="kk">-ыңыз / -іңіз<br><span class="hint">кітаб<b>ыңыз</b></span></td><td class="kk">-ңыз / -ңіз<br><span class="hint">бала<b>ңыз</b></span></td></tr>
+      <tr><td class="kk">оның <span class="hint">его, её</span></td><td class="kk">-ы / -і<br><span class="hint">кітаб<b>ы</b></span></td><td class="kk">-сы / -сі<br><span class="hint">бала<b>сы</b></span></td></tr>
+      <tr><td class="kk">біздің <span class="hint">наш</span></td><td class="kk">-ымыз / -іміз<br><span class="hint">кітаб<b>ымыз</b></span></td><td class="kk">-мыз / -міз<br><span class="hint">бала<b>мыз</b></span></td></tr>
+    </table>
+    <ul class="rule-list">
+      <li>Окончание ставится на то, <b>чем владеют</b>, а не на владельца</li>
+      <li>Слово <span class="kk">менің</span> можно опустить — окончание уже сказало, чьё: <span class="kk">кітабым</span> = «моя книга»</li>
+      <li>Рода нет: <span class="kk">оның</span> и <span class="kk">-ы</span> одинаковы для «его» и «её»</li>
+      <li>Если есть и множественное число, оно идёт <b>первым</b>: <span class="kk">бала<b>лар</b>ым</span> — «мои дети»</li>
+    </ul>
+    <ul class="examples">
+      <li>Менің үй<b>ім</b> үлкен.<span class="ru">Мой дом большой.</span></li>
+      <li>Сенің дос<b>ың</b> келеді.<span class="ru">Твой друг придёт.</span></li>
+      <li>Сіздің бөлме<b>ңіз</b> дайын.<span class="ru">Ваша комната готова.</span></li>
+      <li>Оның әке<b>сі</b> — дәрігер.<span class="ru">Его (её) папа — врач.</span></li>
+      <li>Біздің қала<b>мыз</b> әдемі.<span class="ru">Наш город красивый.</span></li>
+      <li>Бала<b>лар</b><b>ым</b> мектепте.<span class="ru">Мои дети в школе.</span></li>
+    </ul>
+    <div class="contrast">
+      <div class="label">Кто с кем согласуется</div>
+      <p>В русском «мой» подстраивается под вещь: мо<b>й</b> дом, мо<b>я</b> книга, мо<b>ё</b> окно — а сама вещь не меняется.</p>
+      <p>В казахском наоборот: меняется <b>вещь</b>, и подстраивается она не под род (его нет), а под закон созвучия — <span class="kk">үй<b>ім</b></span>, но <span class="kk">қала<b>м</b></span>, но <span class="kk">кітаб<b>ым</b></span>. Владелец же (<span class="kk">менің</span>) вообще не меняется никогда.</p>
+    </div>
+    <div class="trap"><b>қ, к, п на конце слова превращаются в ғ, г, б.</b> Это первое место в курсе, где само слово меняет последнюю букву: <span class="kk">кіта<b>п</b> → кіта<b>б</b>ым</span>, <span class="kk">жүре<b>к</b> → жүре<b>г</b>ім</span>, <span class="kk">тара<b>қ</b> → тара<b>ғ</b>ым</span>. Причина простая: глухая согласная оказалась между двумя гласными и озвончилась — язык не хочет глушить звук в такой позиции. Правило работает только перед окончанием, которое начинается с гласного.</div>
+    <div class="tip"><b>Проверь на подборщике.</b> Открой подборщик суффиксов, выбери «Тәуелдік · мой» и прогони через него <span class="kk">кітап</span>, <span class="kk">жүрек</span>, <span class="kk">тарақ</span>, <span class="kk">дос</span>, <span class="kk">бала</span>. Он покажет третьим шагом, где сработало озвончение, а где нет. Пять слов — и правило перестаёт быть отдельным пунктом, который надо помнить.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 8 · Үй ішінде — дома</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">бөлме</span> <span class="t">— комната</span></div>
+          <div><span class="w">терезе</span> <span class="t">— окно</span></div>
+          <div><span class="w">үстел</span> <span class="t">— стол</span></div>
+          <div><span class="w">орындық</span> <span class="t">— стул</span></div>
+          <div><span class="w">төсек</span> <span class="t">— кровать</span></div>
+          <div><span class="w">кілем</span> <span class="t">— ковёр</span></div>
+          <div><span class="w">сурет</span> <span class="t">— картина, фото</span></div>
+          <div><span class="w">аула</span> <span class="t">— двор</span></div>
+          <div><span class="w">бақша</span> <span class="t">— сад, огород</span></div>
+          <div><span class="w">гүл</span> <span class="t">— цветок</span></div>
+          <div><span class="w">мысық</span> <span class="t">— кошка</span></div>
+          <div><span class="w">тарих</span> <span class="t">— история</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> прогони их через «мой». <span class="kk">бөлме</span> кончается на гласный → <span class="kk">бөлмем</span>. <span class="kk">төсек</span> кончается на <b>к</b> → озвончение → <span class="kk">төсегім</span>. <span class="kk">орындық</span> и <span class="kk">мысық</span> кончаются на <b>қ</b> → <span class="kk">орындығым</span>, <span class="kk">мысығым</span>. Три слова из двенадцати попадают под озвончение — это не редкий случай.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Менің отбасым — моя семья</div>
+      <div class="mini-text">
+        <p class="storytext">Менің отбасым үлкен. Менің әкем — инженер, анам — мұғалім. Менің екі балам бар. Балаларым мектепте оқиды. Біздің үйіміз қалада. Үйіміздің ауласы кішкентай, бірақ бақшамыз әдемі. Онда гүлдер өседі. Менің мысығым да бар. Оның аты — Ақтөс.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Моя семья большая. Мой папа — инженер, мама — учительница. У меня двое детей. Мои дети учатся в школе. Наш дом в городе. Двор нашего дома маленький, но сад у нас красивый. Там растут цветы. Ещё у меня есть кошка. Её зовут Актос.</p>
+        <p class="why-note"><b>Почему так:</b> посчитай, сколько раз в тексте встретилось слово <span class="kk">менің</span> — четыре. А сколько раз принадлежность выражена окончанием — двенадцать. Это нормальная пропорция: местоимение ставят для нажима или в начале рассказа, дальше хватает окончания.<br><br>Обрати внимание на <span class="kk">балаларым</span>: сначала <span class="kk">-лар</span>, потом <span class="kk">-ым</span>. И на <span class="kk">Ақтөс</span> — «белогрудый», обычная кличка для кошки или собаки.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Түркістан — древний город</div>
+      <div class="mini-text">
+        <p class="storytext">Түркістан — ежелгі қала. Оның тарихы ұзақ. Мұнда Қожа Ахмет Яссауи кесенесі бар. Кесене үлкен және әдемі. Оның күмбезі биік. Бұл — ЮНЕСКО ескерткіші. Түркістан — қасиетті жер. Мұнда қонақтар көп.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Туркестан — древний город. Его история длинная. Здесь есть мавзолей Ходжи Ахмеда Ясави. Мавзолей большой и красивый. Его купол высокий. Это памятник ЮНЕСКО. Туркестан — священное место. Здесь много гостей.</p>
+        <p class="why-note"><b>Почему так:</b> <span class="kk">оның тарих<b>ы</b></span>, <span class="kk">оның күмбез<b>і</b></span> — 3-е лицо, окончание <span class="kk">-ы/-і</span> после согласного. А <span class="kk">кесене<b>сі</b></span> — то же 3-е лицо, но после гласного, поэтому вставляется <b>с</b>.<br><br><b>Про мавзолей:</b> его начали строить в конце XIV века по приказу Тимура. Купол — один из крупнейших в Центральной Азии, а здание так и осталось недостроенным: работы прекратились, когда Тимур умер. Леса у главного входа не поставили до сих пор — так и стоит шестьсот лет.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Үйде — дома у друга</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Бұл — біздің үйіміз. Кіріңіз!</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Рақмет! Үйіңіз өте әдемі.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Мынау — менің бөлмем. Ал анау — балалардың бөлмесі.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Терезеңіз үлкен екен! Ал бақшаңыз бар ма?</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Иә, аулада. Онда әкемнің гүлдері бар.</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Это наш дом. Заходите!<br><b>Айгуль:</b> Спасибо! Ваш дом очень красивый.<br><b>Данияр:</b> Вот это — моя комната. А вон то — комната детей.<br><b>Айгуль:</b> Какое у вас большое окно! А сад у вас есть?<br><b>Данияр:</b> Да, во дворе. Там папины цветы.</p>
+        <p class="why-note"><b>Почему так:</b> Айгуль говорит <span class="kk">үйі<b>ңіз</b></span>, <span class="kk">терезе<b>ңіз</b></span>, <span class="kk">бақша<b>ңыз</b></span> — вежливое «ваш», потому что в гостях. Форма на <span class="kk">-ың</span> здесь звучала бы слишком запросто.<br><br><span class="kk">екен</span> в конце фразы — оттенок «оказывается, надо же»: не просто «окно большое», а «а окно-то у вас большое!». Это частица, разбирать её пока не нужно.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="possessive">
+    <p class="quiz-instruction">Впиши окончание принадлежности. Следи за озвончением қ, к, п.</p>
+    <div class="qitem"><span class="qnum">1.</span> Менің үй<input class="blank" data-answer="ім" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(мой дом)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Менің бала<input class="blank" data-answer="м" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(мой ребёнок)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Сенің дос<input class="blank" data-answer="ың" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(твой друг)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Оның әке<input class="blank" data-answer="сі" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(его папа)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Біздің қала<input class="blank" data-answer="мыз" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(наш город)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="ru-hint">«Моя книга» —</span>
+      <select class="mc" data-answer="кітабым">
+        <option value="">—</option>
+        <option value="кітапым">кітапым</option>
+        <option value="кітабым">кітабым</option>
+        <option value="менің кітап">менің кітап</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">«Моё сердце» (жүрек) —</span>
+      <select class="mc" data-answer="жүрегім">
+        <option value="">—</option>
+        <option value="жүрекім">жүрекім</option>
+        <option value="жүрегім">жүрегім</option>
+        <option value="жүрекмін">жүрекмін</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="ru-hint">«Мои дети» — что идёт первым?</span>
+      <select class="mc" data-answer="балаларым">
+        <option value="">—</option>
+        <option value="балаларым">балаларым — сначала -лар</option>
+        <option value="баламдар">баламдар — сначала -м</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">9.</span> <span class="ru-hint">Мои дети учатся в школе.</span>
+      <div class="qbuild" data-answer="Балаларым мектепте оқиды" data-words="оқиды|мектепте|Балаларым"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">10.</span> <span class="ru-hint">Его папа — врач.</span>
+      <div class="qbuild" data-answer="Оның әкесі дәрігер" data-words="әкесі|дәрігер|Оның"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
+    <button type="button" class="next-card" data-open="bar-zhoq">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Бар / жоқ — «есть» и «нет»</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 0.8 БАР / ЖОҚ ============ -->
+<div class="screen topic-screen" id="screen-bar-zhoq" data-topic="bar-zhoq" style="--tint-color:var(--negiz)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--negiz)"></span>
+    <h2><span class="topic-num">0.8</span> Бар / жоқ</h2>
+    <span class="done-badge" data-badge="bar-zhoq">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Два слова вместо глагола «иметь». Глагола «иметь» в казахском нет вообще.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
+    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
+    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>В казахском нельзя сказать «я имею книгу» — такого глагола просто нет. Есть два слова: <span class="kk"><b>бар</b></span> — «имеется, есть», и <span class="kk"><b>жоқ</b></span> — «отсутствует, нет». Они ставятся в конец предложения, на место глагола.</p>
+    <ul class="rule-list">
+      <li><b>Что-то где-то есть:</b> <span class="kk">Алматыда таулар <b>бар</b></span> — «В Алматы есть горы»</li>
+      <li><b>У кого-то что-то есть:</b> ставим принадлежность из темы 0.7 и добавляем <span class="kk">бар</span> — <span class="kk">Менің кітабым <b>бар</b></span></li>
+      <li><b>Отрицание — просто замена слова:</b> <span class="kk">Менің кітабым <b>жоқ</b></span>. Ничего больше менять не надо</li>
+      <li><b>Вопрос</b> — частица <span class="kk">ма/ме/ба/бе/па/пе</span> после <span class="kk">бар</span>: <span class="kk">Кітабың бар <b>ма</b>?</span></li>
+      <li><span class="kk">Жоқ</span> — это ещё и просто ответ «нет», как <span class="kk">иә</span> — «да»</li>
+    </ul>
+    <ul class="examples">
+      <li>Менің көлігім <b>бар</b>.<span class="ru">У меня есть машина. (букв. «машина-моя имеется»)</span></li>
+      <li>Менің уақытым <b>жоқ</b>.<span class="ru">У меня нет времени.</span></li>
+      <li>Сенің сұрағың <b>бар ма</b>?<span class="ru">У тебя есть вопрос?</span></li>
+      <li>Алматыда тау <b>бар</b>.<span class="ru">В Алматы есть горы.</span></li>
+      <li>Бүгін жұмыс <b>жоқ</b>.<span class="ru">Сегодня работы нет.</span></li>
+      <li>— Ақшаң бар ма? — <b>Жоқ</b>.<span class="ru">— У тебя есть деньги? — Нет.</span></li>
+    </ul>
+    <div class="contrast">
+      <div class="label">«У меня есть» ↔ <span class="kk">менің … бар</span></div>
+      <p>Русская конструкция уже устроена похоже: мы тоже говорим не «я имею», а «у меня есть» — то есть буквально «рядом со мной существует». Казахский идёт тем же путём, только владельца помечает не предлогом, а окончанием на самой вещи.</p>
+      <p>Есть и второй способ, ближе к русскому дословно: <span class="kk">Менде кітап бар</span> — «при мне книга есть». Он тоже правильный и звучит чуть более «с собой». Форма <span class="kk">менде</span> — это падеж, до него дойдём в теме 1.4.</p>
+    </div>
+    <div class="trap"><b>Не пытайся построить отрицание через <span class="kk">емес</span>.</b> «Менің кітабым емес» — не «у меня нет книги», а «это не моя книга». Для отсутствия есть отдельное слово <span class="kk">жоқ</span>, и оно не имеет ничего общего с отрицанием признака. Разницу между <span class="kk">емес</span> и остальными отрицаниями разберём в теме 0.12.</div>
+    <div class="tip"><b>Самая полезная пара слов в языке.</b> <span class="kk">Бар</span> и <span class="kk">жоқ</span> закрывают половину бытовых ситуаций: есть ли места, есть ли сдача, есть ли время, есть ли вопросы. Выучи три готовые фразы и пользуйся ими сразу: <span class="kk">Бар ма?</span> («есть?»), <span class="kk">Жоқ, рақмет</span> («нет, спасибо»), <span class="kk">Уақытым жоқ</span> («у меня нет времени»).</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 9 · Күнделікті заттар — что бывает и чего не бывает</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">уақыт</span> <span class="t">— время</span></div>
+          <div><span class="w">сұрақ</span> <span class="t">— вопрос</span></div>
+          <div><span class="w">жауап</span> <span class="t">— ответ</span></div>
+          <div><span class="w">көлік</span> <span class="t">— машина, транспорт</span></div>
+          <div><span class="w">жоспар</span> <span class="t">— план</span></div>
+          <div><span class="w">хабар</span> <span class="t">— новость, весть</span></div>
+          <div><span class="w">тапсырма</span> <span class="t">— задание</span></div>
+          <div><span class="w">ғарыш</span> <span class="t">— космос</span></div>
+          <div><span class="w">зымыран</span> <span class="t">— ракета</span></div>
+          <div><span class="w">мұражай</span> <span class="t">— музей</span></div>
+          <div><span class="w">шөл</span> <span class="t">— пустыня</span></div>
+          <div><span class="w">аз</span> <span class="t">— мало</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> <span class="kk">сұрақ</span>, <span class="kk">жауап</span> и <span class="kk">көлік</span> кончаются на қ, п, к — значит в форме «мой» они озвончатся: <span class="kk">сұрағым</span>, <span class="kk">жауабым</span>, <span class="kk">көлігім</span>. Это правило из прошлой темы, и оно всплывает буквально в каждом втором слове.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Бүгін — сегодня</div>
+      <div class="mini-text">
+        <p class="storytext">Бүгін менің жоспарым бар. Таңертең жұмысым бар, кешке уақытым бар. Менің көлігім жоқ, сондықтан автобуспен барамын. Жұмыста тапсырмалар көп. Менің сұрақтарым бар, бірақ жауаптар жоқ. Кешке балаларыммен боламын. Бұл — жақсы күн.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Сегодня у меня есть план. Утром у меня работа, вечером есть время. Машины у меня нет, поэтому еду на автобусе. На работе много заданий. У меня есть вопросы, но ответов нет. Вечером буду с детьми. Это хороший день.</p>
+        <p class="why-note"><b>Почему так:</b> в тексте пять раз <span class="kk">бар</span> и три раза <span class="kk">жоқ</span>, и ни одно слово вокруг них не меняется — отрицание тут ничего не перестраивает. Сравни с русским, где «нет» тянет за собой родительный падеж: «есть машин<b>а</b>» → «нет машин<b>ы</b>». В казахском форма слова одна и та же.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Байқоңыр — космодром в степи</div>
+      <div class="mini-text">
+        <p class="storytext">Байқоңыр — ғарыш айлағы. Ол шөлде. Мұнда зымырандар бар. Байқоңыр өте үлкен. Мұнда мұражай да бар. Онда ескі зымырандар және суреттер бар. Байқоңырда ағаш аз, су да аз. Бірақ мұнда тарих көп.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Байконур — космодром. Он в пустыне. Здесь есть ракеты. Байконур очень большой. Здесь есть и музей. В нём есть старые ракеты и фотографии. В Байконуре мало деревьев, мало и воды. Но истории здесь много.</p>
+        <p class="why-note"><b>Почему так:</b> обрати внимание на <span class="kk">аз</span> и <span class="kk">көп</span> в последних предложениях — они работают как <span class="kk">бар</span> и <span class="kk">жоқ</span>, то есть замыкают предложение вместо глагола. Это общая черта: в казахском на месте сказуемого спокойно стоит не глагол, а слово-признак.<br><br><b>Про космодром:</b> Байконур — первый и до сих пор крупнейший космодром мира. Именно отсюда в 1961 году стартовал Гагарин. Название взято у посёлка, который находится в трёхстах километрах — так в своё время путали след.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Телефон арқылы — по телефону</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Сәлем, Айгүл! Уақытың бар ма?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Қазір жоқ, жұмыстамын. Кешке бар.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Жақсы. Менің бір сұрағым бар.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Айт, тыңдап тұрмын.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Ертең жоспарың бар ма?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Жоқ, ертең жұмысым жоқ.</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Привет, Айгуль! У тебя есть время?<br><b>Айгуль:</b> Сейчас нет, я на работе. Вечером будет.<br><b>Данияр:</b> Хорошо. У меня есть один вопрос.<br><b>Айгуль:</b> Говори, слушаю.<br><b>Данияр:</b> У тебя завтра есть планы?<br><b>Айгуль:</b> Нет, завтра я не работаю.</p>
+        <p class="why-note"><b>Почему так:</b> посмотри на первую реплику — <span class="kk">Уақытың бар ма?</span> без всякого <span class="kk">сенің</span>. В живой речи владельца почти всегда опускают, окончания хватает. И ответ такой же короткий: <span class="kk">Қазір жоқ</span> — «сейчас нет», два слова, и всё понятно.<br><br><span class="kk">Тыңдап тұрмын</span> — «слушаю (прямо сейчас)», это нақ осы шақ из темы 2.2. Пока просто фраза целиком.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="bar-zhoq">
+    <p class="quiz-instruction">Впиши <span class="kk">бар</span> или <span class="kk">жоқ</span> и допиши окончания принадлежности.</p>
+    <div class="qitem"><span class="qnum">1.</span> Менің көлігім <input class="blank" data-answer="бар" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">. <span class="hint">(у меня есть машина)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Менің уақытым <input class="blank" data-answer="жоқ" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">. <span class="hint">(у меня нет времени)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Сенің сұрағ<input class="blank" data-answer="ың" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> бар ма? <span class="hint">(у тебя есть вопрос?)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Алматыда тау <input class="blank" data-answer="бар" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">. <span class="hint">(в Алматы есть горы)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> <span class="ru-hint">Как сказать «у меня нет книги»?</span>
+      <select class="mc" data-answer="Менің кітабым жоқ">
+        <option value="">—</option>
+        <option value="Менің кітабым емес">Менің кітабым емес</option>
+        <option value="Менің кітабым жоқ">Менің кітабым жоқ</option>
+        <option value="Мен кітап жоқпын">Мен кітап жоқпын</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="ru-hint">Что значит</span> <span class="kk">Менің кітабым емес</span>?
+      <select class="mc" data-answer="это не моя книга">
+        <option value="">—</option>
+        <option value="у меня нет книги">у меня нет книги</option>
+        <option value="это не моя книга">это не моя книга</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">Есть ли в казахском глагол «иметь»?</span>
+      <select class="mc" data-answer="нет, только бар и жоқ">
+        <option value="">—</option>
+        <option value="да, это бар">да, это бар</option>
+        <option value="нет, только бар и жоқ">нет, только бар и жоқ</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">8.</span> <span class="ru-hint">У меня есть план.</span>
+      <div class="qbuild" data-answer="Менің жоспарым бар" data-words="бар|жоспарым|Менің"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">9.</span> <span class="ru-hint">Завтра у меня нет работы.</span>
+      <div class="qbuild" data-answer="Ертең менің жұмысым жоқ" data-words="жұмысым|жоқ|Ертең|менің"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
+    <button type="button" class="next-card" data-open="demonstratives">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Бұл, осы, сол, ол — указательные</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 0.9 БҰЛ / ОСЫ / СОЛ / ОЛ ============ -->
+<div class="screen topic-screen" id="screen-demonstratives" data-topic="demonstratives" style="--tint-color:var(--negiz)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--negiz)"></span>
+    <h2><span class="topic-num">0.9</span> Бұл, осы, сол, ол</h2>
+    <span class="done-badge" data-badge="demonstratives">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Указательные слова. Там, где русский обходится «этот» и «тот», казахский различает четыре степени.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
+    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
+    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>Русский указывает двумя словами: «этот» — поближе, «тот» — подальше. Казахский различает не только расстояние, но и то, <b>называешь</b> ли ты предмет впервые или <b>возвращаешься</b> к уже упомянутому.</p>
+    <table>
+      <tr><th>Слово</th><th>Перевод</th><th>Когда</th></tr>
+      <tr><td class="kk">бұл</td><td>это, этот</td><td>называешь, представляешь: <span class="kk">Бұл — менің үйім</span></td></tr>
+      <tr><td class="kk">осы</td><td>этот самый</td><td>тот конкретный, о котором речь: <span class="kk">осы кітап</span></td></tr>
+      <tr><td class="kk">сол</td><td>тот самый</td><td>уже упоминали, оба знают: <span class="kk">сол адам</span></td></tr>
+      <tr><td class="kk">ол</td><td>тот; он, она</td><td>подальше, или просто 3-е лицо</td></tr>
+      <tr><td class="kk">мынау</td><td>вот это</td><td>показываешь рукой, рядом</td></tr>
+      <tr><td class="kk">анау</td><td>вон то</td><td>показываешь рукой, далеко</td></tr>
+    </table>
+    <ul class="rule-list">
+      <li><span class="kk">бұл</span> чаще стоит <b>само по себе</b>, как подлежащее: <span class="kk">Бұл — кітап</span></li>
+      <li><span class="kk">осы</span> и <span class="kk">сол</span> чаще стоят <b>перед словом</b>, как определение: <span class="kk">осы қала</span>, <span class="kk">сол күні</span></li>
+      <li><span class="kk">мынау</span> и <span class="kk">анау</span> — для настоящего жеста: в магазине, дома, на улице</li>
+      <li>Указательное слово, как и любое определение, стоит <b>перед</b> тем, к чему относится, и само не меняется</li>
+    </ul>
+    <ul class="examples">
+      <li><b>Бұл</b> — менің сөмкем.<span class="ru">Это моя сумка. (называю)</span></li>
+      <li><b>Осы</b> кітап өте жақсы.<span class="ru">Вот эта самая книга очень хорошая.</span></li>
+      <li><b>Сол</b> адам — менің досым.<span class="ru">Тот человек (о котором говорили) — мой друг.</span></li>
+      <li><b>Мынау</b> қанша тұрады?<span class="ru">Вот это сколько стоит? (показывая)</span></li>
+      <li><b>Анау</b> — биік тау.<span class="ru">Вон то — высокая гора.</span></li>
+    </ul>
+    <div class="contrast">
+      <div class="label">бұл или осы</div>
+      <p>Простой практический признак: если после указательного слова идёт тире и ты <b>называешь</b> предмет — нужен <span class="kk">бұл</span>. <span class="kk">Бұл — терезе.</span> «Это окно.»</p>
+      <p>Если указательное слово стоит <b>вплотную к существительному</b> и уточняет, о котором именно идёт речь, — берётся <span class="kk">осы</span>. <span class="kk">Осы терезе үлкен.</span> «Вот это окно большое.»</p>
+      <p>Ошибка здесь не грубая: <span class="kk">Бұл терезе үлкен</span> тоже поймут. Но <span class="kk">осы</span> звучит точнее, и по нему сразу слышно, что человек чувствует язык.</p>
+    </div>
+    <div class="trap"><b><span class="kk">Сол</span> — не просто «тот».</b> Русское «тот» часто значит «который подальше», и рука тянется перевести его как <span class="kk">сол</span>. Но <span class="kk">сол</span> — про <b>общее знание</b>, а не про расстояние: «тот самый, о котором мы оба помним». Для предмета, который просто лежит дальше, нужен <span class="kk">ол</span> или <span class="kk">анау</span>. Сравни: <span class="kk">сол күні</span> — «в тот самый день (о котором речь)», <span class="kk">анау үй</span> — «вон тот дом (вижу отсюда)».</div>
+    <div class="tip"><b>Где это пригодится завтра же.</b> В магазине почти весь разговор строится на <span class="kk">мынау</span> и <span class="kk">анау</span>: показал и спросил цену. Выучи две фразы — <span class="kk">Мынау қанша тұрады?</span> и <span class="kk">Анау не?</span> — и половина бытовых ситуаций закрыта без единого сложного слова.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 10 · Заттар мен түстер — вещи и цвета</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">зат</span> <span class="t">— вещь</span></div>
+          <div><span class="w">түс</span> <span class="t">— цвет</span></div>
+          <div><span class="w">сағат</span> <span class="t">— часы; час</span></div>
+          <div><span class="w">ақ</span> <span class="t">— белый</span></div>
+          <div><span class="w">сөмке</span> <span class="t">— сумка</span></div>
+          <div><span class="w">қара</span> <span class="t">— чёрный</span></div>
+          <div><span class="w">кілт</span> <span class="t">— ключ</span></div>
+          <div><span class="w">қызыл</span> <span class="t">— красный</span></div>
+          <div><span class="w">қалам</span> <span class="t">— ручка</span></div>
+          <div><span class="w">көк</span> <span class="t">— синий; небо</span></div>
+          <div><span class="w">дәптер</span> <span class="t">— тетрадь</span></div>
+          <div><span class="w">сары</span> <span class="t">— жёлтый</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> цвет, как и любое определение, стоит перед словом и не меняется: <span class="kk">қара сөмке</span>, <span class="kk">қара сөмкелер</span>, <span class="kk">қара сөмкем</span>. Никакого согласования, в отличие от русского «чёрная сумка — чёрные сумки».<br><br>И одна деталь: <span class="kk">көк</span> — это и «синий», и «небо», и «зелёный» про траву. Старое слово, у него широкий охват.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Менің үстелім — мой стол</div>
+      <div class="mini-text">
+        <p class="storytext">Бұл — менің бөлмем. Мынау — менің үстелім. Үстелде кітаптар мен дәптерлер тұр. Осы кітап — қазақ тілі кітабы. Ол өте жақсы. Мынау — менің қаламым. Ол қызыл. Анау — терезе. Терезенің жанында гүл тұр. Сол гүл — анамның сыйы.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Это моя комната. Вот это мой стол. На столе стоят книги и тетради. Вот эта книга — учебник казахского языка. Она очень хорошая. Вот это моя ручка. Она красная. Вон то — окно. Рядом с окном стоит цветок. Тот цветок — подарок моей мамы.</p>
+        <p class="why-note"><b>Почему так:</b> проследи логику указаний. <span class="kk">Бұл</span> и <span class="kk">мынау</span> — то, что рядом и называется впервые. <span class="kk">Осы кітап</span> — уточнение «вот эта самая из тех, что на столе». <span class="kk">Анау</span> — окно, оно дальше. А <span class="kk">сол гүл</span> в последней фразе — цветок, о котором только что сказали: оба собеседника уже знают, о каком речь.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Алтын адам — Золотой человек</div>
+      <div class="mini-text">
+        <p class="storytext">Алтын адам — атақты ескерткіш. Бұл — ежелгі жауынгер. Оның киімінде төрт мың алтын бар. Ол — Қазақстан нышаны. Алтын адам мұражайда тұр. Мынау — өте қымбат зат. Осы ескерткіш туралы бүкіл әлем біледі.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Золотой человек — знаменитый памятник. Это древний воин. На его одежде четыре тысячи золотых деталей. Он — символ Казахстана. Золотой человек стоит в музее. Вот это очень дорогая вещь. Об этом памятнике знает весь мир.</p>
+        <p class="why-note"><b>Почему так:</b> <span class="kk">Бұл — ежелгі жауынгер</span> — называем, поэтому <span class="kk">бұл</span>. А в последней фразе <span class="kk">осы ескерткіш</span> — возвращаемся к тому, о чём уже шла речь во всём тексте, поэтому <span class="kk">осы</span>, а не <span class="kk">бұл</span>.<br><br><b>Про находку:</b> костюм нашли в 1969 году в кургане Иссык под Алматы. Это сакский воин V–IV веков до нашей эры, а на одежде около четырёх тысяч золотых пластин. Кто это был — юноша или девушка — спорят до сих пор.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Дүкенде — показываем пальцем</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Айгүл:</span> Кешіріңіз, мынау қанша тұрады?</p>
+          <p class="dline"><span class="speaker">Сатушы:</span> Мынау — қара сөмке ме? Бес мың теңге.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Ал анау? Қызыл сөмке.</p>
+          <p class="dline"><span class="speaker">Сатушы:</span> Ол — жеті мың.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Осы қара сөмкені аламын.</p>
+          <p class="dline"><span class="speaker">Сатушы:</span> Жақсы таңдау!</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Айгуль:</b> Извините, вот это сколько стоит?<br><b>Продавец:</b> Вот эта — чёрная сумка? Пять тысяч тенге.<br><b>Айгуль:</b> А вон та? Красная сумка.<br><b>Продавец:</b> Она — семь тысяч.<br><b>Айгуль:</b> Возьму вот эту чёрную сумку.<br><b>Продавец:</b> Хороший выбор!</p>
+        <p class="why-note"><b>Почему так:</b> весь диалог — это лестница указаний. Сначала <span class="kk">мынау</span> (показала на ближнюю), потом <span class="kk">анау</span> (показала на дальнюю), а в конце <span class="kk">осы</span> — «вот эта самая, о которой мы только что говорили». Разные слова, потому что разные ситуации, а не потому что так красивее.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="demonstratives">
+    <p class="quiz-instruction">Выбери подходящее указательное слово.</p>
+    <div class="qitem"><span class="qnum">1.</span> <span class="ru-hint">Называешь предмет впервые: «___ — моя сумка».</span>
+      <select class="mc" data-answer="Бұл">
+        <option value="">—</option>
+        <option value="Бұл">Бұл</option>
+        <option value="Сол">Сол</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">2.</span> <span class="ru-hint">Показываешь пальцем на дальнюю вещь в магазине:</span>
+      <select class="mc" data-answer="анау">
+        <option value="">—</option>
+        <option value="мынау">мынау</option>
+        <option value="анау">анау</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">3.</span> <span class="ru-hint">Возвращаешься к человеку, о котором вы оба только что говорили:</span>
+      <select class="mc" data-answer="сол адам">
+        <option value="">—</option>
+        <option value="сол адам">сол адам</option>
+        <option value="анау адам">анау адам</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">4.</span> <span class="ru-hint">«Вот эта самая книга хорошая»:</span>
+      <select class="mc" data-answer="Осы кітап жақсы">
+        <option value="">—</option>
+        <option value="Осы кітап жақсы">Осы кітап жақсы</option>
+        <option value="Кітап осы жақсы">Кітап осы жақсы</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">5.</span> <span class="ru-hint">«Чёрная сумка» — в каком порядке?</span>
+      <select class="mc" data-answer="қара сөмке">
+        <option value="">—</option>
+        <option value="сөмке қара">сөмке қара</option>
+        <option value="қара сөмке">қара сөмке</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="ru-hint">Меняется ли цвет по числу — «чёрные сумки»?</span>
+      <select class="mc" data-answer="қара сөмкелер">
+        <option value="">—</option>
+        <option value="қаралар сөмкелер">қаралар сөмкелер</option>
+        <option value="қара сөмкелер">қара сөмкелер</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">7.</span> <span class="ru-hint">Вот это сколько стоит?</span>
+      <div class="qbuild" data-answer="Мынау қанша тұрады" data-words="тұрады|Мынау|қанша"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">8.</span> <span class="ru-hint">Тот человек — мой друг.</span>
+      <div class="qbuild" data-answer="Сол адам менің досым" data-words="досым|адам|менің|Сол"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
     <button type="button" class="next-card" data-open="tool-suffix">
       <span class="next-marker"></span>
       <span class="next-text">
@@ -1665,7 +2162,8 @@
 
   // Порядок = порядок прохождения. Темы без контента сюда не попадают,
   // иначе прогресс считался бы от несуществующих экранов.
-  var TOPICS = ["harmony-vowels","harmony-consonants","word-order","zhiktik","pronouns","plural"];
+  var TOPICS = ["harmony-vowels","harmony-consonants","word-order","zhiktik","pronouns","plural",
+               "possessive","bar-zhoq","demonstratives"];
 
   var BLOCKS = {
     negiz:  { label:"Негіз",   planned:12, topics:TOPICS.slice(), color:"--negiz" },
@@ -1674,7 +2172,8 @@
 
   var TOPIC_MINUTES = {
     "harmony-vowels":18, "harmony-consonants":20, "word-order":16,
-    "zhiktik":20, "pronouns":18, "plural":20
+    "zhiktik":20, "pronouns":18, "plural":20,
+    "possessive":22, "bar-zhoq":18, "demonstratives":18
   };
 
   var STORAGE_KEY   = "kkProgressV1";
@@ -2058,37 +2557,90 @@
     "бе":"ли (вопрос)","па":"ли (вопрос)","пе":"ли (вопрос)",
     // города — чтобы работал перевод форм вроде Алматыда, Алматыдан
     "алматы":"Алматы","алматыдан":"из Алматы","астанадан":"из Астаны",
-    "сау":"здоровый","болыңыз":"будьте","жұмысын":"свою работу"
+    "сау":"здоровый","болыңыз":"будьте","жұмысын":"свою работу",
+    // 0.7 үй ішінде
+    "бөлме":"комната","терезе":"окно","үстел":"стол","орындық":"стул","төсек":"кровать",
+    "кілем":"ковёр","сурет":"картина, фото","аула":"двор","бақша":"сад, огород","гүл":"цветок",
+    "мысық":"кошка","тарих":"история","ұзақ":"длинный, долгий","кесене":"мавзолей",
+    "күмбез":"купол","ескерткіш":"памятник","қасиетті":"священный","кіріңіз":"заходите",
+    "екен":"оказывается (частица)","ал":"а, же","жанында":"рядом с","аты":"его имя",
+    "кішкентай":"маленький","сый":"подарок","сыйы":"подарок (её, его)","сондықтан":"поэтому",
+    // 0.8 бар / жоқ
+    "уақыт":"время","сұрақ":"вопрос","жауап":"ответ","көлік":"машина, транспорт",
+    "жоспар":"план","хабар":"новость","тапсырма":"задание","ғарыш":"космос","айлақ":"порт",
+    "айлағы":"порт (его)","зымыран":"ракета","мұражай":"музей","шөл":"пустыня","аз":"мало",
+    "ағаш":"дерево","ескі":"старый","таңертең":"утром","автобуспен":"на автобусе",
+    "қазір":"сейчас","онда":"там; тогда","боламын":"буду","айт":"скажи","тыңдап":"слушая",
+    "тұрмын":"стою; нахожусь","күн":"день; солнце",
+    // 0.9 нұсқау
+    "зат":"вещь","түс":"цвет","сағат":"часы; час","сөмке":"сумка","кілт":"ключ",
+    "қалам":"ручка","дәптер":"тетрадь","ақ":"белый","қара":"чёрный","қызыл":"красный",
+    "көк":"синий; небо","сары":"жёлтый","мынау":"вот это","анау":"вон то","осы":"этот самый",
+    "сол":"тот самый","атақты":"знаменитый","жауынгер":"воин","киім":"одежда","алтын":"золото",
+    "нышан":"символ","қымбат":"дорогой","бүкіл":"весь","әлем":"мир","біледі":"знает",
+    "таңдау":"выбор","кешіріңіз":"извините","тұр":"стоит",
+    // географические названия и формы глаголов, которые не сводятся к основе
+    "түркістан":"Туркестан","байқоңыр":"Байконур","қазақстан":"Казахстан","юнеско":"ЮНЕСКО",
+    "барамын":"я еду, я иду","аламын":"я беру"
   };
 
   // Слова в тексте стоят с окончаниями, а словарь — по большей части в
-  // словарной форме. Поэтому если точного совпадения нет, отрезаем известные
-  // окончания по одному и пробуем снова. Лучше показать перевод основы, чем
-  // не показать ничего.
+  // словарной форме. Отрезаем известные окончания и пробуем снова.
+  //
+  // Важно: окончания в казахском НАВЕШИВАЮТСЯ ДРУГ НА ДРУГА, и трёх подряд —
+  // обычное дело: бала+лар+ым+мен = «с моими детьми». Отрезание одного
+  // суффикса на таких словах не срабатывает, поэтому ищем в ширину по всем
+  // цепочкам отрезаний до трёх шагов и берём первую основу, которая нашлась
+  // в словаре. Первой находится самая короткая цепочка — она же обычно и
+  // правильная.
   var STRIP = ["ларда","лерде","дарда","дерде","тарда","терде",
                "сыңдар","сіңдер","сыздар","сіздер",
+               "ыңыз","іңіз","ымыз","іміз",
                "лар","лер","дар","дер","тар","тер",
                "дан","ден","тан","тен","нан","нен",
                "ның","нің","дың","дің","тың","тің",
                "мын","мін","бын","бін","пын","пін",
                "мыз","міз","быз","біз","пыз","піз",
-               "сың","сің","сыз","сіз",
+               "сың","сің","сыз","сіз","ңыз","ңіз",
+               "мен","бен","пен","нда","нде",
                "да","де","та","те","ға","ге","қа","ке",
-               "ны","ні","ды","ді","ты","ті","сы","сі","ым","ім","ы","і","м","н"];
+               "ны","ні","ды","ді","ты","ті","сы","сі",
+               "ым","ім","ың","ің","ы","і","м","н","ң"];
 
-  function lookupWord(raw){
-    var w = raw.toLowerCase();
-    if(VOCAB[w]) return VOCAB[w];
+  // Один шаг отрезания: все основы, которые получаются из слова.
+  // Вторым вариантом идёт возврат озвончения (кітабым → кітаб → кітап).
+  function stripOnce(w){
+    var outs = [];
     for(var i = 0; i < STRIP.length; i++){
       var s = STRIP[i];
       if(w.length > s.length + 1 && w.slice(-s.length) === s){
         var base = w.slice(0, -s.length);
-        if(VOCAB[base]) return VOCAB[base];
-        // кітабым → кітап: возвращаем озвончённую согласную назад
-        var last = base.charAt(base.length - 1);
-        var back = { "ғ":"қ", "г":"к", "б":"п" }[last];
-        if(back && VOCAB[base.slice(0,-1) + back]) return VOCAB[base.slice(0,-1) + back];
+        outs.push(base);
+        var back = { "ғ":"қ", "г":"к", "б":"п" }[base.charAt(base.length - 1)];
+        if(back) outs.push(base.slice(0,-1) + back);
       }
+    }
+    return outs;
+  }
+
+  function lookupWord(raw){
+    var w = raw.toLowerCase();
+    if(VOCAB[w]) return VOCAB[w];
+    var frontier = [w], seen = {};
+    for(var depth = 0; depth < 3; depth++){
+      var next = [];
+      for(var i = 0; i < frontier.length; i++){
+        var cands = stripOnce(frontier[i]);
+        for(var j = 0; j < cands.length; j++){
+          var c = cands[j];
+          if(seen[c]) continue;
+          seen[c] = 1;
+          if(VOCAB[c]) return VOCAB[c];
+          next.push(c);
+        }
+      }
+      if(!next.length) break;
+      frontier = next;
     }
     return null;
   }
