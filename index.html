@@ -189,6 +189,7 @@
   }
   .tag[data-group="negiz"]{background:var(--negiz-tint); color:var(--negiz-deep);}
   .tag[data-group="septik"]{background:var(--septik-tint); color:var(--septik-deep);}
+  .tag[data-group="etistik"]{background:var(--etistik-tint); color:var(--etistik-deep);}
   .era-header h2{font-size:1.15rem; margin:8px 0 4px; font-weight:700;}
   .era-header .sub{font-size:0.85rem; color:var(--muted);}
 
@@ -518,7 +519,7 @@
 <header class="hero" id="top">
   <div class="eyebrow">Қазақ тілі · грамматика · офлайн</div>
   <h1>Казахская грамматика с нуля</h1>
-  <p>Закон созвучия, база предложения и все падежи — в каждой теме правило, тексты для чтения и задания с проверкой.</p>
+  <p>Закон созвучия, база предложения, все падежи и глагол — в каждой теме правило, тексты для чтения и задания с проверкой.</p>
   <p class="hero-note">Курс для тех, кто уже знает казахский алфавит, но словарный запас пока маленький. Слова вводятся порциями, и в текстах встречаются только те, что уже были — читать можно с первого дня.</p>
   <p class="hero-note" id="totalTimeNote"></p>
   <button type="button" class="about-link" data-open="about">О приложении: что внутри и как заниматься →</button>
@@ -530,7 +531,7 @@
 
   <div class="level-meter">
     <div class="level-meter-head">
-      <span class="level-meter-label">До конца блока «Септік»</span>
+      <span class="level-meter-label">Прогресс по блокам курса</span>
       <span class="level-meter-pct" id="meterPct">0%</span>
     </div>
     <div class="level-track" id="meterTrack"></div>
@@ -700,6 +701,35 @@
     </div>
   </div>
 
+  <div class="level-divider"><span>Блок 2 · Етістік — глагол</span></div>
+  <div class="topic-group" id="etistik">
+    <div class="era-header">
+      <span class="tag" data-group="etistik">Блок 2 · A2 · Негізгі · 11 тем</span>
+      <h2>Глагол: приказ, настоящее, будущее</h2>
+      <div class="sub">До сих пор глаголы шли в текстах готовыми кусками. Теперь разбираем, из чего они собраны, — и любой прочитанный текст можно перечитать заново, уже понимая каждое слово.</div>
+    </div>
+    <div class="topic-list">
+      <button type="button" class="topic-row" data-open="verb-stem">
+        <span class="marker" style="background:var(--etistik)"></span>
+        <span class="row-title"><span class="topic-num">2.1</span> Етістік негізі · бұйрық рай<span class="row-title-ru">основа глагола и приказ</span></span>
+        <span class="row-check" data-check="verb-stem" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
+      </button>
+      <button type="button" class="topic-row" data-open="present-future">
+        <span class="marker" style="background:var(--etistik)"></span>
+        <span class="row-title"><span class="topic-num">2.2</span> Ауыспалы осы-келер шақ<span class="row-title-ru">настоящее и будущее одной формой</span></span>
+        <span class="row-check" data-check="present-future" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
+      </button>
+      <button type="button" class="topic-row" data-open="present-cont">
+        <span class="marker" style="background:var(--etistik)"></span>
+        <span class="row-title"><span class="topic-num">2.3</span> Нақ осы шақ<span class="row-title-ru">действие прямо сейчас</span></span>
+        <span class="row-check" data-check="present-cont" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
+      </button>
+    </div>
+  </div>
+
   <div class="reset-row"><button id="resetBtn" type="button">Сбросить прогресс</button></div>
 </main>
 </div>
@@ -788,12 +818,19 @@
       <tr><td>Қатаң<br><span class="hint">глухие</span></td><td class="kk">к қ п с т ф х һ ц ч ш щ</td><td class="kk">кітап<b>тар</b>, кітап<b>қа</b></td></tr>
     </table>
     <div class="tip"><b>Короткое правило для памяти:</b> после глухих суффикс тоже становится глухим (<span class="kk">-тар, -қа, -пен</span>), после звонких и сонорных — звонким (<span class="kk">-дар, -ға, -бен</span>), после гласных — самым «мягким» вариантом (<span class="kk">-лар, -ға, -мен</span>). Язык просто ленится переключаться между глухим и звонким внутри слова.</div>
-    <p><b>Сводная таблица окончаний</b> — сюда добавятся падежи, когда откроется блок «Септік».</p>
+    <p><b>Сводная таблица окончаний.</b> Все падежи из блока «Септік» — здесь же.</p>
     <table>
       <tr><th>Что</th><th>После гласных</th><th>После үнді</th><th>После ұяң</th><th>После қатаң</th></tr>
       <tr><td>Көптік<br><span class="hint">мн. число</span></td><td class="kk">-лар/-лер</td><td class="kk">-лар/-лер<br><span class="hint">р, у, й</span><br>-дар/-дер<br><span class="hint">л, м, н, ң</span></td><td class="kk">-дар/-дер</td><td class="kk">-тар/-тер</td></tr>
       <tr><td>Жіктік<br><span class="hint">я + кто</span></td><td class="kk">-мын/-мін</td><td class="kk">-мын/-мін</td><td class="kk">-бын/-бін</td><td class="kk">-пын/-пін</td></tr>
+      <tr><td>Ілік<br><span class="hint">чей</span></td><td class="kk">-ның/-нің</td><td class="kk">-ның/-нің<br><span class="hint">м, н, ң</span><br>-дың/-дің<br><span class="hint">р, л, й, у</span></td><td class="kk">-дың/-дің</td><td class="kk">-тың/-тің</td></tr>
+      <tr><td>Барыс<br><span class="hint">куда, кому</span></td><td class="kk">-ға/-ге</td><td class="kk">-ға/-ге</td><td class="kk">-ға/-ге</td><td class="kk">-қа/-ке</td></tr>
+      <tr><td>Табыс<br><span class="hint">кого, что</span></td><td class="kk">-ны/-ні</td><td class="kk">-ды/-ді</td><td class="kk">-ды/-ді</td><td class="kk">-ты/-ті</td></tr>
+      <tr><td>Жатыс<br><span class="hint">где, когда</span></td><td class="kk">-да/-де</td><td class="kk">-да/-де</td><td class="kk">-да/-де</td><td class="kk">-та/-те</td></tr>
+      <tr><td>Шығыс<br><span class="hint">откуда</span></td><td class="kk">-дан/-ден</td><td class="kk">-нан/-нен<br><span class="hint">м, н, ң</span><br>-дан/-ден<br><span class="hint">р, л, й, у</span></td><td class="kk">-дан/-ден</td><td class="kk">-тан/-тен</td></tr>
+      <tr><td>Көмектес<br><span class="hint">с кем, чем</span></td><td class="kk">-мен</td><td class="kk">-мен</td><td class="kk">-бен<br><span class="hint">ж, з</span><br>-пен<br><span class="hint">б, в, г, д</span></td><td class="kk">-пен</td></tr>
     </table>
+    <div class="tip"><b>Два места, где үнді ведут себя по-разному.</b> В ілік и шығыс носовые <span class="kk">м, н, ң</span> тянут за собой <b>н</b> (<span class="kk">адам<b>ның</b></span>, <span class="kk">адам<b>нан</b></span>), а остальные сонорные — <b>д</b> (<span class="kk">ел<b>дің</b></span>, <span class="kk">ел<b>ден</b></span>). В остальных падежах вся группа үнді ходит вместе.<br><br>И <b>көмектес не подчиняется гармонии гласных</b>: там всегда <b>е</b>, меняется только первая буква.</div>
   </div>
 </div>
 
@@ -1994,7 +2031,7 @@
         </div>
         <button class="btn btn-translate" type="button">Показать перевод</button>
         <p class="ru-translation"><b>Данияр:</b> Привет, Айгуль! У тебя есть время?<br><b>Айгуль:</b> Сейчас нет, я на работе. Вечером будет.<br><b>Данияр:</b> Хорошо. У меня есть один вопрос.<br><b>Айгуль:</b> Говори, слушаю.<br><b>Данияр:</b> У тебя завтра есть планы?<br><b>Айгуль:</b> Нет, завтра я не работаю.</p>
-        <p class="why-note"><b>Почему так:</b> посмотри на первую реплику — <span class="kk">Уақытың бар ма?</span> без всякого <span class="kk">сенің</span>. В живой речи владельца почти всегда опускают, окончания хватает. И ответ такой же короткий: <span class="kk">Қазір жоқ</span> — «сейчас нет», два слова, и всё понятно.<br><br><span class="kk">Тыңдап тұрмын</span> — «слушаю (прямо сейчас)», это нақ осы шақ из темы 2.2. Пока просто фраза целиком.</p>
+        <p class="why-note"><b>Почему так:</b> посмотри на первую реплику — <span class="kk">Уақытың бар ма?</span> без всякого <span class="kk">сенің</span>. В живой речи владельца почти всегда опускают, окончания хватает. И ответ такой же короткий: <span class="kk">Қазір жоқ</span> — «сейчас нет», два слова, и всё понятно.<br><br><span class="kk">Тыңдап тұрмын</span> — «слушаю (прямо сейчас)», это нақ осы шақ из темы 2.3. Пока просто фраза целиком.</p>
       </div>
     </div>
   </div>
@@ -3669,11 +3706,514 @@
       <button class="btn btn-reveal" type="button">Показать ответы</button>
       <span class="quiz-result" aria-live="polite"></span>
     </div>
+    <button type="button" class="next-card" data-open="verb-stem">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Падежи закрыты · дальше</span>
+        <span class="next-title">Блок 2 · глагол начинается с основы</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 2.1 ЕТІСТІК НЕГІЗІ · БҰЙРЫҚ РАЙ ============ -->
+<div class="screen topic-screen" id="screen-verb-stem" data-topic="verb-stem" style="--tint-color:var(--etistik)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--etistik)"></span>
+    <h2><span class="topic-num">2.1</span> Етістік негізі · бұйрық рай</h2>
+    <span class="done-badge" data-badge="verb-stem">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Основа глагола и приказ. Самая короткая форма в языке — и с неё начинается весь глагол.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>В словаре глагол стоит в форме на <b>-у</b>: <span class="kk">бару, келу, жазу</span> — «идти, приходить, писать». Но окончания цепляются не к ней. Снимаешь <b>-у</b> — получаешь <b>основу</b> (<span class="kk">негіз</span>), и уже к основе приклеивается всё остальное: время, лицо, отрицание.</p>
+    <table>
+      <tr><th>Словарная форма</th><th>Основа</th><th>Это же — приказ «сен»</th></tr>
+      <tr><td class="kk">бару</td><td class="kk"><b>бар</b></td><td class="kk">Бар! <span class="hint">иди</span></td></tr>
+      <tr><td class="kk">келу</td><td class="kk"><b>кел</b></td><td class="kk">Кел! <span class="hint">приходи</span></td></tr>
+      <tr><td class="kk">жазу</td><td class="kk"><b>жаз</b></td><td class="kk">Жаз! <span class="hint">пиши</span></td></tr>
+      <tr><td class="kk">беру</td><td class="kk"><b>бер</b></td><td class="kk">Бер! <span class="hint">дай</span></td></tr>
+      <tr><td class="kk">істеу</td><td class="kk"><b>істе</b></td><td class="kk">Істе! <span class="hint">делай</span></td></tr>
+    </table>
+    <p>Голая основа — это и есть приказ на «ты». Ничего добавлять не нужно, и короче в казахском не бывает.</p>
+    <p><b>Кому говоришь — то и добавляешь:</b></p>
+    <table>
+      <tr><th>Кому</th><th>Окончание</th><th>Пример</th></tr>
+      <tr><td class="kk">сен</td><td>— <span class="hint">голая основа</span></td><td class="kk"><b>Кел!</b> <span class="hint">приходи</span></td></tr>
+      <tr><td class="kk">сіз</td><td class="kk">-ыңыз/-іңіз<br><span class="hint">после гласного -ңыз/-ңіз</span></td><td class="kk"><b>Келіңіз!</b> <span class="hint">приходите</span></td></tr>
+      <tr><td class="kk">сендер</td><td class="kk">-ыңдар/-іңдер<br><span class="hint">-ңдар/-ңдер</span></td><td class="kk"><b>Келіңдер!</b></td></tr>
+      <tr><td class="kk">сіздер</td><td class="kk">-ыңыздар/-іңіздер</td><td class="kk"><b>Келіңіздер!</b></td></tr>
+      <tr><td class="kk">мен</td><td class="kk">-айын/-ейін<br><span class="hint">-йын/-йін</span></td><td class="kk"><b>Келейін</b> <span class="hint">приду-ка, дай приду</span></td></tr>
+      <tr><td class="kk">біз</td><td class="kk">-айық/-ейік<br><span class="hint">-йық/-йік</span></td><td class="kk"><b>Келейік</b> <span class="hint">пойдём, давай придём</span></td></tr>
+      <tr><td class="kk">ол</td><td class="kk">-сын/-сін</td><td class="kk"><b>Келсін</b> <span class="hint">пусть придёт</span></td></tr>
+    </table>
+    <p><b>Отрицание — знакомое <span class="kk">-ма/-ме/-ба/-бе/-па/-пе</span></b>, то самое из темы 0.12. Оно встаёт прямо на основу, а вежливость навешивается уже сверху:</p>
+    <ul class="rule-list">
+      <li><span class="kk">бар</span> → <span class="kk"><b>барма</b></span> — не ходи · <span class="kk"><b>бармаңыз</b></span> — не ходите</li>
+      <li><span class="kk">кел</span> → <span class="kk"><b>келме</b></span> · <span class="kk">ал</span> → <span class="kk"><b>алма</b></span> — не бери</li>
+      <li>после звонких <span class="kk">ж з</span> — <span class="kk">-ба/-бе</span>: <span class="kk">жаз</span> → <span class="kk"><b>жазба</b></span></li>
+      <li>после глухих — <span class="kk">-па/-пе</span>: <span class="kk">айт</span> → <span class="kk"><b>айтпа</b></span>, <span class="kk">күт</span> → <span class="kk"><b>күтпе</b></span>, <span class="kk">асық</span> → <span class="kk"><b>асықпа</b></span></li>
+    </ul>
+    <p><b>Смягчитель <span class="kk">-шы/-ші</span></b> превращает приказ в просьбу — примерно как русское «пожалуйста»: <span class="kk">айт<b>шы</b></span> — «скажи-ка», <span class="kk">беріңіз<b>ші</b></span> — «дайте, пожалуйста». Эту форму ты уже видел в теме 1.3.</p>
+    <div class="contrast">
+      <div class="label">Две ступени вежливости против четырёх</div>
+      <p>Русский обходится двумя: «иди» и «идите». Всё остальное добирается интонацией и словом «пожалуйста».</p>
+      <p>Казахский различает четыре: <span class="kk">бар</span> (сен), <span class="kk">барыңыз</span> (сіз), <span class="kk">барыңдар</span> (сендер), <span class="kk">барыңыздар</span> (сіздер). Промахнуться ступенью здесь заметнее, чем в русском: сказать старшему <span class="kk">бар</span> — примерно как ткнуть пальцем. С незнакомым и со старшим всегда <b>-ыңыз/-іңіз</b>, без раздумий.</p>
+    </div>
+    <div class="trap"><b>Снять -у — не всегда «отрезать последнюю букву».</b> Три глагола, где рука ошибается:<br><br>
+      <span class="kk">оқу</span> → основа <span class="kk"><b>оқы</b></span>, а не «оқ». Приказ: <span class="kk">Оқы!</span> В словарной форме буква <b>ы</b> прячется: <span class="kk">оқы + у = оқу</span>.<br><br>
+      <span class="kk">шығу</span> → основа <span class="kk"><b>шық</b></span>, а не «шығ». Приказ: <span class="kk">Шық!</span> Здесь наоборот: глухая <b>қ</b> перед гласным <b>-у</b> зазвенела и стала <b>ғ</b> — тот же переход, что в <span class="kk">кітап → кітабым</span> из темы 0.7. Так же устроено <span class="kk">асығу → асық</span>.<br><br>
+      <span class="kk">қорқу</span> → основа <span class="kk"><b>қорық</b></span>. Отсюда и <span class="kk">қорықпа</span> — «не бойся», которое встречалось в теме 0.12.</div>
+    <div class="tip"><b>Пять форм, которые стоит выучить сегодня же.</b> <span class="kk">Кіріңіз</span> — входите. <span class="kk">Отырыңыз</span> — садитесь. <span class="kk">Беріңіз</span> — дайте. <span class="kk">Айтыңыз</span> — скажите. <span class="kk">Кешіріңіз</span> — извините. Все пять уже встречались в курсе как готовые куски — теперь видно, из чего они собраны. С ними можно зайти в магазин, в кабинет и в гости.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 20 · Тілек — пожелания и напутствия</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">бата</span> <span class="t">— напутствие, благословение</span></div>
+          <div><span class="w">тілек</span> <span class="t">— пожелание</span></div>
+          <div><span class="w">тілеу</span> <span class="t">— желать</span></div>
+          <div><span class="w">ақсақал</span> <span class="t">— аксакал, старший</span></div>
+          <div><span class="w">отбасы</span> <span class="t">— семья</span></div>
+          <div><span class="w">немере</span> <span class="t">— внук</span></div>
+          <div><span class="w">өмір</span> <span class="t">— жизнь</span></div>
+          <div><span class="w">бақыт</span> <span class="t">— счастье</span></div>
+          <div><span class="w">аман</span> <span class="t">— цел, благополучен</span></div>
+          <div><span class="w">сәттілік</span> <span class="t">— удача</span></div>
+          <div><span class="w">ас</span> <span class="t">— еда, угощение</span></div>
+          <div><span class="w">рақмет</span> <span class="t">— спасибо</span></div>
+          <div><span class="w">қуану</span> <span class="t">— радоваться</span></div>
+          <div><span class="w">асығу</span> <span class="t">— торопиться</span></div>
+          <div><span class="w">алу</span> <span class="t">— брать, получать</span></div>
+          <div><span class="w">күту</span> <span class="t">— ждать</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> у четырёх последних глаголов основа снимается по-разному. <span class="kk">Алу → ал</span>, <span class="kk">күту → күт</span> — просто убрали <b>-у</b>. <span class="kk">Қуану → қуан</span> — тоже. А <span class="kk">асығу → асық</span>: звонкая <b>ғ</b> в словарной форме на самом деле глухая <b>қ</b> в основе. Приказы получаются такие: <span class="kk">ал, күт, қуан, асық</span>.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Бата — напутствие старшего</div>
+      <div class="mini-text">
+        <p class="storytext">Қазақта ас соңында ақсақал бата береді. Бата ұзақ емес.<br><br>Ақсақал айтады:<br>— Ас болсын!<br>— Отбасың аман болсын.<br>— Жолың болсын.<br>— Балаларың бақытты болсын.<br>— Немерең көп болсын.<br><br>Бәрі рақмет айтады. Бата — сый емес, тілек. Ақшаға бата жоқ.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">У казахов в конце трапезы аксакал даёт бату — напутствие. Бата не бывает длинной.<br><br>Аксакал говорит:<br>— Пусть будет во благо! (приятного аппетита)<br>— Пусть семья твоя будет цела.<br>— Пусть путь твой будет открыт.<br>— Пусть дети твои будут счастливы.<br>— Пусть внуков у тебя будет много.<br><br>Все говорят спасибо. Бата — не подарок, а пожелание. За деньги баты не бывает.</p>
+        <p class="why-note"><b>Почему так:</b> вся бата держится на одной форме — <span class="kk">болсын</span>, «пусть будет». Это бұйрық рай для «ол»: <span class="kk">бол</span> + <span class="kk"><b>-сын</b></span>. Ни одного другого времени в тексте нет, и это не упрощение — настоящая бата действительно так и строится.<br><br>Обрати внимание на <span class="kk">отбасы<b>ң</b></span>, <span class="kk">жол<b>ың</b></span>, <span class="kk">немере<b>ң</b></span> — это тәуелдік из темы 0.7: «твоя семья, твой путь, твой внук».<br><br><b>Про бату:</b> её просят у старшего перед дорогой, свадьбой, новым делом. Две фразы отсюда слышишь каждый день: <span class="kk">Ас болсын!</span> — говорят перед едой и после неё, а <span class="kk">Жолың болсын!</span> — тому, кто уезжает.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Жол сұрау — спросить дорогу</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Жолаушы:</span> Кешіріңіз! Мұражай қайда?</p>
+          <p class="dline"><span class="speaker">Көрші:</span> Тура жүріңіз. Аялдамада оңға бұрылыңыз.</p>
+          <p class="dline"><span class="speaker">Жолаушы:</span> Алыс па?</p>
+          <p class="dline"><span class="speaker">Көрші:</span> Жоқ, жақын. Асықпаңыз, уақыт бар.</p>
+          <p class="dline"><span class="speaker">Жолаушы:</span> Рақмет!</p>
+          <p class="dline"><span class="speaker">Көрші:</span> Жолыңыз болсын!</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Прохожий:</b> Извините! Где музей?<br><b>Сосед:</b> Идите прямо. На остановке поверните направо.<br><b>Прохожий:</b> Далеко?<br><b>Сосед:</b> Нет, близко. Не торопитесь, время есть.<br><b>Прохожий:</b> Спасибо!<br><b>Сосед:</b> Доброго вам пути!</p>
+        <p class="why-note"><b>Почему так:</b> три вежливых приказа подряд — <span class="kk">жүріңіз, бұрылыңыз, асықпаңыз</span> — и все собраны одинаково: основа + <span class="kk">-ыңыз/-іңіз</span>. В последней отрицание встаёт <b>перед</b> вежливостью: <span class="kk">асық + па + ңыз</span>. Порядок в казахском всегда такой — сначала смысл, потом лицо.<br><br><span class="kk">Жолыңыз болсын</span> — то же «пусть путь будет», только на «вы»: <span class="kk">жол + ыңыз</span> (ваш) + <span class="kk">болсын</span>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="verb-stem">
+    <p class="quiz-instruction">Задания 1–2 — впиши основу целиком, 3–6 — только окончание.</p>
+    <div class="qitem"><span class="qnum">1.</span> <span class="ru-hint">Приказ «сен» от</span> <span class="kk">оқу</span> → <input class="blank" data-answer="оқы" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(читай)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> <span class="ru-hint">Приказ «сен» от</span> <span class="kk">шығу</span> → <input class="blank" data-answer="шық" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(выходи)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> кір<input class="blank" data-answer="іңіз" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(входите — сіз)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> қорық<input class="blank" data-answer="па" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(не бойся)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> ал<input class="blank" data-answer="ма" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(не бери)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> асық<input class="blank" data-answer="паңыз" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(не торопитесь — сіз)</span></div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">Основа глагола</span> <span class="kk">оқу</span> —
+      <select class="mc" data-answer="оқы">
+        <option value="">—</option>
+        <option value="оқ">оқ</option>
+        <option value="оқы">оқы</option>
+        <option value="оқу">оқу</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="kk">Барыңдар!</span> <span class="ru-hint">— кому это сказано?</span>
+      <select class="mc" data-answer="сендер">
+        <option value="">—</option>
+        <option value="сен">сен</option>
+        <option value="сендер">сендер</option>
+        <option value="ол">ол</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">9.</span> <span class="kk">Болсын</span> <span class="ru-hint">— это форма для</span>
+      <select class="mc" data-answer="ол">
+        <option value="">—</option>
+        <option value="сен">сен</option>
+        <option value="сіз">сіз</option>
+        <option value="ол">ол</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">10.</span> <span class="ru-hint">Возьми книгу и читай.</span>
+      <div class="qbuild" data-answer="Кітапты ал және оқы" data-words="оқы|Кітапты|және|ал"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">11.</span> <span class="ru-hint">Не торопитесь, время есть.</span>
+      <div class="qbuild" data-answer="Асықпаңыз уақыт бар" data-words="уақыт|Асықпаңыз|бар"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
+    <button type="button" class="next-card" data-open="present-future">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Настоящее и будущее одной формой</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 2.2 АУЫСПАЛЫ ОСЫ-КЕЛЕР ШАҚ ============ -->
+<div class="screen topic-screen" id="screen-present-future" data-topic="present-future" style="--tint-color:var(--etistik)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--etistik)"></span>
+    <h2><span class="topic-num">2.2</span> Ауыспалы осы-келер шақ</h2>
+    <span class="done-badge" data-badge="present-future">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Одна форма на настоящее и будущее: барамын — и «иду», и «пойду». Самое частое время в языке.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>Собирается из трёх кусков: <b>основа</b> + <b>-а/-е</b> (после согласного) или <b>-й</b> (после гласного) + <b>жіктік жалғау</b> из темы 0.4. Ничего нового заучивать почти не нужно — личные окончания ты уже знаешь.</p>
+    <table>
+      <tr><th>Кто</th><th class="kk">бар- <span class="hint">твёрдая</span></th><th class="kk">кел- <span class="hint">мягкая</span></th><th class="kk">оқы- <span class="hint">на гласный</span></th></tr>
+      <tr><td class="kk">мен</td><td class="kk">бар<b>амын</b></td><td class="kk">кел<b>емін</b></td><td class="kk">оқ<b>имын</b></td></tr>
+      <tr><td class="kk">сен</td><td class="kk">бар<b>асың</b></td><td class="kk">кел<b>есің</b></td><td class="kk">оқ<b>исың</b></td></tr>
+      <tr><td class="kk">сіз</td><td class="kk">бар<b>асыз</b></td><td class="kk">кел<b>есіз</b></td><td class="kk">оқ<b>исыз</b></td></tr>
+      <tr><td class="kk">ол</td><td class="kk">бар<b>ады</b></td><td class="kk">кел<b>еді</b></td><td class="kk">оқ<b>иды</b></td></tr>
+      <tr><td class="kk">біз</td><td class="kk">бар<b>амыз</b></td><td class="kk">кел<b>еміз</b></td><td class="kk">оқ<b>имыз</b></td></tr>
+      <tr><td class="kk">олар</td><td class="kk">бар<b>ады</b></td><td class="kk">кел<b>еді</b></td><td class="kk">оқ<b>иды</b></td></tr>
+    </table>
+    <ul class="rule-list">
+      <li><b>Для «мен» и «біз» всегда вариант с м</b> — <span class="kk">-мын/-мін, -мыз/-міз</span>. Мучиться с выбором <span class="kk">-пын/-бін</span>, как в теме 0.4, здесь не нужно: перед личным окончанием всегда стоит гласный или <span class="kk">й</span>, а после них суффикс берёт самый мягкий вариант</li>
+      <li><b>У «ол» здесь есть окончание</b> — <span class="kk">-ды/-ді</span>. Это отличается от именного сказуемого: <span class="kk">Ол дәрігер</span> (без окончания), но <span class="kk">Ол келеді</span></li>
+      <li><b>Множественное число глагол не повторяет:</b> <span class="kk">Балалар оқиды</span>, а не «оқидылар». Раз в подлежащем уже есть <span class="kk">-лар</span>, глаголу его дублировать незачем</li>
+    </ul>
+    <p><b>Почему «переходное» (<span class="kk">ауыспалы</span>).</b> Одна и та же форма покрывает и настоящее, и будущее. Что именно имеется в виду, говорит не глагол, а соседнее слово:</p>
+    <table>
+      <tr><th>Предложение</th><th>Перевод</th></tr>
+      <tr><td class="kk">Мен <b>қазір</b> барамын</td><td>я сейчас иду</td></tr>
+      <tr><td class="kk">Мен <b>ертең</b> барамын</td><td>я завтра пойду</td></tr>
+      <tr><td class="kk">Мен <b>күнде</b> барамын</td><td>я каждый день хожу</td></tr>
+    </table>
+    <p><b>Отрицание:</b> основа + <span class="kk">-ма/-ме/-ба/-бе/-па/-пе</span> + <b>-й</b> + жіктік. Соединитель после отрицания всегда <span class="kk">-й</span>, потому что <span class="kk">-ма/-ме</span> кончается на гласный — выбирать не приходится.</p>
+    <ul class="rule-list">
+      <li><span class="kk">бар + ма + й + мын = <b>бармаймын</b></span> — не пойду</li>
+      <li><span class="kk">біл + ме + й + мін = <b>білмеймін</b></span> — не знаю</li>
+      <li><span class="kk">айт + па + й + мын = <b>айтпаймын</b></span> — не скажу</li>
+      <li><span class="kk">жаз + ба + й + мын = <b>жазбаймын</b></span> — не напишу</li>
+      <li><span class="kk">кел + ме + й + ді = <b>келмейді</b></span> — не придёт</li>
+    </ul>
+    <div class="contrast">
+      <div class="label">Русскому нужны два времени, казахскому хватает одного</div>
+      <p>Русский делит жёстко: «иду» и «пойду» — разные слова, и выбрать надо заранее, ещё до того, как открыл рот.</p>
+      <p>Казахский на это не тратится: <span class="kk">барамын</span> покрывает оба случая, а когда именно — скажет <span class="kk">қазір</span>, <span class="kk">ертең</span> или <span class="kk">күнде</span>. Русскому такое тоже знакомо: «завтра еду в Алматы» — глагол в настоящем, смысл в будущем. Просто в казахском это норма, а не разговорная вольность.</p>
+    </div>
+    <div class="trap"><b>Две буквы, на которых спотыкаются все.</b><br><br>
+      <span class="kk">оқы + й</span> даёт <span class="kk"><b>оқи</b></span>, а не «оқый»: <b>ы</b> и <b>й</b> сливаются в <b>и</b>. Отсюда <span class="kk">оқимын, оқиды, оқисың</span>. Так же ведёт себя любая основа на <b>ы/і</b>.<br><br>
+      <span class="kk">шық + а</span> даёт <span class="kk"><b>шыға</b></span>мын, а не «шықамын»: глухая <b>қ</b> перед гласным звенит. Ту же пару ты видел в теме 0.7 — <span class="kk">кітап → кітабым</span>. И в <span class="kk">асық → асығамын</span> тоже.<br><br>
+      И не путай два <span class="kk">бар</span>: в <span class="kk">Менде кітап <b>бар</b></span> это «есть» из темы 0.8, а в <span class="kk">Мен <b>бар</b>амын</span> — основа глагола «идти». Слова одинаковые, родства между ними нет.</div>
+    <div class="tip"><b>Ты уже читал эту форму сотни раз.</b> <span class="kk">барады, келеді, істейді, оқиды, тұрады, жазады, өседі</span> — все глаголы, которые встречались в текстах с самой первой темы, стоят именно в ауыспалы осы-келер шақ. До сих пор они шли готовыми кусками. Теперь можно вернуться к любому прочитанному тексту и разобрать в нём каждый глагол до основы — это лучшее упражнение по этой теме, и оно бесплатное.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 21 · Алма — яблоко и город</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">алма</span> <span class="t">— яблоко</span></div>
+          <div><span class="w">тұқым</span> <span class="t">— семя</span></div>
+          <div><span class="w">өсу</span> <span class="t">— расти</span></div>
+          <div><span class="w">өсіру</span> <span class="t">— выращивать</span></div>
+          <div><span class="w">пісу</span> <span class="t">— созревать</span></div>
+          <div><span class="w">тәтті</span> <span class="t">— сладкий</span></div>
+          <div><span class="w">жабайы</span> <span class="t">— дикий</span></div>
+          <div><span class="w">түр</span> <span class="t">— вид, сорт</span></div>
+          <div><span class="w">бөктер</span> <span class="t">— предгорье</span></div>
+          <div><span class="w">атау</span> <span class="t">— называть</span></div>
+          <div><span class="w">таралу</span> <span class="t">— распространяться</span></div>
+          <div><span class="w">сақтау</span> <span class="t">— беречь, хранить</span></div>
+          <div><span class="w">себеп</span> <span class="t">— причина</span></div>
+          <div><span class="w">жыл</span> <span class="t">— год</span></div>
+          <div><span class="w">жеу</span> <span class="t">— есть, кушать</span></div>
+          <div><span class="w">ішу</span> <span class="t">— пить</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> <span class="kk">алма</span> — это ещё и «не бери» из темы 2.1 (<span class="kk">ал + ма</span>). Одинаковые слова, разные вещи; в предложении их не спутать, потому что глагол в казахском всегда в конце.<br><br>Основы новых глаголов: <span class="kk">өсу → өс</span>, <span class="kk">пісу → піс</span>, <span class="kk">жеу → же</span>, <span class="kk">ішу → іш</span>. Последние два — на гласный и на глухой: <span class="kk">жеймін</span> («ем») и <span class="kk">ішемін</span> («пью»).</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Алма мен Алматы — откуда имя города</div>
+      <div class="mini-text">
+        <p class="storytext">Алматының аты алмадан шығады. Қала тау бөктерінде, ал бөктерде жабайы алма ағаштары өседі.<br><br>Ғалымдар айтады: әлемдегі барлық алма түрлері осы жерден таралады. Бірінші алма ағашы осында өседі.<br><br>Жабайы алма кішкентай, өте тәтті емес. Оны құстар жейді және тұқымын алысқа апарады. Сондықтан жаңа ағаштар алыс жерде де өседі.<br><br>Қазір ғалымдар бұл ағаштарды сақтайды. Себебі жабайы алма — әлемдегі барлық бақшаның тұқымы.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Имя Алматы происходит от слова «алма» — яблоко. Город стоит в предгорьях, а в предгорьях растут дикие яблони.<br><br>Учёные говорят: все сорта яблок в мире разошлись отсюда. Первая яблоня растёт именно здесь.<br><br>Дикое яблоко маленькое и не очень сладкое. Его едят птицы и уносят семена далеко. Поэтому новые деревья растут и в дальних местах.<br><br>Сейчас учёные берегут эти деревья. Потому что дикая яблоня — семя всех садов мира.</p>
+        <p class="why-note"><b>Почему так:</b> все глаголы в тексте стоят в ауыспалы осы-келер шақ и все в 3-м лице. Видно пару: после твёрдой основы <span class="kk">-ады</span> (<span class="kk">шығ-ады, тарал-ады, сақтай-ды</span>), после мягкой <span class="kk">-еді</span> (<span class="kk">өс-еді</span>). А <span class="kk">жейді</span> — от основы на гласный: <span class="kk">же + й + ді</span>.<br><br>И <span class="kk">шығады</span>: основа <span class="kk">шық</span>, но перед гласным глухая <b>қ</b> зазвенела. Ровно как <span class="kk">кітап → кітабым</span>.<br><br><b>Про яблоню:</b> Алматы стоит на родине всех культурных яблок. Дикая яблоня Сиверса растёт в горах вокруг города, и генетики считают её предком почти всех сортов, которые лежат сегодня в магазинах по всему миру.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Ертең не істейсің? — планы на завтра</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Ертең не істейсің?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Таңертең базарға барамын, алма аламын.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Мен де барамын. Бірге барайық!</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Жақсы. Сені аялдамада күтемін.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Мен көлікпен келемін, автобус күтпеймін.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Онда сағат жетіде кездесеміз.</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Что ты завтра делаешь?<br><b>Айгуль:</b> Утром пойду на рынок, куплю яблок.<br><b>Данияр:</b> Я тоже пойду. Пойдём вместе!<br><b>Айгуль:</b> Хорошо. Буду ждать тебя на остановке.<br><b>Данияр:</b> Я приеду на машине, автобус ждать не буду.<br><b>Айгуль:</b> Тогда встретимся в семь.</p>
+        <p class="why-note"><b>Почему так:</b> весь диалог о завтрашнем дне, но ни один глагол не стоит в будущем времени — потому что отдельного будущего здесь не нужно. <span class="kk">Барамын, күтемін, келемін, кездесеміз</span> — та же форма, что и для «хожу, жду, прихожу». Работу времени делает слово <span class="kk">ертең</span> в первой реплике: сказал один раз — и весь разговор о завтра.<br><br><span class="kk">Күтпеймін</span> = <span class="kk">күт + пе + й + мін</span>: основа кончается на глухую <b>т</b>, поэтому <span class="kk">-пе</span>.<br><br>А <span class="kk">барайық</span> — «пойдём» — это бұйрық рай для «біз» из темы 2.1. Приказ и время спокойно стоят в одном разговоре.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="present-future">
+    <p class="quiz-instruction">Впиши окончание: соединитель <span class="kk">-а/-е/-й</span> вместе с личным окончанием.</p>
+    <div class="qitem"><span class="qnum">1.</span> Мен ертең базарға бар<input class="blank" data-answer="амын" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(я пойду)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Сен қазір не істе<input class="blank" data-answer="йсің" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">? <span class="hint">(ты делаешь)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Ол кешке кел<input class="blank" data-answer="еді" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(он придёт)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Біз аялдамада күт<input class="blank" data-answer="еміз" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(мы ждём)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Мен ештеңе біл<input class="blank" data-answer="меймін" style="width:7em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(я не знаю)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> Ол ешқашан айт<input class="blank" data-answer="пайды" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(он никогда не скажет)</span></div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">«Я выхожу» — основа</span> <span class="kk">шық</span> —
+      <select class="mc" data-answer="шығамын">
+        <option value="">—</option>
+        <option value="шықамын">шықамын</option>
+        <option value="шығамын">шығамын</option>
+        <option value="шықпамын">шықпамын</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="ru-hint">«Я читаю» — основа</span> <span class="kk">оқы</span> —
+      <select class="mc" data-answer="оқимын">
+        <option value="">—</option>
+        <option value="оқымын">оқымын</option>
+        <option value="оқыймын">оқыймын</option>
+        <option value="оқимын">оқимын</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">9.</span> <span class="kk">Барамын</span> <span class="ru-hint">без слов времени рядом значит</span>
+      <select class="mc" data-answer="и то, и другое">
+        <option value="">—</option>
+        <option value="только «иду»">только «иду»</option>
+        <option value="только «пойду»">только «пойду»</option>
+        <option value="и то, и другое">и то, и другое</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">10.</span> <span class="ru-hint">Утром я пойду на рынок.</span>
+      <div class="qbuild" data-answer="Таңертең мен базарға барамын" data-words="базарға|барамын|Таңертең|мен"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">11.</span> <span class="ru-hint">Я не жду автобус.</span>
+      <div class="qbuild" data-answer="Мен автобус күтпеймін" data-words="күтпеймін|автобус|Мен"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
+    <button type="button" class="next-card" data-open="present-cont">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Действие прямо сейчас</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 2.3 НАҚ ОСЫ ШАҚ ============ -->
+<div class="screen topic-screen" id="screen-present-cont" data-topic="present-cont" style="--tint-color:var(--etistik)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--etistik)"></span>
+    <h2><span class="topic-num">2.3</span> Нақ осы шақ</h2>
+    <span class="done-badge" data-badge="present-cont">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Действие прямо сейчас. Четыре глагола положения — отыр, тұр, жүр, жатыр — работают помощниками.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>Прошлая тема покрывает «хожу вообще» и «пойду завтра». А для «иду прямо сейчас, в эту минуту» язык берёт отдельную конструкцию — и строит её на четырёх глаголах положения тела.</p>
+    <table>
+      <tr><th>Глагол</th><th>Буквально</th><th>Как помощник</th></tr>
+      <tr><td class="kk">отыр</td><td>сидит</td><td>действие на месте, сидя</td></tr>
+      <tr><td class="kk">тұр</td><td>стоит</td><td>короткое, прямо сейчас</td></tr>
+      <tr><td class="kk">жүр</td><td>ходит</td><td>в движении, в эти дни</td></tr>
+      <tr><td class="kk">жатыр</td><td>лежит</td><td>нейтральный, годится всегда</td></tr>
+    </table>
+    <p><b>Сами по себе</b> эти четыре уже значат действие прямо сейчас — и берут жіктік напрямую, без всякого <span class="kk">-а/-е</span>:</p>
+    <table>
+      <tr><th>Кто</th><th class="kk">отыр</th><th class="kk">тұр</th><th class="kk">жүр</th><th class="kk">жатыр</th></tr>
+      <tr><td class="kk">мен</td><td class="kk">отыр<b>мын</b></td><td class="kk">тұр<b>мын</b></td><td class="kk">жүр<b>мін</b></td><td class="kk">жатыр<b>мын</b></td></tr>
+      <tr><td class="kk">сен</td><td class="kk">отыр<b>сың</b></td><td class="kk">тұр<b>сың</b></td><td class="kk">жүр<b>сің</b></td><td class="kk">жатыр<b>сың</b></td></tr>
+      <tr><td class="kk">сіз</td><td class="kk">отыр<b>сыз</b></td><td class="kk">тұр<b>сыз</b></td><td class="kk">жүр<b>сіз</b></td><td class="kk">жатыр<b>сыз</b></td></tr>
+      <tr><td class="kk">ол</td><td class="kk">отыр</td><td class="kk">тұр</td><td class="kk">жүр</td><td class="kk">жатыр</td></tr>
+      <tr><td class="kk">біз</td><td class="kk">отыр<b>мыз</b></td><td class="kk">тұр<b>мыз</b></td><td class="kk">жүр<b>міз</b></td><td class="kk">жатыр<b>мыз</b></td></tr>
+    </table>
+    <p>У «ол» окончания нет вообще — <span class="kk">Ол отыр</span> значит «он сидит». Это единственное место в глаголе, где 3-е лицо остаётся голым.</p>
+    <p><b>Составная форма.</b> Смысловой глагол получает <span class="kk">-ып/-іп</span> (после согласного) или <span class="kk">-п</span> (после гласного), а помощник берёт на себя лицо и время:</p>
+    <ul class="rule-list">
+      <li><span class="kk">жаз + ып + отырмын = <b>жазып отырмын</b></span> — пишу (сижу и пишу)</li>
+      <li><span class="kk">оқы + п + отыр = <b>оқып отыр</b></span> — читает</li>
+      <li><span class="kk">тыңда + п + тұрмын = <b>тыңдап тұрмын</b></span> — слушаю</li>
+      <li><span class="kk">күт + іп + тұрмын = <b>күтіп тұрмын</b></span> — жду</li>
+      <li><span class="kk">істе + п + жатырмын = <b>істеп жатырмын</b></span> — делаю</li>
+    </ul>
+    <p><b>Глаголы движения — исключение:</b> перед <span class="kk">жатыр</span> они берут не <span class="kk">-ып</span>, а <span class="kk">-а/-е</span>. <span class="kk">Бар<b>а</b> жатырмын</span> — «еду прямо сейчас», <span class="kk">кел<b>е</b> жатырмын</span> — «иду сюда». Формы редкие по правилу, но частые в речи — выучи их как есть.</p>
+    <div class="contrast">
+      <div class="label">Разделение, которого нет в русском</div>
+      <p>По-русски «читаю» — одно слово на два разных смысла: «читаю по вечерам» (вообще) и «читаю прямо сейчас, не отвлекай». Понять, о чём речь, можно только из разговора.</p>
+      <p>Казахский разводит их на две конструкции: <span class="kk">кітап <b>оқимын</b></span> — вообще, по привычке; <span class="kk">кітап <b>оқып отырмын</b></span> — вот прямо сейчас. Английский делает то же самое (<i>I read</i> и <i>I am reading</i>), и если английский когда-то давался, здесь сработает та же интуиция.</p>
+    </div>
+    <div class="trap"><b>Тұрмын и тұрамын — разные вещи.</b> <span class="kk">Тұрмын</span> — «стою прямо сейчас». <span class="kk">Тұрамын</span> — обычная форма из темы 2.2 от той же основы, и значит она «живу» или «встаю»: <span class="kk">Мен Алматыда тұрамын</span> — «я живу в Алматы». Одна буква, а смысл другой.<br><br>Так же с <span class="kk">жатыр</span>: <span class="kk">жатыр<b>мын</b></span> — «я сейчас (делаю)», а <span class="kk">жат<b>амын</b></span> — «лягу». Здесь <span class="kk">жатыр</span> ведёт себя как готовая основа, хотя внутри у неё уже сидит <span class="kk">-ыр</span>. Разбирать её не нужно — запомни целиком.<br><br>И <span class="kk">-ып/-іп/-п</span> сам по себе не время: <span class="kk">жазып</span> — это не «пишет», а «написав, пиша». Один он не стоит, ему обязательно нужен помощник.</div>
+    <div class="tip"><b>Если сомневаешься, какой из четырёх — бери <span class="kk">жатыр</span>.</b> Он нейтральный и звучит естественно почти везде. Самый частый вопрос этой темы — <span class="kk">Не істеп жатырсың?</span>, «что ты сейчас делаешь». Ответить на него можно любым помощником, но <span class="kk">жатыр</span> не ошибётся никогда.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 22 · Бәйтерек — башня в Астане</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">мұнара</span> <span class="t">— башня</span></div>
+          <div><span class="w">жұмыртқа</span> <span class="t">— яйцо</span></div>
+          <div><span class="w">аңыз</span> <span class="t">— легенда</span></div>
+          <div><span class="w">алаң</span> <span class="t">— площадь</span></div>
+          <div><span class="w">төбе</span> <span class="t">— вершина, макушка</span></div>
+          <div><span class="w">жарық</span> <span class="t">— свет; светлый</span></div>
+          <div><span class="w">көтерілу</span> <span class="t">— подниматься</span></div>
+          <div><span class="w">түсіру</span> <span class="t">— снимать (фото)</span></div>
+          <div><span class="w">күлу</span> <span class="t">— смеяться</span></div>
+          <div><span class="w">жату</span> <span class="t">— лежать</span></div>
+          <div><span class="w">демалу</span> <span class="t">— отдыхать</span></div>
+          <div><span class="w">қарау</span> <span class="t">— смотреть</span></div>
+          <div><span class="w">ұстау</span> <span class="t">— держать</span></div>
+          <div><span class="w">тұрғын</span> <span class="t">— житель</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> посмотри, какой соединитель берёт каждая основа. <span class="kk">Күл → күліп</span> (мягкая основа на согласный), <span class="kk">қара → қарап</span> (на гласный), <span class="kk">ұста → ұстап</span>, <span class="kk">түсір → түсіріп</span>, <span class="kk">демал → демалып</span> (твёрдая на согласный). Правило то же, что у всех суффиксов: гармония решает гласный, последняя буква решает, нужен ли он вообще.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Бәйтерек — легенда, ставшая башней</div>
+      <div class="mini-text">
+        <p class="storytext">Астананың орталығында биік мұнара тұр. Оның аты — Бәйтерек.<br><br>Аңыз бар: Самұрық құсы биік ағаштың төбесіне алтын жұмыртқа салады. Мұнара сол аңызды айтады.<br><br>Кешке мұнара жарық. Алаңда адамдар жүр: балалар күліп жүр, қонақтар сурет түсіріп тұр, ақсақалдар орындықта демалып отыр.<br><br>Біз жоғары көтерілеміз. Төбеде терезеге қарап тұрмыз. Бүкіл қала жарық, үйлер кішкентай.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">В центре Астаны стоит высокая башня. Её имя — Байтерек.<br><br>Есть легенда: птица Самрук кладёт золотое яйцо на макушку высокого дерева. Башня рассказывает эту легенду.<br><br>Вечером башня светится. На площади ходят люди: дети смеются, гости фотографируют, аксакалы отдыхают на скамейке.<br><br>Мы поднимаемся наверх. На вершине стоим у окна и смотрим. Весь город в огнях, дома маленькие.</p>
+        <p class="why-note"><b>Почему так:</b> в третьем абзаце три помощника подряд, и выбор не случайный. Дети всё время в движении → <span class="kk">күліп <b>жүр</b></span>. Гости остановились на минуту → <span class="kk">түсіріп <b>тұр</b></span>. Аксакалы сидят → <span class="kk">демалып <b>отыр</b></span>. У всех троих подлежащее во множественном числе, а помощник стоит без окончания — 3-е лицо здесь голое.<br><br>В первом предложении <span class="kk">тұр</span> стоит совсем один, без <span class="kk">-ып</span>: «мұнара тұр» — башня стоит. Эти четыре глагола умеют работать и сами по себе.<br><br><b>Про Байтерек:</b> по легенде птица Самрук каждый год кладёт яйцо на вершину тополя, а дракон Айдахар его съедает — так сменяются день и ночь, лето и зима. Башня повторяет эту картину: золотой шар наверху и есть то самое яйцо.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Не істеп жатырсың? — что делаешь</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Сәлем! Не істеп жатырсың?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Үйде отырмын, кітап оқып жатырмын.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Мен аялдамада тұрмын, автобус күтіп тұрмын.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Қайда бара жатырсың?</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Мұражайға. Досым сонда күтіп отыр.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Жақсы, жолың болсын!</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Привет! Что делаешь?<br><b>Айгуль:</b> Сижу дома, читаю книгу.<br><b>Данияр:</b> А я стою на остановке, жду автобус.<br><b>Айгуль:</b> Куда едешь?<br><b>Данияр:</b> В музей. Друг меня там ждёт.<br><b>Айгуль:</b> Хорошо, доброго пути!</p>
+        <p class="why-note"><b>Почему так:</b> <span class="kk">Не істеп жатырсың?</span> буквально — «что делая лежишь». По-русски это звучит дико, но в казахском именно так спрашивают «чем занят».<br><br>Сравни две реплики Айгуль: <span class="kk">отырмын</span> — просто «сижу», помощник работает сам за себя. <span class="kk">Кітап оқып жатырмын</span> — «читаю книгу»: смысл несёт первый глагол, а второй отвечает только за лицо и за «сейчас».<br><br><span class="kk">Бара жатырсың</span> — то самое исключение: глагол движения перед <span class="kk">жатыр</span> берёт <span class="kk">-а</span>, а не <span class="kk">-ып</span>.<br><br>И <span class="kk">жолың болсын</span> из темы 2.1 — приказ спокойно стоит рядом с настоящим временем.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="present-cont">
+    <p class="quiz-instruction">Впиши соединитель <span class="kk">-ып / -іп / -п</span> — или <span class="kk">-а/-е</span>, если глагол о движении.</p>
+    <div class="qitem"><span class="qnum">1.</span> Мен аялдамада автобус күт<input class="blank" data-answer="іп" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> тұрмын. <span class="hint">(жду)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Ол үйде кітап оқы<input class="blank" data-answer="п" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> отыр. <span class="hint">(читает)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Не істе<input class="blank" data-answer="п" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> жатырсың? <span class="hint">(что делаешь)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Мен қазір мұражайға бар<input class="blank" data-answer="а" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> жатырмын. <span class="hint">(еду сейчас)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Балалар алаңда күл<input class="blank" data-answer="іп" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> жүр. <span class="hint">(смеются)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="ru-hint">«Я стою прямо сейчас» —</span>
+      <select class="mc" data-answer="тұрмын">
+        <option value="">—</option>
+        <option value="тұрамын">тұрамын</option>
+        <option value="тұрмын">тұрмын</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="kk">Мен Алматыда тұрамын</span> <span class="ru-hint">значит</span>
+      <select class="mc" data-answer="я живу в Алматы">
+        <option value="">—</option>
+        <option value="я сейчас стою в Алматы">я сейчас стою в Алматы</option>
+        <option value="я живу в Алматы">я живу в Алматы</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="ru-hint">Какой помощник подходит почти всегда?</span>
+      <select class="mc" data-answer="жатыр">
+        <option value="">—</option>
+        <option value="отыр">отыр</option>
+        <option value="тұр">тұр</option>
+        <option value="жүр">жүр</option>
+        <option value="жатыр">жатыр</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">9.</span> <span class="ru-hint">У «ол» помощник стоит</span>
+      <select class="mc" data-answer="без окончания">
+        <option value="">—</option>
+        <option value="с окончанием -ды">с окончанием -ды</option>
+        <option value="без окончания">без окончания</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">10.</span> <span class="ru-hint">Что ты сейчас делаешь?</span>
+      <div class="qbuild" data-answer="Не істеп жатырсың" data-words="жатырсың|Не|істеп"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">11.</span> <span class="ru-hint">Аксакалы отдыхают на скамейке.</span>
+      <div class="qbuild" data-answer="Ақсақалдар орындықта демалып отыр" data-words="демалып|орындықта|отыр|Ақсақалдар"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
     <button type="button" class="next-card" data-open="vocab">
       <span class="next-marker"></span>
       <span class="next-text">
-        <span class="next-label">Первая версия курса пройдена</span>
-        <span class="next-title">Закрепи слова в словаре</span>
+        <span class="next-label">Дальше — прошедшие времена, они в работе</span>
+        <span class="next-title">А пока закрепи слова в словаре</span>
       </span>
       <span class="next-arrow">→</span>
     </button>
@@ -3709,11 +4249,13 @@
   var NEGIZ_TOPICS = ["harmony-vowels","harmony-consonants","word-order","zhiktik","pronouns","plural",
                       "possessive","bar-zhoq","demonstratives","question-words","question-particle","negation"];
   var SEPTIK_TOPICS = ["ilik","barys","tabys","zhatys","shygys","komektes","all-cases"];
-  var TOPICS = NEGIZ_TOPICS.concat(SEPTIK_TOPICS);
+  var ETISTIK_TOPICS = ["verb-stem","present-future","present-cont"];
+  var TOPICS = NEGIZ_TOPICS.concat(SEPTIK_TOPICS).concat(ETISTIK_TOPICS);
 
   var BLOCKS = {
-    negiz:  { label:"Негіз",  planned:12, topics:NEGIZ_TOPICS,  color:"--negiz" },
-    septik: { label:"Септік", planned:7,  topics:SEPTIK_TOPICS, color:"--septik" }
+    negiz:   { label:"Негіз",   planned:12, topics:NEGIZ_TOPICS,   color:"--negiz" },
+    septik:  { label:"Септік",  planned:7,  topics:SEPTIK_TOPICS,  color:"--septik" },
+    etistik: { label:"Етістік", planned:11, topics:ETISTIK_TOPICS, color:"--etistik" }
   };
 
   var TOPIC_MINUTES = {
@@ -3721,7 +4263,8 @@
     "zhiktik":20, "pronouns":18, "plural":20,
     "possessive":22, "bar-zhoq":18, "demonstratives":18,
     "question-words":18, "question-particle":16, "negation":20,
-    "ilik":20, "barys":18, "tabys":22, "zhatys":18, "shygys":20, "komektes":16, "all-cases":24
+    "ilik":20, "barys":18, "tabys":22, "zhatys":18, "shygys":20, "komektes":16, "all-cases":24,
+    "verb-stem":22, "present-future":24, "present-cont":22
   };
 
   var STORAGE_KEY   = "kkProgressV1";
@@ -3988,7 +4531,11 @@
     var pctEl = document.getElementById("meterPct");
     var cntEl = document.getElementById("meterCount");
     if(pctEl) pctEl.textContent = pct + "%";
-    if(cntEl) cntEl.textContent = doneAll + " из " + plannedTotal + " тем блоков «Негіз» и «Септік». Остальные темы пока в работе.";
+    var names = Object.keys(BLOCKS).map(function(k){ return "«" + BLOCKS[k].label + "»"; });
+    var listed = names.length > 1
+      ? names.slice(0, -1).join(", ") + " и " + names[names.length - 1]
+      : names[0];
+    if(cntEl) cntEl.textContent = doneAll + " из " + plannedTotal + " тем блоков " + listed + ". Остальные темы пока в работе.";
   }
 
   // Тема попадает сюда, если по ней есть попытка с ошибками. Сортируем по
@@ -4213,7 +4760,18 @@
     "хабарласамын":"позвоню","септік":"падеж",
     "шығыс":"восток; исходный падеж","батыс":"запад","автобус":"автобус",
     "одан":"от него; чем тот","оған":"ему, к нему","шығады":"выходит, выезжает",
-    "боссың":"ты свободен","құнанбайұлы":"Кунанбайулы"
+    "боссың":"ты свободен","құнанбайұлы":"Кунанбайулы",
+    // 2.1 негіз + бұйрық рай
+    "болсын":"пусть будет","барайық":"пойдём","асықпаңыз":"не торопитесь",
+    "соңында":"в конце","айтады":"говорит",
+    // 2.2 ауыспалы осы-келер шақ
+    "келемін":"приду, прихожу","күтемін":"жду, буду ждать","күтпеймін":"не буду ждать",
+    "таралады":"расходится, распространяется","сақтайды":"бережёт","әлемдегі":"в мире, мировой",
+    // 2.3 нақ осы шақ — көсемше и четыре помощника
+    "отыр":"сидит","отырмын":"сижу","жатырмын":"я (делаю сейчас)","жатырсың":"ты (делаешь сейчас)",
+    "көтерілеміз":"поднимаемся","төбесіне":"на макушку","самұрық":"Самрук (птица из легенды)",
+    "оқып":"читая","істеп":"делая","күтіп":"ожидая","күліп":"смеясь","қарап":"глядя",
+    "түсіріп":"снимая","демалып":"отдыхая","бара":"едучи, направляясь"
   };
 
   // Слова в тексте стоят с окончаниями, а словарь — по большей части в
