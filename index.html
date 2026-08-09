@@ -751,6 +751,18 @@
         <span class="row-check" data-check="verb-negation" aria-hidden="true">✓</span>
         <span class="row-arrow" aria-hidden="true">›</span>
       </button>
+      <button type="button" class="topic-row" data-open="compound-verb">
+        <span class="marker" style="background:var(--etistik)"></span>
+        <span class="row-title"><span class="topic-num">2.8</span> Күрделі етістік<span class="row-title-ru">составной глагол и вспомогательные</span></span>
+        <span class="row-check" data-check="compound-verb" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
+      </button>
+      <button type="button" class="topic-row" data-open="modality">
+        <span class="marker" style="background:var(--etistik)"></span>
+        <span class="row-title"><span class="topic-num">2.9</span> Қажеттілік пен мүмкіндік<span class="row-title-ru">нужно, могу, хочу, можно</span></span>
+        <span class="row-check" data-check="modality" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
+      </button>
     </div>
   </div>
 
@@ -4946,10 +4958,386 @@
       <button class="btn btn-reveal" type="button">Показать ответы</button>
       <span class="quiz-result" aria-live="polite"></span>
     </div>
+    <button type="button" class="next-card" data-open="compound-verb">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Составной глагол: два глагола вместо одного</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 2.8 КҮРДЕЛІ ЕТІСТІК ============ -->
+<div class="screen topic-screen" id="screen-compound-verb" data-topic="compound-verb" style="--tint-color:var(--etistik)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--etistik)"></span>
+    <h2><span class="topic-num">2.8</span> Күрделі етістік</h2>
+    <span class="done-badge" data-badge="compound-verb">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Два глагола вместо одного: айтып беру — «рассказать другому», ұмытып қалу — «взять и забыть». Второй теряет свой смысл и добавляет оттенок.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>Огромная часть казахских действий выражается <b>парой глаголов</b>. Первый несёт смысл и стоит в көсемше — форме на <span class="kk">-ып/-іп/-п</span> из темы 2.3. Второй называется <b>көмекші етістік</b>, вспомогательный: свой словарный смысл он теряет почти целиком, зато добавляет оттенок и забирает на себя время, лицо и отрицание.</p>
+    <p><span class="kk">айт</span> + <span class="kk">ып</span> + <span class="kk">бер</span> + <span class="kk">ді</span> + <span class="kk">м</span> = <span class="kk"><b>айтып бердім</b></span> — <span class="hint">«я рассказал» (кому-то)</span></p>
+    <table>
+      <tr><th>Көмекші</th><th>Что добавляет</th><th>Пример</th></tr>
+      <tr><td class="kk">алу <span class="hint">брать</span></td><td>в свою пользу, себе</td><td class="kk">сатып алу <span class="hint">купить</span></td></tr>
+      <tr><td class="kk">беру <span class="hint">давать</span></td><td>для другого</td><td class="kk">айтып беру <span class="hint">рассказать</span></td></tr>
+      <tr><td class="kk">қою <span class="hint">класть</span></td><td>заранее, впрок, насовсем</td><td class="kk">жазып қою <span class="hint">записать</span></td></tr>
+      <tr><td class="kk">қалу <span class="hint">оставаться</span></td><td>нечаянно, вдруг</td><td class="kk">ұмытып қалу <span class="hint">забыть</span></td></tr>
+      <tr><td class="kk">жіберу <span class="hint">отправлять</span></td><td>резко, внезапно</td><td class="kk">күліп жіберу <span class="hint">расхохотаться</span></td></tr>
+      <tr><td class="kk">шығу <span class="hint">выходить</span></td><td>до конца, насквозь</td><td class="kk">оқып шығу <span class="hint">прочитать целиком</span></td></tr>
+      <tr><td class="kk">көру <span class="hint">видеть</span></td><td>попробовать</td><td class="kk">істеп көру <span class="hint">попробовать</span></td></tr>
+      <tr><td class="kk">болу <span class="hint">быть</span></td><td>завершить</td><td class="kk">жеп болу <span class="hint">доесть</span></td></tr>
+    </table>
+    <p><b>Всё изменяемое висит на втором глаголе.</b> Первый застыл в көсемше и не меняется больше никогда:</p>
+    <table>
+      <tr><th>Форма</th><th>Перевод</th></tr>
+      <tr><td class="kk">айтып <b>беремін</b></td><td>расскажу</td></tr>
+      <tr><td class="kk">айтып <b>бердім</b></td><td>рассказал</td></tr>
+      <tr><td class="kk">айтып <b>бермедім</b></td><td>не рассказал</td></tr>
+      <tr><td class="kk">айтып <b>берген</b></td><td>рассказывал (давно)</td></tr>
+    </table>
+    <p><b>Второе көсемше — на <span class="kk">-а/-е/-й</span></b> — сочетается только с двумя помощниками, и смысл там другой:</p>
+    <ul class="rule-list">
+      <li><span class="kk">оқ<b>и</b> бастадым</span> — начал читать. <span class="kk">Бастау</span> всегда идёт с этой формой, с <span class="kk">-ып</span> его не ставят</li>
+      <li><span class="kk">бар<b>а</b> аламын</span> — могу пойти. Это уже не оттенок, а модальность, и разбирать её будем в теме 2.9</li>
+    </ul>
+    <div class="contrast">
+      <div class="label">Русский лепит приставку, казахский ставит второй глагол</div>
+      <p>Русский оттенок действия навешивает приставкой: <b>про</b>читать, <b>за</b>писать, <b>рас</b>смеяться, <b>при</b>нести. Приставок несколько десятков, они прирастают к глаголу намертво, и новых уже не появляется.</p>
+      <p>Казахский вместо этого берёт обычный глагол и ставит его вторым: <span class="kk">оқып шығу</span> — «выйти прочитав», то есть прочитать до конца. <span class="kk">Жазып қою</span> — «положить написав», то есть записать. Система открытая: помощников десяток, основ тысячи, и почти любая пара что-то значит. Поэтому знакомый глагол в непонятном месте — чаще всего не новое слово, а помощник; загляни, какой оттенок он даёт.</p>
+    </div>
+    <div class="trap"><b>Отрицание — только на втором глаголе.</b> <span class="kk">Айтып бермедім</span> — «я не рассказал». А <span class="kk">айтпай бердім</span> — совсем другое: «дал, не сказав». Переставив отрицание, ты не отрицаешь действие, а описываешь другую сцену.<br><br><b>Не переводи пару дословно.</b> <span class="kk">Сатып алу</span> — это одно понятие «купить», а не «взять покупая». Такие пары срослись намертво: <span class="kk">алып келу</span> — принести, <span class="kk">алып бару</span> — отнести. Спрашивать, при чём тут <span class="kk">алу</span>, так же бесполезно, как спрашивать, при чём в русском «наступить» нога.<br><br><b><span class="kk">Барып алу</span> и <span class="kk">бара алу</span> — разные вещи.</b> Первое — «сходить (для себя)», обычная пара из этой темы. Второе — «мочь пойти», конструкция из темы 2.9. Различает их только форма көсемше: <span class="kk">-ып</span> против <span class="kk">-а</span>. Одна буква меняет смысл целиком.</div>
+    <div class="tip"><b>Ты уже пользовался этим, не зная.</b> Нақ осы шақ из темы 2.3 — <span class="kk">оқып отыр</span>, <span class="kk">тыңдап тұрмын</span> — устроен ровно так же: көсемше плюс помощник. Просто те четыре помощника дают не оттенок, а время. И <span class="kk">ұмытып қалдым</span> из диалога прошлой темы — тоже отсюда: «забыл» по-казахски почти всегда пара, потому что забывают не нарочно.<br><br>Пять пар, которые стоит выучить сегодня: <span class="kk">сатып алу</span>, <span class="kk">айтып беру</span>, <span class="kk">ұмытып қалу</span>, <span class="kk">оқып шығу</span>, <span class="kk">істеп көру</span>.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 27 · Наурыз мерекесі</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">мереке</span> <span class="t">— праздник</span></div>
+          <div><span class="w">көктем</span> <span class="t">— весна</span></div>
+          <div><span class="w">наурыз</span> <span class="t">— Наурыз; март</span></div>
+          <div><span class="w">қазан</span> <span class="t">— котёл</span></div>
+          <div><span class="w">дән</span> <span class="t">— зерно</span></div>
+          <div><span class="w">май</span> <span class="t">— масло, жир</span></div>
+          <div><span class="w">ұн</span> <span class="t">— мука</span></div>
+          <div><span class="w">сан</span> <span class="t">— число</span></div>
+          <div><span class="w">тең</span> <span class="t">— равный</span></div>
+          <div><span class="w">қою</span> <span class="t">— класть, ставить</span></div>
+          <div><span class="w">жіберу</span> <span class="t">— отправлять, пускать</span></div>
+          <div><span class="w">бастау</span> <span class="t">— начинать</span></div>
+          <div><span class="w">аяқтау</span> <span class="t">— заканчивать</span></div>
+          <div><span class="w">жинау</span> <span class="t">— собирать, убирать</span></div>
+          <div><span class="w">кешіру</span> <span class="t">— прощать</span></div>
+          <div><span class="w">көмекші</span> <span class="t">— помощник, вспомогательный</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> три слова из набора — <span class="kk">қою, жіберу, бастау</span> — сегодня работают помощниками, и в этой роли их словарный смысл почти не виден. <span class="kk">Жазып қой</span> — «запиши», а не «положи написав». <span class="kk">Айтып жіберді</span> — «выпалил», а не «отправил сказав». Зато <span class="kk">бастау</span> смысл сохраняет полностью: <span class="kk">оқи бастадым</span> — именно «начал читать».</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Наурыз — көктем мерекесі</div>
+      <div class="mini-text">
+        <p class="storytext">Наурыз — көктем мерекесі. Наурызда күн мен түн тең болады: қыс аяқталады, көктем басталады.<br><br>Мереке алдында адамдар үйді жинап қояды, жаңа киім сатып алады. Ескі қатені кешіріп жібереді: жаңа жылға таза кіру керек.<br><br>Ең маңызды тамақ — наурыз көже. Оны үлкен қазанда пісіреді. Ішінде жеті зат бар: су, ет, тұз, май, ұн, дән және сүт. Жеті — қасиетті сан.<br><br>Қонақтар келеді. Үй иесі дастархан дайындап қояды, шай құйып береді. Ақсақал бата беріп, ескі әңгімені айтып береді. Балалар тыңдап отырады.<br><br>Далада ойын басталады. Әнші ән айтып береді, домбырашы күй ойнап береді. Кешке бәрі көже жеп болады да, үйге қайтады.<br><br>Наурыз — жаңа жылдың басы. Оны мың жыл тойлап келеді.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Наурыз — весенний праздник. В Наурыз день и ночь становятся равными: зима заканчивается, весна начинается.<br><br>Перед праздником люди убирают дом, покупают новую одежду. Старые обиды прощают: в новый год нужно войти чистым.<br><br>Самая важная еда — наурыз-коже. Его варят в большом котле. Внутри семь вещей: вода, мясо, соль, масло, мука, зерно и молоко. Семь — священное число.<br><br>Приходят гости. Хозяин дома накрывает дастархан, наливает чай. Аксакал даёт бата и рассказывает старые истории. Дети сидят и слушают.<br><br>На улице начинаются игры. Певец поёт песню, домбрист играет кюй. Вечером все доедают коже и возвращаются домой.<br><br>Наурыз — начало нового года. Его празднуют уже тысячу лет.</p>
+        <p class="why-note"><b>Почему так:</b> в тексте одиннадцать составных глаголов, и каждый выбран не случайно. <span class="kk">Жинап қояды</span> и <span class="kk">дайындап қояды</span> — заранее, к приходу гостей. <span class="kk">Сатып алады</span> — себе. <span class="kk">Кешіріп жібереді</span> — разом, одним махом. <span class="kk">Айтып береді</span>, <span class="kk">құйып береді</span>, <span class="kk">ойнап береді</span> — всё для других, потому и <span class="kk">беру</span>. <span class="kk">Жеп болады</span> — доедают, до конца.<br><br>Сравни две формы подряд: <span class="kk">тыңдап отырады</span> — это нақ осы шақ из темы 2.3, «сидят и слушают прямо сейчас», а <span class="kk">тойлап келеді</span> — оттенок «делают и продолжают до сих пор». Помощник тот же по устройству, смысл разный.<br><br><b>Про Наурыз:</b> это не казахский и не мусульманский праздник, а день весеннего равноденствия, который отмечают от Балкан до Синьцзяна — иранцы, тюрки, курды. Ему около трёх тысяч лет. В СССР его запрещали с 1926 по 1988 год, и вернулся он в Казахстане одним из первых признаков независимости.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Мерекеге дайындалдың ба? — подготовка к празднику</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Мерекеге дайындалдың ба?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Иә, үйді жинап қойдым, жаңа киім сатып алдым.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Мен әлі ештеңе істемедім. Көже пісірдің бе?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Әжем рецепті айтып берді, мен жазып қойдым.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Маған да айтып бер! Бірақ қазан сатып алу керек.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Ұмытып қалдың ба? Қазан бар, анам тауып қойған.</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Ты подготовилась к празднику?<br><b>Айгуль:</b> Да, дом убрала, новую одежду купила.<br><b>Данияр:</b> А я ещё ничего не сделал. Ты коже сварила?<br><b>Айгуль:</b> Бабушка рассказала рецепт, я записала.<br><b>Данияр:</b> Расскажи и мне! Только котёл надо купить.<br><b>Айгуль:</b> Забыл? Котёл есть, мама его нашла (заранее).</p>
+        <p class="why-note"><b>Почему так:</b> шесть реплик — восемь составных глаголов, и все с разными помощниками. <span class="kk">Жинап қойдым</span>, <span class="kk">жазып қойдым</span>, <span class="kk">тауып қойған</span> — сделано заранее, впрок, и результат лежит готовый. <span class="kk">Сатып алдым</span> — себе. <span class="kk">Айтып берді</span> и <span class="kk">айтып бер</span> — другому.<br><br><span class="kk">Ұмытып қалдың ба?</span> — та самая пара, которая обещана тебе в диалоге прошлой темы. Забывают не нарочно, поэтому <span class="kk">қалу</span>: «оно осталось забытым».<br><br>И <span class="kk">істемедім</span> — обычный глагол без помощника. Составной глагол не обязателен: он добавляет оттенок, а не заменяет обычную форму.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="compound-verb">
+    <p class="quiz-instruction">Впиши окончание на вспомогательном глаголе — время и лицо всегда там.</p>
+    <div class="qitem"><span class="qnum">1.</span> Мен кітапты оқып шық<input class="blank" data-answer="тым" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(прочитал целиком)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Ол маған әңгіме айтып бер<input class="blank" data-answer="ді" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(рассказал)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Мен телефонды ұмытып қал<input class="blank" data-answer="дым" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(забыл)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Айгүл жаңа киім сатып ал<input class="blank" data-answer="ды" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(купила)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Мен оны айтып бер<input class="blank" data-answer="медім" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(не рассказал)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="ru-hint">«Рассказать другому» —</span>
+      <select class="mc" data-answer="айтып беру">
+        <option value="">—</option>
+        <option value="айтып алу">айтып алу</option>
+        <option value="айтып беру">айтып беру</option>
+        <option value="айтып қою">айтып қою</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">«Купить» —</span>
+      <select class="mc" data-answer="сатып алу">
+        <option value="">—</option>
+        <option value="сатып алу">сатып алу</option>
+        <option value="сатып беру">сатып беру</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="ru-hint">«Я не рассказал» —</span>
+      <select class="mc" data-answer="айтып бермедім">
+        <option value="">—</option>
+        <option value="айтпай бердім">айтпай бердім</option>
+        <option value="айтып бермедім">айтып бермедім</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">9.</span> <span class="ru-hint">«Попробовать сделать» —</span>
+      <select class="mc" data-answer="істеп көру">
+        <option value="">—</option>
+        <option value="істеп қою">істеп қою</option>
+        <option value="істеп көру">істеп көру</option>
+        <option value="істеп шығу">істеп шығу</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">10.</span> <span class="ru-hint">Время и лицо стоят —</span>
+      <select class="mc" data-answer="на вспомогательном глаголе">
+        <option value="">—</option>
+        <option value="на основном глаголе">на основном глаголе</option>
+        <option value="на вспомогательном глаголе">на вспомогательном глаголе</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">11.</span> <span class="ru-hint">Я прочитал книгу целиком.</span>
+      <div class="qbuild" data-answer="Мен кітапты оқып шықтым" data-words="шықтым|Мен|оқып|кітапты"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">12.</span> <span class="ru-hint">Мама заранее убрала дом.</span>
+      <div class="qbuild" data-answer="Анам үйді жинап қойды" data-words="қойды|Анам|жинап|үйді"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
+    <button type="button" class="next-card" data-open="modality">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Нужно, могу, хочу, можно</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 2.9 ҚАЖЕТТІЛІК ПЕН МҮМКІНДІК ============ -->
+<div class="screen topic-screen" id="screen-modality" data-topic="modality" style="--tint-color:var(--etistik)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--etistik)"></span>
+    <h2><span class="topic-num">2.9</span> Қажеттілік пен мүмкіндік</h2>
+    <span class="done-badge" data-badge="modality">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Нужно, могу, хочу, можно — четыре конструкции вместо четырёх слов. «Хочу» устроено так, что переводить его дословно бесполезно.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>В русском «нужно», «могу», «хочу» и «можно» — четыре отдельных слова, и глагол при них не меняется. В казахском ни одного такого слова нет: каждый смысл собирается своей конструкцией, и три из четырёх перестраивают предложение целиком.</p>
+
+    <p><b>1. Керек — «нужно».</b> Глагол берётся в словарной форме на <span class="kk">-у</span>, а тот, кому нужно, уходит в барыс из темы 1.2:</p>
+    <table>
+      <tr><th>Конструкция</th><th>Перевод</th></tr>
+      <tr><td class="kk"><b>Маған</b> бару керек</td><td>мне нужно идти</td></tr>
+      <tr><td class="kk"><b>Саған</b> оқу керек</td><td>тебе нужно учиться</td></tr>
+      <tr><td class="kk">Маған бару керек <b>емес</b></td><td>мне не нужно идти</td></tr>
+    </table>
+    <p>Точнее и книжнее — через ілік и тәуелдік: <span class="kk">Менің бар<b>уым</b> керек</span> — «я должен пойти». Дальше по лицам: <span class="kk">бар<b>уың</b> керек</span>, <span class="kk">бар<b>уы</b> керек</span>, <span class="kk">бар<b>уымыз</b> керек</span>. Само <span class="kk">керек</span> не меняется никогда — ни по лицам, ни по числам.</p>
+
+    <p><b>2. Көсемше на -а/-е/-й + алу — «мочь».</b> Тот самый <span class="kk">алу</span> из прошлой темы, но с другим көсемше он значит не «себе», а «в состоянии»:</p>
+    <table>
+      <tr><th>Кто</th><th class="kk">бар-</th><th class="kk">оқы-</th></tr>
+      <tr><td class="kk">мен</td><td class="kk">бара ала<b>мын</b></td><td class="kk">оқи ала<b>мын</b></td></tr>
+      <tr><td class="kk">сен</td><td class="kk">бара ала<b>сың</b></td><td class="kk">оқи ала<b>сың</b></td></tr>
+      <tr><td class="kk">сіз</td><td class="kk">бара ала<b>сыз</b></td><td class="kk">оқи ала<b>сыз</b></td></tr>
+      <tr><td class="kk">ол</td><td class="kk">бара ала<b>ды</b></td><td class="kk">оқи ала<b>ды</b></td></tr>
+      <tr><td class="kk">біз</td><td class="kk">бара ала<b>мыз</b></td><td class="kk">оқи ала<b>мыз</b></td></tr>
+    </table>
+    <ul class="rule-list">
+      <li><b>Отрицание — на <span class="kk">алу</span></b>: <span class="kk">бара ал<b>ма</b>ймын</span> — не могу пойти, <span class="kk">айта ал<b>ма</b>йды</span> — не может сказать</li>
+      <li><b>В прошедшем то же самое</b>: <span class="kk">бара алдым</span> — смог пойти, <span class="kk">бара алмадым</span> — не смог</li>
+    </ul>
+
+    <p><b>3. -ғы/-гі + тәуелдік + келу — «хотеть».</b> Самая чужая конструкция блока. Дословно она значит «моё хотение-идти приходит»:</p>
+    <table>
+      <tr><th>Кто</th><th>Хочет пойти</th></tr>
+      <tr><td class="kk">мен</td><td class="kk">бар<b>ғым</b> келеді</td></tr>
+      <tr><td class="kk">сен</td><td class="kk">бар<b>ғың</b> келеді</td></tr>
+      <tr><td class="kk">сіз</td><td class="kk">бар<b>ғыңыз</b> келеді</td></tr>
+      <tr><td class="kk">ол</td><td class="kk">бар<b>ғысы</b> келеді</td></tr>
+      <tr><td class="kk">біз</td><td class="kk">бар<b>ғымыз</b> келеді</td></tr>
+    </table>
+    <table>
+      <tr><th>Основа кончается на</th><th>Окончание</th><th>Пример</th></tr>
+      <tr><td>гласный, сонорный, звонкий</td><td class="kk">-ғы/-гі</td><td class="kk">бар<b>ғы</b>м, кел<b>гі</b>м, оқы<b>ғы</b>м</td></tr>
+      <tr><td>глухой <span class="hint">(қатаң)</span></td><td class="kk">-қы/-кі</td><td class="kk">айт<b>қы</b>м, іш<b>кі</b>м</td></tr>
+    </table>
+    <ul class="rule-list">
+      <li><b>Отрицание — на <span class="kk">келу</span></b>: <span class="kk">барғым кел<b>ме</b>йді</span> — не хочу идти</li>
+      <li><b>Прошедшее — тоже на нём</b>: <span class="kk">барғым келді</span> — захотелось пойти</li>
+      <li>Выбор буквы — ровно тот же, что у <span class="kk">-ған/-қан</span> из темы 2.5. Новое правило учить не нужно</li>
+    </ul>
+
+    <p><b>4. -уға болады — «можно».</b> Словарная форма на <span class="kk">-у</span> + барыс + <span class="kk">болады</span>:</p>
+    <table>
+      <tr><th>Форма</th><th>Перевод</th></tr>
+      <tr><td class="kk">Кіру<b>ге болады</b></td><td>можно войти</td></tr>
+      <tr><td class="kk">Кіру<b>ге бола ма?</b></td><td>можно войти?</td></tr>
+      <tr><td class="kk">Кіру<b>ге болмайды</b></td><td>нельзя войти</td></tr>
+    </table>
+    <p>И совсем простое: <span class="kk">мүмкін</span> — «возможно», <span class="kk">мүмкін емес</span> — «невозможно». Оба ставятся в конец и ничего не перестраивают: <span class="kk">Қатесіз үйрену мүмкін емес</span> — «учиться без ошибок невозможно».</p>
+
+    <div class="contrast">
+      <div class="label">«Я хочу» — и вдруг никакого «я»</div>
+      <p>В русском все четыре смысла оставляют говорящего подлежащим: <b>я</b> хочу, <b>я</b> могу, <b>мне</b> нужно. Даже в «мне нужно» это узнаваемое «я», просто в другом падеже.</p>
+      <p>В казахском <span class="kk">Менің барғым келеді</span> устроено иначе: подлежащее здесь — само хотение, а «я» стало определением при нём, в ілік септік. Буквально «моё желание-пойти приходит». Поэтому по лицам меняется не глагол <span class="kk">келеді</span>, а притяжательное окончание внутри: <span class="kk">барғ<b>ым</b></span>, <span class="kk">барғ<b>ың</b></span>, <span class="kk">барғ<b>ысы</b></span>. Русскому такое знакомо разве что по «мне хочется» — и это лучшая подсказка: думай не «я хочу», а «мне хочется».</p>
+    </div>
+    <div class="trap"><b>Не ставь «мен» в именительном.</b> «Мен барғым келеді» — частая ошибка. Правильно <span class="kk">Менің барғым келеді</span> или просто <span class="kk">Барғым келеді</span> — местоимение и так видно по окончанию <span class="kk">-ым</span>, и в живой речи его обычно опускают.<br><br><b>Отрицание вешается на помощника, а не на смысл.</b> <span class="kk">Бара алмаймын</span> — не могу пойти. «Бармай аламын» — так не говорят вообще. То же с хотением: <span class="kk">барғым келмейді</span>, а не «бармағым келеді».<br><br><b><span class="kk">Бара алу</span> и <span class="kk">барып алу</span> — разное.</b> Напоминаю из темы 2.8: <span class="kk">-а/-е/-й</span> даёт «мочь», <span class="kk">-ып/-іп/-п</span> — «сделать для себя». <span class="kk">Айта аламын</span> — «могу сказать», <span class="kk">айтып аламын</span> — «скажу-ка себе». Помощник один, көсемше разные.<br><br><b><span class="kk">Керек</span> не спрягается.</b> Меняется местоимение перед ним — <span class="kk">маған, саған, оған</span>, — а само слово стоит как есть. Отрицание тоже не внутри, а рядом: <span class="kk">керек емес</span>.</div>
+    <div class="tip"><b>Три фразы, которые пригодятся в первый же день.</b> <span class="kk">Барғым келеді</span> — «хочу пойти». <span class="kk">Айта аласыз ба?</span> — «можете сказать?». <span class="kk">Кіруге бола ма?</span> — «можно войти?». С ними уже можно попроситься, спросить и объяснить, чего ты хочешь, — а это половина любого разговора.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 28 · Тіл үйрену</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">қажет</span> <span class="t">— нужный, необходимый</span></div>
+          <div><span class="w">мүмкіндік</span> <span class="t">— возможность</span></div>
+          <div><span class="w">сөйлеу</span> <span class="t">— говорить, разговаривать</span></div>
+          <div><span class="w">аудару</span> <span class="t">— переводить</span></div>
+          <div><span class="w">қайталау</span> <span class="t">— повторять</span></div>
+          <div><span class="w">жаттығу</span> <span class="t">— упражнение</span></div>
+          <div><span class="w">сабақ</span> <span class="t">— урок</span></div>
+          <div><span class="w">ұстаз</span> <span class="t">— наставник, учитель</span></div>
+          <div><span class="w">әліпби</span> <span class="t">— алфавит</span></div>
+          <div><span class="w">әріп</span> <span class="t">— буква</span></div>
+          <div><span class="w">дыбыс</span> <span class="t">— звук</span></div>
+          <div><span class="w">ереже</span> <span class="t">— правило</span></div>
+          <div><span class="w">тәжірибе</span> <span class="t">— опыт, практика</span></div>
+          <div><span class="w">жеңіл</span> <span class="t">— лёгкий</span></div>
+          <div><span class="w">күнделікті</span> <span class="t">— ежедневный</span></div>
+          <div><span class="w">ұялу</span> <span class="t">— стесняться</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> собери на этих основах все три конструкции. <span class="kk">Сөйле → сөйлегім келеді</span> (гласный, значит <span class="kk">-гі</span>), <span class="kk">аудар → аударғым келеді</span>, но <span class="kk">ұял → ұялғым келмейді</span>. Через «мочь»: <span class="kk">сөйлей аламын</span>, <span class="kk">аудара аламын</span>, <span class="kk">қайталай аламын</span> — после гласного көсемше даёт <span class="kk">-й</span>. И через «нужно»: <span class="kk">маған қайталау керек</span>, где глагол остаётся в словарной форме и не меняется вовсе.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Қазақша сөйлегім келеді</div>
+      <div class="mini-text">
+        <p class="storytext">Менің қазақша сөйлегім келеді. Бірақ әлі жақсы сөйлей алмаймын.<br><br>Мен оқи аламын және тыңдай аламын. Жаңа сөзді аудара аламын. Бірақ айта алмаймын: ұяламын. Қате жібергім келмейді.<br><br>Ұстазым айтады: «Ұялуға болмайды. Қате жіберуге болады — қатесіз үйрену мүмкін емес. Саған күнделікті тәжірибе қажет, ереже емес.»<br><br>Сондықтан мен күнде жаттығу істеймін. Жаңа сөзді қайталап қоямын, кешке сабақты оқып шығамын. Жеңіл емес, бірақ мүмкіндік бар.<br><br>Ахмет Байтұрсынұлы туралы да оқыдым. Ол қазақ әліпбиін жасаған. Әр әріп бір дыбысты береді. Халық оған «Ұлт ұстазы» деген есім берген.<br><br>Мен де бір күні жақсы сөйлей аламын. Оған уақыт керек.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Я хочу говорить по-казахски. Но пока хорошо говорить не могу.<br><br>Я могу читать и могу слушать. Новое слово могу перевести. Но сказать не могу: стесняюсь. Не хочу делать ошибки.<br><br>Мой наставник говорит: «Стесняться нельзя. Ошибаться можно — учиться без ошибок невозможно. Тебе нужна ежедневная практика, а не правила.»<br><br>Поэтому я каждый день делаю упражнения. Новое слово повторяю, вечером прочитываю урок. Нелегко, но возможность есть.<br><br>Я и про Ахмета Байтурсынулы читал. Он создал казахский алфавит. Каждая буква передаёт один звук. Народ дал ему имя «Учитель нации».<br><br>И я однажды смогу говорить хорошо. На это нужно время.</p>
+        <p class="why-note"><b>Почему так:</b> текст держится на четырёх конструкциях сразу, и видно, как они делят работу. <span class="kk">Сөйлегім келеді</span>, <span class="kk">жібергім келмейді</span> — желание. <span class="kk">Оқи аламын</span>, <span class="kk">тыңдай аламын</span>, <span class="kk">сөйлей алмаймын</span> — способность. <span class="kk">Тәжірибе қажет</span>, <span class="kk">уақыт керек</span> — необходимость. <span class="kk">Ұялуға болмайды</span>, <span class="kk">қате жіберуге болады</span> — разрешение и запрет.<br><br>Обрати внимание: <span class="kk">Менің</span> стоит только в первом предложении, дальше его нет. Окончание <span class="kk">-ім</span> внутри <span class="kk">сөйлегім</span> и так говорит, чьё это желание, и повторять местоимение незачем.<br><br><b>Про Ахмета Байтұрсынұлы:</b> в 1912 году он переделал арабское письмо под казахскую фонетику — выбросил лишние буквы и добавил знаки для казахских гласных. Получилась система, где каждая буква — один звук; её назвали «төте жазу», и в Китае казахи пишут так до сих пор. Он же составил первый казахский букварь и первым описал грамматику казахского на казахском языке. Расстрелян в 1937 году, возвращён в школьные программы только в 1988-м.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Сабаққа барғың келе ме? — о занятиях</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Сен қазақша сөйлей аласың ба?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Аз-аз. Айта аламын, бірақ жақсы сөйлей алмаймын.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Маған да үйрену керек. Жұмыста қазақ тілі қажет.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Онда сабаққа барғың келе ме? Ұстазым жақсы.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Келеді! Бірақ күндіз уақытым жоқ. Кешке баруға бола ма?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Болады. Ол кешке де сабақ береді. Ұялмай хабарлас!</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Ты можешь говорить по-казахски?<br><b>Айгуль:</b> Немножко. Сказать могу, но хорошо говорить не могу.<br><b>Данияр:</b> Мне тоже нужно учиться. На работе нужен казахский язык.<br><b>Айгуль:</b> Тогда хочешь пойти на занятия? Наставник у меня хороший.<br><b>Данияр:</b> Хочу! Но днём у меня нет времени. Вечером можно прийти?<br><b>Айгуль:</b> Можно. Он и вечером даёт уроки. Не стесняйся, позвони!</p>
+        <p class="why-note"><b>Почему так:</b> вопрос о желании собирается так же, как утверждение, плюс частица: <span class="kk">барғың келе ме?</span> — «хочешь пойти?». Ответ ещё короче: <span class="kk">Келеді!</span> — одного глагола хватает, потому что подлежащее (само желание) уже названо в вопросе.<br><br><span class="kk">Керек</span> и <span class="kk">қажет</span> в третьей реплике стоят рядом и значат почти одно. Разница тонкая: <span class="kk">керек</span> — обиходное «надо», <span class="kk">қажет</span> — «необходимо», чуть книжнее и официальнее. В речи их путают свободно.<br><br>И последнее <span class="kk">ұялмай</span> — это көсемше с отрицанием, «не стесняясь». Форму на <span class="kk">-май/-мей</span> ты видел в теме 2.7; целиком көсемше разберём в теме 2.11.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="modality">
+    <p class="quiz-instruction">Впиши недостающую часть конструкции.</p>
+    <div class="qitem"><span class="qnum">1.</span> Маған үйге бару <input class="blank" data-answer="керек" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(мне нужно идти домой)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Мен қазақша оқи ала<input class="blank" data-answer="мын" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(могу читать)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Менің барғым кел<input class="blank" data-answer="еді" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(я хочу пойти)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Мен бүгін бара ал<input class="blank" data-answer="маймын" style="width:7em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(не могу пойти)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Мұнда кіруге бол<input class="blank" data-answer="ады" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(можно войти)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="kk">айт</span> + «хочу» =
+      <select class="mc" data-answer="айтқым келеді">
+        <option value="">—</option>
+        <option value="айтғым келеді">айтғым келеді</option>
+        <option value="айтқым келеді">айтқым келеді</option>
+        <option value="айтамын келеді">айтамын келеді</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">«Я хочу пойти» —</span>
+      <select class="mc" data-answer="Менің барғым келеді">
+        <option value="">—</option>
+        <option value="Мен барғым келеді">Мен барғым келеді</option>
+        <option value="Менің барғым келеді">Менің барғым келеді</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="ru-hint">«Я не могу пойти» —</span>
+      <select class="mc" data-answer="Мен бара алмаймын">
+        <option value="">—</option>
+        <option value="Мен бармай аламын">Мен бармай аламын</option>
+        <option value="Мен бара алмаймын">Мен бара алмаймын</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">9.</span> <span class="ru-hint">«Можно войти?» —</span>
+      <select class="mc" data-answer="Кіруге бола ма?">
+        <option value="">—</option>
+        <option value="Кіруге бола ма?">Кіруге бола ма?</option>
+        <option value="Кіре бола ма?">Кіре бола ма?</option>
+        <option value="Кіріп бола ма?">Кіріп бола ма?</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">10.</span> <span class="ru-hint">«Мочь» требует көсемше —</span>
+      <select class="mc" data-answer="-а/-е/-й: бара аламын">
+        <option value="">—</option>
+        <option value="-ып/-іп/-п: барып аламын">-ып/-іп/-п: барып аламын</option>
+        <option value="-а/-е/-й: бара аламын">-а/-е/-й: бара аламын</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">11.</span> <span class="ru-hint">Я хочу говорить по-казахски.</span>
+      <div class="qbuild" data-answer="Менің қазақша сөйлегім келеді" data-words="келеді|Менің|сөйлегім|қазақша"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">12.</span> <span class="ru-hint">Мне нужна ежедневная практика.</span>
+      <div class="qbuild" data-answer="Маған күнделікті тәжірибе керек" data-words="керек|Маған|тәжірибе|күнделікті"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
     <button type="button" class="next-card" data-open="vocab">
       <span class="next-marker"></span>
       <span class="next-text">
-        <span class="next-label">Дальше — күрделі етістік и модальность, они в работе</span>
+        <span class="next-label">Дальше — есімше и көсемше, они в работе</span>
         <span class="next-title">А пока закрепи слова в словаре</span>
       </span>
       <span class="next-arrow">→</span>
@@ -4987,7 +5375,7 @@
                       "possessive","bar-zhoq","demonstratives","question-words","question-particle","negation"];
   var SEPTIK_TOPICS = ["ilik","barys","tabys","zhatys","shygys","komektes","all-cases"];
   var ETISTIK_TOPICS = ["verb-stem","present-future","present-cont","past-simple","past-perfect",
-                        "future-tense","verb-negation"];
+                        "future-tense","verb-negation","compound-verb","modality"];
   var TOPICS = NEGIZ_TOPICS.concat(SEPTIK_TOPICS).concat(ETISTIK_TOPICS);
 
   var BLOCKS = {
@@ -5004,7 +5392,7 @@
     "ilik":20, "barys":18, "tabys":22, "zhatys":18, "shygys":20, "komektes":16, "all-cases":24,
     "verb-stem":22, "present-future":24, "present-cont":22,
     "past-simple":22, "past-perfect":24,
-    "future-tense":24, "verb-negation":22
+    "future-tense":24, "verb-negation":22, "compound-verb":26, "modality":24
   };
 
   var STORAGE_KEY   = "kkProgressV1";
@@ -5542,6 +5930,26 @@
     "бармаймын":"не пойду","келмедің":"ты не пришёл","бермедің":"ты не дал, не ответил",
     "көрмедім":"я не видел","күттім":"я ждал","хабарластым":"я позвонил",
     "хабарлас":"позвони, свяжись","ұмытып":"забыв","етпейді":"не сделает",
+    // 2.8 күрделі етістік — көсемше основного глагола и формы помощников
+    "айтып":"сказав","жазып":"написав","жинап":"убрав","дайындап":"приготовив",
+    "кешіріп":"простив","құйып":"налив","ойнап":"играя","тауып":"найдя",
+    "тойлап":"празднуя","қайталап":"повторив","беріп":"дав",
+    "қояды":"кладёт; делает заранее","қоямын":"кладу; сделаю заранее",
+    "қойдым":"положил; сделал заранее","қойған":"положил (давно)",
+    "жібереді":"отправляет; делает разом","берді":"дал, рассказал","берген":"дал (давно)",
+    "бер":"дай, расскажи","алады":"берёт; может","аласың":"берёшь; можешь",
+    "шығамын":"выхожу; дочитаю","істемедім":"я не сделал","оқыдым":"я прочитал",
+    "пісірдің":"ты сварил","дайындалдың":"ты подготовился",
+    "көже":"коже (блюдо)","домбырашы":"домбрист","иесі":"хозяин (его)",
+    "ең":"самый","әр":"каждый","күндіз":"днём","рецепті":"рецепт (его)",
+    // 2.9 қажеттілік пен мүмкіндік
+    "оқи":"читая","айта":"говоря","тыңдай":"слушая","сөйлей":"говоря",
+    "аудара":"переводя","келе":"приходя","бола":"быть, становиться",
+    "алмаймын":"не могу","болады":"можно; будет","болмайды":"нельзя",
+    "сөйлегім":"моё желание говорить","жібергім":"моё желание допустить",
+    "барғың":"твоё желание пойти","саған":"тебе","аяқталады":"заканчивается",
+    "ұяламын":"стесняюсь","ұялмай":"не стесняясь","ұлт":"нация, народ",
+    "байтұрсынұлы":"Байтурсынулы",
     // имена и клички из текстов — иначе не переводятся по тапу
     "айгүл":"Айгуль (женское имя)","данияр":"Данияр (мужское имя)",
     "ахмет":"Ахмет (имя)","қожа":"Ходжа (почётное звание)",
