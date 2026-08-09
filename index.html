@@ -190,6 +190,7 @@
   .tag[data-group="negiz"]{background:var(--negiz-tint); color:var(--negiz-deep);}
   .tag[data-group="septik"]{background:var(--septik-tint); color:var(--septik-deep);}
   .tag[data-group="etistik"]{background:var(--etistik-tint); color:var(--etistik-deep);}
+  .tag[data-group="keneyu"]{background:var(--keneyu-tint); color:var(--keneyu-deep);}
   .era-header h2{font-size:1.15rem; margin:8px 0 4px; font-weight:700;}
   .era-header .sub{font-size:0.85rem; color:var(--muted);}
 
@@ -513,6 +514,8 @@
 <nav class="blockbar">
   <button class="negiz" data-target="negiz">НЕГІЗ · ОСНОВА · A1</button>
   <button class="septik" data-target="septik">СЕПТІК · ПАДЕЖИ · A1–A2</button>
+  <button class="etistik" data-target="etistik">ЕТІСТІК · ГЛАГОЛ · A2</button>
+  <button class="keneyu" data-target="keneyu">КЕҢЕЙТУ · РАСШИРЕНИЕ · A2–B1</button>
 </nav>
 
 <div class="screen active" id="home">
@@ -778,6 +781,29 @@
     </div>
   </div>
 
+  <div class="level-divider"><span>Блок 3 · Кеңейту — расширение</span></div>
+  <div class="topic-group" id="keneyu">
+    <div class="era-header">
+      <span class="tag" data-group="keneyu">Блок 3 · A2–B1 · Негізгі–Орта · 12 тем</span>
+      <h2>Из предложения — речь</h2>
+      <div class="sub">Глагол собран, но говорить пока можно только простыми фразами. Здесь появляются «если», «хочу», послелоги, залоги и сложное предложение — то, из чего складывается обычный разговор.</div>
+    </div>
+    <div class="topic-list">
+      <button type="button" class="topic-row" data-open="conditional">
+        <span class="marker" style="background:var(--keneyu)"></span>
+        <span class="row-title"><span class="topic-num">3.1</span> Шартты рай<span class="row-title-ru">условие: «если» одним окончанием</span></span>
+        <span class="row-check" data-check="conditional" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
+      </button>
+      <button type="button" class="topic-row" data-open="optative">
+        <span class="marker" style="background:var(--keneyu)"></span>
+        <span class="row-title"><span class="topic-num">3.2</span> Қалау рай<span class="row-title-ru">желание: пойду-ка, хоть бы, давай</span></span>
+        <span class="row-check" data-check="optative" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
+      </button>
+    </div>
+  </div>
+
   <div class="reset-row"><button id="resetBtn" type="button">Сбросить прогресс</button></div>
 </main>
 </div>
@@ -806,7 +832,7 @@
       <li>Возвращайся к темам из блока «Стоит повторить» — это места, где чаще всего ошибаешься</li>
       <li>Открывай подборщик суффиксов каждый раз, когда сомневаешься. Цель — довести выбор до автоматизма, а не выучить таблицу наизусть</li>
     </ul>
-    <div class="tip">Курс растёт по одной теме за раз. Сейчас открыты первые темы блока «Негіз», дальше идут падежи, потом глагол.</div>
+    <div class="tip">Курс растёт по одной теме за раз. Блоки «Негіз», «Септік» и «Етістік» открыты целиком, блок «Кеңейту» начат: условие и желание уже есть, дальше будут послелоги, залоги и сложное предложение.</div>
     <p style="font-size:0.82rem; color:var(--muted); margin-top:20px;">Сделано <a href="https://www.linkedin.com/in/stanislavsidorovich" target="_blank" rel="noopener" style="color:var(--negiz); font-weight:700; text-decoration:none;">Stanislav Sidorovich</a> · Алматы · <span style="font-family:var(--font-lat)">2026</span></p>
   </div>
 </div>
@@ -5712,10 +5738,401 @@
       <button class="btn btn-reveal" type="button">Показать ответы</button>
       <span class="quiz-result" aria-live="polite"></span>
     </div>
+    <button type="button" class="next-card" data-open="conditional">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Блок «Етістік» пройден целиком — дальше «Кеңейту»</span>
+        <span class="next-title">3.1 Шартты рай — «если» одним окончанием</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 3.1 ШАРТТЫ РАЙ ============ -->
+<div class="screen topic-screen" id="screen-conditional" data-topic="conditional" style="--tint-color:var(--keneyu)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--keneyu)"></span>
+    <h2><span class="topic-num">3.1</span> Шартты рай</h2>
+    <span class="done-badge" data-badge="conditional">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Условие: барсам, келсе, болса. «Если» в казахском не слово, а окончание — и оно же несёт лицо.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>Русское «если» — отдельное слово, и глагол при нём остаётся обычным: «если я <b>пойду</b>». Казахский поступает наоборот: слова «если» в предложении может не быть вовсе, а условие вешается прямо на глагол окончанием <span class="kk">-са/-се</span>. После него идёт личное окончание — то же самое, что в жедел өткен шақ из темы 2.4.</p>
+    <table>
+      <tr><th>Кто</th><th class="kk">бар-</th><th class="kk">кел-</th></tr>
+      <tr><td class="kk">мен</td><td class="kk">бар<b>сам</b></td><td class="kk">кел<b>сем</b></td></tr>
+      <tr><td class="kk">сен</td><td class="kk">бар<b>саң</b></td><td class="kk">кел<b>сең</b></td></tr>
+      <tr><td class="kk">сіз</td><td class="kk">бар<b>саңыз</b></td><td class="kk">кел<b>сеңіз</b></td></tr>
+      <tr><td class="kk">ол</td><td class="kk">бар<b>са</b></td><td class="kk">кел<b>се</b></td></tr>
+      <tr><td class="kk">біз</td><td class="kk">бар<b>сақ</b></td><td class="kk">кел<b>сек</b></td></tr>
+      <tr><td class="kk">сендер</td><td class="kk">бар<b>саңдар</b></td><td class="kk">кел<b>сеңдер</b></td></tr>
+    </table>
+    <p>Личные окончания здесь — <span class="kk">-м, -ң, -ңыз, —, -қ, -ңдар</span>, ровно те же, что у <span class="kk">бардым, бардың, бардық</span>. Ничего нового учить не нужно: новое только <span class="kk">-са/-се</span> перед ними.</p>
+    <div class="tip"><b>Хорошая новость про выбор буквы.</b> У <span class="kk">-са/-се</span> всего два варианта, и глухие с звонкими на них не влияют: <span class="kk">айт<b>са</b></span>, <span class="kk">кет<b>се</b></span>, <span class="kk">іш<b>се</b></span>, <span class="kk">оқы<b>са</b></span>. Смотришь только на гармонию гласных из темы 0.1 — твёрдый корень или мягкий. После <span class="kk">-ды/-ті/-ты</span> из прошедшего времени это отдых.</div>
+    <p><b>Отрицание</b> — обычное <span class="kk">-ма/-ме/-ба/-бе/-па/-пе</span> из темы 2.7, и уже поверх него <span class="kk">-са</span>:</p>
+    <ul class="rule-list">
+      <li><span class="kk">бар<b>ма</b>сам</span> — если я не пойду</li>
+      <li><span class="kk">кел<b>ме</b>се</span> — если он не придёт</li>
+      <li><span class="kk">айт<b>па</b>саң</span> — если ты не скажешь</li>
+    </ul>
+    <p><b>Слово «егер» есть, но оно не главное.</b> Его можно поставить в начале — <span class="kk">Егер уақытың болса, кел</span>, — а можно не ставить: <span class="kk">Уақытың болса, кел</span>. Смысл один и тот же. Условие несёт окончание, а <span class="kk">егер</span> только заранее предупреждает слушателя, что сейчас будет условие.</p>
+    <p><b>Условие всегда идёт первым</b>, главное предложение — вторым. Время и лицо главного предложения ставятся как обычно, а глагол на <span class="kk">-са</span> сам по себе времени не имеет:</p>
+    <table>
+      <tr><th>Казахский</th><th>Русский</th></tr>
+      <tr><td class="kk">Ертең жаңбыр жау<b>са</b>, үйде боламыз</td><td>если завтра пойдёт дождь, будем дома</td></tr>
+      <tr><td class="kk">Уақытым бол<b>са</b>, келемін</td><td>если у меня будет время, приду</td></tr>
+      <tr><td class="kk">Ол кел<b>се</b>, бірге кетеміз</td><td>если он придёт, уйдём вместе</td></tr>
+    </table>
+    <p><b>Самая частая форма всего блока — <span class="kk">болса</span></b>, «если есть, если будет». Ею собирается половина бытовых условий:</p>
+    <ul class="rule-list">
+      <li><span class="kk">Ақшам <b>болса</b>, аламын</span> — будут деньги, куплю</li>
+      <li><span class="kk">Мүмкіндік <b>болса</b>, хабар беріңіз</span> — если будет возможность, дайте знать</li>
+      <li><span class="kk">Ауа райы жақсы <b>болса</b>, тауға шығамыз</span> — если погода будет хорошая, пойдём в горы</li>
+    </ul>
+    <p><b>Три оборота, которые вырастают из того же окончания:</b></p>
+    <table>
+      <tr><th>Форма</th><th>Смысл</th></tr>
+      <tr><td class="kk">Жаңбыр жау<b>са да</b>, барамыз</td><td>даже если пойдёт дождь</td></tr>
+      <tr><td class="kk">Мен кір<b>сем бола ма</b>?</td><td>можно, я войду?</td></tr>
+      <tr><td class="kk">Осында отыр<b>саң болады</b></td><td>можешь сесть здесь</td></tr>
+    </table>
+    <p><b>«Если бы» — то же <span class="kk">-са</span> плюс <span class="kk">-ар еді</span>.</b> Вторая половина берётся из темы 2.6: причастие на <span class="kk">-ар/-ер</span> и вспомогательное <span class="kk">еді</span>. Получается нереальное условие — то, чего нет:</p>
+    <table>
+      <tr><th>Казахский</th><th>Русский</th></tr>
+      <tr><td class="kk">Уақытым болса, бар<b>ар едім</b></td><td>будь у меня время, я бы пошёл</td></tr>
+      <tr><td class="kk">Білсем, айт<b>ар едім</b></td><td>если бы я знал, сказал бы</td></tr>
+      <tr><td class="kk">Су қайтса, балық та қайт<b>ар еді</b></td><td>вернись вода, вернулась бы и рыба</td></tr>
+    </table>
+    <div class="contrast">
+      <div class="label">Русский ставит «если» в начале, казахский — в конце</div>
+      <p>«Если у тебя будет время» — русский предупреждает об условии первым же словом, и дальше можно слушать спокойно.</p>
+      <p>Казахский весь этот смысл откладывает на конец слова: <span class="kk">уақытың болса</span>. До последнего слога фраза выглядит как обычное «у тебя есть время», и только <span class="kk">-са</span> превращает её в условие. Это та же перемена, что была в теме 2.11: смысл проясняется в конце, а не в начале. Зато одно окончание несёт сразу три вещи — условие, лицо и границу придаточного.</p>
+    </div>
+    <div class="trap"><b>«Егер» без -са не работает.</b> Главная ошибка русскоязычных — перевести «если» одним словом и оставить глагол в покое: <span class="kk">Егер мен барамын</span> ✗. Правильно <span class="kk">Егер мен барсам</span> ✓, а само <span class="kk">егер</span> при этом можно и выбросить.<br><br><b>Не путай <span class="kk">-са</span> и <span class="kk">-сын</span>.</b> <span class="kk">Барса</span> — «если пойдёт», <span class="kk">барсын</span> — «пусть идёт» (приказ третьему лицу из темы 2.1). Одна буква, а смысл разный.<br><br><b>Личное окончание идёт после <span class="kk">-са</span>, а не перед.</b> <span class="kk">Барсам</span>, а не «барымса»; <span class="kk">келсек</span>, а не «келміксе». Порядок в казахском слове всегда один: основа → залог → отрицание → наклонение → лицо.<br><br><b>После <span class="kk">-са</span> не бывает времени.</b> «Если я завтра пойду» — не <span class="kk">барсам болады</span> и не «барамын са», а просто <span class="kk">барсам</span>. Будущее время несёт второе предложение, а не первое.<br><br><b><span class="kk">-са да</span> — это «даже если», а не «если да».</b> <span class="kk">Кешіксем де, барамын</span> — «даже если опоздаю, пойду».</div>
+    <div class="tip"><b>Ты уже видел эту форму.</b> В теме 0.5 была пословица <span class="kk">Қонақ келсе, құт келеді</span> — «придёт гость, придёт благодать». Тогда <span class="kk">келсе</span> пришлось запомнить целым куском, а теперь видно, из чего оно собрано.<br><br>Дальше <span class="kk">-са</span> понадобится ещё дважды: в теме «Қалау рай» из него делается желание (<span class="kk">келсе екен</span> — «хоть бы пришёл»), а в теме «Құрмалас сөйлем» условие станет одним из способов связать два предложения с разными подлежащими — там, где цепочка көсемше из 2.11 уже не справляется.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 31 · Арал теңізі</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">өзен</span> <span class="t">— река</span></div>
+          <div><span class="w">кеме</span> <span class="t">— судно, корабль</span></div>
+          <div><span class="w">жағалау</span> <span class="t">— берег, побережье</span></div>
+          <div><span class="w">балықшы</span> <span class="t">— рыбак</span></div>
+          <div><span class="w">құм</span> <span class="t">— песок</span></div>
+          <div><span class="w">құрғау</span> <span class="t">— высыхать</span></div>
+          <div><span class="w">азаю</span> <span class="t">— уменьшаться</span></div>
+          <div><span class="w">көбею</span> <span class="t">— увеличиваться, прибывать</span></div>
+          <div><span class="w">бөгет</span> <span class="t">— плотина, преграда</span></div>
+          <div><span class="w">егін</span> <span class="t">— посевы, урожай</span></div>
+          <div><span class="w">мақта</span> <span class="t">— хлопок</span></div>
+          <div><span class="w">пайдалану</span> <span class="t">— пользоваться</span></div>
+          <div><span class="w">үміт</span> <span class="t">— надежда</span></div>
+          <div><span class="w">жоба</span> <span class="t">— проект</span></div>
+          <div><span class="w">қайтару</span> <span class="t">— возвращать</span></div>
+          <div><span class="w">кейін</span> <span class="t">— потом, после</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> проверь <span class="kk">-са</span> на новых основах — здесь важна только гармония. Твёрдые: <span class="kk">құрға → құрғаса</span>, <span class="kk">аза → азайса</span> (основа <span class="kk">азай</span>), <span class="kk">пайдалан → пайдаланса</span>. Мягкие: <span class="kk">көбей → көбейсе</span>, <span class="kk">кел → келсе</span>. Глухой или звонкий согласный на конце ничего не меняет: <span class="kk">кет<b>се</b></span> и <span class="kk">кел<b>се</b></span> устроены одинаково.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Арал — егер су қайтса</div>
+      <div class="mini-text">
+        <p class="storytext">Арал үлкен теңіз болған. Оған екі өзен су берген. Теңізде балық көп болған, жағалауда балықшылар тұрған, кемелер жүрген.<br><br>Кейін өзеннің суын мақта мен егінге алған. Су теңізге жетпеген. Теңіз құрғай бастаған, су жылдан жылға азайған.<br><br>Су кетсе, тұз қалады. Бүгін ол жерде құм мен тұз бар. Ескі кемелер құмда тұр. Жел тұзды құмды көтереді, ол адамның денсаулығына зиян.<br><br>Егер су қайтса, балық та қайтады. Сол себепті өзеннің суын сақтау керек.<br><br>Солтүстік Аралда бөгет салған, сондықтан онда су көбейді. Балықшылар қайта жұмыс істей бастады. Кіші теңізде балық бар, кемелер де бар.<br><br>Егер адамдар суды дұрыс пайдаланса, үлкен теңіз де қайтар еді. Ол қиын, бірақ үміт бар.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Арал был большим морем. Две реки давали ему воду. Рыбы в море было много, на берегу жили рыбаки, ходили суда.<br><br>Потом воду рек забрали на хлопок и посевы. Вода до моря не доходила. Море начало высыхать, воды из года в год становилось меньше.<br><br>Если вода уходит, остаётся соль. Сегодня там песок и соль. Старые суда стоят на песке. Ветер поднимает солёный песок, а это вредно для здоровья людей.<br><br>Если вода вернётся, вернётся и рыба. Поэтому воду рек надо беречь.<br><br>На Северном Арале построили плотину, и вода там прибыла. Рыбаки снова начали работать. В малом море есть рыба, есть и суда.<br><br>Если люди будут пользоваться водой правильно, вернулось бы и большое море. Это трудно, но надежда есть.</p>
+        <p class="why-note"><b>Почему так:</b> в тексте три вида условия подряд. <span class="kk">Су кетсе, тұз қалады</span> — общее правило, всегда так. <span class="kk">Егер су қайтса, балық та қайтады</span> — реальное условие с обычным будущим во второй части. А <span class="kk">пайдаланса, қайтар еді</span> — нереальное: <span class="kk">-ар еді</span> из темы 2.6 сразу сообщает, что говорящий в это не очень верит.<br><br>Обрати внимание на <span class="kk">егер</span>: в первом случае его нет, во втором есть, и смысл от этого не меняется.<br><br><b>Про Арал:</b> за пятьдесят лет море потеряло больше половины воды, а порт Аральск оказался в сотне километров от берега. Северную часть в 2005 году отделили Кокаральской плотиной — уровень поднялся на несколько метров, рыба вернулась, и в Аральске снова работает рыбзавод. Большое, южное море к прежнему виду уже не вернуть.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Ауа райы жақсы болса — планы на выходной</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Ертең ауа райы жақсы болса, тауға барамыз.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Жаңбыр жауса ше?</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Жаңбыр жауса, үйде отырамыз. Кітап оқимыз.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Уақытым болса, мен де барар едім. Бірақ жұмысым көп.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Жұмысыңды тез аяқтасаң, бірге барамыз. Асықпасаң да, күтемін.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Жарайды. Барсам, хабар беремін. Бармасам, кешір.</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Если завтра будет хорошая погода, пойдём в горы.<br><b>Айгуль:</b> А если пойдёт дождь?<br><b>Данияр:</b> Если пойдёт дождь, посидим дома. Почитаем.<br><b>Айгуль:</b> Если бы у меня было время, я бы тоже пошла. Но работы много.<br><b>Данияр:</b> Если быстро закончишь работу, пойдём вместе. Даже если не будешь спешить, я подожду.<br><b>Айгуль:</b> Хорошо. Если пойду, дам знать. Если не пойду, извини.</p>
+        <p class="why-note"><b>Почему так:</b> весь диалог держится на одном окончании, но лицо каждый раз разное: <span class="kk">болса</span> (погода), <span class="kk">аяқтасаң</span> (ты), <span class="kk">барсам</span> и <span class="kk">бармасам</span> (я). Русский в этих же местах повторяет «если» шесть раз, казахскому хватает шести окончаний.<br><br><span class="kk">Барар едім</span> — вежливый способ отказаться: «пошла бы, но…». Прямое <span class="kk">бармаймын</span> прозвучало бы резче.<br><br><span class="kk">Асықпасаң да</span> — отрицание и «даже если» в одном слове: <span class="kk">асық + па + са + ң + да</span>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="conditional">
+    <p class="quiz-instruction">Впиши окончание шартты рай.</p>
+    <div class="qitem"><span class="qnum">1.</span> Ертең жаңбыр жау<input class="blank" data-answer="са" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">, үйде боламын <span class="hint">(если пойдёт дождь)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Мен бар<input class="blank" data-answer="сам" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">, саған хабар беремін <span class="hint">(если я пойду)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Сен айт<input class="blank" data-answer="саң" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">, мен білемін <span class="hint">(если ты скажешь)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Біз бүгін бар<input class="blank" data-answer="сақ" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">, орын табамыз <span class="hint">(если мы пойдём сегодня)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Ол кел<input class="blank" data-answer="месе" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">, өзім барамын <span class="hint">(если он не придёт)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="ru-hint">«Даже если пойдёт дождь, поедем» —</span>
+      <select class="mc" data-answer="Жаңбыр жауса да, барамыз">
+        <option value="">—</option>
+        <option value="Жаңбыр жауса да, барамыз">Жаңбыр жауса да, барамыз</option>
+        <option value="Жаңбыр жаусын да, барамыз">Жаңбыр жаусын да, барамыз</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">«Будь у меня время, я бы пошёл» —</span>
+      <select class="mc" data-answer="Уақытым болса, барар едім">
+        <option value="">—</option>
+        <option value="Уақытым болса, барамын">Уақытым болса, барамын</option>
+        <option value="Уақытым болса, барар едім">Уақытым болса, барар едім</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="kk">барсын</span> — это
+      <select class="mc" data-answer="пусть идёт">
+        <option value="">—</option>
+        <option value="если пойдёт">если пойдёт</option>
+        <option value="пусть идёт">пусть идёт</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">9.</span> <span class="ru-hint">Личное окончание в шартты рай стоит —</span>
+      <select class="mc" data-answer="после -са: барсам">
+        <option value="">—</option>
+        <option value="после -са: барсам">после -са: барсам</option>
+        <option value="перед -са: барымса">перед -са: барымса</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">10.</span> <span class="ru-hint">Слово «егер» —</span>
+      <select class="mc" data-answer="можно опустить, а окончание -са нельзя">
+        <option value="">—</option>
+        <option value="обязательно, без него условия нет">обязательно, без него условия нет</option>
+        <option value="можно опустить, а окончание -са нельзя">можно опустить, а окончание -са нельзя</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">11.</span> <span class="ru-hint">Если завтра будет время, приду.</span>
+      <div class="qbuild" data-answer="Ертең уақытым болса келемін" data-words="келемін|болса|Ертең|уақытым"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">12.</span> <span class="ru-hint">Если он не придёт, пойду сам.</span>
+      <div class="qbuild" data-answer="Ол келмесе өзім барамын" data-words="барамын|Ол|өзім|келмесе"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
+    <button type="button" class="next-card" data-open="optative">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Следующая тема</span>
+        <span class="next-title">3.2 Қалау рай — пойду-ка, давай, хоть бы</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 3.2 ҚАЛАУ РАЙ ============ -->
+<div class="screen topic-screen" id="screen-optative" data-topic="optative" style="--tint-color:var(--keneyu)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--keneyu)"></span>
+    <h2><span class="topic-num">3.2</span> Қалау рай</h2>
+    <span class="done-badge" data-badge="optative">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Желание: барайын, барайық, келсе екен. Своё желание, общее и чужое выражаются тремя разными формами.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>В русском все желания обслуживает один глагол «хотеть»: хочу пойти, хочу, чтобы он пришёл, давай пойдём. В казахском это три разные конструкции, и выбор зависит от того, <b>чьё желание</b>. Одна из них уже знакома по теме 2.9, две новые.</p>
+    <table>
+      <tr><th>Форма</th><th>Чьё желание</th><th>Пример</th></tr>
+      <tr><td class="kk">-ғым келеді</td><td>моё, о себе</td><td class="kk">барғым келеді</td></tr>
+      <tr><td class="kk">-айын/-ейін</td><td>моё, решаю сам</td><td class="kk">барайын</td></tr>
+      <tr><td class="kk">-айық/-ейік</td><td>наше, зову с собой</td><td class="kk">барайық</td></tr>
+      <tr><td class="kk">-са екен</td><td>чужое, «хоть бы»</td><td class="kk">келсе екен</td></tr>
+    </table>
+
+    <p><b>1. <span class="kk">-айын/-ейін</span> — «пойду-ка я».</b> Это решение, принятое вслух: не «хочу», а «сделаю, если никто не против». Формы всего две — для «мен» и для «біз»:</p>
+    <table>
+      <tr><th>Основа</th><th class="kk">мен</th><th class="kk">біз</th></tr>
+      <tr><td class="kk">бар-</td><td class="kk">бар<b>айын</b></td><td class="kk">бар<b>айық</b></td></tr>
+      <tr><td class="kk">кел-</td><td class="kk">кел<b>ейін</b></td><td class="kk">кел<b>ейік</b></td></tr>
+      <tr><td class="kk">айт-</td><td class="kk">айт<b>айын</b></td><td class="kk">айт<b>айық</b></td></tr>
+      <tr><td class="kk">сөйле-</td><td class="kk">сөйле<b>йін</b></td><td class="kk">сөйле<b>йік</b></td></tr>
+      <tr><td class="kk">оқы-</td><td class="kk">оқ<b>иын</b></td><td class="kk">оқ<b>иық</b></td></tr>
+    </table>
+    <ul class="rule-list">
+      <li><b>После согласного</b> — полное окончание <span class="kk">-айын/-ейін</span>: <span class="kk">барайын</span>, <span class="kk">келейін</span></li>
+      <li><b>После гласного</b> — короткое <span class="kk">-йын/-йін</span>: <span class="kk">сөйлейін</span>, <span class="kk">тыңдайын</span></li>
+      <li><b>Основа на <span class="kk">-ы/-і</span></b> меняет её на <span class="kk">и</span>: <span class="kk">оқы → оқиын</span>, <span class="kk">жина → жинайын</span></li>
+      <li><b>Отрицание</b> обычное: <span class="kk">бар<b>ма</b>йын</span> — не пойду-ка я</li>
+    </ul>
+    <p><b>С вопросительной частицей это становится вежливым предложением</b> — самый ходовой оборот темы:</p>
+    <table>
+      <tr><th>Казахский</th><th>Русский</th></tr>
+      <tr><td class="kk">Айтайын ба?</td><td>сказать?</td></tr>
+      <tr><td class="kk">Барайық па?</td><td>пойдём?</td></tr>
+      <tr><td class="kk">Терезені ашайын ба?</td><td>открыть окно?</td></tr>
+    </table>
+    <p>Частица выбирается по теме 0.11, по последней букве: <span class="kk">айтайы<b>н</b></span> кончается на сонорный — значит <span class="kk">ба</span>; <span class="kk">барайы<b>қ</b></span> на глухой — значит <span class="kk">па</span>.</p>
+
+    <p><b>2. <span class="kk">-са екен</span> — «хоть бы».</b> Берётся шартты рай из прошлой темы и добавляется <span class="kk">екен</span>. Само <span class="kk">екен</span> не меняется никогда, а лицо показывает <span class="kk">-са</span>:</p>
+    <table>
+      <tr><th>Казахский</th><th>Русский</th></tr>
+      <tr><td class="kk">Ол кел<b>се екен</b></td><td>хоть бы он пришёл</td></tr>
+      <tr><td class="kk">Жаңбыр жау<b>са екен</b></td><td>хоть бы пошёл дождь</td></tr>
+      <tr><td class="kk">Бар<b>сам екен</b></td><td>вот бы мне поехать</td></tr>
+      <tr><td class="kk">Ол кешік<b>песе екен</b></td><td>хоть бы он не опоздал</td></tr>
+    </table>
+    <p>Это единственный способ сказать «хочу, чтобы <b>он</b> …»: <span class="kk">-ғым келеді</span> так не работает, оно всегда про самого говорящего.</p>
+
+    <p><b>3. <span class="kk">-са игі еді</span> — то же самое, но книжно.</b> <span class="kk">Жаңбыр жауса игі еді</span> — «хорошо бы пошёл дождь». Так пишут и говорят со сцены; в разговоре звучит <span class="kk">-са екен</span>. Знать эту форму нужно, чтобы узнавать её в текстах и пожеланиях.</p>
+
+    <p><b>4. <span class="kk">-ғы келеді</span> — повторение из темы 2.9.</b> Напомним целиком, потому что рядом с новыми формами разница видна лучше:</p>
+    <table>
+      <tr><th>Казахский</th><th>Русский</th></tr>
+      <tr><td class="kk">Бар<b>ғым</b> келеді</td><td>хочу пойти</td></tr>
+      <tr><td class="kk">Бар<b>ғым</b> келді</td><td>захотелось пойти</td></tr>
+      <tr><td class="kk">Бар<b>ғым</b> келмейді</td><td>не хочу идти</td></tr>
+      <tr><td class="kk">Оның бар<b>ғысы</b> келеді</td><td>он хочет пойти</td></tr>
+    </table>
+    <div class="contrast">
+      <div class="label">«Давай пойдём» обращено к тебе, «барайық» — к себе</div>
+      <p>Русское «давай» — это приказ собеседнику: дай, позволь. Дальше идёт второй глагол, и получается два слова на одно намерение.</p>
+      <p>Казахский обходится одним словом и обращает его к говорящему: <span class="kk">барайық</span> буквально «пойдём-ка мы». Собеседника в этой форме нет вовсе — он появляется только в вопросительной частице: <span class="kk">барайық па?</span> — «пойдём?». Отсюда практическое следствие: <span class="kk">барайық</span> без частицы звучит как решение («идём»), а с частицей — как предложение («пойдём?»). Разница в одном слоге, а по-русски это разница между «идём» и «может, сходим?».</p>
+    </div>
+    <div class="trap"><b><span class="kk">Барайын</span> — это не будущее время.</b> <span class="kk">Барамын</span> — «я пойду» (факт), <span class="kk">барайын</span> — «пойду-ка я» (решение прямо сейчас). Спутать легко, потому что по-русски оба переводятся будущим.<br><br><b><span class="kk">Барайық</span> ≠ <span class="kk">барсын</span>.</b> Первое — «пойдём мы», второе — «пусть он идёт» из темы 2.1. Обе формы про волю, но лица разные.<br><br><b>Основа на <span class="kk">-ы/-і</span> не берёт полное окончание.</b> <span class="kk">Оқиын</span>, а не «оқыайын»; <span class="kk">оқиық</span>, а не «оқыайық».<br><br><b>Чужое желание через <span class="kk">-ғым келеді</span> не выражается.</b> «Хочу, чтобы он пришёл» — это <span class="kk">Ол келсе екен</span>, а не «оның келгісі келеді» (последнее значит «<b>он</b> хочет прийти» — совсем другое).<br><br><b><span class="kk">Екен</span> в этой форме не переводится отдельно</b> и не меняется по лицам. <span class="kk">Барсам екен</span>, <span class="kk">барсаң екен</span>, <span class="kk">барса екен</span> — <span class="kk">екен</span> везде одинаковое.</div>
+    <div class="tip"><b>Ты уже это встречал.</b> Диалог темы 2.11 назывался <span class="kk">Жайлауға барайық</span> — «поедем на джайляу». Тогда форма прошла мимо как готовый кусок, теперь она разобрана.<br><br>Заодно закрылся круг с темой 3.1: одно и то же окончание <span class="kk">-са</span> даёт условие (<span class="kk">келсе</span> — «если придёт») и желание (<span class="kk">келсе екен</span> — «хоть бы пришёл»). Разница только в маленьком слове после него.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 32 · Домбыра</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">домбыра</span> <span class="t">— домбра</span></div>
+          <div><span class="w">күй</span> <span class="t">— кюй, пьеса для домбры</span></div>
+          <div><span class="w">күйші</span> <span class="t">— домбрист, автор кюев</span></div>
+          <div><span class="w">шек</span> <span class="t">— струна</span></div>
+          <div><span class="w">шерту</span> <span class="t">— щипать струну, играть</span></div>
+          <div><span class="w">әуен</span> <span class="t">— мелодия</span></div>
+          <div><span class="w">дауыс</span> <span class="t">— голос, звук</span></div>
+          <div><span class="w">шебер</span> <span class="t">— мастер</span></div>
+          <div><span class="w">сахна</span> <span class="t">— сцена</span></div>
+          <div><span class="w">байқау</span> <span class="t">— конкурс</span></div>
+          <div><span class="w">тыңдаушы</span> <span class="t">— слушатель</span></div>
+          <div><span class="w">жеңу</span> <span class="t">— побеждать</span></div>
+          <div><span class="w">сыйлық</span> <span class="t">— подарок, приз</span></div>
+          <div><span class="w">арман</span> <span class="t">— мечта</span></div>
+          <div><span class="w">қатты</span> <span class="t">— громко; сильно</span></div>
+          <div><span class="w">ақырын</span> <span class="t">— тихо, медленно</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> проверь <span class="kk">-айын</span> на новых основах. После согласного полное окончание: <span class="kk">шерт → шертейін</span>, <span class="kk">жең → жеңейін</span>. После гласного короткое: <span class="kk">тыңда → тыңдайын</span>. А <span class="kk">үйрен</span> даёт <span class="kk">үйренейін</span> и <span class="kk">үйренейік</span> — мягкий ряд, потому что в корне <span class="kk">ү</span> и <span class="kk">е</span>.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Домбыра — екі шек, бір арман</div>
+      <div class="mini-text">
+        <p class="storytext">Домбыра — қазақтың ең белгілі аспабы. Оның екі шегі бар, оны ағаштан жасайды. Шебер бір домбыраны ұзақ жасайды: ағашы жақсы болса, дауысы да жақсы болады.<br><br>Күйші саусағымен шекті шертеді, сонда әуен шығады. Күй — сөзі жоқ әңгіме: онда дала да, жел де, аңыз да бар. Кейде дауысы қатты, кейде ақырын.<br><br>Бұрын домбыра әр үйде тұрған. Қонақ келсе, үй иесі күй тартқан. Бала домбыра үйренсе, әкесі мен анасы қуанған. Олардың тілегі бір: балам күйші болса екен.<br><br>Бүгін де байқау көп. Сахнада бала ойнайды, тыңдаушылар тыңдайды. Жеңсе, сыйлық алады. Жеңбесе де, үйренгені қалады.<br><br>Домбыра үйрену қиын емес. Күнде жаттықсаң, бір жылда күй тартасың. Арманың болса, бүгін баста.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Домбра — самый известный инструмент казахов. У неё две струны, делают её из дерева. Один инструмент мастер делает долго: если дерево хорошее, то и звук хороший.<br><br>Домбрист защипывает струны пальцами, и рождается мелодия. Кюй — это рассказ без слов: в нём и степь, и ветер, и легенда. Иногда он звучит громко, иногда тихо.<br><br>Раньше домбра стояла в каждом доме. Если приходил гость, хозяин играл кюй. Если ребёнок начинал учиться на домбре, отец и мать радовались. Желание у них было одно: хоть бы сын стал домбристом.<br><br>И сегодня конкурсов много. На сцене играет ребёнок, слушатели слушают. Победит — получит приз. А не победит — останется то, чему научился.<br><br>Учиться на домбре нетрудно. Если заниматься каждый день, через год будешь играть кюй. Если есть мечта — начни сегодня.</p>
+        <p class="why-note"><b>Почему так:</b> третий абзац показывает обе формы желания рядом. <span class="kk">Балам күйші болса екен</span> — родители желают не себе, а сыну, поэтому здесь <span class="kk">-са екен</span>, а не <span class="kk">-ғым келеді</span>.<br><br>Условие из темы 3.1 в тексте работает вовсю: <span class="kk">ағашы жақсы болса</span>, <span class="kk">қонақ келсе</span>, <span class="kk">жеңсе</span>, <span class="kk">жаттықсаң</span>, <span class="kk">арманың болса</span>. А <span class="kk">жеңбесе де</span> — то самое «даже если»: отрицание, условие и <span class="kk">да</span> в одном слове.<br><br><b>Про домбру:</b> у неё всего две струны, но кюй Курмангазы «Сарыарқа» умудряется звучать как целый оркестр. Кюй никогда не был просто музыкой: им передавали новости и рассказывали истории, а знаменитый кюй «Ақсақ құлан» существует именно потому, что дурную весть хану побоялись сказать словами.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Үйренейік пе? — записаться на домбру</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Мен домбыра үйренсем екен. Балалық арманым.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Онда бірге үйренейік. Менің де үйренгім келеді.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Ұстаз тапсақ жақсы болар еді.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Көршіміз күйші. Одан сұрайын ба?</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Сұра. Ол уақыт тапса, аптасына екі рет барайық.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Жарайды, ертең айтайын. Ол келіссе екен.</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Вот бы мне научиться играть на домбре. Мечта детства.<br><b>Айгуль:</b> Тогда давай учиться вместе. Мне тоже хочется научиться.<br><b>Данияр:</b> Хорошо бы найти учителя.<br><b>Айгуль:</b> Наш сосед — домбрист. Спросить у него?<br><b>Данияр:</b> Спроси. Если у него найдётся время, давай ходить два раза в неделю.<br><b>Айгуль:</b> Хорошо, завтра скажу. Хоть бы он согласился.</p>
+        <p class="why-note"><b>Почему так:</b> в шести репликах собраны все формы темы. <span class="kk">Үйренсем екен</span> — желание о себе, мечтательное. <span class="kk">Үйренгім келеді</span> — то же самое, но буднично. <span class="kk">Үйренейік</span> и <span class="kk">барайық</span> — зову с собой. <span class="kk">Сұрайын ба?</span> — спрашиваю разрешения. <span class="kk">Айтайын</span> — решаю сам. <span class="kk">Келіссе екен</span> — желание о другом человеке.<br><br><span class="kk">Болар еді</span> в третьей реплике — нереальное из темы 3.1: учителя пока нет.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="optative">
+    <p class="quiz-instruction">Впиши окончание қалау рай.</p>
+    <div class="qitem"><span class="qnum">1.</span> Мен саған айт<input class="blank" data-answer="айын" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(скажу-ка я тебе)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Бірге тауға бар<input class="blank" data-answer="айық" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(пойдём вместе)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Мен ертең кел<input class="blank" data-answer="ейін" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(приду-ка я завтра)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Бұл кітапты оқ<input class="blank" data-answer="иын" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(почитаю-ка я)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Ол тез кел<input class="blank" data-answer="се" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> екен <span class="hint">(хоть бы он пришёл скорее)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="ru-hint">«Хоть бы он не опоздал» —</span>
+      <select class="mc" data-answer="Ол кешікпесе екен">
+        <option value="">—</option>
+        <option value="Ол кешікпесе екен">Ол кешікпесе екен</option>
+        <option value="Ол кешікпейін">Ол кешікпейін</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">«Сказать?» — предлагаю сам —</span>
+      <select class="mc" data-answer="Айтайын ба?">
+        <option value="">—</option>
+        <option value="Айтамын ба?">Айтамын ба?</option>
+        <option value="Айтайын ба?">Айтайын ба?</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="kk">барайын</span> — это
+      <select class="mc" data-answer="решение говорящего: пойду-ка я">
+        <option value="">—</option>
+        <option value="решение говорящего: пойду-ка я">решение говорящего: пойду-ка я</option>
+        <option value="приказ другому: пусть идёт">приказ другому: пусть идёт</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">9.</span> <span class="ru-hint">«Хочу, чтобы он пришёл» —</span>
+      <select class="mc" data-answer="Ол келсе екен">
+        <option value="">—</option>
+        <option value="Оның келгісі келеді">Оның келгісі келеді</option>
+        <option value="Ол келсе екен">Ол келсе екен</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">10.</span> <span class="ru-hint">Книжное «хорошо бы пошёл дождь» —</span>
+      <select class="mc" data-answer="Жаңбыр жауса игі еді">
+        <option value="">—</option>
+        <option value="Жаңбыр жауса игі еді">Жаңбыр жауса игі еді</option>
+        <option value="Жаңбыр жаусын игі еді">Жаңбыр жаусын игі еді</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">11.</span> <span class="ru-hint">Давай завтра поедем в горы.</span>
+      <div class="qbuild" data-answer="Ертең тауға барайық" data-words="барайық|тауға|Ертең"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">12.</span> <span class="ru-hint">Вот бы у меня было время.</span>
+      <div class="qbuild" data-answer="Менің уақытым болса екен" data-words="екен|болса|Менің|уақытым"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
     <button type="button" class="next-card" data-open="vocab">
       <span class="next-marker"></span>
       <span class="next-text">
-        <span class="next-label">Блок «Етістік» пройден целиком — дальше блок «Кеңейту», он в работе</span>
+        <span class="next-label">Блок «Кеңейту» в работе — следующая тема будет про послелоги</span>
         <span class="next-title">А пока закрепи слова в словаре</span>
       </span>
       <span class="next-arrow">→</span>
@@ -5755,12 +6172,14 @@
   var ETISTIK_TOPICS = ["verb-stem","present-future","present-cont","past-simple","past-perfect",
                         "future-tense","verb-negation","compound-verb","modality",
                         "participle","converb"];
-  var TOPICS = NEGIZ_TOPICS.concat(SEPTIK_TOPICS).concat(ETISTIK_TOPICS);
+  var KENEYU_TOPICS = ["conditional","optative"];
+  var TOPICS = NEGIZ_TOPICS.concat(SEPTIK_TOPICS).concat(ETISTIK_TOPICS).concat(KENEYU_TOPICS);
 
   var BLOCKS = {
     negiz:   { label:"Негіз",   planned:12, topics:NEGIZ_TOPICS,   color:"--negiz" },
     septik:  { label:"Септік",  planned:7,  topics:SEPTIK_TOPICS,  color:"--septik" },
-    etistik: { label:"Етістік", planned:11, topics:ETISTIK_TOPICS, color:"--etistik" }
+    etistik: { label:"Етістік", planned:11, topics:ETISTIK_TOPICS, color:"--etistik" },
+    keneyu:  { label:"Кеңейту", planned:12, topics:KENEYU_TOPICS,  color:"--keneyu" }
   };
 
   var TOPIC_MINUTES = {
@@ -5772,7 +6191,8 @@
     "verb-stem":22, "present-future":24, "present-cont":22,
     "past-simple":22, "past-perfect":24,
     "future-tense":24, "verb-negation":22, "compound-verb":26, "modality":24,
-    "participle":26, "converb":24
+    "participle":26, "converb":24,
+    "conditional":24, "optative":22
   };
 
   var STORAGE_KEY   = "kkProgressV1";
@@ -6344,6 +6764,33 @@
     "жауып":"накрыв","ашып":"открыв","тігіп":"поставив (юрту)",
     "тіккім":"моё желание поставить","көшіп":"перекочевав","сүрген":"прожил",
     "содан":"затем, после того","үстінен":"сверху",
+    // 3.1 шартты рай — формы на -са в словарь целиком: отрезанием
+    // они не сводятся, а без них половина текста темы не переводится
+    "егер":"если (слово необязательное)","болса":"если есть, если будет",
+    "барса":"если пойдёт","барсам":"если я пойду","барсаң":"если ты пойдёшь",
+    "барсақ":"если мы пойдём","бармасам":"если я не пойду",
+    "келсем":"если я приду","келмесе":"если не придёт","кетсе":"если уйдёт",
+    "айтса":"если скажет","айтпаса":"если не скажет","жауса":"если пойдёт (о дожде)",
+    "қайтса":"если вернётся","тапса":"если найдёт","тапсақ":"если найдём",
+    "аяқтасаң":"если закончишь","асықпасаң":"если не будешь спешить",
+    "пайдаланса":"если будет пользоваться","құрғай":"высыхая",
+    "азайған":"уменьшилось","көбейді":"прибыло, увеличилось",
+    "жетпеген":"не дошло","салған":"построили, положили","жасайды":"делает",
+    "отырамыз":"посидим","істей":"работая","қуанған":"радовались",
+    "денсаулығына":"для здоровья","бұрын":"раньше","тез":"быстро",
+    "кешір":"извини","та":"тоже, и","рет":"раз",
+    "барар":"пошёл бы","еді":"было (вспомогательный)","едім":"я бы",
+    // 3.2 қалау рай
+    "барайын":"пойду-ка я","барайық":"пойдём","айтайын":"скажу-ка я",
+    "келейін":"приду-ка я","келейік":"придём","оқиын":"почитаю-ка я",
+    "сұра":"спроси","сұрайын":"спрошу-ка я","игі":"благой, хороший",
+    "үйренейік":"давай научимся","үйренсем":"если бы я научился",
+    "үйренсе":"если научится","үйренгім":"моё желание научиться",
+    "үйренгені":"то, чему научился","келіссе":"если согласится",
+    "жеңсе":"если победит","жеңбесе":"если не победит",
+    "жаттықсаң":"если будешь заниматься","шертеді":"защипывает струну, играет",
+    "тартқан":"играл (на домбре)","тартасың":"сыграешь","аптасына":"в неделю",
+    "балалық":"детский, детства",
     // имена и клички из текстов — иначе не переводятся по тапу
     "айгүл":"Айгуль (женское имя)","данияр":"Данияр (мужское имя)",
     "ахмет":"Ахмет (имя)","қожа":"Ходжа (почётное звание)",
