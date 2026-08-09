@@ -763,6 +763,18 @@
         <span class="row-check" data-check="modality" aria-hidden="true">✓</span>
         <span class="row-arrow" aria-hidden="true">›</span>
       </button>
+      <button type="button" class="topic-row" data-open="participle">
+        <span class="marker" style="background:var(--etistik)"></span>
+        <span class="row-title"><span class="topic-num">2.10</span> Есімше<span class="row-title-ru">причастие вместо слова «который»</span></span>
+        <span class="row-check" data-check="participle" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
+      </button>
+      <button type="button" class="topic-row" data-open="converb">
+        <span class="marker" style="background:var(--etistik)"></span>
+        <span class="row-title"><span class="topic-num">2.11</span> Көсемше<span class="row-title-ru">деепричастие и цепочка действий</span></span>
+        <span class="row-check" data-check="converb" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
+      </button>
     </div>
   </div>
 
@@ -5334,10 +5346,376 @@
       <button class="btn btn-reveal" type="button">Показать ответы</button>
       <span class="quiz-result" aria-live="polite"></span>
     </div>
+    <button type="button" class="next-card" data-open="participle">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Есімше: причастие вместо слова «который»</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 2.10 ЕСІМШЕ ============ -->
+<div class="screen topic-screen" id="screen-participle" data-topic="participle" style="--tint-color:var(--etistik)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--etistik)"></span>
+    <h2><span class="topic-num">2.10</span> Есімше</h2>
+    <span class="done-badge" data-badge="participle">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Причастие: мен оқыған кітап — «книга, которую я прочитал». Слова «который» в казахском нет, и придаточное разворачивается задом наперёд.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p><b>Есімше</b> — форма глагола, которая ведёт себя как прилагательное: она определяет существительное и всегда стоит <b>перед</b> ним. Слова «который» в казахском нет вообще, и всё русское придаточное сворачивается в одно определение.</p>
+    <table>
+      <tr><th>Окончание</th><th>Когда</th><th>Пример</th></tr>
+      <tr><td class="kk">-ған/-ген<br>-қан/-кен</td><td>прошедшее</td><td class="kk">барған адам <span class="hint">человек, который пошёл</span></td></tr>
+      <tr><td class="kk">-атын/-етін<br>-йтын/-йтін</td><td>обычное, будущее</td><td class="kk">оқитын бала <span class="hint">ребёнок, который учится</span></td></tr>
+      <tr><td class="kk">-ар/-ер/-р</td><td>предполагаемое</td><td class="kk">айтар сөз <span class="hint">слово, которое скажут</span></td></tr>
+      <tr><td class="kk">-ушы/-уші</td><td>деятель</td><td class="kk">оқушы <span class="hint">ученик</span></td></tr>
+    </table>
+    <p><b>Два первых нужны постоянно, и оба ты уже умеешь собирать.</b> <span class="kk">-ған/-қан</span> — это ровно та форма из темы 2.5, а <span class="kk">-ар</span> — из темы 2.6. Новое здесь только <span class="kk">-атын/-етін</span>:</p>
+    <table>
+      <tr><th>Основа кончается на</th><th>Окончание</th><th>Пример</th></tr>
+      <tr><td>согласный</td><td class="kk">-атын/-етін</td><td class="kk">бар<b>атын</b>, кел<b>етін</b>, айт<b>атын</b></td></tr>
+      <tr><td>гласный</td><td class="kk">-йтын/-йтін</td><td class="kk">оқ<b>итын</b>, істе<b>йтін</b>, сөйле<b>йтін</b></td></tr>
+    </table>
+    <p><b>Порядок обратный русскому.</b> Русское придаточное идёт после слова, казахское определение — до него, и читать его надо с конца:</p>
+    <table>
+      <tr><th>Казахский</th><th>Русский</th></tr>
+      <tr><td class="kk"><b>мен оқыған</b> кітап</td><td>книга, которую я прочитал</td></tr>
+      <tr><td class="kk"><b>Абай жазған</b> өлең</td><td>стихи, которые написал Абай</td></tr>
+      <tr><td class="kk"><b>мектепте оқитын</b> бала</td><td>ребёнок, который учится в школе</td></tr>
+      <tr><td class="kk"><b>ертең келетін</b> қонақ</td><td>гость, который придёт завтра</td></tr>
+    </table>
+    <p><b>Есімше умеет становиться существительным.</b> Как только оно стоит без определяемого слова, оно само превращается в предмет и берёт падежи и притяжательные окончания:</p>
+    <ul class="rule-list">
+      <li><span class="kk">Оқыған озар</span> — «читавший опередит». Пословица целиком из двух причастий</li>
+      <li><span class="kk">Менің айтқан<b>ым</b> дұрыс</span> — «то, что я сказал, верно»</li>
+      <li><span class="kk">Барған<b>ды</b> көрдім</span> — «я видел того, кто пошёл»</li>
+    </ul>
+    <p><b>Отсюда же два самых частых оборота с отрицанием</b> — те, что были обещаны в теме 2.7:</p>
+    <table>
+      <tr><th>Оборот</th><th>Перевод</th></tr>
+      <tr><td class="kk">Мен барған <b>жоқпын</b></td><td>я не ходил</td></tr>
+      <tr><td class="kk">Ол оқып отырған <b>жоқ</b></td><td>он сейчас не читает</td></tr>
+      <tr><td class="kk">бар<b>майтын</b> адам</td><td>человек, который не ходит</td></tr>
+    </table>
+    <p>Буквально <span class="kk">барған жоқпын</span> — «пошедшего нет», то есть факта не было. В живой речи этот оборот встречается чаще, чем <span class="kk">бармадым</span>.</p>
+    <div class="contrast">
+      <div class="label">Русский разворачивает предложение, казахский сворачивает</div>
+      <p>Русский, чтобы описать предмет действием, строит целое придаточное со своим подлежащим и сказуемым: «книга, <b>которую</b> я купил вчера в магазине». Это второе предложение внутри первого.</p>
+      <p>Казахский обходится определением: <span class="kk">мен кеше дүкеннен сатып алған кітап</span>. Никакого «который», никаких запятых, глагол в неличной форме — всё это одно словосочетание, и читается оно справа налево от русского. Отсюда правило для перевода: <b>найди существительное в конце и начни с него</b>. Русскому это даётся тяжело только первую неделю, а потом становится удобнее — конструкция короче.</p>
+    </div>
+    <div class="trap"><b>Три знакомых слова оказались причастиями.</b> <span class="kk">Оқушы</span> — «читающий», ученик. <span class="kk">Сатушы</span> — «продающий», продавец. <span class="kk">Жүргізуші</span> — «ведущий», водитель. Ты выучил их как обычные существительные ещё в блоке 0, а это форма на <span class="kk">-ушы/-уші</span> от <span class="kk">оқу, сату, жүргізу</span>. Так же устроены <span class="kk">жазушы</span> (пишущий — писатель) и <span class="kk">аудармашы</span>.<br><br><b><span class="kk">-атын</span> работает и как время.</b> <span class="kk">Мен бұрын Алматыда тұр<b>атынмын</b></span> — «я раньше жил в Алматы». Это прошедшая привычка, действие, которое повторялось. Не путай с <span class="kk">тұрдым</span> (пожил один раз) и <span class="kk">тұрғанмын</span> (доводилось жить).<br><br><b>Определение не переставляется.</b> «Кітап мен оқыған» — так нельзя, есімше всегда слева от своего слова. И между ними ничего не вставляют: <span class="kk">мен оқыған қызық кітап</span> — сначала причастие, потом прилагательное, потом существительное.</div>
+    <div class="tip"><b>Как разбирать длинное определение.</b> Увидев цепочку слов перед существительным, ищи в ней форму на <span class="kk">-ған</span> или <span class="kk">-атын</span> — это и есть глагол-определение, а всё левее него относится к нему. <span class="kk">Әжем берген кітап</span> — «книга, которую дала бабушка»: <span class="kk">берген</span> глагол, <span class="kk">әжем</span> его подлежащее, <span class="kk">кітап</span> — то, что описывают. Схема работает и на предложении в пять слов, и на предложении в пятнадцать.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 29 · Кітап пен мұра</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">роман</span> <span class="t">— роман</span></div>
+          <div><span class="w">кейіпкер</span> <span class="t">— персонаж, герой</span></div>
+          <div><span class="w">оқырман</span> <span class="t">— читатель</span></div>
+          <div><span class="w">бет</span> <span class="t">— страница; лицо</span></div>
+          <div><span class="w">тарау</span> <span class="t">— глава</span></div>
+          <div><span class="w">оқиға</span> <span class="t">— событие, случай</span></div>
+          <div><span class="w">еңбек</span> <span class="t">— труд</span></div>
+          <div><span class="w">мұра</span> <span class="t">— наследие</span></div>
+          <div><span class="w">заман</span> <span class="t">— эпоха, время</span></div>
+          <div><span class="w">көркем</span> <span class="t">— художественный</span></div>
+          <div><span class="w">білім</span> <span class="t">— знание, образование</span></div>
+          <div><span class="w">тәрбие</span> <span class="t">— воспитание</span></div>
+          <div><span class="w">кез</span> <span class="t">— пора, время</span></div>
+          <div><span class="w">жайлау</span> <span class="t">— летнее пастбище</span></div>
+          <div><span class="w">көшу</span> <span class="t">— кочевать, переезжать</span></div>
+          <div><span class="w">міну</span> <span class="t">— садиться верхом</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> два слова из набора сами собраны причастием. <span class="kk">Оқырман</span> — от <span class="kk">оқыр</span> («читающий», форма из темы 2.6) плюс <span class="kk">-ман</span>. А <span class="kk">еңбек</span> и <span class="kk">білім</span> показывают соседний приём: существительное от глагола через <span class="kk">-ім/-ік</span> — <span class="kk">біл → білім</span>, знание от «знать». Сравни с <span class="kk">оқушы</span> и <span class="kk">жазушы</span>: там деятель, здесь результат.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · «Абай жолы» — қазақтың үлкен кітабы</div>
+      <div class="mini-text">
+        <p class="storytext">«Абай жолы» — Мұхтар Әуезов жазған роман. Онда төрт кітап бар, мың беттен көп.<br><br>Романның басты кейіпкері — Абай, өлең жазған ұлы ақын. Кітапта оның бала кезі, оқыған жылдары, айтқан сөзі, көрген қиын жолы бар.<br><br>Әуезов оны жиырма жыл жазған. Ол көп адаммен сөйлескен, ескі әңгімені жинаған, Абайды білген адамдарды тапқан.<br><br>Романда өткен заман тұрады: жайлауға көшкен ауыл, атқа мінген жігіт, бата берген ақсақал, ән айтқан қыз. Ол заман енді жоқ, бірақ кітапта қалған.<br><br>Бүгін де оқырман көп. Мектепте оқитын бала да, жұмыс істейтін адам да оны оқып шығады. Романды білмейтін қазақ аз.<br><br>«Абай жолы» — қазақтың мұрасы. Оны оқыған адам халықты жақсы түсінеді.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">«Путь Абая» — роман, который написал Мухтар Ауэзов. В нём четыре книги, больше тысячи страниц.<br><br>Главный герой романа — Абай, великий поэт, писавший стихи. В книге есть его детство, годы, когда он учился, сказанные им слова, трудный путь, который он видел.<br><br>Ауэзов писал его двадцать лет. Он говорил со многими людьми, собирал старые рассказы, находил людей, знавших Абая.<br><br>В романе стоит ушедшая эпоха: аул, кочующий на джайляу, парень, севший на коня, аксакал, давший бата, девушка, спевшая песню. Той эпохи больше нет, но она осталась в книге.<br><br>И сегодня читателей много. И ребёнок, который учится в школе, и человек, который работает, прочитывают его. Казахов, не знающих этот роман, мало.<br><br>«Путь Абая» — наследие казахов. Человек, прочитавший его, лучше понимает народ.</p>
+        <p class="why-note"><b>Почему так:</b> в тексте больше двадцати причастий, и почти каждое стоит там, где русский поставил бы «который». Посчитай сам в четвёртом абзаце: <span class="kk">көшкен ауыл</span>, <span class="kk">мінген жігіт</span>, <span class="kk">берген ақсақал</span>, <span class="kk">айтқан қыз</span> — четыре придаточных, свёрнутых в четыре словосочетания.<br><br>Обрати внимание на разницу времён: <span class="kk">жазған роман</span> — уже написан; <span class="kk">оқитын бала</span> — учится вообще, регулярно; <span class="kk">білмейтін қазақ</span> — тот, кто не знает, с отрицанием внутри причастия.<br><br>И одно место, где причастие стало существительным: <span class="kk">оқыған адам</span> — «человек прочитавший», но в первом абзаце <span class="kk">оқыған жылдары</span> — «годы, когда он учился». Одна и та же форма, разная роль.<br><br><b>Про роман:</b> Мухтар Ауэзов писал «Путь Абая» с 1942 по 1956 год. Это единственный казахский роман, переведённый более чем на тридцать языков, и по нему в мире чаще всего судят о казахской степи XIX века. Ауэзов застал живых свидетелей: люди, знавшие Абая лично, были ещё живы, когда он начинал собирать материал.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Сен оқыған кітап — совет по книге</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Сен оқыған кітапты маған айтып бер.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> «Абай жолы» ма? Ол — мен ең жақсы көрген кітап.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Ұзақ па? Мен ұзақ кітапты аяқтамаймын.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Мың беттен көп. Бірақ бастаған адам аяқтайды.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Онда сен айтқан кітапты сатып аламын.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Керек емес! Менде әжем берген кітап бар, саған беремін.</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Расскажи мне про книгу, которую ты прочитала.<br><b>Айгуль:</b> «Путь Абая»? Это книга, которую я люблю больше всего.<br><b>Данияр:</b> Длинная? Я длинные книги не дочитываю.<br><b>Айгуль:</b> Больше тысячи страниц. Но кто начал, тот дочитает.<br><b>Данияр:</b> Тогда куплю книгу, о которой ты сказала.<br><b>Айгуль:</b> Не нужно! У меня есть книга, которую дала бабушка, тебе отдам.</p>
+        <p class="why-note"><b>Почему так:</b> в каждой реплике по причастию, и все четыре типа отношений видны сразу. <span class="kk">Сен оқыған кітап</span> — ты прочитал книгу, книга — объект. <span class="kk">Бастаған адам</span> — человек начал, человек — подлежащее. <span class="kk">Әжем берген кітап</span> — бабушка дала, и подлежащее причастия стоит прямо перед ним.<br><br><span class="kk">Мен ең жақсы көрген кітап</span> — «книга, которую я больше всего люблю». <span class="kk">Жақсы көру</span> буквально «хорошо видеть», а значит «любить» — ещё одна сросшаяся пара из темы 2.8.<br><br>И <span class="kk">Бастаған адам аяқтайды</span> — почти пословица: «начавший заканчивает». Причастие без всякого «который» работает как обобщение, ровно как русское «кто начал, тот…».</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="participle">
+    <p class="quiz-instruction">Впиши окончание причастия.</p>
+    <div class="qitem"><span class="qnum">1.</span> Мен оқы<input class="blank" data-answer="ған" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> кітап <span class="hint">(книга, которую я прочитал)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Ол айт<input class="blank" data-answer="қан" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> сөз <span class="hint">(слово, которое он сказал)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Мектепте оқ<input class="blank" data-answer="итын" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> бала <span class="hint">(ребёнок, который учится)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Ертең кел<input class="blank" data-answer="етін" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> қонақ <span class="hint">(гость, который придёт)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Мен ол жерде бол<input class="blank" data-answer="ған" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> жоқпын <span class="hint">(я там не был)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="ru-hint">«Книга, которую я купил» —</span>
+      <select class="mc" data-answer="мен сатып алған кітап">
+        <option value="">—</option>
+        <option value="кітап мен сатып алған">кітап мен сатып алған</option>
+        <option value="мен сатып алған кітап">мен сатып алған кітап</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="kk">оқушы</span> — это
+      <select class="mc" data-answer="причастие на -ушы: «читающий»">
+        <option value="">—</option>
+        <option value="причастие на -ушы: «читающий»">причастие на -ушы: «читающий»</option>
+        <option value="обычное существительное без глагола">обычное существительное без глагола</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="kk">айт</span> + <span class="kk">-атын</span> =
+      <select class="mc" data-answer="айтатын">
+        <option value="">—</option>
+        <option value="айтйтын">айтйтын</option>
+        <option value="айтатын">айтатын</option>
+        <option value="айтитын">айтитын</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">9.</span> <span class="ru-hint">«Я раньше жил в Алматы» —</span>
+      <select class="mc" data-answer="Бұрын Алматыда тұратынмын">
+        <option value="">—</option>
+        <option value="Бұрын Алматыда тұрамын">Бұрын Алматыда тұрамын</option>
+        <option value="Бұрын Алматыда тұратынмын">Бұрын Алматыда тұратынмын</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">10.</span> <span class="ru-hint">Причастие стоит —</span>
+      <select class="mc" data-answer="перед существительным">
+        <option value="">—</option>
+        <option value="перед существительным">перед существительным</option>
+        <option value="после существительного">после существительного</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">11.</span> <span class="ru-hint">Книга, которую я прочитал, на столе.</span>
+      <div class="qbuild" data-answer="Мен оқыған кітап үстелде" data-words="үстелде|Мен|кітап|оқыған"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">12.</span> <span class="ru-hint">Ребёнок, который учится в школе, пришёл.</span>
+      <div class="qbuild" data-answer="Мектепте оқитын бала келді" data-words="келді|Мектепте|бала|оқитын"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
+    <button type="button" class="next-card" data-open="converb">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Көсемше: цепочка действий вместо союза «и»</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 2.11 КӨСЕМШЕ ============ -->
+<div class="screen topic-screen" id="screen-converb" data-topic="converb" style="--tint-color:var(--etistik)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--etistik)"></span>
+    <h2><span class="topic-num">2.11</span> Көсемше</h2>
+    <span class="done-badge" data-badge="converb">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Деепричастие: тұрып, жуынып, шай ішіп, жұмысқа кеттім. Четыре действия — одно личное окончание, и то в конце.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p><b>Көсемше</b> — форма глагола, которая сама по себе ничего не говорит о времени и лице. Её работа — прицепить действие к другому действию. Ты пользуешься ею с темы 2.3, а теперь она собирается в целую систему: <b>это главный способ строить длинное предложение по-казахски</b>.</p>
+    <table>
+      <tr><th>Окончание</th><th>Значение</th><th>Пример</th></tr>
+      <tr><td class="kk">-ып/-іп/-п</td><td>сделав, и потом</td><td class="kk">келіп <span class="hint">придя</span></td></tr>
+      <tr><td class="kk">-а/-е/-й</td><td>делая, одновременно</td><td class="kk">күле <span class="hint">смеясь</span></td></tr>
+      <tr><td class="kk">-май/-мей</td><td>не делая</td><td class="kk">білмей <span class="hint">не зная</span></td></tr>
+      <tr><td class="kk">-ғалы/-гелі</td><td>с тех пор как; чтобы</td><td class="kk">келгелі <span class="hint">с приезда</span></td></tr>
+      <tr><td class="kk">-ғанша/-генше</td><td>пока не; прежде чем</td><td class="kk">келгенше <span class="hint">пока не придёт</span></td></tr>
+    </table>
+    <p><b>Главное — цепочка.</b> Русский соединяет действия союзом «и» и склоняет каждый глагол. Казахский оставляет личным только последний, а все предыдущие ставит в көсемше:</p>
+    <table>
+      <tr><th>Казахский</th><th>Русский</th></tr>
+      <tr><td class="kk">Тұр<b>ып</b>, шай іш<b>іп</b>, жұмысқа <b>кеттім</b></td><td>я встал, попил чаю и ушёл на работу</td></tr>
+      <tr><td class="kk">Кел<b>іп</b>, отыр<b>ып</b>, әңгіме <b>айтты</b></td><td>он пришёл, сел и рассказал историю</td></tr>
+    </table>
+    <p>В цепочке может быть три, пять, восемь звеньев — окончание всё равно одно, в самом конце. Оно и задаёт время и лицо сразу для всех: <span class="kk">кеттім</span> — значит, вставал и пил чай тоже я, и тоже в прошлом.</p>
+    <p><b>Разница между двумя главными формами:</b></p>
+    <ul class="rule-list">
+      <li><span class="kk">-ып/-іп/-п</span> — <b>сначала одно, потом другое</b>: <span class="kk">келіп айтты</span> — пришёл и сказал</li>
+      <li><span class="kk">-а/-е/-й</span> — <b>одновременно, образ действия</b>: <span class="kk">күле айтты</span> — сказал смеясь</li>
+      <li><b>Удвоение <span class="kk">-а-а</span> даёт постепенность</b>: <span class="kk">жүре-жүре үйренесің</span> — «идя-идя научишься», то есть со временем. <span class="kk">Айта-айта</span> — повторяя раз за разом</li>
+    </ul>
+    <p><b>Отрицание в цепочке — своё:</b> не <span class="kk">-ып</span> с отрицанием, а форма <span class="kk">-май/-мей</span>, знакомая по теме 2.7:</p>
+    <ul class="rule-list">
+      <li><span class="kk">Ештеңе айт<b>пай</b> шықты</span> — вышел, ничего не сказав</li>
+      <li><span class="kk">Біл<b>мей</b> істедім</span> — сделал не зная</li>
+      <li><span class="kk">Ұял<b>май</b> сөйле</span> — говори не стесняясь</li>
+    </ul>
+    <p><b>Две формы для времени</b> — они уже почти союзы:</p>
+    <table>
+      <tr><th>Форма</th><th>Перевод</th></tr>
+      <tr><td class="kk">Мен кел<b>гелі</b> бір сағат өтті</td><td>прошёл час, как я пришёл</td></tr>
+      <tr><td class="kk">Ол мені көр<b>гелі</b> келді</td><td>он пришёл, чтобы меня увидеть</td></tr>
+      <tr><td class="kk">Сен кел<b>генше</b> күтемін</td><td>подожду, пока ты не придёшь</td></tr>
+      <tr><td class="kk">Айт<b>қанша</b> ойлан</td><td>подумай, прежде чем сказать</td></tr>
+    </table>
+    <div class="contrast">
+      <div class="label">Русский повторяет окончание, казахский называет его один раз</div>
+      <p>«Я встал, умылся, позавтракал и вышел» — русский четыре раза сообщает, что это было прошедшее время и что это был я. Информация одна и та же, повторена четырежды.</p>
+      <p>Казахский считает это расточительством: <span class="kk">Тұрып, жуынып, тамақ ішіп, шықтым</span>. Лицо и время названы один раз, в самом конце. Отсюда важное следствие для слушателя: <b>смысл фразы становится понятен только на последнем слове</b>. До него неизвестно даже, кто и когда всё это делал. Русскому, привыкшему понимать фразу с начала, придётся переучиваться дослушивать до конца — и это, пожалуй, главная перемена в голове за весь курс.</p>
+    </div>
+    <div class="trap"><b>Вся цепочка — про одного и того же деятеля.</b> <span class="kk">Келіп, шай ішті</span> значит, что пришёл и пил чай один человек. Если действующие лица разные — «я пришёл, а он ушёл» — көсемше не годится, нужно сложное предложение, и это тема блока 3. Ошибка тут не в форме, а в смысле: слушатель поймёт не то.<br><br><b>Отрицание — только <span class="kk">-май/-мей</span>.</b> «Айтпап» или «айтып емес» не существует. Не сказав — <span class="kk">айтпай</span>.<br><br><b><span class="kk">-п</span> после гласного, <span class="kk">-ып/-іп</span> после согласного.</b> <span class="kk">Оқы → оқып</span>, <span class="kk">істе → істеп</span>, но <span class="kk">кел → келіп</span>, <span class="kk">айт → айтып</span>. Правило то же, что в теме 2.3, — просто теперь оно нужно постоянно.<br><br><b>Не путай көсемше с есімше.</b> <span class="kk">Келген адам</span> — «человек, который пришёл», причастие, определяет существительное. <span class="kk">Келіп айтты</span> — «придя, сказал», деепричастие, привязано к глаголу. Разница как между «пришедший» и «придя».</div>
+    <div class="tip"><b>Где ты уже это видел.</b> Нақ осы шақ из темы 2.3 (<span class="kk">оқып отыр</span>), все составные глаголы из темы 2.8 (<span class="kk">айтып беру</span>), «мочь» из темы 2.9 (<span class="kk">бара алу</span>) — везде первым стоит көсемше. Получается, вся вторая половина блока держится на одной форме, и сегодня она наконец названа по имени.<br><br>Дальше, в блоке «Кеңейту», из неё вырастет сложное предложение: там, где субъекты разные, цепочка ломается, и появляются настоящие союзы.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 30 · Киіз үй</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">шаңырақ</span> <span class="t">— шанырак, навершие купола</span></div>
+          <div><span class="w">уық</span> <span class="t">— уык, жердь купола</span></div>
+          <div><span class="w">кереге</span> <span class="t">— кереге, стенная решётка</span></div>
+          <div><span class="w">түндік</span> <span class="t">— войлочная крышка купола</span></div>
+          <div><span class="w">тігу</span> <span class="t">— ставить (юрту); шить</span></div>
+          <div><span class="w">жабу</span> <span class="t">— покрывать, закрывать</span></div>
+          <div><span class="w">көтеру</span> <span class="t">— поднимать</span></div>
+          <div><span class="w">байлау</span> <span class="t">— привязывать</span></div>
+          <div><span class="w">арқан</span> <span class="t">— верёвка</span></div>
+          <div><span class="w">дөңгелек</span> <span class="t">— круглый</span></div>
+          <div><span class="w">берік</span> <span class="t">— прочный</span></div>
+          <div><span class="w">бөлік</span> <span class="t">— часть</span></div>
+          <div><span class="w">орын</span> <span class="t">— место</span></div>
+          <div><span class="w">орта</span> <span class="t">— середина</span></div>
+          <div><span class="w">таңба</span> <span class="t">— знак, тамга</span></div>
+          <div><span class="w">елтаңба</span> <span class="t">— герб</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> проверь выбор көсемше на новых основах. После согласного — полное окончание: <span class="kk">байла → байлап</span> (гласный, значит <span class="kk">-п</span>), <span class="kk">көтер → көтеріп</span>, <span class="kk">жап → жауып</span>. Последнее интересно: у <span class="kk">жабу</span> основа <span class="kk">жап</span>, и перед гласным окончанием <b>п</b> звенеет в <b>у</b> — <span class="kk">жауып</span>. Тот же ряд, что <span class="kk">кітап → кітабым</span>, только здесь смягчение зашло дальше.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Киіз үй қалай тігіледі</div>
+      <div class="mini-text">
+        <p class="storytext">Киіз үй — дөңгелек үй. Екі сағат жұмыс істеп, оны тігіп қоюға болады. Жинап алып, көлікке салып, жаңа жерге көшуге де болады.<br><br>Бірінші керегені қояды. Кереге — үйдің қабырғасы, ағаштан жасаған бөлік. Оны дөңгелек қойып, есікті байлайды.<br><br>Содан кейін уықты алып, керегеге байлап, шаңырақты жоғары көтереді. Шаңырақ — үйдің басы және ең маңызды бөлік.<br><br>Үстінен киіз жауып, арқанмен байлайды. Түндікті күндіз ашып, түнде жауып қояды. Сонда үй жылы болады.<br><br>Ішінде әр адамның орны бар: төр — қонақтың орны, есік жақ — жас адамның орны.<br><br>Киіз үй жеңіл және берік. Ата-баба жайлауға көшіп, киіз үй тігіп өмір сүрген.<br><br>Шаңырақ — қазақтың таңбасы. Оны елтаңбадан көруге болады: ортасында шаңырақ тұр, айналасында уық.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Юрта — круглый дом. Поработав два часа, её можно поставить. Можно и разобрать, погрузить в машину и перекочевать на новое место.<br><br>Сначала ставят кереге. Кереге — стена дома, часть, сделанная из дерева. Поставив её кругом, привязывают дверь.<br><br>Затем берут уыки, привязывают их к кереге и поднимают шанырак вверх. Шанырак — голова дома и самая важная часть.<br><br>Сверху накрывают войлоком и обвязывают верёвкой. Тюндик днём открывают, а на ночь закрывают. Тогда в доме тепло.<br><br>Внутри у каждого своё место: тор — место гостя, сторона у двери — место молодого.<br><br>Юрта лёгкая и прочная. Предки кочевали на джайляу, ставили юрту и так жили.<br><br>Шанырак — знак казахов. Его можно увидеть на гербе: в середине стоит шанырак, вокруг него уыки.</p>
+        <p class="why-note"><b>Почему так:</b> текст почти целиком собран цепочками, и личное окончание в каждой стоит один раз. <span class="kk">Жинап алып, көлікке салып, көшуге болады</span> — три действия, одно сказуемое. <span class="kk">Уықты алып, керегеге байлап, шаңырақты көтереді</span> — то же самое: два көсемше и только третий глагол личный.<br><br>Сравни две формы рядом в четвёртом абзаце: <span class="kk">ашып</span> и <span class="kk">жауып қояды</span>. Первое — звено цепочки, второе — составной глагол из темы 2.8, где <span class="kk">қою</span> добавляет «насовсем, на всю ночь». Форма одна и та же, а роль разная: всё решает то, что стоит справа.<br><br><b>Про юрту:</b> её собирают без единого гвоздя, а разбирают за полчаса. Шанырак не покупали и не делали заново — его передавали от отца к сыну, и «шаңырағың биік болсын» до сих пор говорят как пожелание крепкой семьи. Именно поэтому он попал на герб: это единственный предмет казахского быта, ставший государственным символом.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Жайлауға барайық — сборы на джайляу</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Жазда жайлауға барып, киіз үй тіккім келеді.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Мен көргенмін. Атам тігіп берген.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Қиын ба?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Жеңіл емес. Бірақ бірге істеп, екі сағатта аяқтайсың.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Мен көрмей түсінбеймін.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Онда келесі жазда барып, көріп қайтамыз.</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Хочу летом поехать на джайляу и поставить юрту.<br><b>Айгуль:</b> Я видела. Дедушка ставил (нам).<br><b>Данияр:</b> Трудно?<br><b>Айгуль:</b> Нелегко. Но если делать вместе, за два часа закончишь.<br><b>Данияр:</b> Я не пойму, пока не увижу.<br><b>Айгуль:</b> Тогда следующим летом съездим и посмотрим.</p>
+        <p class="why-note"><b>Почему так:</b> в первой и последней репликах цепочка соединяет поездку с делом: <span class="kk">барып, тіккім келеді</span> и <span class="kk">барып, көріп қайтамыз</span> — «съездив, посмотрев, вернёмся». Три действия и одно личное окончание.<br><br><span class="kk">Көрмей түсінбеймін</span> — «не увидев, не пойму». По-русски здесь естественнее «пока не увижу», и это ровно тот случай, когда казахское деепричастие заменяет целый союз.<br><br>А <span class="kk">тігіп берген</span> — снова составной глагол: дедушка ставил юрту не себе, а для них, потому и <span class="kk">беру</span>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="converb">
+    <p class="quiz-instruction">Впиши окончание көсемше.</p>
+    <div class="qitem"><span class="qnum">1.</span> Ол үйге кел<input class="blank" data-answer="іп" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">, шай ішті <span class="hint">(придя домой)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Мен ештеңе айт<input class="blank" data-answer="пай" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> шықтым <span class="hint">(ничего не сказав)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Ол күл<input class="blank" data-answer="іп" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> жіберді <span class="hint">(рассмеялся)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Біз бірге істе<input class="blank" data-answer="п" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">, тез аяқтадық <span class="hint">(работая вместе)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Сен кел<input class="blank" data-answer="генше" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> күтемін <span class="hint">(пока ты не придёшь)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="ru-hint">В цепочке время и лицо несёт —</span>
+      <select class="mc" data-answer="только последний глагол">
+        <option value="">—</option>
+        <option value="каждый глагол">каждый глагол</option>
+        <option value="только последний глагол">только последний глагол</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">«Не зная» —</span>
+      <select class="mc" data-answer="білмей">
+        <option value="">—</option>
+        <option value="білмей">білмей</option>
+        <option value="білмеп">білмеп</option>
+        <option value="білместі">білместі</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="ru-hint">Цепочка көсемше требует —</span>
+      <select class="mc" data-answer="одного подлежащего на все действия">
+        <option value="">—</option>
+        <option value="одного подлежащего на все действия">одного подлежащего на все действия</option>
+        <option value="разных подлежащих">разных подлежащих</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">9.</span> <span class="ru-hint">«Сказал смеясь» —</span>
+      <select class="mc" data-answer="күле айтты">
+        <option value="">—</option>
+        <option value="күліп айтты">күліп айтты</option>
+        <option value="күле айтты">күле айтты</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">10.</span> <span class="kk">келген адам</span> — это
+      <select class="mc" data-answer="есімше: «человек, который пришёл»">
+        <option value="">—</option>
+        <option value="есімше: «человек, который пришёл»">есімше: «человек, который пришёл»</option>
+        <option value="көсемше: «придя, человек»">көсемше: «придя, человек»</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">11.</span> <span class="ru-hint">Он пришёл домой и попил чаю.</span>
+      <div class="qbuild" data-answer="Ол үйге келіп шай ішті" data-words="ішті|Ол|келіп|үйге|шай"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">12.</span> <span class="ru-hint">Встав, я попил чаю и вышел.</span>
+      <div class="qbuild" data-answer="Тұрып шай ішіп шықтым" data-words="шықтым|Тұрып|ішіп|шай"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
     <button type="button" class="next-card" data-open="vocab">
       <span class="next-marker"></span>
       <span class="next-text">
-        <span class="next-label">Дальше — есімше и көсемше, они в работе</span>
+        <span class="next-label">Блок «Етістік» пройден целиком — дальше блок «Кеңейту», он в работе</span>
         <span class="next-title">А пока закрепи слова в словаре</span>
       </span>
       <span class="next-arrow">→</span>
@@ -5375,7 +5753,8 @@
                       "possessive","bar-zhoq","demonstratives","question-words","question-particle","negation"];
   var SEPTIK_TOPICS = ["ilik","barys","tabys","zhatys","shygys","komektes","all-cases"];
   var ETISTIK_TOPICS = ["verb-stem","present-future","present-cont","past-simple","past-perfect",
-                        "future-tense","verb-negation","compound-verb","modality"];
+                        "future-tense","verb-negation","compound-verb","modality",
+                        "participle","converb"];
   var TOPICS = NEGIZ_TOPICS.concat(SEPTIK_TOPICS).concat(ETISTIK_TOPICS);
 
   var BLOCKS = {
@@ -5392,7 +5771,8 @@
     "ilik":20, "barys":18, "tabys":22, "zhatys":18, "shygys":20, "komektes":16, "all-cases":24,
     "verb-stem":22, "present-future":24, "present-cont":22,
     "past-simple":22, "past-perfect":24,
-    "future-tense":24, "verb-negation":22, "compound-verb":26, "modality":24
+    "future-tense":24, "verb-negation":22, "compound-verb":26, "modality":24,
+    "participle":26, "converb":24
   };
 
   var STORAGE_KEY   = "kkProgressV1";
@@ -5950,6 +6330,20 @@
     "барғың":"твоё желание пойти","саған":"тебе","аяқталады":"заканчивается",
     "ұяламын":"стесняюсь","ұялмай":"не стесняясь","ұлт":"нация, народ",
     "байтұрсынұлы":"Байтурсынулы",
+    // 2.10 есімше
+    "мұхтар":"Мухтар","әуезов":"Ауэзов","баба":"предок (в ата-баба)",
+    "оқыған":"прочитавший; учившийся","білген":"знавший","білмейтін":"не знающий",
+    "істейтін":"который работает","көшкен":"кочевавший","мінген":"севший верхом",
+    "жинаған":"собирал","тапқан":"нашёл","сөйлескен":"разговаривал",
+    "түсінеді":"понимает","аяқтайды":"заканчивает","аяқтайсың":"закончишь",
+    "аяқтамаймын":"не дочитываю","беремін":"дам, отдам","орны":"его место",
+    // 2.11 көсемше
+    "барып":"сходив, съездив","көріп":"увидев","көрмей":"не увидев",
+    "алып":"взяв","салып":"положив, погрузив","қойып":"поставив",
+    "байлап":"привязав","байлайды":"привязывает","көтереді":"поднимает",
+    "жауып":"накрыв","ашып":"открыв","тігіп":"поставив (юрту)",
+    "тіккім":"моё желание поставить","көшіп":"перекочевав","сүрген":"прожил",
+    "содан":"затем, после того","үстінен":"сверху",
     // имена и клички из текстов — иначе не переводятся по тапу
     "айгүл":"Айгуль (женское имя)","данияр":"Данияр (мужское имя)",
     "ахмет":"Ахмет (имя)","қожа":"Ходжа (почётное звание)",
