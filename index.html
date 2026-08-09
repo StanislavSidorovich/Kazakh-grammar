@@ -727,6 +727,18 @@
         <span class="row-check" data-check="present-cont" aria-hidden="true">✓</span>
         <span class="row-arrow" aria-hidden="true">›</span>
       </button>
+      <button type="button" class="topic-row" data-open="past-simple">
+        <span class="marker" style="background:var(--etistik)"></span>
+        <span class="row-title"><span class="topic-num">2.4</span> Жедел өткен шақ<span class="row-title-ru">прошедшее: что было вчера</span></span>
+        <span class="row-check" data-check="past-simple" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
+      </button>
+      <button type="button" class="topic-row" data-open="past-perfect">
+        <span class="marker" style="background:var(--etistik)"></span>
+        <span class="row-title"><span class="topic-num">2.5</span> Бұрынғы өткен шақ<span class="row-title-ru">давнее прошлое и «доводилось»</span></span>
+        <span class="row-check" data-check="past-perfect" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
+      </button>
     </div>
   </div>
 
@@ -4209,10 +4221,340 @@
       <button class="btn btn-reveal" type="button">Показать ответы</button>
       <span class="quiz-result" aria-live="polite"></span>
     </div>
+    <button type="button" class="next-card" data-open="past-simple">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Прошедшее время: что было вчера</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 2.4 ЖЕДЕЛ ӨТКЕН ШАҚ ============ -->
+<div class="screen topic-screen" id="screen-past-simple" data-topic="past-simple" style="--tint-color:var(--etistik)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--etistik)"></span>
+    <h2><span class="topic-num">2.4</span> Жедел өткен шақ</h2>
+    <span class="done-badge" data-badge="past-simple">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Главное прошедшее время: что было вчера и что ты видел сам. Личные окончания здесь другие — короткие.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>Основа + <b>-ды/-ді</b> или <b>-ты/-ті</b> + короткое личное окончание. Это главное прошедшее в языке: всё, что случилось вчера, на прошлой неделе или только что, берёт именно его.</p>
+    <table>
+      <tr><th>Основа кончается на</th><th>Окончание</th><th>Пример</th></tr>
+      <tr><td>гласный, сонорный, звонкий</td><td class="kk">-ды/-ді</td><td class="kk">бар<b>ды</b>, кел<b>ді</b>, оқы<b>ды</b>, жаз<b>ды</b></td></tr>
+      <tr><td>глухой <span class="hint">(қатаң)</span></td><td class="kk">-ты/-ті</td><td class="kk">айт<b>ты</b>, күт<b>ті</b>, шық<b>ты</b>, іш<b>ті</b></td></tr>
+    </table>
+    <table>
+      <tr><th>Кто</th><th>Окончание</th><th class="kk">бар-</th><th class="kk">кел-</th></tr>
+      <tr><td class="kk">мен</td><td class="kk">-м</td><td class="kk">барды<b>м</b></td><td class="kk">келді<b>м</b></td></tr>
+      <tr><td class="kk">сен</td><td class="kk">-ң</td><td class="kk">барды<b>ң</b></td><td class="kk">келді<b>ң</b></td></tr>
+      <tr><td class="kk">сіз</td><td class="kk">-ңыз/-ңіз</td><td class="kk">барды<b>ңыз</b></td><td class="kk">келді<b>ңіз</b></td></tr>
+      <tr><td class="kk">ол</td><td>—</td><td class="kk">барды</td><td class="kk">келді</td></tr>
+      <tr><td class="kk">біз</td><td class="kk">-қ/-к</td><td class="kk">барды<b>қ</b></td><td class="kk">келді<b>к</b></td></tr>
+      <tr><td class="kk">сендер</td><td class="kk">-ңдар/-ңдер</td><td class="kk">барды<b>ңдар</b></td><td class="kk">келді<b>ңдер</b></td></tr>
+      <tr><td class="kk">олар</td><td>—</td><td class="kk">барды</td><td class="kk">келді</td></tr>
+    </table>
+    <p>С глухой основой картина та же, только суффикс глухой: <span class="kk">айт<b>тым</b>, айт<b>тың</b>, айт<b>тыңыз</b>, айт<b>ты</b>, айт<b>тық</b></span>.</p>
+    <p><b>Личные окончания здесь другие — и это главное, что нужно удержать.</b> Не <span class="kk">-мын/-сың</span> из темы 0.4, а короткие <span class="kk">-м / -ң / -қ</span>. Это те же окончания, что у притяжательного: <span class="kk">кітабы<b>м</b></span> — «моя книга», <span class="kk">барды<b>м</b></span> — «я пошёл».</p>
+    <p><b>Отрицание:</b> основа + <span class="kk">-ма/-ме/-ба/-бе/-па/-пе</span> + <span class="kk">-ды/-ді</span> + личное. После отрицания всегда <span class="kk">-ды/-ді</span>, потому что перед ним гласный:</p>
+    <ul class="rule-list">
+      <li><span class="kk">бар + ма + ды + м = <b>бармадым</b></span> — я не пошёл</li>
+      <li><span class="kk">кел + ме + ді + м = <b>келмедім</b></span> — я не пришёл</li>
+      <li><span class="kk">айт + па + ды + м = <b>айтпадым</b></span> — я не сказал</li>
+      <li><span class="kk">біл + ме + ді + <span style="opacity:.55">—</span> = <b>білмеді</b></span> — он не знал</li>
+    </ul>
+    <p><b>Вопрос</b> собирается как обычно, частицей из темы 0.11: <span class="kk">Барды<b>ң ба</b>?</span> — «ты ходил?», <span class="kk">Келдіңіз <b>бе</b>?</span> — «вы пришли?».</p>
+    <div class="contrast">
+      <div class="label">Русский показывает пол, казахский — лицо</div>
+      <p>Русское прошедшее различает род, но не лицо: скажешь «пошёл» — слышно, что мужчина, но не слышно, кто именно; «пошли» — вообще неизвестно кто.</p>
+      <p>Казахский делает ровно наоборот. <span class="kk">Бардым, бардың, барды, бардық</span> — лицо видно всегда, а пол не виден вообще. Женщина и мужчина говорят одно и то же: <span class="kk">Мен бардым</span>. Поэтому местоимение здесь можно спокойно опускать — окончание уже всё сказало.</p>
+    </div>
+    <div class="trap"><b>Три места, где рука ошибается.</b><br><br>
+      <b>Двойная согласная.</b> <span class="kk">айт + ты + м = <b>айттым</b></span>, две <b>т</b> подряд: одна от основы, одна от окончания. Так же <span class="kk">күтті, кетті, жатты</span>. Одну букву написать хочется, но нужны обе.<br><br>
+      <b>оқыдым, а не «оқидым».</b> В теме 2.2 было <span class="kk">оқимын</span>, потому что суффикс начинался с гласного и <b>ы</b> слилось с <b>й</b>. Здесь <span class="kk">-ды</span> начинается с согласного — сливаться не с чем, <b>ы</b> остаётся на месте.<br><br>
+      <b>Не подставляй жіктік.</b> «Мен бардымын» — такой формы нет. Прошедшее время берёт только короткие окончания, и это единственное, что нужно про него помнить отдельно.</div>
+    <div class="tip"><b>Самая ходовая пара этой темы.</b> Вопрос <span class="kk">Кеше не істедің?</span> — «что ты вчера делал?» — и любой ответ на него. Если рассказываешь про вчера, про выходные, про поездку, которая уже кончилась, — берёшь эту форму и не раздумываешь.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 23 · Есік қорғаны — раскопки</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">табу</span> <span class="t">— находить</span></div>
+          <div><span class="w">қазу</span> <span class="t">— копать</span></div>
+          <div><span class="w">қорған</span> <span class="t">— курган</span></div>
+          <div><span class="w">археолог</span> <span class="t">— археолог</span></div>
+          <div><span class="w">қабір</span> <span class="t">— могила</span></div>
+          <div><span class="w">сүйек</span> <span class="t">— кость</span></div>
+          <div><span class="w">қылыш</span> <span class="t">— меч</span></div>
+          <div><span class="w">бас</span> <span class="t">— голова</span></div>
+          <div><span class="w">өрнек</span> <span class="t">— узор</span></div>
+          <div><span class="w">ашу</span> <span class="t">— открывать</span></div>
+          <div><span class="w">зерттеу</span> <span class="t">— исследовать</span></div>
+          <div><span class="w">дәуір</span> <span class="t">— эпоха</span></div>
+          <div><span class="w">сақ</span> <span class="t">— саки (древний народ)</span></div>
+          <div><span class="w">қалу</span> <span class="t">— оставаться</span></div>
+          <div><span class="w">болу</span> <span class="t">— быть, становиться</span></div>
+          <div><span class="w">ішінде</span> <span class="t">— внутри</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> посмотри, какое окончание берёт каждая основа. <span class="kk">Қаз → қазды</span>, <span class="kk">қал → қалды</span>, <span class="kk">бол → болды</span> — звонкая и сонорные, значит <span class="kk">-ды</span>. А <span class="kk">аш → ашты</span> и <span class="kk">тап → тапты</span> — глухие, значит <span class="kk">-ты</span>. Правило то же, что у множественного числа из темы 0.2: глухая тянет за собой глухую.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Алтын адам — как его нашли</div>
+      <div class="mini-text">
+        <p class="storytext">1969 жылы археологтар Есік қаласының жанында ежелгі қорғанды қазды. Жұмыс ұзақ болды.<br><br>Қорғанның ішінде қабір болды. Ғалымдар оны ашты. Онда жас жауынгер жатты.<br><br>Оның киімінде төрт мың алтын өрнек болды. Жанында қылыш тұрды. Бас киімі биік және әдемі болды.<br><br>Ғалымдар бұл адамды Алтын адам атады. Ол сақ дәуірінен қалды: екі мың жыл жерде жатты.<br><br>Бүкіл әлем бұл хабарды білді. Алтын адам Қазақстан нышаны болды.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">В 1969 году археологи копали древний курган около города Есик. Работа была долгой.<br><br>Внутри кургана была могила. Учёные открыли её. Там лежал молодой воин.<br><br>На его одежде было четыре тысячи золотых узоров. Рядом стоял меч. Головной убор был высоким и красивым.<br><br>Учёные назвали этого человека Золотым человеком. Он остался от эпохи саков: две тысячи лет пролежал в земле.<br><br>Весь мир узнал эту новость. Золотой человек стал символом Казахстана.</p>
+        <p class="why-note"><b>Почему так:</b> весь текст в 3-м лице, а у «ол» личного окончания нет — поэтому глаголы кончаются ровно на суффикс времени: <span class="kk">қазды, болды, ашты, жатты, тұрды, атады, қалды, білді</span>. Голая форма без хвоста — это и есть «он сделал».<br><br>Сравни <span class="kk">ашты</span> и <span class="kk">жатты</span>: у первого <b>т</b> одна (основа <span class="kk">аш</span> + <span class="kk">ты</span>), у второго две (основа <span class="kk">жат</span> + <span class="kk">ты</span>). Букву удваивает не правило, а встреча двух одинаковых.<br><br><b>Про Золотого человека:</b> курган раскопали в 1969 году под Есиком, недалеко от Алматы. Воину было около восемнадцати лет, а на костюм ушло больше четырёх тысяч золотых пластин. Кто это был — юноша или девушка — спорят до сих пор.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Кеше не істедің? — что было вчера</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Кеше не істедің?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Мұражайға бардым. Алтын адамды көрдім.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Ұнады ма?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Өте! Бірақ ұзақ тұрмадым — уақыт болмады.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Мен ол жерде ешқашан болмадым.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Онда ертең бірге барайық!</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Что ты вчера делала?<br><b>Айгуль:</b> Ходила в музей. Видела Золотого человека.<br><b>Данияр:</b> Понравилось?<br><b>Айгуль:</b> Очень! Только долго не стояла — времени не было.<br><b>Данияр:</b> А я там никогда не был.<br><b>Айгуль:</b> Тогда завтра пойдём вместе!</p>
+        <p class="why-note"><b>Почему так:</b> в русском переводе сразу видно, что говорит женщина — «ходила», «видела». В казахском этого не видно нигде: <span class="kk">бардым, көрдім</span> звучат одинаково у всех. Пол в казахском глаголе не отражается вообще, как и в местоимении <span class="kk">ол</span> — «он» и «она» одно слово.<br><br>Два отрицания подряд показывают схему целиком: <span class="kk">тұр + ма + ды + м</span> и <span class="kk">бол + ма + ды + м</span>. Порядок всегда один — смысл, отрицание, время, лицо.<br><br>А <span class="kk">барайық</span> в последней реплике — снова бұйрық рай из темы 2.1: прошедшее и приказ спокойно стоят в одном разговоре.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="past-simple">
+    <p class="quiz-instruction">Впиши окончание прошедшего времени вместе с личным.</p>
+    <div class="qitem"><span class="qnum">1.</span> Мен кеше мұражайға бар<input class="blank" data-answer="дым" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(я ходил)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Сен кеше не істе<input class="blank" data-answer="дің" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">? <span class="hint">(ты делал)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Ол бұл хабарды біл<input class="blank" data-answer="ді" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(он узнал)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Біз қорғанды қаз<input class="blank" data-answer="дық" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(мы копали)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Ғалымдар қабірді аш<input class="blank" data-answer="ты" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(открыли)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> Мен ештеңе айт<input class="blank" data-answer="падым" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(я не сказал)</span></div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">«Я пришёл» —</span>
+      <select class="mc" data-answer="келдім">
+        <option value="">—</option>
+        <option value="келдім">келдім</option>
+        <option value="келдімін">келдімін</option>
+        <option value="келмін">келмін</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="kk">айт</span> + <span class="kk">ты</span> + <span class="kk">м</span> =
+      <select class="mc" data-answer="айттым">
+        <option value="">—</option>
+        <option value="айтым">айтым</option>
+        <option value="айттым">айттым</option>
+        <option value="айтдым">айтдым</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">9.</span> <span class="ru-hint">Личные окончания в этом времени —</span>
+      <select class="mc" data-answer="короткие: -м, -ң, -қ">
+        <option value="">—</option>
+        <option value="те же, что в теме 0.4">те же, что в теме 0.4</option>
+        <option value="короткие: -м, -ң, -қ">короткие: -м, -ң, -қ</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">10.</span> <span class="ru-hint">Вчера я ходил в музей.</span>
+      <div class="qbuild" data-answer="Кеше мен мұражайға бардым" data-words="мұражайға|бардым|Кеше|мен"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">11.</span> <span class="ru-hint">Учёные открыли могилу.</span>
+      <div class="qbuild" data-answer="Ғалымдар қабірді ашты" data-words="қабірді|ашты|Ғалымдар"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
+    <button type="button" class="next-card" data-open="past-perfect">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Второе прошедшее: давно и понаслышке</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 2.5 БҰРЫНҒЫ ӨТКЕН ШАҚ ============ -->
+<div class="screen topic-screen" id="screen-past-perfect" data-topic="past-perfect" style="--tint-color:var(--etistik)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--etistik)"></span>
+    <h2><span class="topic-num">2.5</span> Бұрынғы өткен шақ</h2>
+    <span class="done-badge" data-badge="past-perfect">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Давнее прошлое, чужой рассказ и личный опыт: барғанмын — «я бывал». Время легенд и историй.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>Второе прошедшее время. Основа + <b>-ған/-ген</b> или <b>-қан/-кен</b> + жіктік жалғау — на этот раз <b>обычное</b>, то самое из темы 0.4.</p>
+    <table>
+      <tr><th>Основа кончается на</th><th>Окончание</th><th>Пример</th></tr>
+      <tr><td>гласный, сонорный, звонкий</td><td class="kk">-ған/-ген</td><td class="kk">бар<b>ған</b>, кел<b>ген</b>, оқы<b>ған</b>, жаз<b>ған</b></td></tr>
+      <tr><td>глухой <span class="hint">(қатаң)</span></td><td class="kk">-қан/-кен</td><td class="kk">айт<b>қан</b>, шық<b>қан</b>, күт<b>кен</b>, іш<b>кен</b></td></tr>
+    </table>
+    <table>
+      <tr><th>Кто</th><th class="kk">бар-</th><th class="kk">кел-</th><th class="kk">айт-</th></tr>
+      <tr><td class="kk">мен</td><td class="kk">барған<b>мын</b></td><td class="kk">келген<b>мін</b></td><td class="kk">айтқан<b>мын</b></td></tr>
+      <tr><td class="kk">сен</td><td class="kk">барған<b>сың</b></td><td class="kk">келген<b>сің</b></td><td class="kk">айтқан<b>сың</b></td></tr>
+      <tr><td class="kk">сіз</td><td class="kk">барған<b>сыз</b></td><td class="kk">келген<b>сіз</b></td><td class="kk">айтқан<b>сыз</b></td></tr>
+      <tr><td class="kk">ол</td><td class="kk">барған</td><td class="kk">келген</td><td class="kk">айтқан</td></tr>
+      <tr><td class="kk">біз</td><td class="kk">барған<b>мыз</b></td><td class="kk">келген<b>міз</b></td><td class="kk">айтқан<b>мыз</b></td></tr>
+      <tr><td class="kk">олар</td><td class="kk">барған</td><td class="kk">келген</td><td class="kk">айтқан</td></tr>
+    </table>
+    <p><b>Когда берут его, а не жедел өткен из темы 2.4</b> — три случая:</p>
+    <ul class="rule-list">
+      <li><b>Давно и не своими глазами:</b> <span class="kk">Абай 1845 жылы туған</span> — Абай родился в 1845 году. Говорящего там не было</li>
+      <li><b>Опыт вообще, без даты:</b> <span class="kk">Мен Алматыда болғанмын</span> — я бывал в Алматы. Когда именно — неважно и не сказано</li>
+      <li><b>Легенды, сказки, пересказ:</b> всё, что начинается с «говорят, что…» и «в старину…»</li>
+    </ul>
+    <table>
+      <tr><th>Форма</th><th>Что слышит казах</th></tr>
+      <tr><td class="kk">Кеше мұражайға <b>бардым</b></td><td>вчера ходил — сам, помню, конкретный день</td></tr>
+      <tr><td class="kk">Мұражайға <b>барғанмын</b></td><td>бывал в музее — когда-то, важен опыт, а не день</td></tr>
+    </table>
+    <p><b>Отрицание:</b> основа + <span class="kk">-ма/-ме/-ба/-бе/-па/-пе</span> + <span class="kk">-ған/-ген</span> + жіктік. После отрицания всегда <span class="kk">-ған/-ген</span>: <span class="kk">бар<b>ма</b>ғанмын</span> — «я не бывал», <span class="kk">кел<b>ме</b>генмін</span>, <span class="kk">айт<b>па</b>ған</span>.</p>
+    <div class="contrast">
+      <div class="label">Разница, которую русский вытаскивает словами</div>
+      <p>По-русски «я был в Алматы» годится и для вчерашней поездки, и для «когда-то доводилось». Чтобы развести, приходится добавлять: «вчера», «однажды», «как-то раз».</p>
+      <p>Казахский вшил различие прямо в глагол: <span class="kk">болдым</span> — конкретный раз, который помнишь; <span class="kk">болғанмын</span> — вообще доводилось. Ближе всего к этому английская пара <i>I was</i> и <i>I have been</i>: то же самое разделение, только там оно про время, а здесь ещё и про то, видел ли ты это сам.</p>
+    </div>
+    <div class="trap"><b>Два набора личных окончаний — не перепутай их между темами.</b> В теме 2.4 короткие: <span class="kk">бар<b>дым</b></span>, <span class="kk">бар<b>дың</b></span>, <span class="kk">бар<b>дық</b></span>. Здесь обычные: <span class="kk">барған<b>мын</b></span>, <span class="kk">барған<b>сың</b></span>, <span class="kk">барған<b>мыз</b></span>. Два прошедших времени, два разных хвоста — это надо развести один раз и навсегда.<br><br><b>Выбор ған/қан — по глухости, как всегда.</b> <span class="kk">Айт → айтқан</span>, <span class="kk">шық → шыққан</span>, <span class="kk">іш → ішкен</span>, но <span class="kk">жаз → жазған</span>, <span class="kk">оқы → оқыған</span>. И <span class="kk">шыққан</span> с двумя <b>қ</b> — та же встреча двух одинаковых, что и <span class="kk">айттым</span> в прошлой теме.<br><br><b><span class="kk">-ған</span> живёт и отдельной жизнью</b> — как причастие: <span class="kk">барған адам</span> — «человек, который пошёл», <span class="kk">оқыған кітап</span> — «прочитанная книга». Разбирать это будем в теме про есімше, пока достаточно узнавать в тексте и не пугаться.</div>
+    <div class="tip"><b>Всё, что рассказывают, а не помнят, стоит на -ған.</b> Казахские сказки, предания, жизнеописания — почти целиком в этом времени. Если в тексте подряд идут <span class="kk">болған, келген, айтқан</span> без единого <span class="kk">-ды</span>, это верный знак: перед тобой не отчёт о вчерашнем дне, а история.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 24 · Қорқыт ата — легенда</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">өлім</span> <span class="t">— смерть</span></div>
+          <div><span class="w">өлу</span> <span class="t">— умирать</span></div>
+          <div><span class="w">тірі</span> <span class="t">— живой</span></div>
+          <div><span class="w">қашу</span> <span class="t">— убегать</span></div>
+          <div><span class="w">іздеу</span> <span class="t">— искать</span></div>
+          <div><span class="w">қайту</span> <span class="t">— возвращаться</span></div>
+          <div><span class="w">қобыз</span> <span class="t">— кобыз</span></div>
+          <div><span class="w">жасау</span> <span class="t">— делать, создавать</span></div>
+          <div><span class="w">ән</span> <span class="t">— песня</span></div>
+          <div><span class="w">мәңгі</span> <span class="t">— вечный, вечно</span></div>
+          <div><span class="w">жылан</span> <span class="t">— змея</span></div>
+          <div><span class="w">ұйықтау</span> <span class="t">— спать</span></div>
+          <div><span class="w">түн</span> <span class="t">— ночь</span></div>
+          <div><span class="w">оңтүстік</span> <span class="t">— юг</span></div>
+          <div><span class="w">жақ</span> <span class="t">— сторона</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> проверь себя на этих основах. <span class="kk">Өл → өлген</span>, <span class="kk">ізде → іздеген</span>, <span class="kk">жаса → жасаған</span> — гласный и сонорный, значит <span class="kk">-ген/-ған</span>. А <span class="kk">қаш → қашқан</span> и <span class="kk">қайт → қайтқан</span> — глухие <b>ш</b> и <b>т</b>, значит <span class="kk">-қан</span>.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Қорқыт ата — человек, убежавший от смерти</div>
+      <div class="mini-text">
+        <p class="storytext">Қорқыт ежелгі күйші болған. Ол өлімді көрген және өлімнен қашқан.<br><br>Қорқыт тірі жер іздеген. Ол төрт жаққа барған: солтүстікке, оңтүстікке, шығысқа, батысқа. Бірақ барлық жерде адамдар қабір қазған — Қорқыттың қабірін.<br><br>Сонда Қорқыт өзен жағасына қайтқан. Ол қобыз жасаған және күй ойнаған. Күй тоқтамаған, өлім де келмеген.<br><br>Бір түні Қорқыт ұйықтаған. Күй тоқтаған. Жылан келген, және Қорқыт өлген.<br><br>Бірақ күй қалған. Қазақтар айтады: адам өледі, ән мәңгі тірі.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Коркыт был древним кюйши. Он увидел смерть и убежал от неё.<br><br>Коркыт искал землю, где живут вечно. Он пошёл на четыре стороны: на север, на юг, на восток, на запад. Но везде люди рыли могилу — могилу Коркыта.<br><br>Тогда Коркыт вернулся на берег реки. Он сделал кобыз и играл кюй. Кюй не останавливался, и смерть не приходила.<br><br>Однажды ночью Коркыт уснул. Кюй остановился. Пришла змея, и Коркыт умер.<br><br>Но кюй остался. Казахи говорят: человек умирает, песня вечно жива.</p>
+        <p class="why-note"><b>Почему так:</b> вся легенда стоит на <span class="kk">-ған/-ген/-қан</span> и ни разу не сбивается на <span class="kk">-ды</span>: <span class="kk">болған, көрген, қашқан, іздеген, барған, қазған, қайтқан, жасаған, ойнаған, ұйықтаған, өлген, қалған</span>. Это не украшение — рассказчик там не был, он передаёт то, что слышал. Поставь здесь <span class="kk">болды, көрді, қашты</span>, и легенда превратится в отчёт о вчерашнем дне.<br><br>Отрицания собраны так же: <span class="kk">тоқта + ма + ған</span>, <span class="kk">кел + ме + ген</span>.<br><br>А последняя строка выпадает нарочно: <span class="kk">адам өледі, ән мәңгі тірі</span> — это обычное настоящее из темы 2.2. Пословицы и вечные истины всегда стоят в нём, потому что они не про прошлое.<br><br><b>Про Коркыта:</b> ему приписывают изобретение кобыза и первые кюи. Мавзолей Коркыта стоит на берегу Сырдарьи в Кызылординской области, и построен он так, что ветер в его трубах гудит — получается кобыз размером с здание.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Алматыда болғансың ба? — про опыт</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Сен Алматыда болғансың ба?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Иә, болғанмын. Тауда да болғанмын.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Мен ешқашан бармағанмын.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Мен өткен жылы бардым. Өте әдемі болды.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Досым да айтқан: Алматы керемет.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Онда келесі жазда бірге барайық!</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Ты бывала в Алматы?<br><b>Айгуль:</b> Да, бывала. И в горах бывала.<br><b>Данияр:</b> А я никогда не был.<br><b>Айгуль:</b> Я в прошлом году ездила. Было очень красиво.<br><b>Данияр:</b> Друг тоже говорил: Алматы потрясающий.<br><b>Айгуль:</b> Тогда следующим летом поедем вместе!</p>
+        <p class="why-note"><b>Почему так:</b> в шести репликах стоят оба прошедших времени, и разница видна на глаз. <span class="kk">Болғансың, болғанмын, бармағанмын, айтқан</span> — про опыт вообще: бывал или не бывал, а когда именно — неважно. И тут же <span class="kk">бардым, болды</span> — про конкретную поездку прошлым летом, которую Айгуль помнит.<br><br><span class="kk">Болғансың ба?</span> — именно так спрашивают «ты был там?». Вопрос про опыт, а не про день.<br><br>И обрати внимание на <span class="kk">Досым да айтқан</span>: говорящий передаёт чужие слова, поэтому берёт <span class="kk">-қан</span>. Скажи он <span class="kk">айтты</span> — вышло бы «сказал вот только что, при мне».</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="past-perfect">
+    <p class="quiz-instruction">Впиши окончание <span class="kk">-ған/-ген/-қан/-кен</span> вместе с личным.</p>
+    <div class="qitem"><span class="qnum">1.</span> Мен Алматыда бол<input class="blank" data-answer="ғанмын" style="width:7em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(я бывал)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Сен мұнда кел<input class="blank" data-answer="генсің" style="width:7em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(ты бывал)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Қорқыт өлімнен қаш<input class="blank" data-answer="қан" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(убежал)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Біз ол жерде бол<input class="blank" data-answer="ғанмыз" style="width:7em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(мы бывали)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Ол ешқашан айт<input class="blank" data-answer="паған" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(он никогда не говорил)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="kk">айт</span> + окончание этого времени =
+      <select class="mc" data-answer="айтқан">
+        <option value="">—</option>
+        <option value="айтған">айтған</option>
+        <option value="айтқан">айтқан</option>
+        <option value="айтакан">айтакан</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">«Я бывал в Алматы» (когда-то, неважно когда) —</span>
+      <select class="mc" data-answer="Алматыда болғанмын">
+        <option value="">—</option>
+        <option value="Алматыда болдым">Алматыда болдым</option>
+        <option value="Алматыда болғанмын">Алматыда болғанмын</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="ru-hint">Личные окончания в этом времени —</span>
+      <select class="mc" data-answer="обычные: -мын, -сың, -мыз">
+        <option value="">—</option>
+        <option value="короткие: -м, -ң, -қ">короткие: -м, -ң, -қ</option>
+        <option value="обычные: -мын, -сың, -мыз">обычные: -мын, -сың, -мыз</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">9.</span> <span class="ru-hint">В каком времени рассказывают легенду?</span>
+      <select class="mc" data-answer="бұрынғы өткен: -ған">
+        <option value="">—</option>
+        <option value="жедел өткен: -ды">жедел өткен: -ды</option>
+        <option value="бұрынғы өткен: -ған">бұрынғы өткен: -ған</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">10.</span> <span class="ru-hint">Коркыт сделал кобыз.</span>
+      <div class="qbuild" data-answer="Қорқыт қобыз жасаған" data-words="жасаған|Қорқыт|қобыз"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">11.</span> <span class="ru-hint">Я никогда там не был.</span>
+      <div class="qbuild" data-answer="Мен ол жерде ешқашан болмағанмын" data-words="ешқашан|болмағанмын|Мен|жерде|ол"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
     <button type="button" class="next-card" data-open="vocab">
       <span class="next-marker"></span>
       <span class="next-text">
-        <span class="next-label">Дальше — прошедшие времена, они в работе</span>
+        <span class="next-label">Дальше — келер шақ и сложный глагол, они в работе</span>
         <span class="next-title">А пока закрепи слова в словаре</span>
       </span>
       <span class="next-arrow">→</span>
@@ -4249,7 +4591,7 @@
   var NEGIZ_TOPICS = ["harmony-vowels","harmony-consonants","word-order","zhiktik","pronouns","plural",
                       "possessive","bar-zhoq","demonstratives","question-words","question-particle","negation"];
   var SEPTIK_TOPICS = ["ilik","barys","tabys","zhatys","shygys","komektes","all-cases"];
-  var ETISTIK_TOPICS = ["verb-stem","present-future","present-cont"];
+  var ETISTIK_TOPICS = ["verb-stem","present-future","present-cont","past-simple","past-perfect"];
   var TOPICS = NEGIZ_TOPICS.concat(SEPTIK_TOPICS).concat(ETISTIK_TOPICS);
 
   var BLOCKS = {
@@ -4264,7 +4606,8 @@
     "possessive":22, "bar-zhoq":18, "demonstratives":18,
     "question-words":18, "question-particle":16, "negation":20,
     "ilik":20, "barys":18, "tabys":22, "zhatys":18, "shygys":20, "komektes":16, "all-cases":24,
-    "verb-stem":22, "present-future":24, "present-cont":22
+    "verb-stem":22, "present-future":24, "present-cont":22,
+    "past-simple":22, "past-perfect":24
   };
 
   var STORAGE_KEY   = "kkProgressV1";
@@ -4612,7 +4955,7 @@
     "мектеп":"школа","мектепте":"в школе","мектептер":"школы","дүкен":"магазин","дүкенде":"в магазине",
     "дүкендер":"магазины","дүкенге":"в магазин","көше":"улица","көшелер":"улицы","жол":"дорога",
     "жұмыс":"работа","жұмысқа":"на работу","тау":"гора","таулар":"горы","тауларда":"в горах",
-    "кітап":"книга","кітаптар":"книги","тіл":"язык","есік":"дверь","алма":"яблоко","алмалар":"яблоки",
+    "кітап":"книга","кітаптар":"книги","тіл":"язык","есік":"дверь; Есик (город под Алматы)","алма":"яблоко","алмалар":"яблоки",
     "нан":"хлеб","нандар":"хлеб (мн.)","ағаштары":"деревья (его)","аурухана":"больница","ауруханада":"в больнице",
     // адамдар
     "адам":"человек","адамдар":"люди","әйел":"женщина","ер":"мужчина","жігіт":"парень",
@@ -4771,7 +5114,19 @@
     "отыр":"сидит","отырмын":"сижу","жатырмын":"я (делаю сейчас)","жатырсың":"ты (делаешь сейчас)",
     "көтерілеміз":"поднимаемся","төбесіне":"на макушку","самұрық":"Самрук (птица из легенды)",
     "оқып":"читая","істеп":"делая","күтіп":"ожидая","күліп":"смеясь","қарап":"глядя",
-    "түсіріп":"снимая","демалып":"отдыхая","бара":"едучи, направляясь"
+    "түсіріп":"снимая","демалып":"отдыхая","бара":"едучи, направляясь",
+    // 2.4 жедел өткен шақ
+    "кеше":"вчера","қазды":"копал, копали","ашты":"открыл, открыли","жатты":"лежал",
+    "қалды":"остался","білді":"узнал, знал","болды":"был, стал","көрдім":"я увидел",
+    "істедің":"ты делал","ұнады":"понравилось","тұрмадым":"я не стоял",
+    "болмады":"не было","болмадым":"я не был",
+    // 2.5 бұрынғы өткен шақ
+    "қорқыт":"Коркыт (легендарный кюйши)","болған":"был (давно)","болғанмын":"я бывал",
+    "болғансың":"ты бывал","бармағанмын":"я не бывал","көрген":"видел (давно)",
+    "қашқан":"убежал","іздеген":"искал","қазған":"рыл, вырыл","қайтқан":"вернулся",
+    "жасаған":"сделал","ойнаған":"играл","тоқтаған":"остановился","тоқтамаған":"не останавливался",
+    "келген":"пришёл (давно)","келмеген":"не приходил","ұйықтаған":"уснул","өлген":"умер",
+    "қалған":"остался (давно)","өледі":"умирает","жағасына":"на берег"
   };
 
   // Слова в тексте стоят с окончаниями, а словарь — по большей части в
