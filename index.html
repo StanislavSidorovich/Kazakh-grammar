@@ -739,6 +739,18 @@
         <span class="row-check" data-check="past-perfect" aria-hidden="true">✓</span>
         <span class="row-arrow" aria-hidden="true">›</span>
       </button>
+      <button type="button" class="topic-row" data-open="future-tense">
+        <span class="marker" style="background:var(--etistik)"></span>
+        <span class="row-title"><span class="topic-num">2.6</span> Келер шақ<span class="row-title-ru">будущее: предположение и намерение</span></span>
+        <span class="row-check" data-check="future-tense" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
+      </button>
+      <button type="button" class="topic-row" data-open="verb-negation">
+        <span class="marker" style="background:var(--etistik)"></span>
+        <span class="row-title"><span class="topic-num">2.7</span> Болымсыз етістік<span class="row-title-ru">отрицание во всех временах</span></span>
+        <span class="row-check" data-check="verb-negation" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
+      </button>
     </div>
   </div>
 
@@ -4551,10 +4563,393 @@
       <button class="btn btn-reveal" type="button">Показать ответы</button>
       <span class="quiz-result" aria-live="polite"></span>
     </div>
+    <button type="button" class="next-card" data-open="future-tense">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Ещё два будущих: предположение и намерение</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 2.6 КЕЛЕР ШАҚ ============ -->
+<div class="screen topic-screen" id="screen-future-tense" data-topic="future-tense" style="--tint-color:var(--etistik)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--etistik)"></span>
+    <h2><span class="topic-num">2.6</span> Келер шақ</h2>
+    <span class="done-badge" data-badge="future-tense">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Ещё два будущих: барар — «наверное, пойду», бармақпын — «твёрдо собираюсь». Уверенность встроена в глагол.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>Будущих времён в казахском <b>три</b>. Одно ты уже знаешь — <span class="kk">барамын</span> из темы 2.2, оно рабочее и покрывает почти всё. Два новых добавляют то, чего в русском будущем нет вообще: <b>насколько говорящий уверен</b>.</p>
+    <table>
+      <tr><th>Форма</th><th>Пример</th><th>Что значит</th></tr>
+      <tr><td>2.2 <span class="hint">-а/-е/-й</span></td><td class="kk">барамын</td><td>пойду — просто факт</td></tr>
+      <tr><td>болжалды <span class="hint">-ар</span></td><td class="kk">барармын</td><td>наверное, пойду</td></tr>
+      <tr><td>мақсатты <span class="hint">-мақ</span></td><td class="kk">бармақпын</td><td>намерен пойти</td></tr>
+    </table>
+
+    <p><b>1. Болжалды келер шақ</b> <span class="hint">(предполагаемое)</span> — основа + <b>-ар/-ер/-р</b> + обычное жіктік жалғау.</p>
+    <table>
+      <tr><th>Основа кончается на</th><th>Окончание</th><th>Пример</th></tr>
+      <tr><td>согласный, твёрдый ряд</td><td class="kk">-ар</td><td class="kk">бар<b>ар</b>, айт<b>ар</b>, жаз<b>ар</b></td></tr>
+      <tr><td>согласный, мягкий ряд</td><td class="kk">-ер</td><td class="kk">кел<b>ер</b>, біл<b>ер</b>, көр<b>ер</b></td></tr>
+      <tr><td>гласный</td><td class="kk">-р</td><td class="kk">оқы<b>р</b>, істе<b>р</b>, сөйле<b>р</b></td></tr>
+    </table>
+    <table>
+      <tr><th>Кто</th><th class="kk">бар-</th><th class="kk">кел-</th><th class="kk">оқы-</th></tr>
+      <tr><td class="kk">мен</td><td class="kk">барар<b>мын</b></td><td class="kk">келер<b>мін</b></td><td class="kk">оқыр<b>мын</b></td></tr>
+      <tr><td class="kk">сен</td><td class="kk">барар<b>сың</b></td><td class="kk">келер<b>сің</b></td><td class="kk">оқыр<b>сың</b></td></tr>
+      <tr><td class="kk">сіз</td><td class="kk">барар<b>сыз</b></td><td class="kk">келер<b>сіз</b></td><td class="kk">оқыр<b>сыз</b></td></tr>
+      <tr><td class="kk">ол</td><td class="kk">барар</td><td class="kk">келер</td><td class="kk">оқыр</td></tr>
+      <tr><td class="kk">біз</td><td class="kk">барар<b>мыз</b></td><td class="kk">келер<b>міз</b></td><td class="kk">оқыр<b>мыз</b></td></tr>
+      <tr><td class="kk">олар</td><td class="kk">барар</td><td class="kk">келер</td><td class="kk">оқыр</td></tr>
+    </table>
+    <p><b>Отрицание у него своё — на <span class="kk">-с</span>,</b> и это единственное место в глаголе, где так. Основа + <span class="kk">-ма/-ме/-ба/-бе/-па/-пе</span> + <b>с</b> + жіктік:</p>
+    <table>
+      <tr><th>Утверждение</th><th>Отрицание</th><th>С лицом</th></tr>
+      <tr><td class="kk">барар</td><td class="kk">бар<b>мас</b></td><td class="kk">бармас<b>пын</b></td></tr>
+      <tr><td class="kk">келер</td><td class="kk">кел<b>мес</b></td><td class="kk">келмес<b>пін</b></td></tr>
+      <tr><td class="kk">айтар</td><td class="kk">айт<b>пас</b></td><td class="kk">айтпас<b>сың</b></td></tr>
+      <tr><td class="kk">оқыр</td><td class="kk">оқы<b>мас</b></td><td class="kk">оқымас<b>пыз</b></td></tr>
+    </table>
+
+    <p><b>2. Мақсатты келер шақ</b> <span class="hint">(намеренное)</span> — основа + <b>-мақ/-мек</b> + жіктік. Выбор буквы тот же самый, что у отрицания из темы 2.1: <b>м</b> — <b>б</b> — <b>п</b>.</p>
+    <table>
+      <tr><th>После чего</th><th>Окончание</th><th>Пример</th></tr>
+      <tr><td>гласный, сонорный</td><td class="kk">-мақ/-мек</td><td class="kk">бар<b>мақ</b>, кел<b>мек</b>, оқы<b>мақ</b></td></tr>
+      <tr><td>звонкий <span class="kk">з ж</span></td><td class="kk">-бақ/-бек</td><td class="kk">жаз<b>бақ</b>, қаз<b>бақ</b></td></tr>
+      <tr><td>глухой <span class="hint">(қатаң)</span></td><td class="kk">-пақ/-пек</td><td class="kk">айт<b>пақ</b>, күт<b>пек</b>, іш<b>пек</b></td></tr>
+    </table>
+    <table>
+      <tr><th>Кто</th><th class="kk">бар-</th><th class="kk">кел-</th></tr>
+      <tr><td class="kk">мен</td><td class="kk">бармақ<b>пын</b></td><td class="kk">келмек<b>пін</b></td></tr>
+      <tr><td class="kk">сен</td><td class="kk">бармақ<b>сың</b></td><td class="kk">келмек<b>сің</b></td></tr>
+      <tr><td class="kk">сіз</td><td class="kk">бармақ<b>сыз</b></td><td class="kk">келмек<b>сіз</b></td></tr>
+      <tr><td class="kk">ол</td><td class="kk">бармақ</td><td class="kk">келмек</td></tr>
+      <tr><td class="kk">біз</td><td class="kk">бармақ<b>пыз</b></td><td class="kk">келмек<b>піз</b></td></tr>
+    </table>
+    <ul class="rule-list">
+      <li><b>В живой речи чаще с <span class="kk">-шы/-ші</span></b>: <span class="kk">бармақ<b>шы</b>мын</span> — «собираюсь пойти». Тот же смягчитель, что в <span class="kk">айтшы</span> из темы 2.1, только здесь он не смягчает, а просто прирос к форме</li>
+      <li><b>Отрицание — через <span class="kk">емес</span></b> из темы 0.12: <span class="kk">бармақ емеспін</span> — «не собираюсь идти». Внутрь слова тут ничего не вставляют</li>
+      <li><b>После <span class="kk">-мақ</span> личное окончание глухое</b> — <span class="kk">-пын/-пыз</span>, а не <span class="kk">-мын/-мыз</span>: перед ним стоит глухая <span class="kk">қ</span>. Правило из темы 0.4 работает как обычно</li>
+    </ul>
+    <div class="contrast">
+      <div class="label">Уверенность: русский добавляет слово, казахский — букву</div>
+      <p>По-русски «пойду» одно на все случаи, а степень уверенности навешивается отдельными словами: «наверное, пойду», «собираюсь пойти», «точно пойду».</p>
+      <p>Казахский вшивает её в сам глагол: <span class="kk">барамын</span> — нейтрально, <span class="kk">барармын</span> — с сомнением, <span class="kk">бармақпын</span> — с решением. Поэтому <span class="kk">барар</span> в ответе на просьбу звучит уклончиво: человек не отказал, но и не пообещал. А <span class="kk">бармақпын</span> — почти обязательство, его и в новостях пишут: <span class="kk">Президент Астанаға бармақ</span>.</p>
+    </div>
+    <div class="trap"><b><span class="kk">Бармас</span>, а не «бармар».</b> Отрицание болжалды келер шақ меняет форму целиком: <span class="kk">-ар</span> уходит, приходит <span class="kk">-с</span>. Запомни парами: <span class="kk">барар — бармас</span>, <span class="kk">келер — келмес</span>, <span class="kk">білер — білмес</span>. Отсюда же знаменитое <span class="kk">Білмес</span> — «незнайка».<br><br><b>Не подменяй им обычное будущее.</b> «Завтра я пойду на работу» — это <span class="kk">Ертең жұмысқа барамын</span>, а не <span class="kk">барармын</span>. Второе значит «может, схожу». Планы и договорённости всегда идут через форму из темы 2.2.<br><br><b><span class="kk">Шық → шығар.</span></b> Перед гласным окончанием глухая <span class="kk">қ</span> звенеет и становится <span class="kk">ғ</span> — то же самое, что в <span class="kk">кітап → кітабым</span>. Так и получилось слово <span class="kk">шығар</span>, которое в речи стало отдельной частицей «наверное»: <span class="kk">Ол келеді шығар</span> — «он, наверное, придёт».</div>
+    <div class="tip"><b>Где <span class="kk">-ар</span> встречается чаще всего — в пословицах.</b> Народная мудрость говорит не о завтрашнем дне, а о том, что бывает вообще, и для этого болжалды келер шақ подходит идеально: <span class="kk">Еңбек етсең, ерінбей — тояды қарның, тіленбей</span>. Ещё два слова этой формы ты используешь каждый день, не подозревая: <span class="kk">болар</span> («будет, наверное») и <span class="kk">келер жылы</span> («в будущем году»).</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 25 · Болжам мен ниет</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">болашақ</span> <span class="t">— будущее</span></div>
+          <div><span class="w">болжам</span> <span class="t">— прогноз, предположение</span></div>
+          <div><span class="w">мақсат</span> <span class="t">— цель</span></div>
+          <div><span class="w">ниет</span> <span class="t">— намерение</span></div>
+          <div><span class="w">ауа райы</span> <span class="t">— погода</span></div>
+          <div><span class="w">жаңбыр</span> <span class="t">— дождь</span></div>
+          <div><span class="w">қар</span> <span class="t">— снег</span></div>
+          <div><span class="w">жел</span> <span class="t">— ветер</span></div>
+          <div><span class="w">жауу</span> <span class="t">— идти (о дожде, снеге)</span></div>
+          <div><span class="w">ыстық</span> <span class="t">— жаркий, горячий</span></div>
+          <div><span class="w">салқын</span> <span class="t">— прохладный</span></div>
+          <div><span class="w">орман</span> <span class="t">— лес</span></div>
+          <div><span class="w">шың</span> <span class="t">— вершина</span></div>
+          <div><span class="w">самырсын</span> <span class="t">— кедр</span></div>
+          <div><span class="w">өзгеру</span> <span class="t">— меняться</span></div>
+          <div><span class="w">дайындалу</span> <span class="t">— готовиться</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> проверь выбор окончания на новых основах. <span class="kk">Жау → жауар</span>: на конце <b>у</b>, а она в конце слова всегда считается согласной — та же логика, что в <span class="kk">тау → тауда</span> из темы 1.4. <span class="kk">Өзгер → өзгерер</span>, <span class="kk">дайындал → дайындалар</span> — тоже согласный, значит полное <span class="kk">-ар/-ер</span>. И только у знакомых <span class="kk">оқы</span> и <span class="kk">істе</span> на конце гласный, поэтому остаётся голое <span class="kk">-р</span>: <span class="kk">оқыр, істер</span>.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Алтайға бармақпыз</div>
+      <div class="mini-text">
+        <p class="storytext">Келесі жазда біз Алтайға бармақпыз. Бұл — біздің үлкен мақсатымыз.<br><br>Алтай Қазақстанның шығысында. Ол жерде биік шыңдар, терең өзендер және үлкен орман бар. Орманда самырсын өседі. Шыңдарда жазда да қар жатыр. «Алтай» — «алтын тау» деген сөз.<br><br>Әкем жоспар жасады: біз пойызбен барамыз, тауға көлікпен жетеміз. Ол айтады: «Тауда ауа райы күнде өзгереді. Бүгін ыстық болар, ертең салқын. Жел соғар, жаңбыр жауар. Жылы киім ал!»<br><br>Мен бүгін дайындаламын. Ертең сөмкемді алмақпын, кітап пен қалам салмақпын.<br><br>Анам күледі: «Тауда телефон жұмыс істемес. Ешкім хабарласпас, ешкім асықпас. Ал болашақ — келесі аптада.»</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Следующим летом мы собираемся поехать на Алтай. Это наша большая цель.<br><br>Алтай — на востоке Казахстана. Там высокие вершины, глубокие реки и большой лес. В лесу растёт кедр. На вершинах и летом лежит снег. «Алтай» — слово, означающее «золотая гора».<br><br>Папа составил план: мы поедем поездом, а до гор доберёмся на машине. Он говорит: «В горах погода меняется каждый день. Сегодня будет жарко, завтра прохладно. Подует ветер, пойдёт дождь. Возьми тёплую одежду!»<br><br>Я готовлюсь сегодня. Завтра возьму сумку, положу книгу и ручку.<br><br>Мама смеётся: «В горах телефон работать не будет. Никто не позвонит, никто не будет спешить. А будущее — на следующей неделе.»</p>
+        <p class="why-note"><b>Почему так:</b> в тексте работают все три будущих сразу, и разница видна по смыслу. <span class="kk">Бармақпыз, алмақпын, салмақпын</span> — решено, это план. <span class="kk">Барамыз, жетеміз, дайындаламын</span> — обычное будущее из темы 2.2, простая констатация. А <span class="kk">болар, соғар, жауар, істемес, хабарласпас, асықпас</span> — предположения: никто не знает, какая там будет погода.<br><br>Отрицания собраны по-новому: <span class="kk">істе + ме + с</span>, <span class="kk">хабарлас + па + с</span>, <span class="kk">асық + па + с</span>. Ни одного <span class="kk">-майды</span> — в этом времени отрицание другое.<br><br><b>Про Алтай:</b> название и правда читается как «алтын тау» — золотая гора. Алтай считают прародиной тюркских народов: именно оттуда, по большинству версий, разошлись языки, к которым относится и казахский. Кедровые леса там тянутся на сотни километров, а орех до сих пор собирают вручную.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Ертең жаңбыр жауар ма? — планы на выходной</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Ертең ауа райы қандай болар?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Болжам жақсы емес: салқын болар, жаңбыр жауар.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Онда тауға бармаспыз ба?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Мен бармаймын. Үйде кітап оқымақпын.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Ал мен бәрібір бармақшымын. Тауда жаңбыр жаумас!</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Жарайды. Кешке хабарлас, ертең бәрі белгілі болар.</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Какая завтра будет погода?<br><b>Айгуль:</b> Прогноз нехороший: будет прохладно, пойдёт дождь.<br><b>Данияр:</b> Тогда в горы не поедем?<br><b>Айгуль:</b> Я не поеду. Дома буду читать книгу.<br><b>Данияр:</b> А я всё равно собираюсь поехать. В горах дождя не будет!<br><b>Айгуль:</b> Ладно. Позвони вечером, завтра всё станет ясно.</p>
+        <p class="why-note"><b>Почему так:</b> шесть реплик — и все три будущих в работе. <span class="kk">Болар, жауар, жаумас</span> — предположения о завтрашней погоде, тут они на своём месте: никто не знает наверняка. <span class="kk">Оқымақпын, бармақшымын</span> — решения, которые уже приняты. <span class="kk">Бармаймын</span> — обычное отрицание из темы 2.2, ровное и без оттенка.<br><br>Обрати внимание на <span class="kk">бармаспыз ба?</span> — предположение внутри вопроса: «неужели не поедем?». Вопросительная частица <span class="kk">ба</span> стоит отдельным словом после глагола, как в теме 0.11, и с отрицанием внутри глагола не сталкивается.<br><br>И последнее <span class="kk">болар</span> — вежливая формула. <span class="kk">Бәрі белгілі болар</span> буквально «всё, наверное, станет известно», а по смыслу — «утро вечера мудренее».</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="future-tense">
+    <p class="quiz-instruction">Впиши окончание будущего времени вместе с личным, если оно нужно.</p>
+    <div class="qitem"><span class="qnum">1.</span> Мен ертең бар<input class="blank" data-answer="армын" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(наверное, пойду)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Ол кешке кел<input class="blank" data-answer="ер" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(наверное, придёт)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Ертең жаңбыр жау<input class="blank" data-answer="ар" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(наверное, пойдёт)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Біз Алтайға бар<input class="blank" data-answer="мақпыз" style="width:7em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(собираемся поехать)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Ол ешқашан айт<input class="blank" data-answer="пас" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(вряд ли скажет)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="kk">кел</span> + отрицание болжалды келер шақ =
+      <select class="mc" data-answer="келмес">
+        <option value="">—</option>
+        <option value="келмер">келмер</option>
+        <option value="келмес">келмес</option>
+        <option value="келмейді">келмейді</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">«Я собираюсь поехать в Алматы» —</span>
+      <select class="mc" data-answer="Алматыға бармақпын">
+        <option value="">—</option>
+        <option value="Алматыға барамын">Алматыға барамын</option>
+        <option value="Алматыға бармақпын">Алматыға бармақпын</option>
+        <option value="Алматыға барармын">Алматыға барармын</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="ru-hint">«Завтра я иду на работу» (договорено) —</span>
+      <select class="mc" data-answer="Ертең жұмысқа барамын">
+        <option value="">—</option>
+        <option value="Ертең жұмысқа барамын">Ертең жұмысқа барамын</option>
+        <option value="Ертең жұмысқа барармын">Ертең жұмысқа барармын</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">9.</span> <span class="kk">бармақ</span> + окончание для <span class="kk">мен</span> =
+      <select class="mc" data-answer="бармақпын">
+        <option value="">—</option>
+        <option value="бармақмын">бармақмын</option>
+        <option value="бармақпын">бармақпын</option>
+        <option value="бармақбын">бармақбын</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">10.</span> <span class="ru-hint">В каком времени говорят пословицы?</span>
+      <select class="mc" data-answer="болжалды: -ар">
+        <option value="">—</option>
+        <option value="мақсатты: -мақ">мақсатты: -мақ</option>
+        <option value="болжалды: -ар">болжалды: -ар</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">11.</span> <span class="ru-hint">Завтра, наверное, пойдёт дождь.</span>
+      <div class="qbuild" data-answer="Ертең жаңбыр жауар" data-words="жауар|Ертең|жаңбыр"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">12.</span> <span class="ru-hint">Следующим летом мы собираемся поехать на Алтай.</span>
+      <div class="qbuild" data-answer="Келесі жазда біз Алтайға бармақпыз" data-words="бармақпыз|Келесі|Алтайға|біз|жазда"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
+    <button type="button" class="next-card" data-open="verb-negation">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · дальше</span>
+        <span class="next-title">Отрицание глагола: одна частица на все времена</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 2.7 БОЛЫМСЫЗ ЕТІСТІК ============ -->
+<div class="screen topic-screen" id="screen-verb-negation" data-topic="verb-negation" style="--tint-color:var(--etistik)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--etistik)"></span>
+    <h2><span class="topic-num">2.7</span> Болымсыз етістік</h2>
+    <span class="done-badge" data-badge="verb-negation">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Одна частица -ма/-ме на все семь форм глагола — и три места, где она ведёт себя не так, как ждёшь.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>Отрицание встречалось в каждой теме блока по кусочку. Пора собрать его целиком: правило одно, а хвостов у него семь. <b>Порядок сборки не меняется никогда:</b></p>
+    <p><span class="kk">бар</span> + <span class="kk">ма</span> + <span class="kk">ды</span> + <span class="kk">м</span> = <span class="kk"><b>бармадым</b></span> — <span class="hint">основа · отрицание · время · лицо</span></p>
+    <p><b>Какую букву выбрать — м, б или п</b> — решает последний звук основы. Это тот же закон из темы 0.2, что и у всех остальных окончаний, только тройка другая:</p>
+    <table>
+      <tr><th>После чего</th><th>Форма</th><th>Пример</th></tr>
+      <tr><td>гласный, сонорный <span class="hint">р л й у м н ң</span></td><td class="kk">-ма/-ме</td><td class="kk">оқы<b>ма</b>, бар<b>ма</b>, кел<b>ме</b></td></tr>
+      <tr><td>звонкий <span class="kk">з ж</span></td><td class="kk">-ба/-бе</td><td class="kk">жаз<b>ба</b>, қаз<b>ба</b></td></tr>
+      <tr><td>глухой <span class="hint">(қатаң)</span></td><td class="kk">-па/-пе</td><td class="kk">айт<b>па</b>, күт<b>пе</b>, іш<b>пе</b></td></tr>
+    </table>
+    <p><b>Все формы глагола разом.</b> Отрицание одно и то же, меняется только то, что стоит справа от него:</p>
+    <table>
+      <tr><th>Тема</th><th>Есть</th><th>Нет</th></tr>
+      <tr><td>2.1 <span class="hint">бұйрық</span></td><td class="kk">бар!</td><td class="kk">бар<b>ма</b>!</td></tr>
+      <tr><td>2.2 <span class="hint">ауыспалы</span></td><td class="kk">барады</td><td class="kk">бар<b>май</b>ды</td></tr>
+      <tr><td>2.3 <span class="hint">нақ осы</span></td><td class="kk">оқып отыр</td><td class="kk">оқы<b>май</b> отыр</td></tr>
+      <tr><td>2.4 <span class="hint">жедел</span></td><td class="kk">барды</td><td class="kk">бар<b>ма</b>ды</td></tr>
+      <tr><td>2.5 <span class="hint">бұрынғы</span></td><td class="kk">барған</td><td class="kk">бар<b>ма</b>ған</td></tr>
+      <tr><td>2.6 <span class="hint">болжалды</span></td><td class="kk">барар</td><td class="kk">бар<b>мас</b></td></tr>
+      <tr><td>2.6 <span class="hint">мақсатты</span></td><td class="kk">бармақ</td><td class="kk">бармақ <b>емес</b></td></tr>
+    </table>
+    <ul class="rule-list">
+      <li><b>Перед <span class="kk">-а/-е</span> отрицание сливается в <span class="kk">-май/-мей</span></b>: <span class="kk">бар + ма + а + ды</span> невозможно, два гласных подряд язык не терпит, поэтому <span class="kk">бармайды</span>. Это единственное сращение во всей схеме</li>
+      <li><b>Перед <span class="kk">-ды</span> и <span class="kk">-ған</span> ничего не происходит</b>: <span class="kk">бармады</span>, <span class="kk">бармаған</span>. Выбирать между <span class="kk">-ды/-ты</span> и <span class="kk">-ған/-қан</span> тоже не приходится — перед ними всегда гласный <b>а</b> отрицания</li>
+      <li><b>Только у <span class="kk">-ар</span> форма ломается</b>: <span class="kk">барар → бармас</span>. Это исключение из темы 2.6, других таких нет</li>
+    </ul>
+    <p><b>Три отрицания из темы 0.12 — теперь на своих местах:</b></p>
+    <table>
+      <tr><th>Что отрицаем</th><th>Чем</th><th>Пример</th></tr>
+      <tr><td>признак, имя</td><td class="kk">емес</td><td class="kk">Мұғалім <b>емеспін</b></td></tr>
+      <tr><td>наличие</td><td class="kk">жоқ</td><td class="kk">Уақытым <b>жоқ</b></td></tr>
+      <tr><td>действие</td><td class="kk">-ма/-ме</td><td class="kk">Бар<b>ма</b>ймын</td></tr>
+    </table>
+    <p><b>Слова на <span class="kk">еш-</span> требуют второго отрицания</b> — ровно как русские «никто» и «ничего»: <span class="kk">Ешкім кел<b>ме</b>ді</span>, <span class="kk">Ештеңе біл<b>ме</b>ймін</span>, <span class="kk">Ешқашан бар<b>ма</b>ғанмын</span>. Без глагольного отрицания фраза разваливается.</p>
+    <div class="contrast">
+      <div class="label">Русское «не» ходит по фразе, казахское — приклеено намертво</div>
+      <p>В русском «не» — отдельное слово, и его можно двигать: «<b>не</b> я пойду», «я <b>не</b> пойду», «я пойду <b>не</b> туда». Каждый сдвиг меняет смысл.</p>
+      <p>В казахском отрицание сидит внутри глагола и отрицать может только действие. Чтобы отвергнуть другое слово, берут <span class="kk">емес</span> и ставят его прямо за этим словом: <span class="kk">Мен емес, ол барады</span> — «пойду не я, а он». <span class="kk">Ертең емес, бүгін</span> — «не завтра, а сегодня». Так что <span class="kk">емес</span> — это не «слабый вариант» отрицания, а единственный способ сказать «не то, а это».</p>
+    </div>
+    <div class="trap"><b><span class="kk">Барма</span> и <span class="kk">бар ма</span> — разные вещи.</b> Слитно <span class="kk">барма</span> — «не ходи», отрицание внутри глагола. Раздельно <span class="kk">бар ма?</span> — «есть ли?», вопросительная частица из темы 0.11, отдельное слово после сказуемого. Буквы те же, пробел решает всё: <span class="kk">Ақшаң бар ма?</span> — «у тебя есть деньги?», <span class="kk">Онда барма!</span> — «не ходи туда!».<br><br><b>Отрицание не ставится в конец.</b> «Бардыма», «келдіме» — так не говорят: сначала смысл, потом время, потом лицо. Правильный порядок один — <span class="kk">бар + ма + ды + м</span>.<br><br><b>Нақ осы шақ отрицают двумя способами.</b> Разобранный сегодня <span class="kk">оқымай отыр</span> — «сидит не читая». Но в живой речи чаще отрицают не действие, а его наличие: <span class="kk">оқып отырған жоқ</span> — буквально «читающего нет». Вторая конструкция стоит на <span class="kk">-ған</span> в роли причастия, и разберём мы её в теме про есімше. Пока достаточно узнавать её в речи.</div>
+    <div class="tip"><b>Три формы, которые стоит выучить сегодня же целиком.</b> <span class="kk">Білмеймін</span> — не знаю. <span class="kk">Түсінбеймін</span> — не понимаю. <span class="kk">Ұмытпаңыз</span> — не забудьте. С первыми двумя можно честно продержаться весь первый разговор с носителем, а третья — самая частая вежливая просьба в переписке.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 26 · Тыйым сөздер</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">тыйым</span> <span class="t">— запрет</span></div>
+          <div><span class="w">ырым</span> <span class="t">— примета, обычай</span></div>
+          <div><span class="w">от</span> <span class="t">— огонь</span></div>
+          <div><span class="w">табалдырық</span> <span class="t">— порог</span></div>
+          <div><span class="w">басу</span> <span class="t">— наступать, нажимать</span></div>
+          <div><span class="w">тастау</span> <span class="t">— бросать</span></div>
+          <div><span class="w">құю</span> <span class="t">— лить, наливать</span></div>
+          <div><span class="w">ысқыру</span> <span class="t">— свистеть</span></div>
+          <div><span class="w">кесу</span> <span class="t">— резать</span></div>
+          <div><span class="w">ұмыту</span> <span class="t">— забывать</span></div>
+          <div><span class="w">кешігу</span> <span class="t">— опаздывать</span></div>
+          <div><span class="w">сену</span> <span class="t">— верить</span></div>
+          <div><span class="w">зиян</span> <span class="t">— вред</span></div>
+          <div><span class="w">заң</span> <span class="t">— закон</span></div>
+          <div><span class="w">немесе</span> <span class="t">— или</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> все три варианта отрицания собираются прямо на этих основах. <span class="kk">Құй → құйма</span>, <span class="kk">таста → тастама</span>, <span class="kk">ысқыр → ысқырма</span> — на конце <b>й</b>, гласный и <b>р</b>, значит <span class="kk">-ма</span>. <span class="kk">Бас → баспа</span>, <span class="kk">кес → кеспе</span>, <span class="kk">ұмыт → ұмытпа</span>, <span class="kk">кешік → кешікпе</span> — глухие <b>с, т, к</b>, значит <span class="kk">-па/-пе</span>. А у <span class="kk">кешігу</span> в основе снова прячется чередование: <span class="kk">кешіг → кешік</span>, как в <span class="kk">шығу → шық</span> из темы 2.1.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Қазақтың тыйым сөздері</div>
+      <div class="mini-text">
+        <p class="storytext">Қазақта көп тыйым бар. Олар — ескі ырым, бірақ бүгін де айтады.<br><br>«Отқа су құйма.» От — қасиетті. Ол үйді жылытады және тамақ береді.<br><br>«Нанды тастама, нанды баспа.» Нан да қасиетті: нан — үлкен ас.<br><br>«Табалдырықта тұрма.» Табалдырық — үйдің басы. Кір немесе шық, бірақ онда тұрма.<br><br>«Түнде ысқырма.» Ақша жоғалады дейді.<br><br>«Үлкен кісінің сөзін кеспе.» Ол айтады — сен тыңдайсың.<br><br>Бұл тыйымдар — заң емес. Ешкім оларды жазбаған, ешкім тексермейді. Бірақ балалар оларды ұмытпайды: ырым зиян бермейді, ал құрмет ешқашан жоғалмайды.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">У казахов много запретов. Они — старые приметы, но их говорят и сегодня.<br><br>«Не лей воду в огонь.» Огонь священен. Он греет дом и даёт еду.<br><br>«Не бросай хлеб, не наступай на хлеб.» Хлеб тоже священен: хлеб — большая еда.<br><br>«Не стой на пороге.» Порог — голова дома. Заходи или выходи, но там не стой.<br><br>«Не свисти ночью.» Говорят, деньги пропадут.<br><br>«Не перебивай старшего.» Он говорит — ты слушаешь.<br><br>Эти запреты — не закон. Никто их не записывал, никто не проверяет. Но дети их не забывают: примета вреда не принесёт, а уважение никогда не пропадёт.</p>
+        <p class="why-note"><b>Почему так:</b> шесть запретов — это бұйрық рай из темы 2.1 с отрицанием, и выбор буквы виден на каждом: <span class="kk">құй<b>ма</b></span>, <span class="kk">таста<b>ма</b></span>, <span class="kk">тұр<b>ма</b></span>, <span class="kk">ысқыр<b>ма</b></span> — после сонорного и гласного; <span class="kk">бас<b>па</b></span>, <span class="kk">кес<b>пе</b></span> — после глухих.<br><br>В последнем абзаце подряд идут четыре времени: <span class="kk">жаз<b>ба</b>ған</span> (бұрынғы өткен), <span class="kk">тексер<b>ме</b>йді</span> и <span class="kk">ұмыт<b>па</b>йды</span> (ауыспалы), <span class="kk">бер<b>ме</b>йді</span>, <span class="kk">жоғал<b>ма</b>йды</span>. Отрицание во всех одно и то же, меняется только хвост справа от него.<br><br><b>Про сами тыйымы:</b> у большинства из них есть бытовое объяснение. Огонь в юрте гасить нельзя было буквально — от него зависела жизнь. На пороге не стоят, потому что там сквозняк и там же стоит гость, которого нужно скорее провести к <span class="kk">төр</span>. А хлеб роняли на землю только в голодные годы, и запрет держит память об этом.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Неге келмедің? — обычное отрицание в разговоре</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Кеше неге келмедің? Мен ұзақ күттім.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Ұмытып қалдым. Кешіріңіз!</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Хабарластым, бірақ сен жауап бермедің.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Телефонымды көрмедім, ол сөмкеде жатты.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Ештеңе етпейді. Ертең ұмытпа!</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Ұмытпаймын және кешікпеймін. Ешқашан!</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Почему ты вчера не пришла? Я долго ждал.<br><b>Айгуль:</b> Забыла. Извините!<br><b>Данияр:</b> Я звонил, но ты не ответила.<br><b>Айгуль:</b> Я не видела телефон, он лежал в сумке.<br><b>Данияр:</b> Ничего страшного. Завтра не забудь!<br><b>Айгуль:</b> Не забуду и не опоздаю. Никогда!</p>
+        <p class="why-note"><b>Почему так:</b> в шести репликах отрицание стоит в трёх разных временах и ни разу не меняет своего места. Прошедшее: <span class="kk">кел<b>ме</b>дің</span>, <span class="kk">бер<b>ме</b>дің</span>, <span class="kk">көр<b>ме</b>дім</span>. Будущее: <span class="kk">ұмыт<b>па</b>ймын</span>, <span class="kk">кешік<b>пе</b>ймін</span>. Повеление: <span class="kk">ұмыт<b>па</b></span>.<br><br><span class="kk">Ештеңе етпейді</span> — готовая формула «ничего страшного», и в ней снова двойное отрицание: буквально «ничего не сделает».<br><br>А <span class="kk">Кешіріңіз</span> в ответ на «ты» — не ошибка. Айгуль обращается к Данияру на <span class="kk">сіз</span>, он к ней на <span class="kk">сен</span>: так бывает, когда он старше или это рабочие отношения. Несимметричное «вы» в казахском встречается чаще, чем в русском.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="verb-negation">
+    <p class="quiz-instruction">Впиши отрицание вместе с окончанием времени и лица.</p>
+    <div class="qitem"><span class="qnum">1.</span> Мен ертең бар<input class="blank" data-answer="маймын" style="width:7em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(не пойду)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Ол кеше кел<input class="blank" data-answer="меді" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(не пришёл вчера)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Мен Алматыда бол<input class="blank" data-answer="мағанмын" style="width:8em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(не бывал)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Ертең жаңбыр жау<input class="blank" data-answer="мас" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(вряд ли пойдёт)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Түнде ысқыр<input class="blank" data-answer="ма" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">! <span class="hint">(не свисти)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="kk">жаз</span> + отрицание =
+      <select class="mc" data-answer="жазба">
+        <option value="">—</option>
+        <option value="жазма">жазма</option>
+        <option value="жазба">жазба</option>
+        <option value="жазпа">жазпа</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="kk">кешік</span> + отрицание =
+      <select class="mc" data-answer="кешікпе">
+        <option value="">—</option>
+        <option value="кешікме">кешікме</option>
+        <option value="кешікбе">кешікбе</option>
+        <option value="кешікпе">кешікпе</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="ru-hint">«У меня нет времени» —</span>
+      <select class="mc" data-answer="Уақытым жоқ">
+        <option value="">—</option>
+        <option value="Уақытым жоқ">Уақытым жоқ</option>
+        <option value="Уақытым емес">Уақытым емес</option>
+        <option value="Уақытым болмайды">Уақытым болмайды</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">9.</span> <span class="ru-hint">«Пойду не я, а он» —</span>
+      <select class="mc" data-answer="Мен емес, ол барады">
+        <option value="">—</option>
+        <option value="Мен бармаймын, ол барады">Мен бармаймын, ол барады</option>
+        <option value="Мен емес, ол барады">Мен емес, ол барады</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">10.</span> <span class="ru-hint">«Не ходи туда!» —</span>
+      <select class="mc" data-answer="Онда барма!">
+        <option value="">—</option>
+        <option value="Онда бар ма?">Онда бар ма?</option>
+        <option value="Онда барма!">Онда барма!</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">11.</span> <span class="ru-hint">Не лей воду в огонь.</span>
+      <div class="qbuild" data-answer="Отқа су құйма" data-words="су|Отқа|құйма"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">12.</span> <span class="ru-hint">Никто ничего не сказал.</span>
+      <div class="qbuild" data-answer="Ешкім ештеңе айтпады" data-words="айтпады|Ешкім|ештеңе"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
     <button type="button" class="next-card" data-open="vocab">
       <span class="next-marker"></span>
       <span class="next-text">
-        <span class="next-label">Дальше — келер шақ и сложный глагол, они в работе</span>
+        <span class="next-label">Дальше — күрделі етістік и модальность, они в работе</span>
         <span class="next-title">А пока закрепи слова в словаре</span>
       </span>
       <span class="next-arrow">→</span>
@@ -4591,7 +4986,8 @@
   var NEGIZ_TOPICS = ["harmony-vowels","harmony-consonants","word-order","zhiktik","pronouns","plural",
                       "possessive","bar-zhoq","demonstratives","question-words","question-particle","negation"];
   var SEPTIK_TOPICS = ["ilik","barys","tabys","zhatys","shygys","komektes","all-cases"];
-  var ETISTIK_TOPICS = ["verb-stem","present-future","present-cont","past-simple","past-perfect"];
+  var ETISTIK_TOPICS = ["verb-stem","present-future","present-cont","past-simple","past-perfect",
+                        "future-tense","verb-negation"];
   var TOPICS = NEGIZ_TOPICS.concat(SEPTIK_TOPICS).concat(ETISTIK_TOPICS);
 
   var BLOCKS = {
@@ -4607,7 +5003,8 @@
     "question-words":18, "question-particle":16, "negation":20,
     "ilik":20, "barys":18, "tabys":22, "zhatys":18, "shygys":20, "komektes":16, "all-cases":24,
     "verb-stem":22, "present-future":24, "present-cont":22,
-    "past-simple":22, "past-perfect":24
+    "past-simple":22, "past-perfect":24,
+    "future-tense":24, "verb-negation":22
   };
 
   var STORAGE_KEY   = "kkProgressV1";
@@ -5127,6 +5524,24 @@
     "жасаған":"сделал","ойнаған":"играл","тоқтаған":"остановился","тоқтамаған":"не останавливался",
     "келген":"пришёл (давно)","келмеген":"не приходил","ұйықтаған":"уснул","өлген":"умер",
     "қалған":"остался (давно)","өледі":"умирает","жағасына":"на берег",
+    // 2.6 келер шақ
+    "алтай":"Алтай (горы на востоке)","райы":"погода (в «ауа райы»)","телефон":"телефон",
+    "жатыр":"лежит; находится","жасады":"сделал, составил","жетеміз":"доберёмся",
+    "дайындаламын":"готовлюсь","өзгереді":"меняется","күледі":"смеётся",
+    "болар":"будет, наверное","жауар":"пойдёт, наверное (о дожде)","соғар":"подует",
+    "жаумас":"вряд ли пойдёт","істемес":"не будет работать","асықпас":"не будет спешить",
+    "хабарласпас":"не позвонит","бармаспыз":"вряд ли пойдём",
+    "бармақпыз":"собираемся пойти","бармақшымын":"собираюсь пойти",
+    "алмақпын":"собираюсь взять","салмақпын":"собираюсь положить","оқымақпын":"собираюсь читать",
+    // 2.7 болымсыз етістік
+    "құйма":"не лей","тастама":"не бросай","баспа":"не наступай","тұрма":"не стой",
+    "ысқырма":"не свисти","кеспе":"не перебивай, не режь","ұмытпа":"не забудь",
+    "кір":"заходи","шық":"выходи","дейді":"говорят","жоғалады":"пропадёт",
+    "жазбаған":"не записывал","тексермейді":"не проверяет","бермейді":"не даёт",
+    "ұмытпайды":"не забывают","ұмытпаймын":"не забуду","кешікпеймін":"не опоздаю",
+    "бармаймын":"не пойду","келмедің":"ты не пришёл","бермедің":"ты не дал, не ответил",
+    "көрмедім":"я не видел","күттім":"я ждал","хабарластым":"я позвонил",
+    "хабарлас":"позвони, свяжись","ұмытып":"забыв","етпейді":"не сделает",
     // имена и клички из текстов — иначе не переводятся по тапу
     "айгүл":"Айгуль (женское имя)","данияр":"Данияр (мужское имя)",
     "ахмет":"Ахмет (имя)","қожа":"Ходжа (почётное звание)",
