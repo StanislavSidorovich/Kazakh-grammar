@@ -243,10 +243,13 @@
 
   .subnav{display:flex; gap:6px; margin-bottom:14px;}
   .subnav-btn{
-    flex:1; padding:9px 4px; border-radius:10px; border:1.5px solid #E0E4E9;
+    flex:1; display:flex; flex-direction:column; align-items:center; gap:1px;
+    padding:7px 4px; border-radius:10px; border:1.5px solid #E0E4E9;
     background:var(--card); color:var(--muted); font-family:var(--font-ru);
-    font-size:0.85rem; font-weight:600; cursor:pointer;
+    cursor:pointer;
   }
+  .subnav-btn b{font-size:0.85rem; font-weight:700;}
+  .subnav-btn i{font-style:normal; font-size:0.67rem; font-weight:500; opacity:0.8;}
   .subnav-btn.active{background:var(--tint-color,var(--negiz)); border-color:var(--tint-color,var(--negiz)); color:#fff;}
 
   .pane{display:none;}
@@ -307,8 +310,15 @@
   }
   .chips{display:flex; flex-wrap:wrap; gap:6px; margin:9px 0 0;}
   .chip{
-    padding:5px 11px; border-radius:20px; border:1.5px solid #E0E4E9; background:transparent;
-    font-family:var(--font-kk); font-size:0.85rem; font-weight:600; color:var(--ink); cursor:pointer;
+    display:inline-flex; flex-direction:column; align-items:center; gap:0;
+    padding:5px 11px; border-radius:14px; border:1.5px solid #E0E4E9; background:transparent;
+    color:var(--ink); cursor:pointer; line-height:1.25;
+  }
+  .chip-w{font-family:var(--font-kk); font-size:0.85rem; font-weight:600;}
+  .chip-t{font-family:var(--font-ru); font-size:0.66rem; font-weight:500; color:var(--muted);}
+  .suf-tr{
+    display:block; font-family:var(--font-ru); font-size:0.78rem; font-weight:500;
+    color:var(--muted); margin-top:3px;
   }
   .suf-out{margin-top:14px; padding-top:12px; border-top:1px solid #E5E9EE;}
   .suf-word{font-family:var(--font-kk); font-size:1.5rem; font-weight:700; line-height:1.3;}
@@ -338,13 +348,23 @@
   .wordset .t{color:var(--muted); font-size:0.84rem;}
 
   .stage-note{font-family:var(--font-ru); font-size:0.8rem; color:var(--muted); margin:0 0 8px;}
-  .tap-word{cursor:pointer; border-bottom:1px dotted #B9C2CC;}
+  /* Подчёркивать каждое слово нельзя — пунктир под всей строкой мешает читать.
+     Подсказку о том, что слова нажимаются, несёт .tap-hint, а подсветку
+     получает только то слово, которое сейчас открыто. */
+  .tap-word{cursor:pointer; border-radius:4px; padding:0 1px; margin:0 -1px;}
+  .tap-word.on{background:var(--negiz-tint); color:var(--negiz-deep);}
   .tap-popup{
     position:fixed; z-index:60; background:var(--ink-fixed); color:#fff;
     padding:7px 11px; border-radius:9px; font-family:var(--font-ru); font-size:0.84rem;
     max-width:70vw; box-shadow:0 6px 20px rgba(0,0,0,0.25);
   }
-  .tap-hint{font-size:0.78rem; color:var(--muted); margin:0 0 10px;}
+  .tap-hint{
+    display:flex; align-items:center; gap:8px;
+    background:var(--negiz-tint); color:var(--negiz-deep);
+    font-size:0.8rem; font-weight:600; border-radius:10px;
+    padding:9px 12px; margin:0 0 14px;
+  }
+  .tap-hint::before{content:"👆"; font-size:0.95rem;}
 
   /* ---------- ЗАДАНИЯ ---------- */
   .quiz-instruction{font-size:0.86rem; color:var(--muted); margin:0 0 14px;}
@@ -449,8 +469,8 @@
 </div>
 
 <nav class="blockbar">
-  <button class="negiz" data-target="negiz">НЕГІЗ · A1</button>
-  <button class="septik" data-target="septik">СЕПТІК · A1–A2</button>
+  <button class="negiz" data-target="negiz">НЕГІЗ · ОСНОВА · A1</button>
+  <button class="septik" data-target="septik">СЕПТІК · ПАДЕЖИ · A1–A2</button>
 </nav>
 
 <div class="screen active" id="home">
@@ -485,7 +505,7 @@
 </header>
 
 <main>
-  <div class="level-divider"><span>Блок 0 · Негіз</span></div>
+  <div class="level-divider"><span>Блок 0 · Негіз — основа</span></div>
   <div class="topic-group" id="negiz">
     <div class="era-header">
       <span class="tag" data-group="negiz">Блок 0 · A1 · Қарапайым · 12 тем</span>
@@ -506,19 +526,19 @@
 
       <button type="button" class="topic-row" data-open="harmony-vowels">
         <span class="marker" style="background:var(--negiz)"></span>
-        <span class="row-title"><span class="topic-num">0.1</span> Үндестік заңы I<span class="row-title-ru">жуан и жіңішке — гармония гласных</span></span>
+        <span class="row-title"><span class="topic-num">0.1</span> Үндестік заңы I<span class="row-title-ru">закон созвучия: гармония гласных</span></span>
         <span class="row-check" data-check="harmony-vowels" aria-hidden="true">✓</span>
         <span class="row-arrow" aria-hidden="true">›</span>
       </button>
       <button type="button" class="topic-row" data-open="harmony-consonants">
         <span class="marker" style="background:var(--negiz)"></span>
-        <span class="row-title"><span class="topic-num">0.2</span> Үндестік заңы II<span class="row-title-ru">қатаң, ұяң, үнді — почему -лар / -дар / -тар</span></span>
+        <span class="row-title"><span class="topic-num">0.2</span> Үндестік заңы II<span class="row-title-ru">закон созвучия: согласные, -лар / -дар / -тар</span></span>
         <span class="row-check" data-check="harmony-consonants" aria-hidden="true">✓</span>
         <span class="row-arrow" aria-hidden="true">›</span>
       </button>
       <button type="button" class="topic-row" data-open="word-order">
         <span class="marker" style="background:var(--negiz)"></span>
-        <span class="row-title"><span class="topic-num">0.3</span> Сөйлем құрылымы<span class="row-title-ru">порядок слов: глагол в конце</span></span>
+        <span class="row-title"><span class="topic-num">0.3</span> Сөйлем құрылымы<span class="row-title-ru">строение предложения: глагол в конце</span></span>
         <span class="row-check" data-check="word-order" aria-hidden="true">✓</span>
         <span class="row-arrow" aria-hidden="true">›</span>
       </button>
@@ -561,7 +581,7 @@
       </button>
       <button type="button" class="topic-row" data-open="question-words">
         <span class="marker" style="background:var(--negiz)"></span>
-        <span class="row-title"><span class="topic-num">0.10</span> Сұрау есімдіктері<span class="row-title-ru">кім, не, қайда, қашан, қалай</span></span>
+        <span class="row-title"><span class="topic-num">0.10</span> Сұрау есімдіктері<span class="row-title-ru">вопросительные слова: кім, не, қайда</span></span>
         <span class="row-check" data-check="question-words" aria-hidden="true">✓</span>
         <span class="row-arrow" aria-hidden="true">›</span>
       </button>
@@ -573,14 +593,14 @@
       </button>
       <button type="button" class="topic-row" data-open="negation">
         <span class="marker" style="background:var(--negiz)"></span>
-        <span class="row-title"><span class="topic-num">0.12</span> Емес, жоқ и -ма<span class="row-title-ru">емес, жоқ и -ма — три отрицания</span></span>
+        <span class="row-title"><span class="topic-num">0.12</span> Емес, жоқ и -ма<span class="row-title-ru">три отрицания вместо одного «не»</span></span>
         <span class="row-check" data-check="negation" aria-hidden="true">✓</span>
         <span class="row-arrow" aria-hidden="true">›</span>
       </button>
     </div>
   </div>
 
-  <div class="level-divider"><span>Блок 1 · Септіктер</span></div>
+  <div class="level-divider"><span>Блок 1 · Септіктер — падежи</span></div>
   <div class="topic-group" id="septik">
     <div class="era-header">
       <span class="tag" data-group="septik">Блок 1 · A1–A2 · 7 тем</span>
@@ -733,9 +753,9 @@
   </div>
   <div class="topic-subtitle">Гармония гласных: слово целиком либо твёрдое, либо мягкое — и суффикс обязан подстроиться.</div>
   <div class="subnav">
-    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
-    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
-    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
   </div>
 
   <div class="pane pane-rule active">
@@ -891,9 +911,9 @@
   </div>
   <div class="topic-subtitle">Вторая половина закона: последняя согласная решает, с какой буквы начнётся суффикс.</div>
   <div class="subnav">
-    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
-    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
-    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
   </div>
 
   <div class="pane pane-rule active">
@@ -1030,9 +1050,9 @@
   </div>
   <div class="topic-subtitle">Порядок слов: кто → что → что делает. Глагол всегда уходит в конец предложения.</div>
   <div class="subnav">
-    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
-    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
-    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
   </div>
 
   <div class="pane pane-rule active">
@@ -1172,9 +1192,9 @@
   </div>
   <div class="topic-subtitle">Личные окончания. В казахском нет глагола «быть» — вместо него окончание на самом слове.</div>
   <div class="subnav">
-    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
-    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
-    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
   </div>
 
   <div class="pane pane-rule active">
@@ -1334,9 +1354,9 @@
   </div>
   <div class="topic-subtitle">Восемь местоимений вместо шести — и главное социальное правило языка: сен или сіз.</div>
   <div class="subnav">
-    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
-    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
-    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
   </div>
 
   <div class="pane pane-rule active">
@@ -1496,9 +1516,9 @@
   </div>
   <div class="topic-subtitle">Множественное число целиком — и три случая, когда его как раз не ставят.</div>
   <div class="subnav">
-    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
-    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
-    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
   </div>
 
   <div class="pane pane-rule active">
@@ -1671,9 +1691,9 @@
   </div>
   <div class="topic-subtitle">Принадлежность — окончанием на самой вещи. «Мой» живёт не в отдельном слове, а внутри слова «книга».</div>
   <div class="subnav">
-    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
-    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
-    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
   </div>
 
   <div class="pane pane-rule active">
@@ -1833,9 +1853,9 @@
   </div>
   <div class="topic-subtitle">Два слова вместо глагола «иметь». Глагола «иметь» в казахском нет вообще.</div>
   <div class="subnav">
-    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
-    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
-    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
   </div>
 
   <div class="pane pane-rule active">
@@ -1987,9 +2007,9 @@
   </div>
   <div class="topic-subtitle">Указательные слова. Там, где русский обходится «этот» и «тот», казахский различает четыре степени.</div>
   <div class="subnav">
-    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
-    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
-    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
   </div>
 
   <div class="pane pane-rule active">
@@ -2165,9 +2185,9 @@
   </div>
   <div class="topic-subtitle">Вопросительные слова. Главное здесь не сам список, а то, что порядок слов в вопросе не меняется.</div>
   <div class="subnav">
-    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
-    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
-    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
   </div>
 
   <div class="pane pane-rule active">
@@ -2325,9 +2345,9 @@
   </div>
   <div class="topic-subtitle">Вопрос «да или нет» ставится отдельным словом. Одной интонации, как в русском, здесь не хватает.</div>
   <div class="subnav">
-    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
-    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
-    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
   </div>
 
   <div class="pane pane-rule active">
@@ -2465,9 +2485,9 @@
   </div>
   <div class="topic-subtitle">Три разных отрицания там, где русский обходится словом «не». Перепутать их — самая частая ошибка на этом уровне.</div>
   <div class="subnav">
-    <button type="button" class="subnav-btn active" data-pane="rule">Ереже</button>
-    <button type="button" class="subnav-btn" data-pane="texts">Мәтін</button>
-    <button type="button" class="subnav-btn" data-pane="quiz">Тапсырма</button>
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
   </div>
 
   <div class="pane pane-rule active">
@@ -3089,7 +3109,7 @@
     "құм":"песок","қайғылы":"печальный","қайта":"снова","мүлдем":"совсем","нәрсе":"вещь",
     "қатесіз":"без ошибок","кейде":"иногда","жаман":"плохой","бірден":"сразу","бәрін":"всё",
     "қазақша":"по-казахски","үйрену":"учить, осваивать","білмейді":"не знает",
-    "шарын":"Чарын","арал":"Арал"
+    "шарын":"Чарын","арал":"Арал","ел":"страна, народ"
   };
 
   // Слова в тексте стоят с окончаниями, а словарь — по большей части в
@@ -3188,7 +3208,9 @@
 
   var tapPopup = null, tapWord = null;
   function hideTapPopup(){
-    if(tapPopup){ tapPopup.remove(); tapPopup = null; tapWord = null; }
+    if(tapWord) tapWord.classList.remove("on");
+    if(tapPopup){ tapPopup.remove(); tapPopup = null; }
+    tapWord = null;
   }
   function showTapPopup(w){
     hideTapPopup();
@@ -3204,6 +3226,7 @@
     b.style.top = top + "px";
     b.style.left = left + "px";
     tapPopup = b; tapWord = w;
+    w.classList.add("on");
   }
   document.addEventListener("click", function(e){
     var w = e.target.closest && e.target.closest(".tap-word");
@@ -3355,7 +3378,14 @@
 
   /* ================= ПОДБОРЩИК СУФФИКСОВ ================= */
 
-  var SUF_SAMPLES = ["кітап","бала","үй","дос","адам","мектеп","қала","ел","тау","мұғалім","қыз","көше"];
+  // Пары «слово — перевод»: для начинающего голый список казахских слов
+  // бесполезен, он не понимает, с чем тренируется. Слова подобраны так,
+  // чтобы закрыть все три класса последней согласной и обе гармонии.
+  var SUF_SAMPLES = [
+    ["кітап","книга"], ["бала","ребёнок"], ["үй","дом"], ["дос","друг"],
+    ["адам","человек"], ["мектеп","школа"], ["қала","город"], ["ел","страна"],
+    ["тау","гора"], ["мұғалім","учитель"], ["қыз","девочка"], ["көше","улица"]
+  ];
 
   function initSuffixTool(){
     var input = document.getElementById("sufWord");
@@ -3369,8 +3399,10 @@
       select.appendChild(o);
     });
 
-    chips.innerHTML = SUF_SAMPLES.map(function(w){
-      return '<button type="button" class="chip" data-word="'+w+'">'+w+'</button>';
+    chips.innerHTML = SUF_SAMPLES.map(function(pair){
+      return '<button type="button" class="chip" data-word="'+pair[0]+'">' +
+             '<span class="chip-w">'+pair[0]+'</span>' +
+             '<span class="chip-t">'+pair[1]+'</span></button>';
     }).join("");
     chips.addEventListener("click", function(e){
       var c = e.target.closest(".chip");
@@ -3399,7 +3431,11 @@
     }
 
     var cls = r.harmony === "hard" ? "zhuan" : "zhinishke";
-    out.innerHTML = escapeHtml(r.stem) + (r.separate ? " " : "") + '<em class="'+cls+'">' + escapeHtml(r.suffix) + '</em>';
+    // Перевод исходного слова: без него тренировка идёт вслепую.
+    var tr = lookupWord(word.trim().toLowerCase());
+    out.innerHTML = escapeHtml(r.stem) + (r.separate ? " " : "") +
+                    '<em class="'+cls+'">' + escapeHtml(r.suffix) + '</em>' +
+                    (tr ? '<span class="suf-tr">' + escapeHtml(word.trim()) + ' — ' + escapeHtml(tr) + '</span>' : "");
 
     var hName = r.harmony === "hard" ? "жуан (твёрдое)" : "жіңішке (мягкое)";
     var html = '<span class="step"><b>1.</b> Слово ' + hName + ' → гласный суффикса ' +
