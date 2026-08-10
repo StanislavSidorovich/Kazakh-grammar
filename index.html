@@ -108,11 +108,14 @@
   }
 
   /* ---------- ПЕРЕХОД ПО БЛОКАМ ---------- */
+  /* Переносим, а не прокручиваем. Раньше тут был overflow-x:auto со скрытой
+     полосой: на телефоне это работало, а на десктопе четвёртая кнопка просто
+     обрезалась краем — прокрутки не видно, и выглядит как поломка. Перенос
+     нужен и на случай крупного шрифта (125%), при котором кнопки не влезают
+     ни в какую ширину. */
   .blockbar{
-    display:flex; gap:6px; padding:10px 16px 0; max-width:640px; margin:0 auto;
-    overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none;
+    display:flex; flex-wrap:wrap; gap:6px; padding:10px 16px 0; max-width:640px; margin:0 auto;
   }
-  .blockbar::-webkit-scrollbar{display:none;}
   body.topic-open .blockbar{display:none;}
   .blockbar button{
     flex:0 0 auto; font-family:var(--font-lat); font-weight:800; font-size:0.72rem;
@@ -284,6 +287,12 @@
   }
 
   table{width:100%; border-collapse:collapse; margin:0 0 16px; font-size:0.88rem;}
+  /* При шрифте 125% таблицы, влезавшие при обычном, выходят за экран на ~15px
+     и тянут за собой всю страницу. Здесь они прокручиваются внутри себя.
+     Правило намеренно висит только на самом крупном шрифте: при обычном и
+     112% таблицы влезают, и display:block им не нужен — он ломает
+     растягивание на всю ширину. */
+  html.font-plus-plus .pane table{display:block; width:100%; overflow-x:auto;}
   th{text-align:left; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--muted); font-weight:800; padding:6px 6px 6px 0;}
   td{padding:8px 6px 8px 0; border-bottom:1px solid #E5E9EE; vertical-align:top;}
 
@@ -387,6 +396,11 @@
     font-family:var(--font-kk); font-size:1rem; font-weight:600; padding:5px 8px;
     border-radius:8px; border:1.5px solid #DDE2E8; background:var(--bg); color:var(--ink);
   }
+  /* Длинный вариант ответа задаёт select-у собственную ширину, и он вылезал
+     за карточку и за экран: на 375px худший уходил на 18px за край, а таких
+     по курсу было 140. Ограничиваем шириной карточки — раскрытый список всё
+     равно показывает вариант целиком, это делает сам браузер. */
+  .mc{max-width:100%;}
   .blank.ok, .mc.ok{border-color:var(--ok); background:var(--ok-tint); color:var(--ink-fixed);}
   .blank.bad, .mc.bad{border-color:var(--bad); background:var(--bad-tint); color:var(--ink-fixed);}
 
@@ -516,11 +530,13 @@
   <button type="button" id="themeToggle" class="settings-btn">🌙 Тёмная</button>
 </div>
 
+<!-- Уровень CEFR тут намеренно не дублируется: он стоит в заголовке блока,
+     куда кнопка и ведёт. Пока стоял в обоих местах, разошёлся при правке. -->
 <nav class="blockbar">
-  <button class="negiz" data-target="negiz">НЕГІЗ · ОСНОВА · A1</button>
-  <button class="septik" data-target="septik">СЕПТІК · ПАДЕЖИ · A1–A2</button>
-  <button class="etistik" data-target="etistik">ЕТІСТІК · ГЛАГОЛ · A2</button>
-  <button class="keneyu" data-target="keneyu">КЕҢЕЙТУ · РАСШИРЕНИЕ · A2–B1</button>
+  <button class="negiz" data-target="negiz">НЕГІЗ · ОСНОВА</button>
+  <button class="septik" data-target="septik">СЕПТІК · ПАДЕЖИ</button>
+  <button class="etistik" data-target="etistik">ЕТІСТІК · ГЛАГОЛ</button>
+  <button class="keneyu" data-target="keneyu">КЕҢЕЙТУ · РАСШИРЕНИЕ</button>
 </nav>
 
 <div class="screen active" id="home">
@@ -7828,9 +7844,11 @@
       var b = BLOCKS[k];
       var done = b.topics.filter(function(t){ return isDone(p[t]); }).length;
       doneAll += done;
-      var widthPct = plannedTotal ? (b.planned/plannedTotal*100) : 0;
       var fillPct  = b.planned ? (done/b.planned*100) : 0;
-      segHtml += '<div class="level-seg" style="flex:0 0 '+widthPct.toFixed(2)+'%"><span style="width:'+fillPct.toFixed(1)+'%;background:var('+b.color+')"></span></div>';
+      // flex-grow пропорционально числу тем, а не фиксированный процент:
+      // проценты давали в сумме ровно 100%, и три зазора gap:3px вылезали
+      // за контейнер на 9px. С basis 0 флексбокс делит уже оставшееся место.
+      segHtml += '<div class="level-seg" style="flex:'+b.planned+' 1 0"><span style="width:'+fillPct.toFixed(1)+'%;background:var('+b.color+')"></span></div>';
       legHtml += '<span><b style="color:var('+b.color+')">'+b.label+'</b> '+done+'/'+b.planned+'</span>';
     });
 

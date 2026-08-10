@@ -49,6 +49,62 @@ function checkTables() {
 }
 
 /* ---------------------------------------------------------------------------
+ * 1б. ОБРЕЗАННЫЕ БЛОКИ
+ *
+ * checkTables() ловит только таблицы и ширину страницы целиком, и этого мало.
+ * Элемент с overflow:auto прокручивается внутри себя, страницу не расширяет —
+ * и обрезка остаётся невидимой для проверки. Так пролезли сразу две:
+ *
+ *  · .blockbar с четырьмя кнопками требовала 761px при 640px контейнера.
+ *    На телефоне это прокручивалось пальцем, а на десктопе четвёртая кнопка
+ *    просто обрывалась краем. Лечится переносом (flex-wrap), а не прокруткой.
+ *  · .level-track: четыре сегмента по проценту давали ровно 100%, и три
+ *    зазора gap:3px вылезали сверху. Лечится flex-grow с basis 0.
+ *
+ * Проверять при обоих крайних размерах шрифта: при 125% не влезает то,
+ * что при обычном влезало.
+ *
+ * Вызов: checkClipping()
+ * -------------------------------------------------------------------------*/
+function checkClipping() {
+  const problems = [];
+  const seen = new Set();
+
+  const scan = (where) => {
+    document.querySelectorAll('.screen.active, .screen.active *').forEach((el) => {
+      if (!el.offsetParent) return;
+      const over = el.scrollWidth - el.clientWidth;
+      if (over <= 1 || el.clientWidth === 0) return;
+      // Таблица при шрифте 125% прокручивается внутри себя намеренно —
+      // это лечение, а не болезнь.
+      if (el.tagName === 'TABLE' && getComputedStyle(el).overflowX === 'auto') return;
+      const key = where + '|' + el.tagName + (el.className || '');
+      if (seen.has(key)) return;
+      seen.add(key);
+      problems.push(`${where} · ${el.tagName.toLowerCase()}.${String(el.className).split(' ')[0]} шире своего контейнера на ${over}px`);
+    });
+  };
+
+  ['', 'font-plus', 'font-plus-plus'].forEach((font) => {
+    document.documentElement.className = font;
+    scan('главная, шрифт ' + (font || 'обычный'));
+    document.querySelectorAll('.topic-row[data-open]').forEach((row) => {
+      const id = row.dataset.open;
+      row.click();
+      const screen = document.getElementById('screen-' + id);
+      if (!screen) return;
+      screen.querySelectorAll('.subnav-btn').forEach((btn) => { btn.click(); scan(id); });
+      const back = screen.querySelector('[data-back]');
+      if (back) back.click();
+    });
+  });
+  document.documentElement.className = '';
+
+  console.log(problems.length ? 'ОБРЕЗКА:\n' + problems.join('\n') : 'Ничего не обрезано ни при одном размере шрифта.');
+  return problems;
+}
+
+/* ---------------------------------------------------------------------------
  * 2. ЗАДАНИЯ
  *
  * Заполняет все задания темы правильными ответами и жмёт «Тексеру».
