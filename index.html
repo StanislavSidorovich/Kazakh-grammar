@@ -807,6 +807,18 @@
         <span class="row-check" data-check="postpositions" aria-hidden="true">✓</span>
         <span class="row-arrow" aria-hidden="true">›</span>
       </button>
+      <button type="button" class="topic-row" data-open="adjectives">
+        <span class="marker" style="background:var(--keneyu)"></span>
+        <span class="row-title"><span class="topic-num">3.4</span> Сын есім<span class="row-title-ru">прилагательное и степени сравнения</span></span>
+        <span class="row-check" data-check="adjectives" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
+      </button>
+      <button type="button" class="topic-row" data-open="adverbs">
+        <span class="marker" style="background:var(--keneyu)"></span>
+        <span class="row-title"><span class="topic-num">3.5</span> Үстеу<span class="row-title-ru">наречие и его место перед глаголом</span></span>
+        <span class="row-check" data-check="adverbs" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
+      </button>
     </div>
   </div>
 
@@ -838,7 +850,7 @@
       <li>Возвращайся к темам из блока «Стоит повторить» — это места, где чаще всего ошибаешься</li>
       <li>Открывай подборщик суффиксов каждый раз, когда сомневаешься. Цель — довести выбор до автоматизма, а не выучить таблицу наизусть</li>
     </ul>
-    <div class="tip">Курс растёт по одной теме за раз. Блоки «Негіз», «Септік» и «Етістік» открыты целиком, блок «Кеңейту» идёт: условие, желание и послелоги уже есть, дальше будут прилагательные, залоги и сложное предложение.</div>
+    <div class="tip">Курс растёт по одной теме за раз. Блоки «Негіз», «Септік» и «Етістік» открыты целиком, блок «Кеңейту» идёт: условие, желание, послелоги, прилагательные и наречия уже есть, дальше будут числительные, время и даты, залоги и сложное предложение.</div>
     <p style="font-size:0.82rem; color:var(--muted); margin-top:20px;">Сделано <a href="https://www.linkedin.com/in/stanislavsidorovich" target="_blank" rel="noopener" style="color:var(--negiz); font-weight:700; text-decoration:none;">Stanislav Sidorovich</a> · Алматы · <span style="font-family:var(--font-lat)">2026</span></p>
   </div>
 </div>
@@ -6372,10 +6384,441 @@
       <button class="btn btn-reveal" type="button">Показать ответы</button>
       <span class="quiz-result" aria-live="polite"></span>
     </div>
+    <button type="button" class="next-card" data-open="adjectives">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · Тема 3.4</span>
+        <span class="next-title">Сын есім — прилагательное и степени сравнения</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 3.4 СЫН ЕСІМ ============ -->
+<div class="screen topic-screen" id="screen-adjectives" data-topic="adjectives" style="--tint-color:var(--keneyu)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--keneyu)"></span>
+    <h2><span class="topic-num">3.4</span> Сын есім</h2>
+    <span class="done-badge" data-badge="adjectives">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Прилагательное и степени сравнения: үлкен, үлкенірек, ең үлкен. Слово не меняется вообще — ни по числу, ни по падежу.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>Это самая лёгкая тема блока, и вот почему. В русском прилагательное согласуется с существительным по роду, числу и падежу — «больш<b>ой</b> дом», «в больш<b>ом</b> доме», «больш<b>ие</b> дома». В казахском оно <b>не меняется никогда</b>: стоит перед существительным одной и той же формой, а все окончания достаются существительному.</p>
+    <table>
+      <tr><th>Казахский</th><th>Русский</th></tr>
+      <tr><td class="kk"><b>үлкен</b> үй</td><td>больш<b>ой</b> дом</td></tr>
+      <tr><td class="kk"><b>үлкен</b> үйде</td><td>в больш<b>ом</b> доме</td></tr>
+      <tr><td class="kk"><b>үлкен</b> үйлер</td><td>больш<b>ие</b> дома</td></tr>
+      <tr><td class="kk"><b>үлкен</b> үйлерден</td><td>из больш<b>их</b> домов</td></tr>
+    </table>
+    <p>Слева <span class="kk">үлкен</span> четыре раза одинаковое, справа четыре разные формы. Запоминать нечего — просто ничего не делай с прилагательным.</p>
+
+    <p><b>1. Прилагательное как сказуемое.</b> Когда оно стоит не перед существительным, а в конце предложения, к нему прицепляется жіктік жалғау из темы 0.4 — как к любому именному сказуемому:</p>
+    <table>
+      <tr><th>Казахский</th><th>Русский</th></tr>
+      <tr><td class="kk">Үй үлкен</td><td>дом большой</td></tr>
+      <tr><td class="kk">Мен бақытты<b>мын</b></td><td>я счастлив</td></tr>
+      <tr><td class="kk">Сен ақылды<b>сың</b></td><td>ты умный</td></tr>
+      <tr><td class="kk">Біз бақытты<b>мыз</b></td><td>мы счастливы</td></tr>
+    </table>
+
+    <p><b>2. Салыстырмалы дәреже <span class="kk">-рақ/-рек</span> — «немного более».</b> Вариант выбирается по закону созвучия, а полная или короткая форма — по последней букве:</p>
+    <table>
+      <tr><th>Основа</th><th>Форма</th><th>Русский</th></tr>
+      <tr><td class="kk">жақсы</td><td class="kk">жақсы<b>рақ</b></td><td>получше</td></tr>
+      <tr><td class="kk">әдемі</td><td class="kk">әдемі<b>рек</b></td><td>покрасивее</td></tr>
+      <tr><td class="kk">ұзын</td><td class="kk">ұзын<b>ырақ</b></td><td>подлиннее</td></tr>
+      <tr><td class="kk">кең</td><td class="kk">кең<b>ірек</b></td><td>пошире</td></tr>
+    </table>
+    <ul class="rule-list">
+      <li><b>После гласного</b> — короткое <span class="kk">-рақ/-рек</span></li>
+      <li><b>После согласного</b> — полное <span class="kk">-ырақ/-ірек</span></li>
+    </ul>
+
+    <p><b>3. Сравнение с предметом — через шығыс септік.</b> То, с чем сравниваем, встаёт в падеж «откуда», и это главное отличие от русского «чем»:</p>
+    <table>
+      <tr><th>Казахский</th><th>Русский</th></tr>
+      <tr><td class="kk">Мен се<b>нен</b> үлкенмін</td><td>я старше тебя</td></tr>
+      <tr><td class="kk">Алматы Астана<b>дан</b> үлкен</td><td>Алматы больше Астаны</td></tr>
+      <tr><td class="kk">Бұл бөлме о<b>дан</b> кеңірек</td><td>эта комната шире той</td></tr>
+    </table>
+    <p>Само окончание <span class="kk">-рақ</span> при этом необязательно: <span class="kk">Алматы Астанадан үлкен</span> уже значит «больше», потому что сравнение несёт падеж.</p>
+    <p><b>Сюда же встаёт <span class="kk">гөрі</span> из прошлой темы.</b> Это послелог шығыс септік, и работает он ровно на этом месте — усиливает сравнение, как русское «по сравнению с»:</p>
+    <table>
+      <tr><th>Казахский</th><th>Русский</th></tr>
+      <tr><td class="kk">Бұл бөлме о<b>дан гөрі</b> кең</td><td>эта комната просторнее той</td></tr>
+      <tr><td class="kk">Арзан<b>нан гөрі</b> жақсысы дұрыс</td><td>лучше хорошее, чем дешёвое</td></tr>
+    </table>
+    <p>Без <span class="kk">гөрі</span> фраза не сломается — оно добавляет противопоставление, а не смысл сравнения.</p>
+
+    <p><b>4. Асырмалы дәреже — <span class="kk">ең</span> и усилители.</b> Слово ставится перед прилагательным, и само прилагательное опять не меняется:</p>
+    <table>
+      <tr><th>Слово</th><th>Значение</th><th>Пример</th></tr>
+      <tr><td class="kk">ең</td><td>самый</td><td class="kk">ең жақсы</td></tr>
+      <tr><td class="kk">өте</td><td>очень</td><td class="kk">өте дәмді</td></tr>
+      <tr><td class="kk">тым</td><td>слишком</td><td class="kk">тым қымбат</td></tr>
+      <tr><td class="kk">аса</td><td>весьма, книжн.</td><td class="kk">аса маңызды</td></tr>
+    </table>
+    <p><span class="kk">Өте</span> и <span class="kk">тым</span> путать нельзя: первое просто усиливает, второе всегда несёт упрёк. <span class="kk">Өте қымбат</span> — «очень дорого, но я возьму», <span class="kk">тым қымбат</span> — «дорого, я не возьму».</p>
+
+    <p><b>5. Күшейтпелі дәреже — удвоение первого слога.</b> Работает почти только с цветами и даёт «ярко-, совсем-». Берётся первый слог, к нему добавляется <span class="kk">п</span>, и всё это приклеивается спереди:</p>
+    <table>
+      <tr><th>Основа</th><th>Форма</th><th>Русский</th></tr>
+      <tr><td class="kk">қызыл</td><td class="kk"><b>қып</b>-қызыл</td><td>ярко-красный</td></tr>
+      <tr><td class="kk">қара</td><td class="kk"><b>қап</b>-қара</td><td>чёрный-пречёрный</td></tr>
+      <tr><td class="kk">сары</td><td class="kk"><b>сап</b>-сары</td><td>ярко-жёлтый</td></tr>
+      <tr><td class="kk">көк</td><td class="kk"><b>көп</b>-көк</td><td>ярко-синий</td></tr>
+      <tr><td class="kk">ақ</td><td class="kk"><b>ап</b>-ақ</td><td>белый-пребелый</td></tr>
+    </table>
+    <p>Пишется через дефис, кроме <span class="kk">аппақ</span>, которое давно срослось в одно слово. Форм таких немного, они заучиваются целиком.</p>
+
+    <p><b>6. Ослабление — <span class="kk">-лау/-леу</span>.</b> Обратная сторона: не «более», а «слегка чересчур». <span class="kk">Үлкендеу</span> — великоватый, <span class="kk">ұзындау</span> — длинноватый, <span class="kk">арзандау</span> — дешевле обычного. Вариант выбирается по тому же закону, что и көптік жалғау из темы 0.6.</p>
+
+    <div class="contrast">
+      <div class="label">Прилагательное и наречие — одно и то же слово</div>
+      <p>В русском это две разные формы: «хорош<b>ий</b> ученик» — «читает хорош<b>о</b>», «быстр<b>ый</b> поезд» — «едет быстр<b>о</b>».</p>
+      <table>
+        <tr><td class="kk"><b>жақсы</b> оқушы</td><td>хороший ученик</td></tr>
+        <tr><td class="kk"><b>жақсы</b> оқиды</td><td>хорошо учится</td></tr>
+        <tr><td class="kk"><b>тез</b> көлік</td><td>быстрая машина</td></tr>
+        <tr><td class="kk"><b>тез</b> жүреді</td><td>быстро едет</td></tr>
+      </table>
+      <p>Одно слово обслуживает обе работы, и различает их только то, что стоит следом: существительное или глагол. Поэтому наречий как отдельного списка учить почти не придётся — об этом целиком следующая тема.</p>
+    </div>
+    <div class="trap"><b>Прилагательное не берёт ни көптік, ни септік.</b> <span class="kk">Үлкен үйлерде</span> — окончания только на существительном. «Үлкендер үйлерде» — грубая ошибка, хотя по-русски согласование кажется обязательным.<br><br><b><span class="kk">Ең</span> и <span class="kk">-рақ</span> вместе не ставятся.</b> <span class="kk">Ең жақсы</span> — «самый лучший», а «ең жақсырақ» не бывает: одно слово уже про максимум, второе про «чуть больше».<br><br><b>Сравнение идёт через шығыс, а не через барыс.</b> <span class="kk">Менен үлкен</span> — «старше меня»; «маған үлкен» значит совсем другое.<br><br><b><span class="kk">Тым</span> — это упрёк.</b> На вопрос «как тебе?» ответ <span class="kk">тым жақсы</span> звучит странно: получается «слишком хорошо». Нужно <span class="kk">өте жақсы</span>.<br><br><b>Прилагательное всегда перед существительным.</b> Порядок «үй үлкен» — это уже целое предложение «дом большой», а не словосочетание «большой дом».</div>
+    <div class="tip"><b>Что не нужно делать вообще.</b> Не искать род — его в казахском нет. Не согласовывать по числу и падежу. Не менять форму после <span class="kk">ең</span> и <span class="kk">өте</span>. Из всей темы работы ровно на два окончания: <span class="kk">-рақ/-рек</span> и <span class="kk">-лау/-леу</span>.<br><br>Заодно закрылся долг темы 3.3: <span class="kk">гөрі</span> тогда упомянули как послелог шығыс септік и обещали разобрать в сравнении — вот оно, четвёртый раздел.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 34 · Қандай? — какой</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">ұзын</span> <span class="t">— длинный, высокий</span></div>
+          <div><span class="w">қысқа</span> <span class="t">— короткий</span></div>
+          <div><span class="w">кең</span> <span class="t">— просторный, широкий</span></div>
+          <div><span class="w">тар</span> <span class="t">— тесный, узкий</span></div>
+          <div><span class="w">ауыр</span> <span class="t">— тяжёлый</span></div>
+          <div><span class="w">арзан</span> <span class="t">— дешёвый</span></div>
+          <div><span class="w">дәмді</span> <span class="t">— вкусный</span></div>
+          <div><span class="w">жұмсақ</span> <span class="t">— мягкий</span></div>
+          <div><span class="w">күшті</span> <span class="t">— сильный</span></div>
+          <div><span class="w">мықты</span> <span class="t">— крепкий, надёжный</span></div>
+          <div><span class="w">ақылды</span> <span class="t">— умный</span></div>
+          <div><span class="w">кәрі</span> <span class="t">— старый (о человеке)</span></div>
+          <div><span class="w">бай</span> <span class="t">— богатый</span></div>
+          <div><span class="w">сұлу</span> <span class="t">— красивый (о человеке)</span></div>
+          <div><span class="w">ыңғайлы</span> <span class="t">— удобный</span></div>
+          <div><span class="w">тым</span> <span class="t">— слишком</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> прогони <span class="kk">-рақ/-рек</span> по набору. После согласного полное окончание: <span class="kk">ұзын<b>ырақ</b></span>, <span class="kk">кең<b>ірек</b></span>, <span class="kk">арзан<b>ырақ</b></span>. После гласного короткое: <span class="kk">кәрі<b>рек</b></span>, <span class="kk">сұлу<b>рақ</b></span>. Твёрдый или мягкий ряд решает гласный в корне: в <span class="kk">кең</span> стоит <span class="kk">е</span>, значит <span class="kk">-ірек</span>.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Ағам, мен және інім — три брата</div>
+      <div class="mini-text">
+        <p class="storytext">Біздің отбасымызда үш бала бар: ағам, мен және інім. Бір үйде тұрамыз, бірақ бәріміз әртүрліміз.<br><br>Ағам менен үлкен. Ол ұзын, күшті және мықты. Күнде спорт ойнайды. Ауыр жұмысты да жеңіл істейді. Ағам — үйдегі ең күшті адам.<br><br>Мен ағамнан кішімін, бірақ інімнен үлкенмін. Кітапты көп оқимын, мектепте сабағым жақсы. Анам мені ақылды бала көреді. Спортта ағамнан күшті емеспін, бірақ сабақта одан жақсырақ оқимын.<br><br>Інім ең кіші, ең жас. Ол әлі мектепке бармайды. Күні бойы ойнайды, тым қатты сөйлейді. Бірақ ол — үйдегі ең бақытты адам.<br><br>Ағамның бөлмесі кең, менікі тар. Оның терезесі үлкен, бөлмесі жарық. Менің бөлмем кішірек, бірақ маған ыңғайлы.<br><br>Кешке анам тамақ пісіреді. Оның сорпасы өте дәмді. Ағам көп жейді, інім аз жейді. Мен ортадамын: не көп, не аз.<br><br>Біз әртүрліміз, бірақ бір отбасымыз. Ең жақсысы — сол.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">В нашей семье трое детей: старший брат, я и младший брат. Живём в одном доме, но все мы разные.<br><br>Брат старше меня. Он высокий, сильный и крепкий. Каждый день занимается спортом. Даже тяжёлую работу делает легко. Брат — самый сильный человек в доме.<br><br>Я младше брата, но старше младшего. Читаю много книг, в школе учусь хорошо. Мама считает меня умным ребёнком. В спорте я слабее брата, но в учёбе учусь лучше него.<br><br>Младший брат самый маленький, самый юный. Он ещё не ходит в школу. Целыми днями играет, говорит слишком громко. Но он — самый счастливый человек в доме.<br><br>Комната брата просторная, моя тесная. У него окно большое, в комнате светло. Моя комната поменьше, но мне удобно.<br><br>Вечером мама готовит еду. Её суп очень вкусный. Брат ест много, младший ест мало. Я посередине: ни много, ни мало.<br><br>Мы разные, но одна семья. Это и есть самое лучшее.</p>
+        <p class="why-note"><b>Почему так:</b> сравнений в тексте восемь, и все через шығыс септік. <span class="kk">Ағам ме<b>нен</b> үлкен</span>, <span class="kk">ағам<b>нан</b> кішімін</span>, <span class="kk">інім<b>нен</b> үлкенмін</span>, <span class="kk">о<b>дан</b> жақсырақ</span>. Ни одного «чем» отдельным словом — падежа хватает.<br><br><span class="kk">Әртүрліміз</span>, <span class="kk">кішімін</span>, <span class="kk">үлкенмін</span>, <span class="kk">әлсізмін</span> — прилагательное в роли сказуемого, с жіктік жалғау из темы 0.4.<br><br>А <span class="kk">үлкен</span> в первом абзаце и <span class="kk">үлкен</span> в пятом — одно и то же слово, хотя по-русски это «старший» и «большое». Прилагательное не подстраивается ни под кого.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Қайсысы жақсырақ? — выбираем комнату</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Екі бөлме көрдім. Қайсысы жақсырақ, білмеймін.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Олар қандай?</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Біріншісі кең әрі жарық, бірақ тым қымбат. Екіншісі арзанырақ, бірақ тар.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Терезесі қалай?</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Бірінші бөлменің терезесі үлкен. Екіншісінде терезе кішкентай, жарық аз.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Арзан бөлмеден гөрі ыңғайлы бөлме дұрыс. Бірінші бөлмені ал.</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Посмотрел две комнаты. Не знаю, какая лучше.<br><b>Айгуль:</b> А какие они?<br><b>Данияр:</b> Первая просторная и светлая, но слишком дорогая. Вторая подешевле, но тесная.<br><b>Айгуль:</b> А как с окном?<br><b>Данияр:</b> У первой комнаты окно большое. Во второй окно маленькое, света мало.<br><b>Айгуль:</b> Удобная комната лучше, чем дешёвая. Бери первую.</p>
+        <p class="why-note"><b>Почему так:</b> в последней реплике <span class="kk">арзан бөлме<b>ден гөрі</b></span> — то самое сравнение с <span class="kk">гөрі</span>, обещанное в теме 3.3. Убери <span class="kk">гөрі</span>, и смысл останется тем же: падеж уже сделал работу.<br><br><span class="kk">Тым қымбат</span> в третьей реплике — не «очень дорого», а «дороже, чем я готов платить». Заменишь на <span class="kk">өте қымбат</span> — исчезнет причина сомневаться, и весь диалог потеряет смысл.<br><br><span class="kk">Жақсырақ</span>, <span class="kk">арзанырақ</span> — после гласного короткое окончание, после согласного полное. Два слова в одной реплике показывают оба варианта.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="adjectives">
+    <p class="quiz-instruction">Впиши окончание степени сравнения или падеж, которого требует сравнение.</p>
+    <div class="qitem"><span class="qnum">1.</span> Алматы Астана<input class="blank" data-answer="дан" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> үлкен <span class="hint">(больше Астаны)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Бұл кітап жақсы<input class="blank" data-answer="рақ" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(получше)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Мен се<input class="blank" data-answer="нен" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> кішімін <span class="hint">(младше тебя)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Бұл бөлме кең<input class="blank" data-answer="ірек" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(пошире)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Мен бақытты<input class="blank" data-answer="мын" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> <span class="hint">(я счастлив)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="ru-hint">«Слишком дорого» — я не куплю —</span>
+      <select class="mc" data-answer="тым қымбат">
+        <option value="">—</option>
+        <option value="өте қымбат">өте қымбат</option>
+        <option value="тым қымбат">тым қымбат</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">«Самый лучший» —</span>
+      <select class="mc" data-answer="ең жақсы">
+        <option value="">—</option>
+        <option value="ең жақсы">ең жақсы</option>
+        <option value="ең жақсырақ">ең жақсырақ</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="ru-hint">«В больших домах» —</span>
+      <select class="mc" data-answer="үлкен үйлерде">
+        <option value="">—</option>
+        <option value="үлкендер үйлерде">үлкендер үйлерде</option>
+        <option value="үлкен үйлерде">үлкен үйлерде</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">9.</span> <span class="ru-hint">«Ярко-красный» —</span>
+      <select class="mc" data-answer="қып-қызыл">
+        <option value="">—</option>
+        <option value="қып-қызыл">қып-қызыл</option>
+        <option value="қызыл-қызыл">қызыл-қызыл</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">10.</span> <span class="ru-hint">«Старше меня» —</span>
+      <select class="mc" data-answer="менен үлкен">
+        <option value="">—</option>
+        <option value="маған үлкен">маған үлкен</option>
+        <option value="менен үлкен">менен үлкен</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">11.</span> <span class="ru-hint">Эта комната просторнее той.</span>
+      <div class="qbuild" data-answer="Бұл бөлме одан гөрі кең" data-words="гөрі|кең|Бұл|одан|бөлме"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">12.</span> <span class="ru-hint">Мой брат сильнее меня.</span>
+      <div class="qbuild" data-answer="Ағам менен күшті" data-words="күшті|Ағам|менен"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
+    <button type="button" class="next-card" data-open="adverbs">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · Тема 3.5</span>
+        <span class="next-title">Үстеу — наречия и их место в предложении</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 3.5 ҮСТЕУ ============ -->
+<div class="screen topic-screen" id="screen-adverbs" data-topic="adverbs" style="--tint-color:var(--keneyu)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--keneyu)"></span>
+    <h2><span class="topic-num">3.5</span> Үстеу</h2>
+    <span class="done-badge" data-badge="adverbs">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Наречие: әдетте, жиі, әрең, қазақша. Отдельного окончания у него почти нет — зато есть строгое место в предложении.</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>Прошлая тема закончилась тем, что прилагательное и наречие в казахском — одно и то же слово. Это и есть главное содержание темы: <b>отдельной формы наречия нет</b>. В русском «быстр<b>ый</b>» превращается в «быстр<b>о</b>», в казахском не превращается ни во что.</p>
+    <table>
+      <tr><th>Перед существительным</th><th>Перед глаголом</th></tr>
+      <tr><td class="kk">жақсы оқушы<br><span class="hint">хороший ученик</span></td><td class="kk">жақсы оқиды<br><span class="hint">хорошо учится</span></td></tr>
+      <tr><td class="kk">тез көлік<br><span class="hint">быстрая машина</span></td><td class="kk">тез жүреді<br><span class="hint">быстро едет</span></td></tr>
+      <tr><td class="kk">қатты дауыс<br><span class="hint">громкий голос</span></td><td class="kk">қатты сөйлейді<br><span class="hint">громко говорит</span></td></tr>
+    </table>
+    <p>Учить приходится не форму, а <b>место</b>: наречие стоит непосредственно перед глаголом. Слово не изменилось — изменилось то, что справа от него.</p>
+
+    <p><b>1. Четыре группы по смыслу.</b> Делить их важно не ради названий, а ради порядка слов: в предложении с несколькими наречиями они идут именно в этом порядке — сначала время, потом место, потом мера, потом образ действия, и уже потом глагол.</p>
+    <table>
+      <tr><th>Группа</th><th>О чём</th><th>Примеры</th></tr>
+      <tr><td>мезгіл</td><td>когда</td><td class="kk">бүгін, ертең, әдетте, жиі, әлі</td></tr>
+      <tr><td>мекен</td><td>где</td><td class="kk">мұнда, онда, алға, жоғары</td></tr>
+      <tr><td>мөлшер</td><td>сколько</td><td class="kk">көп, аз, біраз, тым, шамамен</td></tr>
+      <tr><td>сын-қимыл</td><td>как</td><td class="kk">тез, ақырын, жаяу, бірге, әрең</td></tr>
+    </table>
+    <p><span class="kk">Мен ертең мұнда біраз жұмыс істеймін</span> — «завтра я тут немного поработаю». Порядок не жёсткий закон, но нарушенный звучит неуклюже, как «поработаю немного тут завтра» по-русски.</p>
+
+    <p><b>2. <span class="kk">-ша/-ше</span> — единственное живое окончание наречия.</b> Оно значит «на манер, по-…» и цепляется и к языкам, и к людям:</p>
+    <table>
+      <tr><th>Казахский</th><th>Русский</th></tr>
+      <tr><td class="kk">қазақ<b>ша</b></td><td>по-казахски</td></tr>
+      <tr><td class="kk">орыс<b>ша</b></td><td>по-русски</td></tr>
+      <tr><td class="kk">мен<b>імше</b></td><td>по-моему</td></tr>
+      <tr><td class="kk">се<b>німше</b></td><td>по-твоему</td></tr>
+      <tr><td class="kk">бала<b>ша</b></td><td>по-детски</td></tr>
+    </table>
+    <p>С местоимением сначала встаёт тәуелдік жалғау из темы 0.7, и только потом <span class="kk">-ше</span>: <span class="kk">мен + ім + ше</span>. Отсюда <span class="kk">менімше</span>, а не «менше».</p>
+
+    <p><b>3. Застывшие падежи.</b> Больша́я часть наречий — это существительные, когда-то взявшие падеж и в нём замёрзшие. Окончание видно, но менять его уже нельзя:</p>
+    <table>
+      <tr><th>Наречие</th><th>Откуда</th><th>Русский</th></tr>
+      <tr><td class="kk">кеш<b>ке</b></td><td>кеш + барыс</td><td>вечером</td></tr>
+      <tr><td class="kk">түн<b>де</b></td><td>түн + жатыс</td><td>ночью</td></tr>
+      <tr><td class="kk">жаз<b>да</b></td><td>жаз + жатыс</td><td>летом</td></tr>
+      <tr><td class="kk">күн<b>діз</b></td><td>күн + старый падеж</td><td>днём</td></tr>
+      <tr><td class="kk">бір<b>ге</b></td><td>бір + барыс</td><td>вместе</td></tr>
+    </table>
+    <p>Их не нужно разбирать на части при употреблении — это цельные слова. Разбор нужен только чтобы не пугаться окончания там, где падежа по смыслу нет.</p>
+
+    <p><b>4. Наречия времени и порядок слов.</b> Одно исключение из правила «перед глаголом»: наречие времени часто уходит в самое начало предложения — туда же, куда в теме 0.3 ставилось подлежащее.</p>
+    <table>
+      <tr><th>Казахский</th><th>Русский</th></tr>
+      <tr><td class="kk"><b>Ертең</b> мен жұмысқа барамын</td><td>завтра я иду на работу</td></tr>
+      <tr><td class="kk">Мен ертең жұмысқа барамын</td><td>я завтра иду на работу</td></tr>
+    </table>
+    <p>Оба варианта верны. В начале предложения наречие выделяется сильнее — как русское «Завтра-то я…».</p>
+
+    <div class="contrast">
+      <div class="label"><span class="kk">Әлі</span> — «ещё», <span class="kk">енді</span> — «теперь»</div>
+      <p>Русское «уже/ещё» размазано по контекстам, и русскоязычные ставят эти два слова наугад. Разница жёсткая: <span class="kk">әлі</span> смотрит назад, в то, что тянется, <span class="kk">енді</span> — вперёд, в то, что изменилось.</p>
+      <table>
+        <tr><td class="kk"><b>Әлі</b> келген жоқ</td><td>ещё не пришёл</td></tr>
+        <tr><td class="kk"><b>Енді</b> келмейді</td><td>теперь уже не придёт</td></tr>
+        <tr><td class="kk"><b>Әлі</b> жұмыс істеймін</td><td>я всё ещё работаю</td></tr>
+        <tr><td class="kk"><b>Енді</b> жұмыс істеймін</td><td>теперь я работаю</td></tr>
+      </table>
+      <p>Проверка простая: если по-русски влезает «всё ещё» — это <span class="kk">әлі</span>; если влезает «с этого момента» — это <span class="kk">енді</span>.</p>
+    </div>
+    <div class="trap"><b>Не приделывать наречию окончание.</b> «Жақсылы оқиды» не бывает: русское «-о» в «хорошо» не переводится ничем. Слово остаётся <span class="kk">жақсы</span>.<br><br><b><span class="kk">Менімше</span>, а не «менше».</b> Между местоимением и <span class="kk">-ше</span> обязательно стоит тәуелдік: <span class="kk">мен<b>ім</b>ше</span>, <span class="kk">сен<b>ің</b>ше</span>, <span class="kk">о<b>ныңша</b></span>.<br><br><b><span class="kk">Әрең</span> — это не «еле-еле» в смысле «медленно».</b> Оно значит «с трудом, едва получилось»: <span class="kk">әрең жеттім</span> — «еле успел». Для «медленно» есть <span class="kk">ақырын</span>.<br><br><b><span class="kk">Жиі</span> и <span class="kk">сирек</span> ставятся перед глаголом, а не после.</b> <span class="kk">Мен жиі келемін</span>, а не «мен келемін жиі» — глагол в казахском закрывает предложение, за него ничего не выносится.<br><br><b><span class="kk">Тіпті</span> усиливает, а не отрицает.</b> <span class="kk">Тіпті ол да білмейді</span> — «даже он не знает». Само по себе <span class="kk">тіпті</span> отрицания не несёт, его даёт глагол.</div>
+    <div class="tip"><b>Сколько тут на самом деле работы.</b> Новых механизмов два: окончание <span class="kk">-ша/-ше</span> и порядок «время — место — мера — образ — глагол». Всё остальное — словарь, и половина его уже знакома: <span class="kk">тез</span>, <span class="kk">көп</span>, <span class="kk">аз</span>, <span class="kk">бірге</span>, <span class="kk">кейде</span>, <span class="kk">қатты</span>, <span class="kk">ақырын</span> встречались с первых тем.<br><br>Слово <span class="kk">қазақша</span> ты видел ещё в теме 2.8 — <span class="kk">Қазақша сөйлегім келеді</span>. Теперь понятно, из чего оно собрано.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 35 · Қалай? Қашан? — как и когда</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">әрқашан</span> <span class="t">— всегда</span></div>
+          <div><span class="w">әдетте</span> <span class="t">— обычно</span></div>
+          <div><span class="w">жиі</span> <span class="t">— часто</span></div>
+          <div><span class="w">сирек</span> <span class="t">— редко</span></div>
+          <div><span class="w">ерте</span> <span class="t">— рано</span></div>
+          <div><span class="w">біраз</span> <span class="t">— немного, некоторое время</span></div>
+          <div><span class="w">шамамен</span> <span class="t">— примерно</span></div>
+          <div><span class="w">әдейі</span> <span class="t">— нарочно, специально</span></div>
+          <div><span class="w">кенет</span> <span class="t">— вдруг, внезапно</span></div>
+          <div><span class="w">дереу</span> <span class="t">— немедленно, сразу</span></div>
+          <div><span class="w">әрең</span> <span class="t">— еле, с трудом</span></div>
+          <div><span class="w">тіпті</span> <span class="t">— даже</span></div>
+          <div><span class="w">жаяу</span> <span class="t">— пешком</span></div>
+          <div><span class="w">қайтадан</span> <span class="t">— снова, заново</span></div>
+          <div><span class="w">ақырында</span> <span class="t">— в конце концов</span></div>
+          <div><span class="w">бірте-бірте</span> <span class="t">— постепенно</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> ни одно слово набора не имеет окончания наречия — их просто нет как класса форм. <span class="kk">Ақырында</span> и <span class="kk">бірте-бірте</span> выглядят как падежи, и когда-то ими и были, но менять там уже нечего: это застывшие формы из третьего раздела.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Жұмысқа қалай барамын — дорога на работу</div>
+      <div class="mini-text">
+        <p class="storytext">Мен әдетте ерте тұрамын. Таңертең шай ішемін, содан кейін жұмысқа шығамын.<br><br>Кеңсем алыс емес. Ауа райы жақсы болса, жаяу барамын. Жаяу жүру ұзақ: шамамен жиырма бес минут. Бірақ маған ұнайды — көшеде адам аз, таңертең ауа таза.<br><br>Жаңбыр жауса, автобуспен барамын. Автобус жиі жүреді, бірақ таңертең адам көп. Кейде әрең мінемін.<br><br>Бір күні кенет жаңбыр жауды. Мен дереу автобусқа міндім, сондықтан жұмысқа ерте жеттім. Ол күні тіпті жиналыстан бұрын келдім.<br><br>Кеңседе әдетте тыныштық. Мен ақырын жұмыс істеймін, асықпаймын. Қиын тапсырманы да ақырында аяқтаймын.<br><br>Кешке үйге қайтамын. Қайтадан автобус, қайтадан сол көше. Үйде біраз демаламын, содан кейін ұйықтаймын.<br><br>Бірте-бірте бұл жолды жақсы білдім. Күнде бір жол, бірақ мен сирек шаршаймын.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Я обычно встаю рано. Утром пью чай, потом выхожу на работу.<br><br>Мой офис недалеко. Если погода хорошая, иду пешком. Идти пешком долго: примерно двадцать пять минут. Но мне нравится — на улице мало людей, утром воздух чистый.<br><br>Если идёт дождь, еду на автобусе. Автобус ходит часто, но утром много народу. Иногда еле влезаю.<br><br>Однажды вдруг пошёл дождь. Я сразу сел в автобус, поэтому приехал на работу рано. В тот день я пришёл даже раньше начальника.<br><br>В офисе обычно тихо. Я работаю не спеша, не тороплюсь. Даже трудное задание в конце концов заканчиваю.<br><br>Вечером возвращаюсь домой. Снова автобус, снова та же улица. Дома немного отдыхаю, потом ложусь спать.<br><br>Постепенно я хорошо изучил эту дорогу. Каждый день одна дорога, но я редко устаю.</p>
+        <p class="why-note"><b>Почему так:</b> в тексте четырнадцать наречий, и каждое стоит вплотную перед своим глаголом: <span class="kk">ерте тұрамын</span>, <span class="kk">жаяу барамын</span>, <span class="kk">жиі жүреді</span>, <span class="kk">әрең мінемін</span>, <span class="kk">дереу міндім</span>, <span class="kk">ақырын істеймін</span>, <span class="kk">біраз демаламын</span>, <span class="kk">сирек шаршаймын</span>. Ни одно не вынесено за глагол.<br><br>Исключение — <span class="kk">әдетте</span> в первом и пятом абзаце: наречие времени спокойно уходит в начало предложения, это четвёртый раздел правила.<br><br>Обрати внимание на <span class="kk">тіпті бастықтан бұрын келдім</span>: тут <span class="kk">тіпті</span> усиливает, а <span class="kk">бұрын</span> работает послелогом при шығыс септік — прямо как в теме 3.3.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Қашан кездесеміз? — договориться о встрече</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Кешке әдетте не істейсің?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Әдетте үйде боламын. Кейде досыммен кездесемін.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Мен сені сирек көремін. Ертең кездесейік пе?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Ертең болмайды, жұмыс көп. Сенбіде бос боламын.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Жақсы. Сағат бесте саябақта ма?</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Бесте ерте, мен әрең жетемін. Алтыда дұрыс болады.</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Келістік. Мен әрқашан уақытында келемін, кешікпе.</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Что ты обычно делаешь по вечерам?<br><b>Айгуль:</b> Обычно бываю дома. Иногда встречаюсь с подругой.<br><b>Данияр:</b> Я тебя редко вижу. Может, встретимся завтра?<br><b>Айгуль:</b> Завтра не получится, много работы. В субботу буду свободна.<br><b>Данияр:</b> Хорошо. В пять в парке?<br><b>Айгуль:</b> В пять рано, я еле успею. В шесть будет нормально.<br><b>Данияр:</b> Договорились. Я всегда прихожу вовремя, не опаздывай.</p>
+        <p class="why-note"><b>Почему так:</b> четыре наречия частоты в шести репликах — <span class="kk">әдетте</span>, <span class="kk">кейде</span>, <span class="kk">сирек</span>, <span class="kk">әрқашан</span>. Это и есть обычная плотность в разговоре: без них речь звучит как расписание, а не как живой человек.<br><br><span class="kk">Ерте</span> в шестой реплике стоит не перед глаголом, а сказуемым: <span class="kk">Бесте ерте</span> — «в пять рано». Наречие и прилагательное — одно слово, и в роли сказуемого оно ведёт себя как прилагательное из темы 3.4.<br><br><span class="kk">Кездесейік пе?</span> — қалау рай из темы 3.2, <span class="kk">кешікпе</span> — бұйрық рай с отрицанием из 2.1.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="adverbs">
+    <p class="quiz-instruction">Впиши окончание наречия или выбери нужное слово.</p>
+    <div class="qitem"><span class="qnum">1.</span> Ол орыс<input class="blank" data-answer="ша" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> жақсы сөйлейді <span class="hint">(по-русски)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Мен<input class="blank" data-answer="ім" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">ше, бұл дұрыс <span class="hint">(по-моему)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Түн<input class="blank" data-answer="де" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> ұйықтаймын <span class="hint">(ночью)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Кеш<input class="blank" data-answer="ке" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> үйге қайтамын <span class="hint">(вечером)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> <span class="ru-hint">«Он хорошо учится» —</span>
+      <select class="mc" data-answer="Ол жақсы оқиды">
+        <option value="">—</option>
+        <option value="Ол жақсылы оқиды">Ол жақсылы оқиды</option>
+        <option value="Ол жақсы оқиды">Ол жақсы оқиды</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="ru-hint">«Он ещё не пришёл» —</span>
+      <select class="mc" data-answer="Ол әлі келген жоқ">
+        <option value="">—</option>
+        <option value="Ол әлі келген жоқ">Ол әлі келген жоқ</option>
+        <option value="Ол енді келген жоқ">Ол енді келген жоқ</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">«Еле успел» —</span>
+      <select class="mc" data-answer="әрең жеттім">
+        <option value="">—</option>
+        <option value="ақырын жеттім">ақырын жеттім</option>
+        <option value="әрең жеттім">әрең жеттім</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="ru-hint">«Примерно час» —</span>
+      <select class="mc" data-answer="шамамен бір сағат">
+        <option value="">—</option>
+        <option value="біраз бір сағат">біраз бір сағат</option>
+        <option value="шамамен бір сағат">шамамен бір сағат</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">9.</span> <span class="ru-hint">«По-моему» —</span>
+      <select class="mc" data-answer="менімше">
+        <option value="">—</option>
+        <option value="менше">менше</option>
+        <option value="менімше">менімше</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">10.</span> <span class="ru-hint">«Я часто прихожу» —</span>
+      <select class="mc" data-answer="Мен жиі келемін">
+        <option value="">—</option>
+        <option value="Мен келемін жиі">Мен келемін жиі</option>
+        <option value="Мен жиі келемін">Мен жиі келемін</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">11.</span> <span class="ru-hint">Я обычно хожу на работу пешком.</span>
+      <div class="qbuild" data-answer="Мен жұмысқа әдетте жаяу барамын" data-words="жаяу|Мен|барамын|әдетте|жұмысқа"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">12.</span> <span class="ru-hint">Он редко опаздывает на урок.</span>
+      <div class="qbuild" data-answer="Ол сабаққа сирек кешігеді" data-words="сирек|кешігеді|Ол|сабаққа"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
     <button type="button" class="next-card" data-open="vocab">
       <span class="next-marker"></span>
       <span class="next-text">
-        <span class="next-label">Блок «Кеңейту» в работе — следующая тема будет про прилагательные и степени сравнения</span>
+        <span class="next-label">Блок «Кеңейту» в работе — следующая тема будет про числительные</span>
         <span class="next-title">А пока закрепи слова в словаре</span>
       </span>
       <span class="next-arrow">→</span>
@@ -6415,7 +6858,7 @@
   var ETISTIK_TOPICS = ["verb-stem","present-future","present-cont","past-simple","past-perfect",
                         "future-tense","verb-negation","compound-verb","modality",
                         "participle","converb"];
-  var KENEYU_TOPICS = ["conditional","optative","postpositions"];
+  var KENEYU_TOPICS = ["conditional","optative","postpositions","adjectives","adverbs"];
   var TOPICS = NEGIZ_TOPICS.concat(SEPTIK_TOPICS).concat(ETISTIK_TOPICS).concat(KENEYU_TOPICS);
 
   var BLOCKS = {
@@ -6435,7 +6878,8 @@
     "past-simple":22, "past-perfect":24,
     "future-tense":24, "verb-negation":22, "compound-verb":26, "modality":24,
     "participle":26, "converb":24,
-    "conditional":24, "optative":22, "postpositions":26
+    "conditional":24, "optative":22, "postpositions":26,
+    "adjectives":20, "adverbs":20
   };
 
   var STORAGE_KEY   = "kkProgressV1";
@@ -7040,6 +7484,17 @@
     "ұшқаннан":"от того, как взлетел","дайындалады":"готовится",
     "жетеді":"доезжает, доходит","жүреді":"едет, ходит","шығып":"выйдя, выехав",
     "хабарласайын":"позвоню-ка я","билетпен":"по билету",
+    // 3.4 сын есім
+    "жақсырақ":"получше","арзанырақ":"подешевле","кішірек":"поменьше",
+    "үйдегі":"домашний, что в доме","екіншісі":"второй из них",
+    "екіншісінде":"во втором из них",
+    // 3.5 үстеу
+    "тұрамын":"встаю; живу","ішемін":"пью","мінемін":"сажусь (в транспорт)",
+    "міндім":"сел (в транспорт)","жауды":"пошёл (о дожде)","келдім":"пришёл",
+    "жеттім":"добрался, успел","демаламын":"отдыхаю","ұйықтаймын":"сплю, ложусь спать",
+    "аяқтаймын":"заканчиваю","асықпаймын":"не тороплюсь","шаршаймын":"устаю",
+    "бармайды":"не ходит","кездесемін":"встречаюсь","кездесейік":"давай встретимся",
+    "келістік":"договорились","кешікпе":"не опаздывай",
     // имена и клички из текстов — иначе не переводятся по тапу
     "айгүл":"Айгуль (женское имя)","данияр":"Данияр (мужское имя)",
     "ахмет":"Ахмет (имя)","қожа":"Ходжа (почётное звание)",
