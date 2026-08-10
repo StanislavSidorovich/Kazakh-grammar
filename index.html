@@ -342,7 +342,12 @@
   .storytext{font-family:var(--font-kk); font-size:1.04rem; line-height:1.75; margin:0;}
   .dialogue{margin:0;}
   .dline{font-family:var(--font-kk); font-size:1.02rem; margin:0 0 7px;}
-  .speaker{font-weight:700; color:var(--negiz); margin-right:5px;}
+  /* Имя говорящего — обычный текст, а не украшение, значит нужен контраст 4.5.
+     Брендовый --negiz даёт на тёмной карточке всего 3.68, поэтому в тёмной
+     теме берётся осветлённый вариант (6.07). Менять сам --negiz нельзя: он
+     держит акценты всего курса. */
+  .speaker{font-weight:700; color:#2A7299; margin-right:5px;}
+  body.dark .speaker{color:#5AA6CE;}
   .ru-translation{display:none; font-size:0.87rem; color:var(--muted); margin:10px 0 0; padding-top:10px; border-top:1px solid #E5E9EE;}
   .mini-text.show-translation .ru-translation{display:block;}
   .why-note{font-size:0.83rem; color:var(--muted); margin:10px 0 0; padding-top:10px; border-top:1px solid #E5E9EE;}
@@ -654,7 +659,7 @@
   <div class="level-divider"><span>Блок 1 · Септіктер — падежи</span></div>
   <div class="topic-group" id="septik">
     <div class="era-header">
-      <span class="tag" data-group="septik">Блок 1 · A1–A2 · 7 тем</span>
+      <span class="tag" data-group="septik">Блок 1 · A1–A2 · 8 тем</span>
       <h2>Семь падежей вместо предлогов</h2>
       <div class="sub">В казахском нет предлогов — их работу делают окончания. Выбор варианта окончания — тот же закон созвучия из блока 0.</div>
     </div>
@@ -701,13 +706,19 @@
         <span class="row-check" data-check="all-cases" aria-hidden="true">✓</span>
         <span class="row-arrow" aria-hidden="true">›</span>
       </button>
+      <button type="button" class="topic-row" data-open="helper-nouns">
+        <span class="marker" style="background:var(--septik)"></span>
+        <span class="row-title"><span class="topic-num">1.8</span> Көмекші есімдер<span class="row-title-ru">на столе, под столом, перед домом</span></span>
+        <span class="row-check" data-check="helper-nouns" aria-hidden="true">✓</span>
+        <span class="row-arrow" aria-hidden="true">›</span>
+      </button>
     </div>
   </div>
 
   <div class="level-divider"><span>Блок 2 · Етістік — глагол</span></div>
   <div class="topic-group" id="etistik">
     <div class="era-header">
-      <span class="tag" data-group="etistik">Блок 2 · A2 · Негізгі · 11 тем</span>
+      <span class="tag" data-group="etistik">Блок 2 · A2–B1 · Негізгі · 11 тем</span>
       <h2>Глагол: приказ, настоящее, будущее</h2>
       <div class="sub">До сих пор глаголы шли в текстах готовыми кусками. Теперь разбираем, из чего они собраны, — и любой прочитанный текст можно перечитать заново, уже понимая каждое слово.</div>
     </div>
@@ -784,9 +795,9 @@
   <div class="level-divider"><span>Блок 3 · Кеңейту — расширение</span></div>
   <div class="topic-group" id="keneyu">
     <div class="era-header">
-      <span class="tag" data-group="keneyu">Блок 3 · A2–B1 · Негізгі–Орта · 12 тем</span>
+      <span class="tag" data-group="keneyu">Блок 3 · A1–B1 · Негізгі–Орта · 12 тем</span>
       <h2>Из предложения — речь</h2>
-      <div class="sub">Глагол собран, но говорить пока можно только простыми фразами. Здесь появляются «если», «хочу», послелоги, залоги и сложное предложение — то, из чего складывается обычный разговор.</div>
+      <div class="sub">Всё, что не вошло в имя и глагол: «если», «хочу», послелоги, части речи, залоги и сложное предложение. Уровень внутри блока разный — числительные и часы простые, а залоги и прямая речь уже B1. Порядок здесь задан не уровнем, а тем, какая тема на какую опирается.</div>
     </div>
     <div class="topic-list">
       <button type="button" class="topic-row" data-open="conditional">
@@ -831,6 +842,31 @@
         <span class="row-check" data-check="time-date" aria-hidden="true">✓</span>
         <span class="row-arrow" aria-hidden="true">›</span>
       </button>
+      <button type="button" class="topic-row" disabled>
+        <span class="marker" style="background:var(--keneyu)"></span>
+        <span class="row-title"><span class="topic-num">3.8</span> Сөзжасам<span class="row-title-ru">-шы, -лық, -сыз, -дай: как из слова делается слово</span></span>
+        <span class="row-soon">скоро</span>
+      </button>
+      <button type="button" class="topic-row" disabled>
+        <span class="marker" style="background:var(--keneyu)"></span>
+        <span class="row-title"><span class="topic-num">3.9</span> Етіс<span class="row-title-ru">залоги: оқыды, оқытты, оқылды</span></span>
+        <span class="row-soon">скоро</span>
+      </button>
+      <button type="button" class="topic-row" disabled>
+        <span class="marker" style="background:var(--keneyu)"></span>
+        <span class="row-title"><span class="topic-num">3.10</span> Төл сөз<span class="row-title-ru">прямая речь и цепочка деп / дейді / деген</span></span>
+        <span class="row-soon">скоро</span>
+      </button>
+      <button type="button" class="topic-row" disabled>
+        <span class="marker" style="background:var(--keneyu)"></span>
+        <span class="row-title"><span class="topic-num">3.11</span> Құрмалас сөйлем<span class="row-title-ru">сложное предложение и союзы</span></span>
+        <span class="row-soon">скоро</span>
+      </button>
+      <button type="button" class="topic-row" disabled>
+        <span class="marker" style="background:var(--keneyu)"></span>
+        <span class="row-title"><span class="topic-num">3.12</span> Ресми тіл<span class="row-title-ru">официальный стиль: заявление, объявление, ҚАЗТЕСТ</span></span>
+        <span class="row-soon">скоро</span>
+      </button>
     </div>
   </div>
 
@@ -851,7 +887,7 @@
     <p><b>Как устроен курс:</b></p>
     <ul class="rule-list">
       <li>В каждой теме три вкладки: <b>Ереже</b> (правило с примерами, сравнением и разбором типичных ошибок), <b>Мәтін</b> (тексты и диалоги) и <b>Тапсырма</b> — задания с автопроверкой</li>
-      <li>Темы идут строго по порядку: следующая опирается на предыдущую сильнее, чем в европейских языках</li>
+      <li>Темы идут строго по порядку: следующая опирается на предыдущую сильнее, чем в европейских языках. Поэтому порядок задан <b>зависимостями, а не уровнем</b> — числительные и часы простые, но стоят после глагола, потому что их тексты опираются на всё, что было раньше</li>
       <li><b>Подборщик суффиксов</b> — отдельный тренажёр: вводишь любое слово и видишь, какой вариант окончания к нему подходит и почему</li>
     </ul>
     <p><b>Про словарный запас.</b> Каждая тема добавляет 12–18 новых слов, и в её текстах встречаются только слова из этой темы и всех предыдущих. Это значит, что текст всегда можно прочитать целиком, а не выдирать смысл через одно слово. Слова подобраны по частотности — сначала то, что реально звучит каждый день.</p>
@@ -862,7 +898,7 @@
       <li>Возвращайся к темам из блока «Стоит повторить» — это места, где чаще всего ошибаешься</li>
       <li>Открывай подборщик суффиксов каждый раз, когда сомневаешься. Цель — довести выбор до автоматизма, а не выучить таблицу наизусть</li>
     </ul>
-    <div class="tip">Курс растёт по одной теме за раз. Блоки «Негіз», «Септік» и «Етістік» открыты целиком, блок «Кеңейту» идёт: условие, желание, послелоги, прилагательные, наречия, числительные, время и даты уже есть, дальше будут словообразование, залоги и сложное предложение.</div>
+    <div class="tip">Курс растёт по одной теме за раз. Блоки «Негіз», «Септік» и «Етістік» открыты целиком, блок «Кеңейту» идёт: условие, желание, послелоги, прилагательные, наречия, числительные, время и даты уже есть, дальше будут словообразование, залоги и сложное предложение. Оставшиеся темы видны на главной серым — так понятно, куда курс идёт.</div>
     <p style="font-size:0.82rem; color:var(--muted); margin-top:20px;">Сделано <a href="https://www.linkedin.com/in/stanislavsidorovich" target="_blank" rel="noopener" style="color:var(--negiz); font-weight:700; text-decoration:none;">Stanislav Sidorovich</a> · Алматы · <span style="font-family:var(--font-lat)">2026</span></p>
   </div>
 </div>
@@ -3810,10 +3846,215 @@
       <button class="btn btn-reveal" type="button">Показать ответы</button>
       <span class="quiz-result" aria-live="polite"></span>
     </div>
+    <button type="button" class="next-card" data-open="helper-nouns">
+      <span class="next-marker"></span>
+      <span class="next-text">
+        <span class="next-label">Келесі · Тема 1.8</span>
+        <span class="next-title">Көмекші есімдер — «на столе», «перед домом»</span>
+      </span>
+      <span class="next-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ 1.8 КӨМЕКШІ ЕСІМДЕР ============ -->
+<div class="screen topic-screen" id="screen-helper-nouns" data-topic="helper-nouns" style="--tint-color:var(--septik)">
+  <div class="topic-topbar"><button type="button" class="back-btn" data-back>← Все темы</button></div>
+  <div class="topic-header">
+    <span class="marker" style="background:var(--septik)"></span>
+    <h2><span class="topic-num">1.8</span> Көмекші есімдер</h2>
+    <span class="done-badge" data-badge="helper-nouns">✓ пройдено</span>
+  </div>
+  <div class="topic-subtitle">Служебные имена: үстелдің үстінде, үйдің алдында. В казахском нет слова «на» — вместо него существительное «верх».</div>
+  <div class="subnav">
+    <button type="button" class="subnav-btn active" data-pane="rule"><b>Ереже</b><i>правило</i></button>
+    <button type="button" class="subnav-btn" data-pane="texts"><b>Мәтін</b><i>тексты</i></button>
+    <button type="button" class="subnav-btn" data-pane="quiz"><b>Тапсырма</b><i>задания</i></button>
+  </div>
+
+  <div class="pane pane-rule active">
+    <p>Семь падежей закрыты, но сказать «на столе» ими всё ещё нельзя. Жатыс даёт <span class="kk">үстелде</span> — «у стола, за столом, где-то там». А «именно сверху» падеж не выражает.</p>
+    <p>Причина в том, что <b>в казахском вообще нет слов «на», «под», «перед»</b>. Вместо них — обычные существительные со значением «верх», «низ», «перёд». И фраза строится буквально так: <b>«стола верх-в»</b>.</p>
+    <table>
+      <tr><th>Часть</th><th>Что несёт</th></tr>
+      <tr><td class="kk">үстел<b>дің</b></td><td>ілік септік — чей верх</td></tr>
+      <tr><td class="kk">үст<b>і</b></td><td>служебное имя + тәуелдік 3-го лица</td></tr>
+      <tr><td class="kk">үстіде → үст<b>ін</b>де</td><td>септік, через буфер <span class="kk">н</span></td></tr>
+    </table>
+    <p>Буква <span class="kk">н</span> в середине — не новость: она вставляется между тәуелдік 3-го лица и падежом, это правило из темы 1.7. Там было <span class="kk">үй<b>ін</b>де</span> — «в его доме». Здесь ровно то же самое.</p>
+
+    <p><b>1. Список.</b> Одно из них ты знаешь с темы 0.8 — набор слов там назывался <span class="kk">Үй ішінде</span>.</p>
+    <table>
+      <tr><th>Форма</th><th>Дословно</th><th>Русский</th></tr>
+      <tr><td class="kk">үст<b>інде</b></td><td>в его верхе</td><td>на</td></tr>
+      <tr><td class="kk">аст<b>ында</b></td><td>в его низе</td><td>под</td></tr>
+      <tr><td class="kk">іш<b>інде</b></td><td>в его нутре</td><td>в, внутри</td></tr>
+      <tr><td class="kk">сырт<b>ында</b></td><td>в его наружности</td><td>снаружи</td></tr>
+      <tr><td class="kk">алд<b>ында</b></td><td>в его переде</td><td>перед</td></tr>
+      <tr><td class="kk">арт<b>ында</b></td><td>в его заде</td><td>за, позади</td></tr>
+      <tr><td class="kk">қас<b>ында</b></td><td>в его боку</td><td>возле</td></tr>
+      <tr><td class="kk">жан<b>ында</b></td><td>в его боку</td><td>рядом с</td></tr>
+      <tr><td class="kk">орта<b>сында</b></td><td>в его середине</td><td>посреди</td></tr>
+      <tr><td class="kk">ара<b>сында</b></td><td>в его промежутке</td><td>между</td></tr>
+      <tr><td class="kk">маң<b>ында</b></td><td>в его окрестности</td><td>около</td></tr>
+    </table>
+    <p><span class="kk">Орта</span> и <span class="kk">ара</span> кончаются на гласный, поэтому тәуелдік у них <span class="kk">-сы</span>, а не <span class="kk">-ы</span>: <span class="kk">орта<b>сы</b>нда</span>, <span class="kk">ара<b>сы</b>нда</span>. Закон тот же, что в теме 0.7.</p>
+
+    <p><b>2. Три направления.</b> Служебное имя — существительное, а значит само берёт падеж. Поменяй падеж — поменяется направление:</p>
+    <table>
+      <tr><th>Падеж</th><th>Форма</th><th>Русский</th></tr>
+      <tr><td>жатыс</td><td class="kk">үстелдің үст<b>інде</b></td><td>на столе — где</td></tr>
+      <tr><td>барыс</td><td class="kk">үстелдің үст<b>іне</b></td><td>на стол — куда</td></tr>
+      <tr><td>шығыс</td><td class="kk">үстелдің үст<b>інен</b></td><td>со стола — откуда</td></tr>
+    </table>
+    <p>Это та же тройка «где / куда / откуда» из тем 1.2, 1.4 и 1.5. Ничего нового учить не нужно — падежи навешиваются на служебное имя так же, как на любое другое слово.</p>
+
+    <p><b>3. С местоимением тәуелдік согласуется по лицу.</b> Здесь ошибаются чаще всего:</p>
+    <table>
+      <tr><th>Казахский</th><th>Русский</th></tr>
+      <tr><td class="kk">менің алд<b>ым</b>да</td><td>передо мной</td></tr>
+      <tr><td class="kk">сенің алд<b>ың</b>да</td><td>перед тобой</td></tr>
+      <tr><td class="kk">оның алд<b>ын</b>да</td><td>перед ним</td></tr>
+      <tr><td class="kk">біздің алд<b>ымыз</b>да</td><td>перед нами</td></tr>
+    </table>
+    <p>Служебное имя ведёт себя как <span class="kk">үй</span> в теме 0.7: <span class="kk">үй<b>ім</b></span>, <span class="kk">үй<b>ің</b></span>, <span class="kk">үй<b>і</b></span>. Сказать «менің алдында» — то же самое, что сказать «менің үйі».</p>
+
+    <p><b>4. Ілік можно опустить.</b> Обе фразы верны, разница в определённости:</p>
+    <table>
+      <tr><th>Казахский</th><th>Русский</th></tr>
+      <tr><td class="kk">үстел үстінде</td><td>на столе — на каком-то</td></tr>
+      <tr><td class="kk">үстел<b>дің</b> үстінде</td><td>на столе — на этом самом</td></tr>
+    </table>
+    <p>С местоимением опускать нельзя: <span class="kk">менің қасымда</span>, но не «мен қасымда».</p>
+
+    <div class="contrast">
+      <div class="label">Жатыс и служебное имя — разная точность</div>
+      <p>Обе конструкции переводятся русским «на» или «в», и выбор не случайный.</p>
+      <table>
+        <tr><td class="kk">үстел<b>де</b></td><td>за столом, у стола</td></tr>
+        <tr><td class="kk">үстел<b>дің үстінде</b></td><td>на столе, сверху</td></tr>
+        <tr><td class="kk">үй<b>де</b></td><td>дома</td></tr>
+        <tr><td class="kk">үй<b>дің ішінде</b></td><td>внутри дома</td></tr>
+      </table>
+      <p>Падеж говорит «там, в этой зоне». Служебное имя показывает точное место относительно предмета. Если по-русски можно спросить «а где именно?» — нужно служебное имя.</p>
+    </div>
+    <div class="trap"><b>Буфер <span class="kk">н</span> не выкидывать.</b> <span class="kk">Үстінде</span>, а не «үстіде»; <span class="kk">алдында</span>, а не «алдыда». Между тәуелдік 3-го лица и падежом эта буква стоит всегда.<br><br><b>С местоимением тәуелдік меняется по лицу.</b> <span class="kk">Менің қас<b>ым</b>да</span>, а не «менің қасында». Последнее значит «возле него».<br><br><b>Перед служебным именем — ілік, а не барыс.</b> <span class="kk">Үйдің алдында</span>, а не «үйге алдында». Смысл «перед» несёт само служебное имя, а предыдущее слово только отвечает на вопрос «чей».<br><br><b><span class="kk">Орта</span> и <span class="kk">ара</span> берут <span class="kk">-сы</span>.</b> <span class="kk">Ортасында</span> и <span class="kk">арасында</span> — потому что основа кончается на гласный.<br><br><b><span class="kk">Арасында</span> требует множественного или двух предметов.</b> <span class="kk">Үйлердің арасында</span> — «между домами»; <span class="kk">үй мен дүкеннің арасында</span> — «между домом и магазином».</div>
+    <div class="tip"><b>Почему это стоит после падежей, а не среди них.</b> Служебное имя собирается сразу из трёх вещей: ілік из темы 1.1, тәуелдік из 0.7 и один из падежей 1.2, 1.4 или 1.5. Раньше эту тему просто нечем было бы объяснить.<br><br>Есть и второй способ связать слова — <b>шылаулар</b>, послелоги вроде <span class="kk">дейін</span> и <span class="kk">кейін</span>. Они устроены иначе: не склоняются вовсе и требуют падежа от соседнего слова. Это отдельная тема 3.3, туда идти после глагола.<br><br><b>Быстрая проверка себя.</b> Оглядись и скажи вслух, где что лежит: <span class="kk">кітап үстелдің үстінде</span>, <span class="kk">сөмке орындықтың астында</span>. Десять фраз про свою комнату закрывают тему прочнее любой таблицы.</div>
+  </div>
+
+  <div class="pane pane-texts">
+    <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
+    <div class="reading-block">
+      <div class="text-label">Слова 21 · Қайда? — где что лежит</div>
+      <div class="mini-text">
+        <div class="wordset">
+          <div><span class="w">үст</span> <span class="t">— верх (үстінде — на)</span></div>
+          <div><span class="w">аст</span> <span class="t">— низ (астында — под)</span></div>
+          <div><span class="w">алд</span> <span class="t">— перёд (алдында — перед)</span></div>
+          <div><span class="w">арт</span> <span class="t">— зад (артында — за)</span></div>
+          <div><span class="w">қас</span> <span class="t">— близость (қасында — возле)</span></div>
+          <div><span class="w">жан</span> <span class="t">— бок (жанында — рядом)</span></div>
+          <div><span class="w">сырт</span> <span class="t">— наружная сторона</span></div>
+          <div><span class="w">орта</span> <span class="t">— середина (ортасында — посреди)</span></div>
+          <div><span class="w">ара</span> <span class="t">— промежуток (арасында — между)</span></div>
+          <div><span class="w">маң</span> <span class="t">— окрестность (маңында — около)</span></div>
+          <div><span class="w">қабырға</span> <span class="t">— стена</span></div>
+          <div><span class="w">еден</span> <span class="t">— пол</span></div>
+          <div><span class="w">бұрыш</span> <span class="t">— угол</span></div>
+          <div><span class="w">жануар</span> <span class="t">— животное</span></div>
+        </div>
+        <p class="why-note"><b>Почему так:</b> в столбце слева стоят голые основы — именно они и есть существительные. Готовая форма в скобках получается всегда одинаково: основа плюс <span class="kk">-ы/-і</span> (или <span class="kk">-сы/-сі</span> после гласного), плюс буфер <span class="kk">н</span>, плюс падеж.<br><br><span class="kk">Іш</span> в набор не попал: он уже был в теме 0.8, в наборе <span class="kk">Үй ішінде</span>.</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Текст · Менің бөлмем — что где стоит</div>
+      <div class="mini-text">
+        <p class="storytext">Бұл менің бөлмем. Бөлме үлкен емес, бірақ жарық.<br><br>Терезенің алдында үстел тұрады. Үстелдің үстінде кітап, дәптер және қалам бар. Үстелдің астында менің сөмкем.<br><br>Үстелдің қасында орындық тұрады. Орындықтың артында кітап сөмкесі жоқ — ол үстелдің астында.<br><br>Бөлменің ортасында кілем. Кілемнің үстінде мысық отырады. Оның аты — Ақтөс. Ақтөс — менің үй жануарым.<br><br>Қабырғада сурет бар. Суреттің жанында тағы бір сурет: онда тау мен өзен.<br><br>Терезенің сыртында бақша. Бақшада гүл көп. Екі ағаштың арасында орындық тұр.<br><br>Төсек бұрышта, есіктің артында. Төсектің үстінде кітап: кешке оқимын.<br><br>Кілт қайда? Кілт үстелдің үстінде емес, сөмкенің ішінде.</p>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation">Это моя комната. Комната небольшая, но светлая.<br><br>Перед окном стоит стол. На столе книга, тетрадь и ручка. Под столом моя сумка.<br><br>Возле стола стоит стул. За стулом школьной сумки нет — она под столом.<br><br>Посреди комнаты ковёр. На ковре сидит кошка. Её зовут Актос. Актос — моё домашнее животное.<br><br>На стене картина. Рядом с картиной ещё одна картина: там горы и река.<br><br>За окном сад. В саду много цветов. Между двумя деревьями стоит скамейка.<br><br>Кровать в углу, за дверью. На кровати книга: вечером почитаю.<br><br>Где ключ? Ключ не на столе, а внутри сумки.</p>
+        <p class="why-note"><b>Почему так:</b> в тексте одиннадцать служебных имён, и перед каждым стоит ілік: <span class="kk">терезе<b>нің</b> алдында</span>, <span class="kk">үстел<b>дің</b> үстінде</span>, <span class="kk">бөлме<b>нің</b> ортасында</span>, <span class="kk">екі ағаш<b>тың</b> арасында</span>. Ни одного барыс — это самая частая ошибка, и в тексте её нет специально.<br><br>Сравни две фразы про стену: <span class="kk">қабырға<b>да</b> сурет бар</span> — жатыс, «на стене» в общем смысле, и <span class="kk">сурет<b>тің</b> жанында</span> — точное место рядом с ней. Это контраст из правила.<br><br>Последняя строчка отвечает на вопрос <span class="kk">қайда?</span> дважды: сначала отрицанием, потом точным местом. Так в разговоре и получается — «не там, а вот здесь».</p>
+      </div>
+    </div>
+
+    <div class="reading-block">
+      <div class="text-label">Диалог · Кілт қайда? — ищем ключи</div>
+      <div class="mini-text">
+        <div class="dialogue">
+          <p class="dline"><span class="speaker">Данияр:</span> Кілт қайда? Үстелдің үстінде жоқ.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Сөмкенің ішінде емес пе?</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Жоқ. Сөмкенің ішінде тек дәптер мен қалам.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Орындықтың астында ма?</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Мұнда да жоқ. Есіктің қасында да жоқ.</p>
+          <p class="dline"><span class="speaker">Айгүл:</span> Кітаптың астында ма?</p>
+          <p class="dline"><span class="speaker">Данияр:</span> Рас! Мінеки, кітап пен дәптердің арасында.</p>
+        </div>
+        <button class="btn btn-translate" type="button">Показать перевод</button>
+        <p class="ru-translation"><b>Данияр:</b> Где ключ? На столе нет.<br><b>Айгуль:</b> А не внутри сумки?<br><b>Данияр:</b> Нет. В сумке только тетрадь и ручка.<br><b>Айгуль:</b> Под стулом?<br><b>Данияр:</b> И тут нет. И возле двери нет.<br><b>Айгуль:</b> Может, под книгой?<br><b>Данияр:</b> Точно! Вот, между книгой и тетрадью.</p>
+        <p class="why-note"><b>Почему так:</b> все семь реплик стоят в жатыс, и это не случайность: весь диалог спрашивает «где». Барыс появился бы, только если бы что-то двигалось — <span class="kk">үстелдің астына</span> «под стол». Пока ключ просто лежит, падеж один и тот же.<br><br><span class="kk">Кітап пен дәптердің арасында</span> — <span class="kk">арасында</span> нужны два предмета, и ілік берёт только последний из них. Не «кітаптың пен дәптердің».<br><br>Весь диалог держится на паре <span class="kk">қайда?</span> и <span class="kk">жоқ</span> из темы 0.8 — служебные имена просто уточняют, где именно нет.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane pane-quiz" data-topic="helper-nouns">
+    <p class="quiz-instruction">Впиши окончание служебного имени или падеж перед ним.</p>
+    <div class="qitem"><span class="qnum">1.</span> Үстел<input class="blank" data-answer="дің" style="width:4em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> үстінде кітап бар <span class="hint">(на столе)</span></div>
+    <div class="qitem"><span class="qnum">2.</span> Үйдің алд<input class="blank" data-answer="ында" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> ағаш тұр <span class="hint">(перед домом)</span></div>
+    <div class="qitem"><span class="qnum">3.</span> Бөлменің орта<input class="blank" data-answer="сында" style="width:6em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> кілем <span class="hint">(посреди комнаты)</span></div>
+    <div class="qitem"><span class="qnum">4.</span> Менің қас<input class="blank" data-answer="ымда" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> отыр <span class="hint">(возле меня)</span></div>
+    <div class="qitem"><span class="qnum">5.</span> Мен үстелдің қас<input class="blank" data-answer="ына" style="width:5em;" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"> барамын <span class="hint">(к столу — куда)</span></div>
+    <div class="qitem"><span class="qnum">6.</span> <span class="ru-hint">«В его доме» —</span>
+      <select class="mc" data-answer="үйінде">
+        <option value="">—</option>
+        <option value="үйіде">үйіде</option>
+        <option value="үйінде">үйінде</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">7.</span> <span class="ru-hint">«Перед домом» —</span>
+      <select class="mc" data-answer="үйдің алдында">
+        <option value="">—</option>
+        <option value="үйге алдында">үйге алдында</option>
+        <option value="үйдің алдында">үйдің алдында</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">8.</span> <span class="ru-hint">«Передо мной» —</span>
+      <select class="mc" data-answer="менің алдымда">
+        <option value="">—</option>
+        <option value="менің алдымда">менің алдымда</option>
+        <option value="менің алдында">менің алдында</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">9.</span> <span class="ru-hint">«Со стола» — откуда —</span>
+      <select class="mc" data-answer="үстелдің үстінен">
+        <option value="">—</option>
+        <option value="үстелдің үстінде">үстелдің үстінде</option>
+        <option value="үстелдің үстінен">үстелдің үстінен</option>
+      </select>
+    </div>
+    <div class="qitem"><span class="qnum">10.</span> <span class="ru-hint">«Между домами» —</span>
+      <select class="mc" data-answer="үйлердің арасында">
+        <option value="">—</option>
+        <option value="үйдің арасында">үйдің арасында</option>
+        <option value="үйлердің арасында">үйлердің арасында</option>
+      </select>
+    </div>
+    <div class="qitem">
+      <span class="qnum">11.</span> <span class="ru-hint">Кошка сидит под столом.</span>
+      <div class="qbuild" data-answer="Мысық үстелдің астында отырады" data-words="астында|Мысық|отырады|үстелдің"></div>
+    </div>
+    <div class="qitem">
+      <span class="qnum">12.</span> <span class="ru-hint">Перед окном стоит стул.</span>
+      <div class="qbuild" data-answer="Терезенің алдында орындық тұрады" data-words="алдында|тұрады|Терезенің|орындық"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn btn-check" type="button">Тексеру · Проверить</button>
+      <button class="btn btn-reveal" type="button">Показать ответы</button>
+      <span class="quiz-result" aria-live="polite"></span>
+    </div>
     <button type="button" class="next-card" data-open="verb-stem">
       <span class="next-marker"></span>
       <span class="next-text">
-        <span class="next-label">Падежи закрыты · дальше</span>
+        <span class="next-label">Имя закрыто · дальше</span>
         <span class="next-title">Блок 2 · глагол начинается с основы</span>
       </span>
       <span class="next-arrow">→</span>
@@ -3881,7 +4122,7 @@
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 20 · Тілек — пожелания и напутствия</div>
+      <div class="text-label">Слова 22 · Тілек — пожелания и напутствия</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">бата</span> <span class="t">— напутствие, благословение</span></div>
@@ -4050,7 +4291,7 @@
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 21 · Алма — яблоко и город</div>
+      <div class="text-label">Слова 23 · Алма — яблоко и город</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">алма</span> <span class="t">— яблоко</span></div>
@@ -4213,7 +4454,7 @@
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 22 · Бәйтерек — башня в Астане</div>
+      <div class="text-label">Слова 24 · Бәйтерек — башня в Астане</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">мұнара</span> <span class="t">— башня</span></div>
@@ -4381,7 +4622,7 @@
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 23 · Есік қорғаны — раскопки</div>
+      <div class="text-label">Слова 25 · Есік қорғаны — раскопки</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">табу</span> <span class="t">— находить</span></div>
@@ -4543,7 +4784,7 @@
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 24 · Қорқыт ата — легенда</div>
+      <div class="text-label">Слова 26 · Қорқыт ата — легенда</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">өлім</span> <span class="t">— смерть</span></div>
@@ -4735,7 +4976,7 @@
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 25 · Болжам мен ниет</div>
+      <div class="text-label">Слова 27 · Болжам мен ниет</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">болашақ</span> <span class="t">— будущее</span></div>
@@ -4917,7 +5158,7 @@
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 26 · Тыйым сөздер</div>
+      <div class="text-label">Слова 28 · Тыйым сөздер</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">тыйым</span> <span class="t">— запрет</span></div>
@@ -5091,7 +5332,7 @@
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 27 · Наурыз мерекесі</div>
+      <div class="text-label">Слова 29 · Наурыз мерекесі</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">мереке</span> <span class="t">— праздник</span></div>
@@ -5293,7 +5534,7 @@
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 28 · Тіл үйрену</div>
+      <div class="text-label">Слова 30 · Тіл үйрену</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">қажет</span> <span class="t">— нужный, необходимый</span></div>
@@ -5477,7 +5718,7 @@
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 29 · Кітап пен мұра</div>
+      <div class="text-label">Слова 31 · Кітап пен мұра</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">роман</span> <span class="t">— роман</span></div>
@@ -5660,7 +5901,7 @@
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 30 · Киіз үй</div>
+      <div class="text-label">Слова 32 · Киіз үй</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">шаңырақ</span> <span class="t">— шанырак, навершие купола</span></div>
@@ -5853,7 +6094,7 @@
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 31 · Арал теңізі</div>
+      <div class="text-label">Слова 33 · Арал теңізі</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">өзен</span> <span class="t">— река</span></div>
@@ -6052,7 +6293,7 @@
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 32 · Домбыра</div>
+      <div class="text-label">Слова 34 · Домбыра</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">домбыра</span> <span class="t">— домбра</span></div>
@@ -6281,13 +6522,13 @@
       <p>Русское «и» между существительными чаще переводится именно так, а не через <span class="kk">және</span>: <span class="kk">және</span> тяжелее и соединяет скорее части предложения.</p>
     </div>
     <div class="trap"><b>Падеж не выкидывать.</b> <span class="kk">Үйге дейін</span>, а не «үй дейін»; <span class="kk">сабақтан кейін</span>, а не «сабақ кейін». Это ошибка номер один, потому что в русском окончание прячется внутри слова и его не замечаешь.<br><br><b><span class="kk">Дейін</span> и <span class="kk">бері</span> — зеркальная пара.</b> В одной фразе стоят оба падежа: <span class="kk">таңертеңнен кешке дейін</span> — «с утра до вечера».<br><br><b><span class="kk">Кейін</span> и <span class="kk">бұрын</span> живут двойной жизнью.</b> После шығыс это послелоги (<span class="kk">сабақтан кейін</span>), а сами по себе — обычные наречия: <span class="kk">Кейін айтамын</span> — «скажу потом», <span class="kk">Бұрын мұнда тұрдым</span> — «раньше я тут жил». Падежа перед ними в этом случае нет.<br><br><b><span class="kk">Сайын</span> не берёт көптік.</b> <span class="kk">Күн сайын</span>, <span class="kk">апта сайын</span> — а «күндер сайын» не бывает: множественность уже внутри самого слова.<br><br><b>С местоимением <span class="kk">үшін</span> идёт в атау.</b> <span class="kk">Мен үшін</span>, <span class="kk">сен үшін</span>, <span class="kk">ол үшін</span> — не «менің үшін».<br><br><b><span class="kk">Мен</span> — это ещё и «я».</b> Три значения на одно слово: <span class="kk">мен</span> «я», <span class="kk">мен</span> «и», <span class="kk">-мен</span> «с». Разбирается по месту в предложении и по пробелу.</div>
-    <div class="tip"><b>Мнемоника падежа.</b> Смотри, куда направлен смысл. <span class="kk">Дейін</span>, <span class="kk">қарай</span>, <span class="kk">таман</span> тянут <b>к</b> точке — значит барыс, падеж «куда». <span class="kk">Кейін</span>, <span class="kk">бері</span>, <span class="kk">басқа</span>, <span class="kk">гөрі</span> отталкиваются <b>от</b> точки — значит шығыс, падеж «откуда». Из двадцати послелогов запоминать по отдельности приходится только те, что идут с атау.<br><br><b>Ты уже ими пользовался.</b> <span class="kk">Телефон арқылы</span> — название диалога темы 0.9, <span class="kk">беріңізші</span> — из темы 1.2, <span class="kk">бірге үйренейік</span> — из прошлой темы. Тогда это были готовые куски, теперь понятно, из чего они собраны.</div>
+    <div class="tip"><b>Мнемоника падежа.</b> Смотри, куда направлен смысл. <span class="kk">Дейін</span>, <span class="kk">қарай</span>, <span class="kk">таман</span> тянут <b>к</b> точке — значит барыс, падеж «куда». <span class="kk">Кейін</span>, <span class="kk">бері</span>, <span class="kk">басқа</span>, <span class="kk">гөрі</span> отталкиваются <b>от</b> точки — значит шығыс, падеж «откуда». Из двадцати послелогов запоминать по отдельности приходится только те, что идут с атау.<br><br><b>Ты уже ими пользовался.</b> <span class="kk">Телефон арқылы</span> — название диалога темы 0.9, <span class="kk">беріңізші</span> — из темы 1.2, <span class="kk">бірге үйренейік</span> — из прошлой темы. Тогда это были готовые куски, теперь понятно, из чего они собраны.<br><br><b>Не путай с көмекші есімдер из темы 1.8.</b> <span class="kk">Үйдің алдында</span> — там служебное <b>имя</b>: оно само склоняется, а соседнее слово ставит в ілік. <span class="kk">Үйге дейін</span> — здесь шылау: оно не меняется никогда, а падеж требует от соседа. Два разных механизма на одну русскую роль предлога.</div>
   </div>
 
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 33 · Шылаулар — служебные слова</div>
+      <div class="text-label">Слова 35 · Шылаулар — служебные слова</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">дейін</span> <span class="t">— до (барыс)</span></div>
@@ -6512,7 +6753,7 @@
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 34 · Қандай? — какой</div>
+      <div class="text-label">Слова 36 · Қандай? — какой</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">ұзын</span> <span class="t">— длинный, высокий</span></div>
@@ -6713,7 +6954,7 @@
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 35 · Қалай? Қашан? — как и когда</div>
+      <div class="text-label">Слова 37 · Қалай? Қашан? — как и когда</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">әрқашан</span> <span class="t">— всегда</span></div>
@@ -6922,7 +7163,7 @@
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 36 · Сандар — числа и счёт</div>
+      <div class="text-label">Слова 38 · Сандар — числа и счёт</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">нөл</span> <span class="t">— ноль</span></div>
@@ -7138,7 +7379,7 @@
   <div class="pane pane-texts">
     <p class="tap-hint">Нажми на любое казахское слово, чтобы увидеть перевод.</p>
     <div class="reading-block">
-      <div class="text-label">Слова 37 · Апта күндері мен айлар</div>
+      <div class="text-label">Слова 39 · Апта күндері мен айлар</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">сейсенбі</span> <span class="t">— вторник</span></div>
@@ -7164,7 +7405,7 @@
     </div>
 
     <div class="reading-block">
-      <div class="text-label">Слова 38 · Уақыт пен ақша</div>
+      <div class="text-label">Слова 40 · Уақыт пен ақша</div>
       <div class="mini-text">
         <div class="wordset">
           <div><span class="w">жарым</span> <span class="t">— с половиной (о времени)</span></div>
@@ -7305,7 +7546,8 @@
   // иначе прогресс считался бы от несуществующих экранов.
   var NEGIZ_TOPICS = ["harmony-vowels","harmony-consonants","word-order","zhiktik","pronouns","plural",
                       "possessive","bar-zhoq","demonstratives","question-words","question-particle","negation"];
-  var SEPTIK_TOPICS = ["ilik","barys","tabys","zhatys","shygys","komektes","all-cases"];
+  var SEPTIK_TOPICS = ["ilik","barys","tabys","zhatys","shygys","komektes","all-cases",
+                       "helper-nouns"];
   var ETISTIK_TOPICS = ["verb-stem","present-future","present-cont","past-simple","past-perfect",
                         "future-tense","verb-negation","compound-verb","modality",
                         "participle","converb"];
@@ -7315,7 +7557,7 @@
 
   var BLOCKS = {
     negiz:   { label:"Негіз",   planned:12, topics:NEGIZ_TOPICS,   color:"--negiz" },
-    septik:  { label:"Септік",  planned:7,  topics:SEPTIK_TOPICS,  color:"--septik" },
+    septik:  { label:"Септік",  planned:8,  topics:SEPTIK_TOPICS,  color:"--septik" },
     etistik: { label:"Етістік", planned:11, topics:ETISTIK_TOPICS, color:"--etistik" },
     keneyu:  { label:"Кеңейту", planned:12, topics:KENEYU_TOPICS,  color:"--keneyu" }
   };
@@ -7326,6 +7568,7 @@
     "possessive":22, "bar-zhoq":18, "demonstratives":18,
     "question-words":18, "question-particle":16, "negation":20,
     "ilik":20, "barys":18, "tabys":22, "zhatys":18, "shygys":20, "komektes":16, "all-cases":24,
+    "helper-nouns":22,
     "verb-stem":22, "present-future":24, "present-cont":22,
     "past-simple":22, "past-perfect":24,
     "future-tense":24, "verb-negation":22, "compound-verb":26, "modality":24,
