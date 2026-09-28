@@ -1,0 +1,10 @@
+# Что не отдавать наружу при раздаче корня репозитория.
+# Формат — как у .gitignore. Файл должен лежать в корне assets.directory.
+.git
+.gitignore
+.assetsignore
+.claude
+.wrangler
+node_modules
+wrangler.jsonc
+tools

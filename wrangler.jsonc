@@ -1,0 +1,11 @@
+{
+  // Статический сайт на Cloudflare Workers (kazakh.skilledu.workers.dev).
+  // Сборки нет — Worker-скрипта тоже: раздаются только файлы из репозитория,
+  // поэтому поле "main" не нужно.
+  "name": "kazakh",
+  "compatibility_date": "2026-09-28",
+  "assets": {
+    // Корень репозитория; что не отдавать наружу — перечислено в .assetsignore
+    "directory": "./"
+  }
+}
